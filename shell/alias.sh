@@ -1,0 +1,232 @@
+###################
+# General
+###################
+
+alias cat='bat --theme=zenburn'
+
+###################
+# Navigation
+###################
+
+alias p='pwd'
+alias ll='exa -l'
+alias lo='exa -l --sort=old'
+alias la='exa -la'
+alias lf='ls -d */'
+alias lc='colorls -lA --sd'
+alias ctree='exa -T'
+alias j='z'
+
+# Jumps
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias projects='cd ~/Projects'
+alias slides='cd ~/Documents/Presentations'
+alias salle='cd ~/Projects/Salle'
+alias pw='cd ~/Projects/Salle/pw'
+alias udr='cd ~/Projects/Unaderecetas'
+alias .f='cd $DOTFILES_PATH'
+alias magento='cd ~/Projects/Magento'
+alias sublime='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
+
+###################
+# Docker
+###################
+
+# General
+alias dk="docker"
+alias dv="docker -v"
+alias dl="docker login --username=jaumecapdevila"
+
+# Images
+alias di="docker images"
+alias dip="docker image prune -f"
+
+# Containers
+alias dps='docker ps --format "{{.ID}}: {{.Names}} - {{.Status}}"'
+alias dpsa="docker ps -a"
+alias dcp="docker container prune -f"
+alias dci="docker inspect"
+alias dciip="docker inspect -f \"{{ .NetworkSettings.IPAddress }}\""
+alias de="docker exec -it"
+
+# Networks
+alias dnls="docker network ls"
+alias dni="docker network inspect"
+alias dnrm="docker network rm"
+alias dnp="docker network prune -f"
+
+# Volumes
+alias dvc="docker volume create"
+alias dvls="docker volume ls"
+alias dvrm="docker volume rm"
+alias dvp="docker volume prune -f"
+alias dvi="docker volume inspect"
+
+# Compose
+alias dc="docker-compose"
+alias dcv="docker-compose -v"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dcst="docker-compose stop"
+alias dcb="docker-compose build --no-cache"
+alias dcc="docker-compose config"
+
+###################
+# Editors
+###################
+
+# Editors
+alias s.='subl .'
+alias c.='code .'
+alias i.='idea .'
+alias v.='vim .'
+
+# Edit
+alias edit-github-profile='subl ~/Projects/Personal/github-profile'
+alias sr='subl ~/Projects/Unaderecetas/recipes-book'
+
+###################
+# Git
+###################
+
+# Basic git commands
+alias g='git'
+alias gs='git status -sb'
+alias ga='git add'
+alias gap='git add -p'
+alias gaa='git add -A'
+
+# Committing
+alias gc='git commit -v'
+alias gac='git commit -a -v'
+alias gc!='git commit -v --amend'
+alias gcm='git commit -m'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+
+# Comparing
+alias gd='git diff --color'
+alias gds='git diff --staged --color'
+
+# Working with remotes
+alias clone='git clone'
+alias gf='git fetch'
+alias gft='git fetch --tags'
+alias gfa='git fetch --all -p'
+alias gp='git push'
+alias gpf='git push --force-with-lease'
+alias gpl='git pull --rebase --autostash'
+alias gpom='git push origin master'
+alias gplom='git pull origin master'
+alias gplum='git pull upstream master'
+
+# Working with branches
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gm='git merge --no-ff'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcob='git checkout -b'
+
+# Tagging
+alias gt='git tag'
+
+# Restore
+alias gr='git restore'
+alias grs='git restore --staged'
+
+###################
+# Github cli
+###################
+alias ghprvw='gh pr view --web'
+alias ghprlo='gh pr list --state open'
+alias ghprc='gh pr create'
+
+# Logging
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias glgp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -p'
+
+# Cleanup
+alias gcl='git clean'
+alias gclf='git clean -f'
+
+###################
+# Languages
+###################
+
+# Python
+alias python='python3'
+
+# PHP
+alias ci="composer install"
+alias cu="composer update"
+
+###################
+# Tmux
+###################
+alias start-tmux='tmux new -A -s main'
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
+
+###################
+# Others
+###################
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Aux
+alias aux='ps uax'
+alias brwe='brew'
+alias brew-list-deps="brew list | while read cask; do echo -n \"\e[1;34m$cask ->\e[0m\"; brew deps $cask | awk '{printf(\" %s \", $0)}'; echo \"\"; done"
+alias edithosts='sudo vim /etc/hosts'
+alias c='pbcopy'
+alias cl='clear'
+alias copy='pbcopy'
+alias copy_ssh_key='xclip -sel clip < ~/.ssh/id_rsa.pub'
+alias count_files_recursive='find . -type f -print | wc -l'
+alias count_files_recursive_per_directory='ls -d */ | xargs -I _ sh -c "find \"_\" -type f | wc -l | xargs echo _"'
+alias emptytrash='sudo empty_trash'
+alias find_broken_symlinks='find -L . -type l'
+alias fuck!='sudo $history[1]'
+alias flat_this_dir="sudo find . -mindepth 2 -type f -exec mv -i '{}' . ';'"
+alias k='kill -9'
+alias map="xargs -n1"
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias r='realpath'
+alias reveal='open .'
+alias size_of_directory="ncdu --color dark -rr -x"
+alias watch_number_of_files='watch -n1 "find . -type f -print | wc -l"'
+alias t='time'
+alias pubkey='cat ~/.ssh/id_rsa.pub | pbcopy'
+alias privateip='ipconfig getifaddr en0'
+alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias catimg='imgcat'
+alias optimize_zsh='source ${ZDOTDIR:-${HOME}}/.zlogin'
+alias phpqa='docker run --init -it --rm -v $(pwd):/project -v $(pwd)/tmp-phpqa:/tmp -w /project jakzal/phpqa:alpine'
+alias md='glow -s dark -w 80'
+
+# Mac
+alias wall='change_wallpaper'
+alias out='outdated_apps'
+alias up='update_apps'
+alias ziper='zip -er'
+
+# Dotfiles
+alias .ef='subl ~/.dotfiles'
+
+# Digital garden
+alias dg='subl ~/Projects/Personal/inside-out'
+
+# Slides
+alias present='reveal-md --theme solarized --highlight-theme monokai-sublime'

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Show all files in the local git repository (.git folder)
+git ls-tree --full-tree -r HEAD

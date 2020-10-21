@@ -1,0 +1,27 @@
+export DOTFILES_PATH=$HOME/.dotfiles
+
+# Load vars
+source "${DOTFILES_PATH}/shell/zsh/vars.zsh"
+
+# ZSH Ops
+setopt HIST_IGNORE_ALL_DUPS
+setopt autopushd
+
+# Initializations
+source $DOTFILES_PATH/shell/init.sh
+
+# Theme configuration
+BULLETTRAIN_PROMPT_ORDER=(dir git)
+BULLETTRAIN_PROMPT_CHAR=""
+BULLETTRAIN_PROMPT_SEPARATE_LINE=false
+BULLETTRAIN_DIR_EXTENDED=1
+
+# Antigen configuration
+source $DOTFILES_PATH/shell/zsh/antigen.zsh
+
+# Loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Load sdkman
+source "$HOME/.sdkman/bin/sdkman-init.sh"

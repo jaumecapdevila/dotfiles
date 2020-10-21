@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Identifies the default branch for the remote $1
+git remote show $1 | grep 'HEAD branch' | cut -d' ' -f5

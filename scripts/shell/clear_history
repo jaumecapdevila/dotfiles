@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Clears command history
+#?? 1.0.0
+##?
+##? Usage:
+##?    clear_history zsh      # Clears zsh history
+##?    clear_history bash     # Clears bash history
+
+docs::eval_help "$@"
+
+case $1 in
+  "zsh")
+    HISTORY_FILE="$HOME/.zsh_history"
+    echo "Removing $HISTORY_FILE"
+    rm $HISTORY_FILE
+    echo "Done!"
+    ;;
+  "bash")
+    HISTORY_FILE="$HOME/.bash_history"
+    echo "Removing $HISTORY_FILE"
+    rm $HISTORY_FILE
+    echo "Done!"
+    ;;
+  *)
+    docs::eval_help --help
+    ;;
+esac

@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- defaults:
+    link:
+      create: true
+      force: true
+
+- link:
+    ~/.zshrc: shell/zsh/.zshrc
+    ~/.zlogin: shell/zsh/.zlogin
+    ~/.bashrc: shell/bash/.bashrc
+    ~/.npmrc: npm/.npmrc
+    ~/.bash_profile: shell/bash/.bash_profile
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.gitattributes: git/.gitattributes
+    ~/.vimrc: editors/vim/.vimrc
+
+- create:
+    - ~/.z
+    - ~/.hushlogin

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Remove all local branches merged into master
+
+read -r -p "Clean just merged branches? [Y/n] " input
+
+case $input in
+    [yY][eE][sS]|[yY])
+echo "Cleaning branches merged to master..."
+ git branch --merged "master" | grep -v "master" | xargs git branch -D
+ ;;
+    [nN][oO]|[nN])
+echo "Cleaning all local branches..."
+ git branch | grep -v "master" | xargs git branch -D
+       ;;
+    *)
+ echo "Invalid input..."
+ exit 1
+ ;;
+esac

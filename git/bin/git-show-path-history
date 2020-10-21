@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Displays a list with all the commits that modified the file $1, including the merge commits
+git log --oneline --graph --show-pulls -- $1

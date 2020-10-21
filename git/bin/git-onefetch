@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Displays onefetch report for current repository
+onefetch

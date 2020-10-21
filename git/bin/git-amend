@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Ammend changes without running git hooks
+git add -A
+git commit -n --amend

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Starts the oms virtual machine
+#?? 1.0.0
+##?
+##? Usage:
+##?    ssh
+
+docs::eval "$@"
+
+cd $HOME/projects/magento/oms
+vagrant up

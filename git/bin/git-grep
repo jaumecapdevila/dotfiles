@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Find commits by commit message
+git grep $1 `git show-ref --heads`

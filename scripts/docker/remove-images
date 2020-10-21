@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Remove all docker images
+#?? 1.0.0
+##?
+##? Usage:
+##?    remove-images
+
+docs::eval "$@"
+
+docker rmi $(docker images -a -q)

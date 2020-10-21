@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Revert all local uncommitted changes
+git checkout .

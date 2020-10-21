@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Creates a new branch $1
+git checkout -b $1

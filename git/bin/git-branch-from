@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Creates a branch $2 from branch $1
+git checkout -b $2 $1

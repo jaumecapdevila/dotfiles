@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Follow file through history
+git log --oneline -M --stat --follow -- $1

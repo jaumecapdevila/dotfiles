@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Show commits added between two tags
+git log --pretty=oneline $1...$2

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Unstage all files
+git reset HEAD -- .

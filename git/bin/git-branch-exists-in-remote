@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Checks if the given branch $1 exists in the remote repository $2
+git ls-remote --heads $2 $1
+

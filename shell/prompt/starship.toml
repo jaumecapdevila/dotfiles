@@ -1,0 +1,35 @@
+# General config
+add_newline = false
+
+# Prompt segments
+format = """
+$character\
+$directory\
+$git_branch\
+$git_status\
+› \
+$cmd_duration"""
+
+[cmd_duration]
+min_time=500
+format="[$duration]($style) "
+
+[character]
+success_symbol="[✔](bold fg:70)"
+error_symbol="[✘](bold fg:160)"
+
+[git_commit]
+disabled=true
+
+[git_branch]
+symbol=""
+format="[\uE0B1](fg:31) [$symbol $branch]($style) "
+style="fg:76"
+
+[git_status]
+format="([$all_status$ahead_behind]($style) )"
+
+[directory]
+format="[$path]($style) "
+truncation_length=1
+style="fg:31"

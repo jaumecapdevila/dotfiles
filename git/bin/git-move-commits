@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+read -p "How many commits do you want to move? " commits
+
+read -p "To which branch you want to move the commits? " branch
+
+# Checkout to master
+git master
+
+# Create the new branch
+git checkout -b $branch
+
+# Remove commits from master
+git master
+git reset --hard HEAD~$commits
+
+# Checkout new branch
+git checkout $branch

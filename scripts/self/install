@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+source "$DOTFILES_PATH/scripts/self/utils/install.sh"
+
+##? Install the dotfiles
+#?? 1.0.0
+##?
+##? Usage:
+##?    install
+
+docs::eval_help "$@"
+
+"$DOTFILES_PATH/bin/dot" self update
+
+log::note "Installing MacOS  custom packages"
+brew bundle --file="$DOTFILES_PATH/mac/brew/Brewfile"
+
+log::note "Setting ZSH as the default shell"
+chsh -s $(which zsh)
+
+log::note "Installing ruby gems"
+install_ruby_gems
+
+log::note "Installing pip packages"
+install_pip_packages
+
+log::note "Installing npm packages"
+install_npm_packages
+
+read -rp "Git config: What is you email? " git_email
+read -rp "Git config: And your name? " git_name
+
+git config --global user.email "$git_email"
+git config --global user.name "$git_name"
+git config --global --unset user.signingkey
+git config --global --unset commit.gpgsign
+git config --global --unset tag.gpgsign
+git config --global --unset gpg.program

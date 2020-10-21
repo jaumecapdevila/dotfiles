@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Generate a comma separated list
+#?? 1.0.0
+##?
+##? Usage:
+##?    list <items>
+
+docs::eval "$@"
+
+items=""
+
+for i in $(seq 1 $1)
+do
+    if [[ $i -eq $1 ]]; then
+        items+="$i"
+    else
+        items+="$i,"
+    fi
+done
+
+echo -n $items | pbcopy
+echo $items
+
+osascript -e 'display notification "List copied to the clipboard"'
