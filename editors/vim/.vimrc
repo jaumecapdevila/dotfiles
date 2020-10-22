@@ -58,8 +58,8 @@ let NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Lightline
-" let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
+let g:lightline = {
+    \ 'colorscheme': 'nord',
 \ }
 
 " Prettier
@@ -197,7 +197,14 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-colorscheme peaksea
+" Theme configuration
+let g:nord_cursor_line_number_background = 1
+let g:nord_bold_vertical_split_line = 1
+let g:nord_uniform_diff_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
+colorscheme nord
 
 " Set extra options when running in GUI mode
 if has("gui_running")
