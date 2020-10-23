@@ -31,7 +31,7 @@
     hard = reset --hard
     soft = reset --soft
     unstage = reset HEAD
-    re = rebase
+    rb = rebase
     st = status
     sa = submodule add
     si = submodule init

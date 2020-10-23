@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+# Displays the identifier of the last commit
 git rev-parse --short HEAD
