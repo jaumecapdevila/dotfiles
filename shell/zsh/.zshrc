@@ -11,6 +11,22 @@ setopt autopushd
 source $DOTFILES_PATH/shell/init.sh
 
 # Theme configuration
+export ALIEN_THEME="soft"
+
+export ALIEN_SECTIONS_LEFT=(
+  battery
+  user
+  path
+  vcs_branch
+  vcs_status
+  vcs_dirty
+  newline
+  ssh
+  venv
+  prompt
+)
+
+export ALIEN_SECTIONS_RIGHT=()
 
 # Antigen configuration
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
@@ -21,6 +37,3 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Load starship prompt
-eval "$(starship init zsh)"
