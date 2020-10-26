@@ -12,6 +12,7 @@ Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
 Plug 'sjl/badwolf'
 Plug 'arcticicestudio/nord-vim'
+Plug 'colepeters/spacemacs-theme.vim'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -193,7 +194,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " Theme configuration
-colorscheme peaksea
+set background=dark
+colorscheme spacemacs-theme
 
 " Set extra options when running in GUI mode
 if has("gui_running")
