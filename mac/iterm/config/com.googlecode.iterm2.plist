@@ -1384,7 +1384,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<false/>
 			<key>Normal Font</key>
-			<string>OperatorMono-Medium 17</string>
+			<string>OperatorMono-Book 17</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>
@@ -1684,11 +1684,11 @@
 	<true/>
 	<key>NoSyncBFPFavorites</key>
 	<array>
-		<string>MonoLisa</string>
-		<string>PragmataPro Mono</string>
+		<string>Operator Mono</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>MonoLisa</string>
 		<string>Operator Mono</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -1709,7 +1709,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{393, 825}</string>
+		<string>{391, 827}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1722,7 +1722,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0D22A267-7123-473E-9750-B39E8DB68BAA</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>159</integer>
+	<integer>160</integer>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>

@@ -38,7 +38,7 @@ truncation_length=2
 style="bold fg:0 bg:45"
 
 [git_branch]
-format="[ $symbol$branch ]($style)[\uE0B0](fg:238 bg:239)"
+format="[ $symbol$branch]($style)[\uE0B0](fg:238 bg:239)"
 style="bold fg:87 bg:238"
 
 [git_status]
