@@ -12,7 +12,7 @@ source $DOTFILES_PATH/shell/init.sh
 
 # Theme configuration
 export ALIEN_THEME="soft"
-export ALIEN_PROMPT_SYM=" "
+export ALIEN_PROMPT_SYM=""
 
 export ALIEN_SECTIONS_LEFT=(
   battery
@@ -21,6 +21,7 @@ export ALIEN_SECTIONS_LEFT=(
   vcs_branch
   vcs_status
   vcs_dirty
+  newline
   prompt
 )
 
