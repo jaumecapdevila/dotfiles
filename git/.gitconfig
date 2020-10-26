@@ -9,6 +9,7 @@
     del = branch -D
     ci = commit
     am = commit --amend
+    count-commits = rev-list --count
     cl = clone
     co = checkout
     contains = describe --all --contains

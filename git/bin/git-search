@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Searches the entire repository for content matching $1
+git rev-list –all | xargs git grep -F $1
