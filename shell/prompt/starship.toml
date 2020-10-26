@@ -1,35 +1,46 @@
 # General config
-add_newline = false
+add_newline = true
 
 # Prompt segments
 format = """
 $character\
+$battery\
 $directory\
 $git_branch\
-$git_status\
-› \
-$cmd_duration"""
-
-[cmd_duration]
-min_time=500
-format="[$duration]($style) "
+$git_status"""
 
 [character]
-success_symbol="[✔](bold fg:70)"
-error_symbol="[✘](bold fg:160)"
+success_symbol="[ ✔ ](bold fg:9 bg:87)[\uE0B0](fg:87 bg:193)"
+error_symbol="[ ✘ ](bold fg:160 bg:87)[\uE0B0](fg:87 bg:193)"
+format="$symbol"
 
-[git_commit]
-disabled=true
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+format="[ $symbol$percentage ]($style)[\uE0B0](fg:193 bg:45)"
 
-[git_branch]
-symbol=""
-format="[\uE0B1](fg:31) [$symbol $branch]($style) "
-style="fg:76"
+[[battery.display]]
+threshold = 20
+style = "bold fg:0 bg:193"
 
-[git_status]
-format="([$all_status$ahead_behind]($style) )"
+[[battery.display]]
+threshold = 60
+style = "bold fg:0 bg:193"
+
+[[battery.display]]
+threshold = 100
+style = "bold fg:0 bg:193"
 
 [directory]
-format="[$path]($style) "
-truncation_length=1
-style="fg:31"
+format="[ $path ]($style)[\uE0B0](fg:45 bg:238)"
+truncation_length=2
+style="fg:0 bg:45"
+
+[git_branch]
+format="[ $symbol$branch ]($style)[\uE0B0](fg:238 bg:239)"
+style="fg:87 bg:238"
+
+[git_status]
+format="[$all_status$ahead_behind]($style)[\uE0B0](fg:239) "
+style="fg:86 bg:239"
