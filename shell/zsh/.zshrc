@@ -11,12 +11,10 @@ setopt autopushd
 source $DOTFILES_PATH/shell/init.sh
 
 # Theme configuration
-BULLETTRAIN_PROMPT_ORDER=(dir git)
-BULLETTRAIN_PROMPT_CHAR=""
-BULLETTRAIN_PROMPT_SEPARATE_LINE=false
-BULLETTRAIN_DIR_EXTENDED=1
-BULLETTRAIN_DIR_BG="blue"
-BULLETTRAIN_DIR_FG="black"
+MNML_PROMPT=(mnml_status mnml_cwd mnml_git mnml_keymap)
+MNML_RPROMPT=()
+MNML_INFOLN=()
+MNML_MAGICENTER=(mnml_me_ls)
 
 # Antigen configuration
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
