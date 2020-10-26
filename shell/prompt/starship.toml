@@ -35,12 +35,12 @@ style = "bold fg:0 bg:193"
 [directory]
 format="[ $path ]($style)[\uE0B0](fg:45 bg:238)"
 truncation_length=2
-style="fg:0 bg:45"
+style="bold fg:0 bg:45"
 
 [git_branch]
 format="[ $symbol$branch ]($style)[\uE0B0](fg:238 bg:239)"
-style="fg:87 bg:238"
+style="bold fg:87 bg:238"
 
 [git_status]
 format="[$all_status$ahead_behind]($style)[\uE0B0](fg:239) "
-style="fg:86 bg:239"
+style="bold fg:86 bg:239"
