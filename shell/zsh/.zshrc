@@ -11,10 +11,20 @@ setopt autopushd
 source $DOTFILES_PATH/shell/init.sh
 
 # Theme configuration
-MNML_PROMPT=(mnml_status mnml_cwd mnml_git mnml_keymap)
-MNML_RPROMPT=()
-MNML_INFOLN=()
-MNML_MAGICENTER=(mnml_me_ls)
+export ALIEN_THEME="soft"
+export ALIEN_PROMPT_SYM=" "
+
+export ALIEN_SECTIONS_LEFT=(
+  battery
+  user
+  path
+  vcs_branch
+  vcs_status
+  vcs_dirty
+  prompt
+)
+
+export ALIEN_SECTIONS_RIGHT=()
 
 # Antigen configuration
 source $DOTFILES_PATH/shell/zsh/antigen.zsh

@@ -7,6 +7,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 
 # Load theme
-antigen bundle subnixr/minimal
+antigen theme eendroroy/alien alien
 
 antigen apply
