@@ -81,6 +81,7 @@ brew "libpq"
 brew "libxml2"
 brew "libzip"
 brew "mas"
+brew "minikube", link: false
 brew "nmap"
 brew "onefetch"
 brew "pandoc"
@@ -112,6 +113,7 @@ brew "tree"
 brew "vault"
 brew "vim"
 brew "watch"
+brew "watchexec"
 brew "wget"
 brew "xsv"
 brew "zsh"
@@ -125,6 +127,7 @@ brew "heroku/brew/heroku"
 brew "yqrashawn/goku/goku"
 cask "dbeaver-community"
 cask "deluge"
+cask "font-hack-nerd-font"
 cask "minikube"
 cask "ngrok"
 cask "paragon-ntfs"
@@ -142,6 +145,8 @@ mas "Keynote", id: 409183694
 mas "Lungo", id: 1263070803
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Reeder", id: 1449412482
 mas "RunCat", id: 1429033973
+mas "Shareful", id: 1522267256
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
