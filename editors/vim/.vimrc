@@ -12,7 +12,7 @@ Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
 Plug 'sjl/badwolf'
 Plug 'arcticicestudio/nord-vim'
-Plug 'colepeters/spacemacs-theme.vim'
+Plug 'liuchengxu/space-vim-dark/'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -195,7 +195,8 @@ endif
 
 " Theme configuration
 set background=dark
-colorscheme spacemacs-theme
+let g:space_vim_dark_background=235
+colorscheme space-vim-dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
