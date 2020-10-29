@@ -26,6 +26,3 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Load starship prompt
-# eval "$(starship init zsh)"
