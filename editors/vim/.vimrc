@@ -10,9 +10,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
-Plug 'sjl/badwolf'
-Plug 'arcticicestudio/nord-vim'
-Plug 'liuchengxu/space-vim-dark/'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
