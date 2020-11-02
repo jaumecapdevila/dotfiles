@@ -7,6 +7,4 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle unixorn/fzf-zsh-plugin
 
-antigen theme bhilburn/powerlevel9k powerlevel9k
-
 antigen apply

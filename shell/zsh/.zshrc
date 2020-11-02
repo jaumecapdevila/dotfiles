@@ -10,14 +10,6 @@ setopt autopushd
 # Initializations
 source $DOTFILES_PATH/shell/init.sh
 
-# Theme configuration
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-
 # Antigen configuration
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
@@ -27,3 +19,6 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Init prompt
+eval "$(starship init zsh)"
