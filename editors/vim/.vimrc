@@ -193,7 +193,7 @@ endif
 
 " Theme configuration
 set background=dark
-colorscheme peaksea
+colorscheme space_vim_theme
 
 " Set extra options when running in GUI mode
 if has("gui_running")
