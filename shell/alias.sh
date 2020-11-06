@@ -35,13 +35,14 @@ alias sublime='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
 ###################
 
 # General
-alias dk="docker"
+alias d="docker"
 alias dv="docker -v"
 alias dl="docker login --username=jaumecapdevila"
 
 # Images
 alias di="docker images"
 alias dip="docker image prune -f"
+alias drmi="docker rmi"
 
 # Containers
 alias dps='docker ps --format "{{.ID}}: {{.Names}} - listening on {{.Ports}} - {{.Status}}"'
