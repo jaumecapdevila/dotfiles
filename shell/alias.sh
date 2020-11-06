@@ -44,7 +44,7 @@ alias di="docker images"
 alias dip="docker image prune -f"
 
 # Containers
-alias dps='docker ps --format "{{.ID}}: {{.Names}} - {{.Status}}"'
+alias dps='docker ps --format "{{.ID}}: {{.Names}} - listening on {{.Ports}} - {{.Status}}"'
 alias dpsa="docker ps -a"
 alias dcp="docker container prune -f"
 alias dci="docker inspect"
