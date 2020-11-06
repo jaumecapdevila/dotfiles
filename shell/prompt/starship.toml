@@ -3,16 +3,22 @@ add_newline = true
 
 # Prompt segments
 format = """
+$character\
 $battery\
 $username\
 $directory\
 $git_branch"""
 
+[character]
+success_symbol="[ ✓ ](bold fg:232 bg:226)"
+error_symbol="[ ✗ ](bold fg:232 bg:226)"
+format="$symbol($style)[\uE0B0](fg:226 bg:28)"
+
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
-format="[ $symbol$percentage ]($style)[\uE0B0](fg:28 bg:34)"
+full_symbol=""
+charging_symbol=""
+discharging_symbol=""
+format="[$symbol$percentage]($style)[\uE0B0](fg:28 bg:34)"
 
 [[battery.display]]
 threshold = 20
