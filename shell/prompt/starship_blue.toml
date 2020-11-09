@@ -1,0 +1,43 @@
+# General config
+add_newline = true
+
+# Prompt segments
+format = """
+$character\
+$battery\
+$directory\
+$git_branch\
+$line_break\
+❯ """
+
+[character]
+success_symbol="[ ✓ ](fg:0 bg:229)"
+error_symbol="[ ✗ ](fg:0 bg:229)"
+format="$symbol($style)[\uE0B0](fg:229 bg:193)"
+
+[battery]
+full_symbol=""
+charging_symbol=""
+discharging_symbol=""
+format="[ $percentage ]($style)[\uE0B0](fg:193)"
+
+[[battery.display]]
+threshold = 20
+style = "fg:0 bg:193"
+
+[[battery.display]]
+threshold = 60
+style = "fg:0 bg:193"
+
+[[battery.display]]
+threshold = 100
+style = "fg:0 bg:193"
+
+[directory]
+format="[\uE0B0](fg:black bg:45)[ $path ]($style)[\uE0B0](fg:45)"
+truncation_length=2
+style="fg:0 bg:45"
+
+[git_branch]
+format="[\uE0B0](fg:black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
+style="bold fg:87 bg:238"
