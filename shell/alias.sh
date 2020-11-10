@@ -45,7 +45,7 @@ alias dip="docker image prune -f"
 alias drmi="docker rmi"
 
 # Containers
-alias dps='docker ps --format "{{.ID}}: {{.Names}} - listening on {{.Ports}} - {{.Status}}"'
+alias dps='docker ps --format "<{{.Names}}> with id <{{.ID}}> - {{.Status}}"'
 alias dpsa="docker ps -a"
 alias dcp="docker container prune -f"
 alias dci="docker inspect"

@@ -36,7 +36,7 @@ export VAULT_ADDR="https://vault.or1.adobe.net"
 export GOPATH="$HOME/projects/golang"
 
 # Propmt
-export STARSHIP_CONFIG="$DOTFILES_PATH/shell/prompt/starship_blue.toml"
+export STARSHIP_CONFIG="$DOTFILES_PATH/shell/prompt/starship_green.toml"
 
 # Path
 PATH=/usr/local/sbin:$PATH
