@@ -7,6 +7,7 @@
 ##?    color_scheme_table
 #
 #
+
 T='gYw'
 
 printf "\n         def     40m     41m     42m     43m     44m     45m     46m     47m\n";

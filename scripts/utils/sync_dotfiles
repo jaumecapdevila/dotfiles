@@ -22,4 +22,4 @@ git pull --rebase --autostash
 brew bundle cleanup --file="$HOMEBREW_BUNDLE_FILE_PATH" --force
 brew bundle install --file="$HOMEBREW_BUNDLE_FILE_PATH"
 
-echo 'Done! 👯‍'
+echo 'Done!'

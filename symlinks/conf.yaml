@@ -9,7 +9,6 @@
     ~/.zshrc: shell/zsh/.zshrc
     ~/.zlogin: shell/zsh/.zlogin
     ~/.bashrc: shell/bash/.bashrc
-    ~/.npmrc: npm/.npmrc
     ~/.bash_profile: shell/bash/.bash_profile
     ~/.tmux.conf: tmux/tmux.conf
     ~/.gitconfig: git/.gitconfig

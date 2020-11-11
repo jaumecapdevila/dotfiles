@@ -1,2 +1,18 @@
+# MacOS
+# ----------------------------------
+
+# Karabiner
+/mac/karabiner-elements/automatic_backups
+
+# Alfred
+/mac/alfred/remote
+
+# Common
+# ----------------------------------
+
+# Compiled zsh
+terminal/zsh/**/**.zwc
+terminal/zsh/**/**.zwc.old
+
 # Private Stuff
 /**/**/private-*

@@ -9,8 +9,8 @@ set -euo pipefail
 ##?    install
 
 dotfiles_path="$HOME/.dotfiles"
-echo "Cloning into: '$dotfiles_path'"
 
+echo "Cloning into: '$dotfiles_path'"
 git clone --depth 1 git@github.com:jaumecapdevila/dotfiles.git "$dotfiles_path"
 
 "$dotfiles_path/bin/dot" self install
