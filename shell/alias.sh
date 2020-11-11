@@ -185,12 +185,11 @@ alias tkss='tmux kill-session -t'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Aux
+# Utils
 alias aux='ps uax'
-alias brwe='brew'
+alias fuck='sudo !!'
 alias brew-list-deps="brew list | while read cask; do echo -n \"\e[1;34m$cask ->\e[0m\"; brew deps $cask | awk '{printf(\" %s \", $0)}'; echo \"\"; done"
 alias edithosts='sudo vim /etc/hosts'
-alias c='pbcopy'
 alias cl='clear'
 alias copy='pbcopy'
 alias copy_ssh_key='xclip -sel clip < ~/.ssh/id_rsa.pub'
@@ -198,7 +197,6 @@ alias count_files_recursive='find . -type f -print | wc -l'
 alias count_files_recursive_per_directory='ls -d */ | xargs -I _ sh -c "find \"_\" -type f | wc -l | xargs echo _"'
 alias emptytrash='sudo empty_trash'
 alias find_broken_symlinks='find -L . -type l'
-alias fuck!='sudo $history[1]'
 alias flat_this_dir="sudo find . -mindepth 2 -type f -exec mv -i '{}' . ';'"
 alias k='kill -9'
 alias map="xargs -n1"
