@@ -40,4 +40,4 @@ style="bold fg:232 bg:82"
 
 [git_branch]
 format="[\uE0B0](fg:black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
-style="fg:154 bg:238"
+style="bold fg:154 bg:238"
