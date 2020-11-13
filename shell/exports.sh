@@ -31,6 +31,7 @@ export LC_CTYPE=UTF-8
 
 # Work
 export VAULT_ADDR="https://vault.or1.adobe.net"
+export OMS_CODE="$HOME/Projects/Magento/oms"
 
 # Languages
 export GOPATH="$HOME/projects/golang"
