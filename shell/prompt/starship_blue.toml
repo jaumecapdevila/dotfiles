@@ -34,10 +34,10 @@ threshold = 100
 style = "bold fg:0 bg:193"
 
 [directory]
-format="[\uE0B0](fg:black bg:45)[ $path ]($style)[\uE0B0](fg:45)"
+format="[\uE0B0](fg:bright-black bg:45)[ $path ]($style)[\uE0B0](fg:45)"
 truncation_length=2
 style="bold fg:0 bg:45"
 
 [git_branch]
-format="[\uE0B0](fg:black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
+format="[\uE0B0](fg:bright-black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
 style="bold fg:87 bg:238"
