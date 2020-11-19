@@ -128,7 +128,7 @@ alias gplum='git pull upstream master'
 # Working with branches
 alias gb='git branch'
 alias gbd='git branch -d'
-alias gbD='git branch -D'
+alias gbD='dot git remove-branch'
 alias gm='git merge --no-ff'
 alias gco='git checkout'
 alias gcom='git checkout master'
