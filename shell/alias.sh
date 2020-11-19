@@ -167,6 +167,7 @@ alias python='python3'
 # PHP
 alias ci="composer install"
 alias cu="composer update"
+alias php8cli="docker run --rm -it php:8.0.0RC4-cli php -a"
 
 ###################
 # Tmux

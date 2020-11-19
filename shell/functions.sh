@@ -7,3 +7,12 @@ function slides_to_pdf {
 function antigen_load {
   antigen bundle $1
 }
+
+###################
+# Languages
+###################
+
+# PHP
+function php8 {
+  docker run --rm -v "$PWD:/app/" php:8.0.0RC4-cli php "/app/$1"
+}
