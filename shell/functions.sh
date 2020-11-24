@@ -20,3 +20,8 @@ function antigen_load {
 function php8 {
   docker run --rm -v "$PWD:/app/" php:8.0.0RC4-cli php "/app/$1"
 }
+
+# Composer
+function old_composer {
+  docker run --rm -w="/app" -v "$(PWD):/app" composer:1.10.17 composer $@
+}
