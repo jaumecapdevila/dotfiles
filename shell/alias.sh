@@ -209,7 +209,6 @@ alias reveal='open .'
 alias size_of_directory="ncdu --color dark -rr -x"
 alias watch_number_of_files='watch -n1 "find . -type f -print | wc -l"'
 alias t='time'
-alias pubkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias privateip='ipconfig getifaddr en0'
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias catimg='imgcat'
@@ -222,6 +221,9 @@ alias wall='change_wallpaper'
 alias out='outdated_apps'
 alias up='update_apps'
 alias ziper='zip -er'
+
+# SSH
+alias sshgk='ssh-keygen -t rsa -b 4096'
 
 # Dotfiles
 alias .ef='subl ~/.dotfiles'
