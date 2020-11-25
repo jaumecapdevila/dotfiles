@@ -169,6 +169,12 @@ alias ci="composer install"
 alias cu="composer update"
 alias php8cli="docker run --rm -it php:8.0.0RC4-cli php -a"
 
+# Golang
+alias gog='go get'
+alias got='go test'
+alias gomi='go mod init'
+alias golm='go list -m all'
+
 ###################
 # Tmux
 ###################
