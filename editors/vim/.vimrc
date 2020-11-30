@@ -10,7 +10,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
-Plug 'liuchengxu/space-vim-theme'
+Plug 'liuchengxu/space-vim-dark'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -193,7 +193,9 @@ endif
 
 " Theme configuration
 set background=dark
-colorscheme peaksea
+let g:space_vim_dark_background = 235
+colorscheme space-vim-dark
+hi Comment cterm=italic
 
 " Set extra options when running in GUI mode
 if has("gui_running")

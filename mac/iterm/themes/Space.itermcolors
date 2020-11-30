@@ -11,9 +11,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.12549020349979401</real>
+		<real>0.14901961386203766</real>
 		<key>Red Component</key>
-		<real>0.12941177189350128</real>
+		<real>0.14901961386203766</real>
 	</dict>
 	<key>Ansi 1 Color</key>
 	<dict>
@@ -219,9 +219,9 @@
 		<key>Color Space</key>
 		<string>sRGB</string>
 		<key>Green Component</key>
-		<real>0.12549020349979401</real>
+		<real>0.14901961386203766</real>
 		<key>Red Component</key>
-		<real>0.12941177189350128</real>
+		<real>0.14901961386203766</real>
 	</dict>
 	<key>Badge Color</key>
 	<dict>
