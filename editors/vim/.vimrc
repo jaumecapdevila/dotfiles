@@ -192,9 +192,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " Theme configuration
-set background=dark
-let g:space_vim_dark_background = 235
-colorscheme space-vim-dark
+colorscheme peaksea
 hi Comment cterm=italic
 
 " Set extra options when running in GUI mode
