@@ -3,38 +3,13 @@ add_newline = true
 
 # Prompt segments
 format = """
-$character\
-$battery\
 $directory\
 $git_branch\
 $line_break\
 ❯ """
 
-[character]
-success_symbol="[ ✓ ](bold fg:0 bg:229)"
-error_symbol="[ ✗ ](bold fg:0 bg:229)"
-format="$symbol($style)[\uE0B0](fg:229 bg:193)"
-
-[battery]
-full_symbol=""
-charging_symbol=""
-discharging_symbol=""
-format="[ $percentage ]($style)[\uE0B0](fg:193)"
-
-[[battery.display]]
-threshold = 20
-style = "bold fg:0 bg:193"
-
-[[battery.display]]
-threshold = 60
-style = "bold fg:0 bg:193"
-
-[[battery.display]]
-threshold = 100
-style = "bold fg:0 bg:193"
-
 [directory]
-format="[\uE0B0](fg:black bg:45)[ $path ]($style)[\uE0B0](fg:45)"
+format="[ $path ]($style)[\uE0B0](fg:45)"
 truncation_length=2
 style="bold fg:0 bg:45"
 
