@@ -11,6 +11,7 @@ $line_break\
 [directory]
 format="[ $path ]($style)[\uE0B0](fg:45)"
 truncation_length=2
+truncation_symbol="../"
 style="bold fg:0 bg:45"
 
 [git_branch]
