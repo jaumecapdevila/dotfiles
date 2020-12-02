@@ -3,10 +3,16 @@ add_newline = true
 
 # Prompt segments
 format = """
+$character\
 $directory\
 $git_branch\
 $line_break\
 ❯ """
+
+[character]
+success_symbol="[ ✓ ](bold fg:254 bg:22)"
+error_symbol="[ ✗ ](bold fg:254 bg:22)"
+format="$symbol($style)[\uE0B0](fg:22 bg:28)"
 
 [directory]
 format="[ $path ]($style)[\uE0B0](fg:82)"
