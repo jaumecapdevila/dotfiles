@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Checkout a git branch using fzf
+#?? 1.0.0
+##?
+##? Usage:
+##?    checkout-branch
+
+docs::eval "$@"
+
+if (! git::is_in_repo); then
+  echo "Not in a git repo!"
+  exit 0
+fi
+
+git branch | fzf --height 50% --ansi | awk -F ': ' '{print $1}' | xargs git checkout

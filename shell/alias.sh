@@ -132,7 +132,7 @@ alias gb='git branch'
 alias gbd='git branch -d'
 alias gbD='dot git remove-branch'
 alias gm='git merge --no-ff'
-alias gco='git checkout'
+alias gco='dot git checkout-branch'
 alias gcom='git checkout master'
 alias gcob='git checkout -b'
 
