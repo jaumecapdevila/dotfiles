@@ -193,9 +193,6 @@ endif
 
 " Theme configuration
 colorscheme peaksea
-let g:space_vim_dark_background = 235
-colorscheme space-vim-dark
-hi Comment cterm=italic
 
 " Set extra options when running in GUI mode
 if has("gui_running")
