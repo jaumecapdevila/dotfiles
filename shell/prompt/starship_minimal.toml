@@ -8,16 +8,16 @@ $git_branch\
 $character"""
 
 [character]
-success_symbol="[ ❯ ](bold fg:red)"
-error_symbol="[ ❯ ](bold fg:green)"
+success_symbol="[ ❯ ](bold fg:green)"
+error_symbol="[ ❯ ](bold fg:red)"
 format="$symbol($style)"
 
 [directory]
 format="[$path]($style)"
 truncation_length=2
-truncation_symbol=""
+truncation_symbol="../"
 style="bold fg:blue"
 
 [git_branch]
-format="[ $branch]($style)"
+format="[ git:\\($branch\\)]($style)"
 style="bold fg:green"
