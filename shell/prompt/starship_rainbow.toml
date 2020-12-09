@@ -10,9 +10,9 @@ $line_break\
 ❯ """
 
 [character]
-success_symbol="[ ✓ ](bold fg:black bg:purple)"
-error_symbol="[ ✗ ](bold fg:black bg:purple)"
-format="$symbol($style)[\uE0B0](fg:purple bg:blue)"
+success_symbol="[ ✓ ](bold fg:black bg:cyan)"
+error_symbol="[ ✗ ](bold fg:black bg:cyan)"
+format="$symbol($style)[\uE0B0](fg:cyan bg:blue)"
 
 [directory]
 format="[ $path ]($style)[\uE0B0](fg:blue)"
