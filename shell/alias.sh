@@ -230,6 +230,9 @@ alias out='outdated_apps'
 alias up='update_apps'
 alias ziper='zip -er'
 
+# iTerm
+alias supported_colors='for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"'
+
 # SSH
 alias sshgk='ssh-keygen -t rsa -b 4096'
 

@@ -12,8 +12,8 @@ $line_break\
 format="┌─[\\[$path\\]]($style)"
 truncation_length=2
 truncation_symbol=""
-style="bold fg:82"
+style="bold fg:125"
 
 [git_branch]
 format="[ \\[ $branch \\] ]($style)"
-style="bold fg:154"
+style="bold fg:127"
