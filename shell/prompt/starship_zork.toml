@@ -5,6 +5,7 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
+$git_commit\
 $line_break\
 └─▪ """
 
@@ -17,3 +18,9 @@ style="bold fg:125"
 [git_branch]
 format="[ \\[ $branch \\] ]($style)"
 style="bold fg:127"
+
+[git_commit]
+only_detached=false
+tag_disabled=true
+format="─── [\\[ $hash \\]]($style)"
+style="bold fg:129"
