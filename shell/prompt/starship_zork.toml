@@ -1,0 +1,19 @@
+# General config
+add_newline = true
+
+# Prompt segments
+format = """
+$directory\
+$git_branch\
+$line_break\
+└╼ """
+
+[directory]
+format="┌─╼ [\\[ $path \\]]($style)"
+truncation_length=2
+truncation_symbol="../"
+style="bold fg:82"
+
+[git_branch]
+format="[ \\[ $branch \\] ]($style)"
+style="bold fg:154"
