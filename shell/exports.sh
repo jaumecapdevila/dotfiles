@@ -6,7 +6,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
 # Work
 export KLAM_BROWSER="Firefox"
-export KLAM_PYTHON="/usr/local/bin/python3"
+export KLAM_PYTHON="/usr/bin/python"
 
 # Utils
 export MY_SSH_USERNAME='jaume.capdevila'
