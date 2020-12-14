@@ -4,6 +4,10 @@ export ZSH_COLORIZE_STYLE="emacs"
 # Zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
+# Work
+export KLAM_BROWSER="Firefox"
+export KLAM_PYTHON="/usr/local/bin/python3"
+
 # Utils
 export MY_SSH_USERNAME='jaume.capdevila'
 export FZF_DEFAULT_OPTS='--color=bg+:24 --reverse'
@@ -52,6 +56,12 @@ PATH=$HOME/.cargo/bin:$PATH
 PATH=${DOTFILES_PATH}/git/bin:$PATH
 PATH=${DOTFILES_PATH}/bin:$PATH
 
+# Private exports
+if [[ -f "$HOME/.private/exports.sh" && -r "$HOME/.private/exports.sh" ]]; then
+   source "$HOME/.private/exports.sh"
+ fi
+
 export PATH=$PATH
 
-typeset -U PATH # Remove duplicates in $PATH
+# Remove duplicates in $PATH
+typeset -U PATH
