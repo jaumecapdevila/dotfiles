@@ -6,12 +6,12 @@ format = """
 $directory\
 $git_branch\
 $line_break\
-└╼ """
+└─▪ """
 
 [directory]
-format="┌─╼ [\\[ $path \\]]($style)"
+format="┌─[\\[$path\\]]($style)"
 truncation_length=2
-truncation_symbol="../"
+truncation_symbol=""
 style="bold fg:82"
 
 [git_branch]
