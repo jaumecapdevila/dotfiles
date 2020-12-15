@@ -22,5 +22,5 @@ style="bold fg:127"
 [git_commit]
 only_detached=false
 tag_disabled=true
-format="─── [\\[ $hash \\]]($style)"
+format="──▪[ \\[ $hash \\]]($style)"
 style="bold fg:129"

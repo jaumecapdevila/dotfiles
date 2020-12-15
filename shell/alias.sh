@@ -146,9 +146,9 @@ alias grs='git restore --staged'
 ###################
 # Github cli
 ###################
-alias ghprvw='gh pr view --web'
+alias view-pr='gh pr view --web'
 alias ghprlo='gh pr list --state open'
-alias ghprc='gh pr create'
+alias open-pr='gh pr create'
 
 # Logging
 alias gl="dot git pretty-log"
