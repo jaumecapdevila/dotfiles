@@ -10,16 +10,16 @@ $line_break\
 ❯ """
 
 [character]
-success_symbol="[ ✓ ](bold fg:0 bg:229)"
-error_symbol="[ ✗ ](bold fg:0 bg:229)"
-format="$symbol($style)[\uE0B0](fg:229 bg:45)"
+success_symbol="[ ✓ ](bold fg:254 bg:22)"
+error_symbol="[ ✗ ](bold fg:254 bg:22)"
+format="$symbol($style)[\uE0B0](fg:22 bg:82)"
 
 [directory]
-format="[ $path ]($style)[\uE0B0](fg:45)"
+format="[ $path ]($style)[\uE0B0](fg:82)"
 truncation_length=2
-truncation_symbol="../"
-style="bold fg:0 bg:45"
+truncation_symbol=""
+style="bold fg:232 bg:82"
 
 [git_branch]
 format="[\uE0B0](fg:black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
-style="bold fg:87 bg:238"
+style="bold fg:154 bg:238"
