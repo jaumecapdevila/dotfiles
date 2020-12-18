@@ -120,6 +120,7 @@ alias clone='git clone'
 alias gf='git fetch'
 alias gft='git fetch --tags'
 alias gfa='git fetch --all -p'
+alias glt='git describe --abbrev=0 --tags' # last tag from current branch
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gpl='git pull --rebase --autostash'
