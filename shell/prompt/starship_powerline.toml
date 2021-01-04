@@ -6,6 +6,7 @@ format = """
 $character\
 $directory\
 $git_branch\
+$git_commit\
 $line_break\
 ❯ """
 
@@ -23,3 +24,9 @@ style="bold fg:232 bg:82"
 [git_branch]
 format="[\uE0B0](fg:black bg:238)[ $symbol$branch ]($style)[\uE0B0](fg:238)"
 style="bold fg:154 bg:238"
+
+[git_commit]
+only_detached=false
+tag_disabled=true
+format="[\uE0B0](fg:black bg:244)[ $hash ]($style)[\uE0B0](fg:244)"
+style="bold bg:244 fg:255"
