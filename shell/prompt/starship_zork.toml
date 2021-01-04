@@ -3,25 +3,24 @@ add_newline = true
 
 # Prompt segments
 format = """
-$directory\
-$git_branch\
-$git_commit\
+┌─$directory\
+$git_branch─$git_commit\
 $line_break\
 └─▪ """
 
 [directory]
-format="┌─[\\[$path\\]]($style)"
+format="[\\[](fg:125)[$path]($style)[\\]](fg:125) "
 truncation_length=2
 truncation_symbol=""
 style="bold fg:125"
 
 [git_branch]
 symbol=""
-format="[ \\[$branch\\]]($style)"
+format="[\\[](fg:127)[$branch]($style)[\\]](fg:127)"
 style="bold fg:127"
 
 [git_commit]
 only_detached=false
 tag_disabled=true
-format="──[\\[$hash\\]]($style)"
+format="[\\[](fg:129)[$hash]($style)[\\]](fg:129)"
 style="bold fg:129"
