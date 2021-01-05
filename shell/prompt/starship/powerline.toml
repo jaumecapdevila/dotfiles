@@ -5,6 +5,7 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
+$git_status\
 $git_commit\
 $line_break\
 ❯ """
@@ -17,6 +18,10 @@ style="bold fg:black bg:blue"
 
 [git_branch]
 format="[\uE0B0](fg:black bg:238)[ $branch ]($style)"
+style="bold fg:154 bg:238"
+
+[git_status]
+format="([$all_status$ahead_behind ]($style))"
 style="bold fg:154 bg:238"
 
 [git_commit]
