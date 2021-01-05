@@ -5,7 +5,6 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
-$git_status\
 $git_commit\
 $line_break\
 ❯ """
