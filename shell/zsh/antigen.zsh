@@ -12,7 +12,7 @@ antigen bundle subnixr/minimal
 antigen apply
 
 # Theme configuration
-MNML_PROMPT=(mnml_keymap)
-MNML_RPROMPT=('mnml_cwd 1 0' mnml_files mnml_git)
+MNML_PROMPT=('mnml_cwd 1 0' mnml_files mnml_git mnml_keymap)
+MNML_RPROMPT=()
 MNML_INFOLN=()
 MNML_MAGICENTER=(mnml_me_ls)
