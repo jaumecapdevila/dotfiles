@@ -6,7 +6,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle unixorn/fzf-zsh-plugin
-# antigen bundle subnixr/minimal
+antigen bundle subnixr/minimal
 
 # Load plugins
 antigen apply

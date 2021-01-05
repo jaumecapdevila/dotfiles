@@ -14,7 +14,7 @@ source $DOTFILES_PATH/shell/init.sh
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Use startship prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # Loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
