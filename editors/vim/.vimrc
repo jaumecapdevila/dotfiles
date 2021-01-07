@@ -10,7 +10,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
-Plug 'liuchengxu/space-vim-dark'
+Plug 'liuchengxu/space-vim-theme'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -180,9 +180,6 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Load Dracula Pro theme
-packadd! dracula_pro
-
 " Enable syntax highlighting
 syntax enable
 
