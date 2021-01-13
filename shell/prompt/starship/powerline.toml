@@ -10,13 +10,13 @@ $line_break\
 ❯ """
 
 [directory]
-format="[ $path ]($style)[\uE0B0](fg:blue)"
+format="[ \uf07c  $path ]($style)[\uE0B0](fg:blue)"
 truncation_length=2
 truncation_symbol=""
 style="bold fg:black bg:blue"
 
 [git_branch]
-format="[\uE0B0](fg:black bg:238)[ $branch ]($style)"
+format="[\uE0B0](fg:black bg:238)[ \ue725 $branch ]($style)"
 style="bold fg:154 bg:238"
 
 [git_status]
