@@ -189,7 +189,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " Theme configuration
-colorscheme peaksea
+set background=dark
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
