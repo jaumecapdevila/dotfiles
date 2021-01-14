@@ -13,6 +13,9 @@ source $DOTFILES_PATH/shell/init.sh
 # Antigen configuration
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
+# Theme configuration
+[[ ! -f "$DOTFILES_PATH/shell/prompt/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/prompt/p10k/config.zsh"
+
 # Random tab colors
 source $DOTFILES_PATH/shell/zsh/random_colors.zsh
 
