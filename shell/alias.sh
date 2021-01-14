@@ -16,6 +16,7 @@ alias lf='ls -d */'
 alias lc='colorls -lA --sd'
 alias ctree='exa -T'
 alias j='z'
+alias wls='watch -n 5 ls -la'
 
 # Jumps
 alias ..='cd ..'
