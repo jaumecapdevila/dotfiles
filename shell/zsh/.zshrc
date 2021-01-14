@@ -17,8 +17,8 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 source $DOTFILES_PATH/shell/zsh/random_colors.zsh
 
 # Load theme configuration
-# [[ ! -f "$DOTFILES_PATH/shell/prompt/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/prompt/p10k/config.zsh"
-eval "$(starship init zsh)"
+[[ ! -f "$DOTFILES_PATH/shell/prompt/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/prompt/p10k/config.zsh"
+# eval "$(starship init zsh)"
 
 # Loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -26,3 +26,5 @@ eval "$(starship init zsh)"
 
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
