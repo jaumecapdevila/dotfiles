@@ -172,7 +172,7 @@ alias python='python3'
 alias ci="composer install"
 alias cu="composer update"
 alias php8cli="docker run --rm -it php:8.0.0RC4-cli php -a"
-alias php74="/usr/local/Cellar/php@7.4/7.4.14/bin/php"
+alias php74="/usr/local/Cellar/php@7.4/7.4.14_1/bin/php"
 
 # Golang
 alias gog='go get'
