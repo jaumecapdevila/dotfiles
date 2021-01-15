@@ -189,8 +189,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " Theme configuration
-set background=dark
-colorscheme space_vim_theme.
+colorscheme peaksea
 
 " Set extra options when running in GUI mode
 if has("gui_running")
