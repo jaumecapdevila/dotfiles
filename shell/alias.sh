@@ -53,7 +53,7 @@ alias dci="docker inspect"
 alias dciip="docker inspect -f \"{{ .NetworkSettings.IPAddress }}\""
 alias de="docker exec -it"
 alias drm="docker rm"
-alias dsp="docker stop"
+alias dstp="docker stop"
 
 # Networks
 alias dnls="docker network ls"
