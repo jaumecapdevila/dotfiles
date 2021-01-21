@@ -11,6 +11,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/peaksea'
 Plug 'jnurmine/Zenburn'
 Plug 'liuchengxu/space-vim-theme'
+Plug 'gerardbm/vim-atomic'
 
 " Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -188,8 +189,15 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-" Theme configuration
-colorscheme peaksea
+if has("termguicolors")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+let g:atomic_italic = 0
+colorscheme atomic
+AtomicDarkBlueHard
 
 " Set extra options when running in GUI mode
 if has("gui_running")

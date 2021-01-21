@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Delete all branches older than $1 months. Defaults to 12 months.
+MONTHS="${1:-12}"
+
+for BRANCH in $(git branch --remote --merged | egrep -v "(^\*|master|dev)" | sed 's/origin\///'); do
+  if [[ ! $(git log -1 --since="$MONTHS month ago" -s origin/$BRANCH) ]]; then
+    git push --delete origin $BRANCH
+  fi
+done

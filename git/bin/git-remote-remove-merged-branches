@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# This script removes all the remote branches that have been merged into master
+git branch -r --merged |
+    egrep -v "origin/HEAD|origin/master" |
+    sed 's/origin\///g' |
+    xargs git push --no-verify origin --delete
