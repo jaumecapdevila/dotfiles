@@ -195,9 +195,8 @@ if has("termguicolors")
     set termguicolors
 endif
 
-let g:atomic_italic = 0
-colorscheme atomic
-AtomicDarkBlueHard
+set background=dark
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
