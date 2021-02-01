@@ -17,7 +17,7 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 [[ ! -f "$DOTFILES_PATH/shell/prompt/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/prompt/p10k/config.zsh"
 
 # Random tab colors
-source $DOTFILES_PATH/shell/zsh/random_colors.zsh
+# source $DOTFILES_PATH/shell/zsh/random_colors.zsh
 
 # Loads nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
