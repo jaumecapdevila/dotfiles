@@ -196,7 +196,7 @@ if has("termguicolors")
 endif
 
 set background=dark
-colorscheme solarized
+colorscheme darkblue
 
 " Set extra options when running in GUI mode
 if has("gui_running")
