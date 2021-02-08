@@ -11,7 +11,6 @@ export KLAM_PYTHON="/usr/bin/python"
 # Utils
 export MY_SSH_USERNAME='jaume.capdevila'
 export FZF_DEFAULT_OPTS='--color=bg+:24 --reverse'
-export SCRIPTING="$HOME/Scripts"
 export PIPENV_IGNORE_VIRTUALENVS=1
 
 # System

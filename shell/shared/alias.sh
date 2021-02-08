@@ -184,7 +184,7 @@ alias golm='go list -m all'
 ###################
 # Tmux
 ###################
-alias start-tmux='tmux new -A -s main'
+alias nmux='tmux attach || tmux new -s main'
 alias ta='tmux attach -t'
 alias tad='tmux attach -d -t'
 alias ts='tmux new-session -s'

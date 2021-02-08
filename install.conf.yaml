@@ -7,7 +7,6 @@
 
 - link:
     ~/.zshrc: shell/zsh/.zshrc
-    ~/.zlogin: shell/zsh/.zlogin
     ~/.bashrc: shell/bash/.bashrc
     ~/.bash_profile: shell/bash/.bash_profile
     ~/.tmux.conf: tmux/tmux.conf
@@ -19,3 +18,6 @@
 - create:
     - ~/.z
     - ~/.hushlogin
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
