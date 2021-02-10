@@ -91,9 +91,8 @@
     ]
    }
    {
-    :des "Caps to Fn or Escape + Vim navigation mode"
+    :des "Vim navigation mode"
     :rules [
-     [:##caps_lock :fn nil {:alone :escape}]
      [:!Fh :delete_or_backspace]
      [:!Fj :left_arrow]
      [:!Fi :up_arrow]
