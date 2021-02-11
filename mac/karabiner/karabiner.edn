@@ -12,11 +12,13 @@
     ;; To obtain the app ID: `grep -A1 "CFBundleIdentifier" /Applications/AppName.app/Contents/Info.plist`
     :Firefox  ["org.mozilla.firefox"]
     :Finder   ["com.apple.finder"]
+    :iTerm    ["com.googlecode.iterm2"]
     :Notion   ["notion.id"]
     :Slack    ["com.tinyspeck.slackmacgap"]
   }
 
   :froms {
+    :sublime-delete-line {:modi [:left_shift :left_control] :key :k}
     :search {:modi :left_command :key :f}
   }
 
@@ -73,9 +75,9 @@
       ]}
 
     ;; ------------ Application specific ------------
-    {:des "[Firefox] Search" :rules [:Firefox [:search :!Cl]]}
+    {:des "[iTerm] Delete line" :rules [:iTerm [:sublime-delete-line :!Tw]]}
   ]
-  ;; ------------ Modifiers Cheatsheet ------------
+  ;; ------------ Modifiers Cheatsheest ------------
   ;; !  stand for mandatory
   ;; #  stand for optional
   ;; !! stand for mandatory command + control + optional + shift (hyper)
