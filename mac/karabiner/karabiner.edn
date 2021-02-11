@@ -17,7 +17,7 @@
   }
 
   :froms {
-    :delete-line {:modi :left_command :key :delete_or_backspace}
+    :search {:modi :left_command :key :f}
   }
 
   ;; A simlayer is a combination of keys with a small delay between them
@@ -39,7 +39,13 @@
         [:t [:open "iTerm"]]
         [:f [:open "Firefox"]]
         [:s [:open "Sublime Text"]]
+        [:d [:open "Todoist"]]
+        [:l [:open "Slack"]]
+        [:m [:open "Spotify"]]
       ]}
+
+    ;; ------------ Utils ------------
+
     ;; ------------ Remaps ------------
     {:des "Caps lock to Fn"
       :rules [[:caps_lock :fn]]}
@@ -67,7 +73,7 @@
       ]}
 
     ;; ------------ Application specific ------------
-    {:des "[Firefox] Show recent tabs" :rules [:Firefox [:delete-line :!CSa]]}
+    {:des "[Firefox] Search" :rules [:Firefox [:search :!Cl]]}
   ]
   ;; ------------ Modifiers Cheatsheet ------------
   ;; !  stand for mandatory
