@@ -1,29 +1,59 @@
 {:profiles
-  {:default
-    {:alone              500
-      :default            true
-      :delay              200
-      :held               500
-      :sim                200
-      :simlayer-threshold 220
-    }}
+  {:default {
+    :alone              500
+    :default            true
+    :delay              200
+    :held               500
+    :sim                200
+    :simlayer-threshold 220
+  }}
+
+  :applications {
+    ;; To obtain the app ID: `grep -A1 "CFBundleIdentifier" /Applications/AppName.app/Contents/Info.plist`
+    :Firefox  ["org.mozilla.firefox"]
+    :Finder   ["com.apple.finder"]
+    :Notion   ["notion.id"]
+    :Slack    ["com.tinyspeck.slackmacgap"]
+  }
+
+  :froms {
+    :delete-line {:modi :left_command :key :delete_or_backspace}
+  }
+
+  ;; A simlayer is a combination of keys with a small delay between them
+  ;; example: o + t = open terminal
+  :simlayers {
+    :open {:key :o}
+  }
+
+  ;; Templates to be used in the rules
+  :templates {
+    :open "open -a '%s.app'"
+  }
 
   :main
   [
+    ;; ------------ Launchers ------------
+    {:des "Open things"
+      :rules [:open
+        [:t [:open "iTerm"]]
+        [:f [:open "Firefox"]]
+        [:s [:open "Sublime Text"]]
+      ]}
     ;; ------------ Remaps ------------
     {:des "Caps lock to Fn"
       :rules [[:caps_lock :fn]]}
 
-    {:des "Disable arrows"
-      :rules [
-        [:left_arrow :vk_none]
-        [:up_arrow :vk_none]
-        [:down_arrow :vk_none]
-        [:right_arrow :vk_none]
-      ]}
+    ;; {:des "Disable arrows"
+    ;;   :rules [
+    ;;     [:left_arrow :vk_none]
+    ;;     [:up_arrow :vk_none]
+    ;;     [:down_arrow :vk_none]
+    ;;     [:right_arrow :vk_none]
+    ;;   ]}
 
-    {:des "Disable Delete"
-      :rules [[:delete_or_backspace :vk_none]]}
+    ;; {:des "Disable Delete"
+    ;;   :rules [[:delete_or_backspace :vk_none]]}
 
     {:des "Fn + h to Delete"
       :rules [[:!Fh :delete_or_backspace]]}
@@ -35,15 +65,10 @@
         [:!Fk :down_arrow]
         [:!Fl :right_arrow]
       ]}
-   ;; ------------ Launchers ------------
-   {:des "[launch] iTerm"
-    :rules [[:!CTOspacebar "open -a 'iTerm.app'"]]}
-    {:des "[launch] Firefox"
-      :rules [[:!CTOf "open -a 'Firefox.app'"]]}
-   {:des "[launch] Sublime"
-      :rules [[:!CTOs "open -a 'Sublime Text.app'"]]}
-  ]
 
+    ;; ------------ Application specific ------------
+    {:des "[Firefox] Show recent tabs" :rules [:Firefox [:delete-line :!CSa]]}
+  ]
   ;; ------------ Modifiers Cheatsheet ------------
   ;; !  stand for mandatory
   ;; #  stand for optional
