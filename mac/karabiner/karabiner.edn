@@ -1,104 +1,69 @@
-;; !  | means mandatory
-;; #  | means optional
-;; C  | left_command
-;; T  | left_control
-;; O  | left_option
-;; S  | left_shift
-;; F  | fn
-;; Q  | right_command
-;; W  | right_control
-;; E  | right_option
-;; R  | right_shift
-;; !! | mandatory command + control + optional + shift (hyper)
-;; ## | optional any
+{:profiles
+  {:default
+    {:alone              500
+      :default            true
+      :delay              200
+      :held               500
+      :sim                200
+      :simlayer-threshold 220
+    }}
 
-{
- :profiles {
-  :nerd {
-   :default true
-   :sim     50
-   :delay   80
-   :alone   100
-   :held    70
-   }
-  }
+  :main
+  [
+    ;; ------------ Remaps ------------
+    {:des "Caps lock to Fn"
+      :rules [[:caps_lock :fn]]}
 
- :templates {
-  :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
-  :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
-  :open "open \"%s\""
- }
+    {:des "Disable arrows"
+      :rules [
+        [:left_arrow :vk_none]
+        [:up_arrow :vk_none]
+        [:down_arrow :vk_none]
+        [:right_arrow :vk_none]
+      ]}
 
- ;; layers are basically "hyper" keys
- ;; press this in combination with something else and depending on your rule, make things happen
- :layers {}
+    {:des "Disable Delete"
+      :rules [[:delete_or_backspace :vk_none]]}
 
- ;; simlayers are basically "hyper" keys
- ;; layers works too, but only recommended for non-typing keys like . or tab
- ;; or keys like z which are used less often
- :simlayers {
-  :alfred-mode {:key :a}
-  :open-mode {:key :q}
-  :semicolon-mode {:key :semicolon}
-  :dot-mode {:key :period}
- }
+    {:des "Fn + h to Delete"
+      :rules [[:!Fh :delete_or_backspace]]}
 
- ;; main contains multiple manipulators
- :main [
-   ;; each manipulator has a description and multiple rules
+    {:des "Fn + i/j/k/l to arrows"
+      :rules [
+        [:!Fj :left_arrow]
+        [:!Fi :up_arrow]
+        [:!Fk :down_arrow]
+        [:!Fl :right_arrow]
+      ]}
+   ;; ------------ Launchers ------------
+   {:des "[launch] iTerm"
+    :rules [[:!CTOspacebar "open -a 'iTerm.app'"]]}
+    {:des "[launch] Firefox"
+      :rules [[:!CTOf "open -a 'Firefox.app'"]]}
+   {:des "[launch] Sublime"
+      :rules [[:!CTOs "open -a 'Sublime Text.app'"]]}
+  ]
 
-    ;;{:des "..."                               ;; -> description
-    ;; :rules[
-    ;;          [<from>  <to>  <conditions>]    ;; -> rule 1
-    ;;          [<from>  <to>  <conditions>]    ;; -> rule 2
-    ;; ]}
-
-    ;; rule [:period ["period-mode" 1] nil {:afterup ["period-mode" 0] :alone :period}]
-    ;;       |_____| |_______________| |_| |_________________________________________|
-    ;;        <from>    <to>      <conditions>         <other options>
-    ;;
-    ;; karabiner docs: ;; https://pqrs.org/osx/karabiner/json.html#complex_modifications-manipulator-definition
-    ;; <other options> includs ~to_if_alone~, ~to_if_held_down~,~to_after_key_up~, ~to_delayed_action~ and ~parameters~.
-    ;;
-
-    ;; (custom variables) & modifiers -> Advanced
-    ;; https://github.com/yqrashawn/GokuRakuJoudo/blob/master/examples.org#custom-variable
-
-   {
-    :des "Open mode"
-    :rules [
-     :open-mode
-       [:n [:km "Open: Notion"]]
-       [:t [:km "Open: iTerm"]]
-       [:f [:km "Open: Firefox"]]
-       [:c [:km "Open: VS Code"]]
-       [:s [:km "Open: Spotify"]]
-       [:w [:km "Open: WhatsApp"]]
-       [:e [:km "Open: Sublime Text"]]
-       [:m [:km "Open: Postman"]]
-       [:1 [:km "Open: 1Password"]]
-       [:d [:km "Open: DBeaver"]]
-       [:l [:km "Open: Slack"]]
-       [:p [:km "Open: PhpStorm"]]
-    ]
-   }
-   {
-    :des "Dotfiles"
-    :rules [
-     :dot-mode
-       [:f [:km "Edit: Dotfiles"]]
-       [:d [:km "Edit: Digital Garden"]]
-    ]
-   }
-   {
-    :des "Vim navigation mode"
-    :rules [
-     [:!Fh :delete_or_backspace]
-     [:!Fj :left_arrow]
-     [:!Fi :up_arrow]
-     [:!Fl :right_arrow]
-     [:!Fk :down_arrow]
-    ]
-   }
- ]
-}
+  ;; ------------ Modifiers Cheatsheet ------------
+  ;; !  stand for mandatory
+  ;; #  stand for optional
+  ;; !! stand for mandatory command + control + optional + shift (hyper)
+  ;; ## stand for optional any
+  ;; C T O S for left command control option shift
+  ;; Q W E R for right command control option shift
+  ;; F for fn
+  ;; P for caps_lock
+  ;; need to prefix C T O S F Q W E R with ! or #
+  :cheatsheet
+  {:!Ca        "command a"
+  :!Ta        "control a"
+  :!Oa        "option a"
+  :!Sa        "shift a"
+  :#Sa        "shift a"
+  :!CTOa      "command control option a"
+  :!Cspacebar "command space"
+  :!Fa        "fn a"
+  :##a        "keycode a optional any"
+  :!!a        "mandatory hyper (control command option shift) a "
+  :template   {:des "Description of your action"
+               :rules [[:!Cspacebar "command to execute"]]}}}
