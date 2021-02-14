@@ -140,7 +140,8 @@ module.exports = {
   plugins: [
     'hypercwd',
     'hyperpunk',
-    'hyperline',
+    'hyper-statusline',
+    'hyper-tabs-enhanced'
   ],
 
   // in development, you can create a directory under
