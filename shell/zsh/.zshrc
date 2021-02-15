@@ -13,7 +13,7 @@ source $DOTFILES_PATH/shell/zsh/antigen.zsh
 [[ ! -f "$DOTFILES_PATH/shell/themes/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/themes/p10k/config.zsh"
 
 # Random tab colors
-# source $DOTFILES_PATH/shell/zsh/random_colors.zsh
+source $DOTFILES_PATH/shell/zsh/random_colors.zsh
 
 # Load sdks
 source $DOTFILES_PATH/shell/zsh/sdks.zsh
