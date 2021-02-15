@@ -129,6 +129,11 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    // Plugins configuration
+    hyperSearchUI: {
+      buttonBorderRadius: 0,
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -141,7 +146,8 @@ module.exports = {
     'hypercwd',
     'hyperpunk',
     'hyper-statusline',
-    'hyper-tabs-enhanced'
+    'hyper-tabs-enhanced',
+    'hyper-search'
   ],
 
   // in development, you can create a directory under
