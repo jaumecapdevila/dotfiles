@@ -44,6 +44,11 @@
         [:d [:open "Todoist"]]
         [:l [:open "Slack"]]
         [:m [:open "Spotify"]]
+        [:c [:open "Visual Studio Code"]]
+        [:p [:open "PhpStorm"]]
+        [:1 [:open "1Password 7"]]
+        [:n [:open "Notion"]]
+        [:2 [:open "Todoist"]]
       ]}
 
     ;; ------------ Utils ------------
