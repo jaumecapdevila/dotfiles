@@ -44,7 +44,7 @@ export OMS_CODE="$HOME/Projects/Magento/oms"
 export GOPATH="$HOME/projects/golang"
 
 # Propmt
-export STARSHIP_CONFIG="$DOTFILES_PATH/shell/prompt/starship/powerline.toml"
+export STARSHIP_CONFIG="$DOTFILES_PATH/shell/themes/starship/starship.toml"
 
 # Path
 PATH=/usr/local/sbin:$PATH
