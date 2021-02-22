@@ -10,7 +10,7 @@ source $DOTFILES_PATH/shell/init.sh
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Theme configurations
-# [[ ! -f "$DOTFILES_PATH/shell/themes/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/themes/p10k/config.zsh"
+[[ ! -f "$DOTFILES_PATH/shell/themes/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/themes/p10k/config.zsh"
 
 # Random tab colors
 source $DOTFILES_PATH/shell/zsh/random_colors.zsh

@@ -1,2 +1,77 @@
 # General config
 add_newline = true
+
+# Prompt segments
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$golang\
+$helm\
+$java\
+$julia\
+$php\
+$python\
+$rust\
+$terraform\
+$memory_usage\
+$aws\
+$env_var\
+$cmd_duration\
+$line_break\
+$character"""
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "blue"
+
+[docker]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[git_branch]
+symbol = " "
+format = "[\\[$symbol$branch\\]]($style) "
+style = "green"
+
+[golang]
+symbol = " "
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[php]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
