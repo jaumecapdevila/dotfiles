@@ -17,6 +17,11 @@ function antigen_load {
 ###################
 
 # PHP
+function switch_php {
+    brew unlink $1
+    brew link $2 --force --overwrite
+}
+
 function php8 {
   docker run --rm -w="/app" -v "$PWD:/app/" php:8.0.0RC4-cli php "$1"
 }

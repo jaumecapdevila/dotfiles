@@ -40,14 +40,18 @@
       :rules [:open
         [:t [:open "iTerm"]]
         [:f [:open "Firefox"]]
-        [:s [:open "Sublime Text"]]
         [:l [:open "Slack"]]
-        [:m [:open "Spotify"]]
+        ;; Code editors
+        [:s [:open "Sublime Text"]]
         [:c [:open "Visual Studio Code"]]
         [:p [:open "PhpStorm"]]
+        [:m [:open "Postman"]]
+        [:d [:open "TablePlus"]]
+        ;; Utils
         [:1 [:open "1Password 7"]]
         [:2 [:open "Notion"]]
         [:3 [:open "Todoist"]]
+        [:4 [:open "WhatsApp"]]
       ]}
 
     ;; ------------ Utils ------------
