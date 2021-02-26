@@ -36,6 +36,10 @@ export TERM=xterm-256color
 export LANG=en_GB
 export LC_CTYPE=UTF-8
 
+# Ruby exports
+export GEM_HOME=$HOME/.gems
+export PATH=$HOME/.gems/bin:$PATH
+
 # Work
 export VAULT_ADDR="https://vault.or1.adobe.net"
 export OMS_CODE="$HOME/Projects/Magento/oms"
