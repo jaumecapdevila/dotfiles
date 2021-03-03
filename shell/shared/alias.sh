@@ -29,7 +29,7 @@ alias udr='cd ~/Projects/Personal/Unaderecetas'
 alias pers='cd ~/Projects/Personal'
 alias .f='cd $DOTFILES_PATH'
 alias magento='cd ~/Projects/Magento'
-alias sublime='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
+alias sublime='cd ~/Library/Application\ Support/Sublime\ Text/Packages/User'
 
 ###################
 # Docker
