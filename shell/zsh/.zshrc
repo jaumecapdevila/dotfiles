@@ -10,7 +10,7 @@ source $DOTFILES_PATH/shell/init.sh
 source $DOTFILES_PATH/shell/zsh/antigen.zsh
 
 # Theme configurations
-zstyle :prompt:pure:path color cyan
+zstyle :prompt:pure:path color blue
 zstyle :prompt:pure:git:stash show yes
 # [[ ! -f "$DOTFILES_PATH/shell/themes/p10k/config.zsh" ]] || source "$DOTFILES_PATH/shell/themes/p10k/config.zsh"
 
