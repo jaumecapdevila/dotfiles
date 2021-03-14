@@ -105,6 +105,7 @@ alias gaa='git add -A'
 
 # Committing
 alias gc='git commit -v'
+alias gce='git commit -v --allow-empty'
 alias gac='git commit -a -v'
 alias gc!='git commit -v --amend'
 alias gcm='git commit -m'

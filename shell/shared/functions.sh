@@ -30,6 +30,10 @@ function php72 {
   docker run --rm -w="/app" -v "$PWD:/app/" php:7.2.34-cli php "$1"
 }
 
+function php70 {
+  docker run --rm -w="/app" -v "$PWD:/app/" php:7.0.33-cli php "$1"
+}
+
 # Composer
 function old_composer {
   docker run --rm -w="/app" -v "$(PWD):/app" composer:1.10.17 composer $@
