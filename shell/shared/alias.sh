@@ -149,9 +149,12 @@ alias grs='git restore --staged'
 ###################
 # Github cli
 ###################
-alias openpr='gh pr create'
-alias viewpr='gh pr view --web'
-alias listpr='gh pr list --state open'
+alias pr:open='gh pr create'
+alias pr:view='gh pr view --web'
+alias pr:diff='gh pr diff'
+alias pr:close='gh pr close'
+alias pr:list='gh pr list --state open'
+alias repo:clone='gh repo clone'
 
 # Logging
 alias gl="dot git pretty-log"
@@ -172,6 +175,9 @@ alias python='python3'
 # PHP
 alias ci="composer install"
 alias cu="composer update"
+alias cr="composer require"
+alias crm="composer remove"
+alias crd="composer require --dev"
 alias php8cli="docker run --rm -it php:8.0.0RC4-cli php -a"
 alias php74="/usr/local/Cellar/php@7.4/7.4.15/bin/php"
 alias php72="/usr/local/Cellar/php@7.2/7.2.34_1/bin/php"
