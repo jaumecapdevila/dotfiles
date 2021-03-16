@@ -149,6 +149,7 @@ alias grs='git restore --staged'
 ###################
 # Github cli
 ###################
+# PR
 alias pr:open='gh pr create'
 alias pr:view='gh pr view --web'
 alias pr:diff='gh pr diff'
@@ -158,7 +159,13 @@ alias pr:ci='gh pr checks'
 alias pr:comment='gh pr comment --web'
 alias pr:close='gh pr close'
 alias pr:list='gh pr list --state open'
+# Repos
 alias repo:clone='gh repo clone'
+# Releases
+alias rl:create='gh release create'
+alias rl:delete='gh release delete'
+alias rl:view='gh release view --web'
+alias rl:list='gh release list'
 
 # Logging
 alias gl="dot git pretty-log"
