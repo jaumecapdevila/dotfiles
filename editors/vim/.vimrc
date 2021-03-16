@@ -181,6 +181,8 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add dracula
+packadd! dracula_pro
 " Enable syntax highlighting
 syntax enable
 
@@ -195,8 +197,10 @@ if has("termguicolors")
     set termguicolors
 endif
 
-set background=dark
-colorscheme default
+syntax enable
+
+let g:dracula_colorterm = 0
+colorscheme dracula_pro
 
 " Set extra options when running in GUI mode
 if has("gui_running")

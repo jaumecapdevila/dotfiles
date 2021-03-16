@@ -35,6 +35,6 @@ function php70 {
 }
 
 # Composer
-function old_composer {
+function composer1 {
   docker run --rm -w="/app" -v "$(PWD):/app" composer:1.10.17 composer $@
 }

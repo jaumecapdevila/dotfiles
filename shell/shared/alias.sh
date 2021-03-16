@@ -178,9 +178,6 @@ alias cu="composer update"
 alias cr="composer require"
 alias crm="composer remove"
 alias crd="composer require --dev"
-alias php8cli="docker run --rm -it php:8.0.0RC4-cli php -a"
-alias php74="/usr/local/Cellar/php@7.4/7.4.15/bin/php"
-alias php72="/usr/local/Cellar/php@7.2/7.2.34_1/bin/php"
 
 # Golang
 alias gog='go get'
