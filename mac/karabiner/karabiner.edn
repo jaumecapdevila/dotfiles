@@ -44,7 +44,7 @@
         ;; Code editors
         [:s [:open "Sublime Text"]]
         [:c [:open "Visual Studio Code"]]
-        [:p [:open "PhpStorm"]]
+        [:e [:open "PhpStorm"]]
         [:m [:open "Postman"]]
         [:d [:open "TablePlus"]]
         ;; Utils
