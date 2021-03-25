@@ -202,7 +202,7 @@ syntax enable
 let g:dracula_colorterm = 0
 " colorscheme dracula_pro
 set background=dark
-colorscheme solarized
+colorscheme default
 
 " Set extra options when running in GUI mode
 if has("gui_running")
