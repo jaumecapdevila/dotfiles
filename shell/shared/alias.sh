@@ -184,6 +184,7 @@ alias gclf='git clean -f'
 alias python='python3'
 
 # PHP
+alias php:has="php -m | grep -i"
 alias ci="composer install"
 alias cu="composer update"
 alias cr="composer require"
