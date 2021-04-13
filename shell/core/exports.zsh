@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Pygments
 export ZSH_COLORIZE_STYLE="emacs"
 
