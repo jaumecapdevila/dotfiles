@@ -47,6 +47,7 @@
     # custom functions
     changelog = "!git log --oneline --no-merges $1..HEAD"
     difference = "!git log --oneline $1..$2"
+    ahead-of-master = "log --oneline origin/master..HEAD"
 
     # refresh the date of commits
     refresh = "!git rebase HEAD~$1 --ignore-date"
