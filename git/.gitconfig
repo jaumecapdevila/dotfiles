@@ -60,17 +60,6 @@
     wdiff = diff --word-diff
     upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 
-    # github(hub) shortcuts
-    view = browse --
-    code = browse --
-    issues = browse -- issues
-    pulls = browse -- pulls
-    wiki = browse -- wiki
-    projects = browse -- projects
-    insights = browse -- insights
-    settings = browse -- settings
-    releases = browse -- releases
-
 [fetch]
     prune = true
 
@@ -97,7 +86,6 @@
 
 [delta]
     features = side-by-side line-numbers decorations
-    syntax-theme = Dracula
     plus-style = syntax "#003800"
     minus-style = syntax "#3f0001"
 
