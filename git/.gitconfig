@@ -44,22 +44,7 @@
     t = tag
     set-url = remote set-url origin
 
-    # custom functions
-    changelog = "!git log --oneline --no-merges $1..HEAD"
-    difference = "!git log --oneline $1..$2"
     ahead-of-master = "log --oneline origin/master..HEAD"
-
-    # refresh the date of commits
-    refresh = "!git rebase HEAD~$1 --ignore-date"
-    local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
-    mindiff = diff -w --word-diff-regex=. --color-words -U0
-    overview = log --all --since='2 weeks' --oneline --no-merges
-    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
-    sneak = commit -a --amend --no-edit
-    stats = shortlog -sn
-    today = "!git log --since='00:00:00' --all --no-merges --oneline --author=$(git config user.email)"
-    wdiff = diff --word-diff
-    upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 
 [fetch]
     prune = true

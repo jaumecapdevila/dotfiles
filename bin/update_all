@@ -25,10 +25,6 @@ echo '♢ Updating Brew Cask apps'
 brew outdated --cask | grep -v real-vnc | xargs -n1 brew cask install --force
 
 echo ''
-echo '♢ ZSH Zim'
-zsh ${ZIM_HOME}/tools/zim_update
-
-echo ''
 echo '♢ tldr'
 tldr --update
 

@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-source "$DOTFILES_PATH/scripts/core/_main.sh"
+source "$DOTFILES_PATH/scripts/core/docs.sh"
 
 ##? Shows the size of the current directory
 #?? 1.0.0
