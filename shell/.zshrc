@@ -13,9 +13,9 @@ source "$DOTFILES_PATH/shell/core/alias.zsh"
 source "$DOTFILES_PATH/shell/core/exports.zsh"
 source "$DOTFILES_PATH/shell/core/functions.zsh"
 
+# Config
+source $DOTFILES_PATH/shell/config/styling.zsh
+
 # Deps
 source $DOTFILES_PATH/shell/dep/antigen.zsh
 source $DOTFILES_PATH/shell/dep/sdks.zsh
-
-# Config
-source $DOTFILES_PATH/shell/config/styling.zsh
