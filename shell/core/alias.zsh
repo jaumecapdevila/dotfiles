@@ -116,7 +116,7 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
 # Comparing
-alias gd='dot git pretty-diff'
+alias gd='git-pretty-diff'
 alias gds='git diff --staged --color'
 
 # Working with remotes
@@ -135,9 +135,9 @@ alias gplum='git pull upstream master'
 # Working with branches
 alias gb='git branch'
 alias gbd='git branch -d'
-alias gbD='dot git remove-branch'
+alias gbD='git:branch-remove'
 alias gm='git merge --no-ff'
-alias gco='dot git checkout-branch'
+alias gco='git-checkout-branch'
 alias gcom='git checkout master'
 alias gcob='git checkout -b'
 
@@ -170,7 +170,7 @@ alias rl:view='gh release view --web'
 alias rl:list='gh release list'
 
 # Logging
-alias gl="dot git pretty-log"
+alias gl="git-pretty-log"
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias glgp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -p'
 

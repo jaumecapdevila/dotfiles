@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source "$DOTFILES_PATH/scripts/core/docs.sh"
+set -euo pipefail
+
+source $DOTFILES_PATH/scripting/_main.sh
 
 ##? Clears command history
 #?? 1.0.0

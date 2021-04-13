@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-source "$DOTFILES_PATH/scripts/core/docs.sh"
-
 ##? Kill process named
 #?? 1.0.0
 ##?

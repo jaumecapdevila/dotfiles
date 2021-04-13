@@ -2,23 +2,18 @@
 
 set -euo pipefail
 
-source "$DOTFILES_PATH/scripts/core/_main.sh"
+source "$DOTFILES_PATH/scripting/_main.sh"
 
 ##? Remove a git branch
 #?? 1.0.0
 ##?
 ##? Usage:
-##?    remove-branch
+##?    git::branch-remove
 
 docs::eval "$@"
 
 if (! git::is_in_repo); then
   echo "Not in a git repo!"
-  exit 0
-fi
-
-if (! git::is_main_branch); then
-  echo "Checkout to the main branch to execute this command!"
   exit 0
 fi
 
