@@ -11,9 +11,9 @@ alias cat='bat --theme=zenburn'
 ###################
 
 alias p='pwd'
-alias ll='exa -l'
-alias lo='exa -l --sort=old'
-alias la='exa -la'
+alias ll='exa -l --icons'
+alias lo='exa -l --sort=old --icons'
+alias la='exa -la --icons'
 alias lf='ls -d */'
 alias lc='colorls -lA --sd'
 alias ctree='exa -T'
