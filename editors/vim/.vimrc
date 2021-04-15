@@ -204,16 +204,16 @@ syntax enable
 " let g:dracula_colorterm = 0
 " colorscheme dracula_pro
 
-" let g:monochrome_italic_comments = 1
-" colorscheme monochrome
+let g:monochrome_italic_comments = 1
+colorscheme monochrome
 
 " let g:monotone_color = [120, 100, 70] " Sets theme color to bright green
 " let g:monotone_secondary_hue_offset = 200 " Offset secondary colors by 200 degrees
 " let g:monotone_emphasize_comments = 1 " Emphasize comments
 " colorscheme monotone
 
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
