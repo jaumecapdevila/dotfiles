@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 LP_ENABLE_JOBS=0
 LP_ENABLE_HG=0
 LP_ENABLE_SVN=0
