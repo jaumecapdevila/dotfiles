@@ -245,6 +245,7 @@ alias catimg='imgcat'
 alias optimize_zsh='source ${ZDOTDIR:-${HOME}}/.zlogin'
 alias phpqa='docker run --init -it --rm -v $(pwd):/project -v $(pwd)/tmp-phpqa:/tmp -w /project jakzal/phpqa:alpine'
 alias md='glow -s dark -w 80'
+alias empty='cat /dev/null >'
 
 # Mac
 alias wall='change_wallpaper'
