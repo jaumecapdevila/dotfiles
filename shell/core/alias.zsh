@@ -148,6 +148,16 @@ alias gt='git tag'
 alias gr='git restore'
 alias grs='git restore --staged'
 
+# Logging
+alias gl="git-pretty-log"
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias glgp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -p'
+
+# Cleanup
+alias gcl='git clean'
+alias gclf='git clean -f'
+alias gclfd='git clean -fd'
+
 ###################
 # Github cli
 ###################
@@ -168,15 +178,6 @@ alias rlc='gh release create'
 alias rld='gh release delete'
 alias rlv='gh release view --web'
 alias rll='gh release list'
-
-# Logging
-alias gl="git-pretty-log"
-alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias glgp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -p'
-
-# Cleanup
-alias gcl='git clean'
-alias gclf='git clean -f'
 
 ###################
 # Languages
