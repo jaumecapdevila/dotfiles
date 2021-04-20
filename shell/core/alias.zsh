@@ -148,6 +148,11 @@ alias gt='git tag'
 alias gr='git restore'
 alias grs='git restore --staged'
 
+# Rebase
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbq='git rebase --quit'
+
 # Logging
 alias gl="git-pretty-log"
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
