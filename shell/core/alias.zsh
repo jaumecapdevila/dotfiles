@@ -4,7 +4,8 @@
 # General
 ###################
 
-alias cat='bat --theme=zenburn'
+alias catr='cat'
+alias cat='bat --theme=DarkNeon --show-all'
 
 ###################
 # Navigation
