@@ -18,4 +18,5 @@ source $DOTFILES_PATH/shell/config/styling.zsh
 
 # Deps
 source $DOTFILES_PATH/shell/dep/antigen.zsh
-# source $DOTFILES_PATH/shell/dep/sdks.zsh
+source $DOTFILES_PATH/shell/dep/sdks.zsh
+
