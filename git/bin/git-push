@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-git push origin $(git branch | grep \* | cut -d ' ' -f2)
+# -u --set-upstream
+git push -u origin $(git branch | grep \* | cut -d ' ' -f2)

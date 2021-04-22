@@ -43,6 +43,7 @@
     sub = submodule
     t = tag
     set-url = remote set-url origin
+    track = branch -u
 
     ahead-of-master = "log --oneline origin/master..HEAD"
 
