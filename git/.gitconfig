@@ -73,8 +73,7 @@
 
 [delta]
     features = side-by-side line-numbers decorations
-    plus-style = syntax "#003800"
-    minus-style = syntax "#3f0001"
+    syntax-theme = 1337
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul

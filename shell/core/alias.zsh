@@ -117,7 +117,7 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
 # Comparing
-alias gd='git-pretty-diff'
+alias gd='git diff --color'
 alias gds='git diff --staged --color'
 
 # Working with remotes
