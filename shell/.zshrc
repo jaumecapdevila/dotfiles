@@ -12,6 +12,9 @@ source "$DOTFILES_PATH/shell/core/alias.zsh"
 source "$DOTFILES_PATH/shell/core/exports.zsh"
 source "$DOTFILES_PATH/shell/core/functions.zsh"
 
+# Load styles for current theme
+source "$DOTFILES_PATH/shell/config/styles.zsh"
+
 # Load plugins
 source "$DOTFILES_PATH/shell/dep/zgenom.zsh"
 
