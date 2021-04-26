@@ -192,6 +192,9 @@ alias rll='gh release list'
 # Python
 alias python='python3'
 
+# Makefile
+alias mk='make'
+
 # PHP
 alias php:has="php -m | grep -i"
 alias ci="composer install"
