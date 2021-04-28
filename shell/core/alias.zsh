@@ -8,6 +8,16 @@ alias catr='cat'
 alias cat='bat --theme=DarkNeon --show-all'
 
 ###################
+# Package managers
+###################
+# Brew
+
+alias br='brew'
+alias brl='brew list'
+alias brs='brew search'
+alias bru='brew update'
+
+###################
 # Navigation
 ###################
 
@@ -230,7 +240,6 @@ alias sudo='sudo '
 # Utils
 alias aux='ps uax'
 alias fuck='sudo !!'
-alias brew-list-deps="brew list | while read cask; do echo -n \"\e[1;34m$cask ->\e[0m\"; brew deps $cask | awk '{printf(\" %s \", $0)}'; echo \"\"; done"
 alias edithosts='sudo vim /etc/hosts'
 alias cl='clear'
 alias copy='pbcopy'
