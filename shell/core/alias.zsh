@@ -82,14 +82,14 @@ alias dvp="docker volume prune -f"
 alias dvi="docker volume inspect"
 
 # Compose
-alias dc="docker-compose"
-alias dcv="docker-compose -v"
-alias dcu="docker-compose up"
-alias dcud="docker-compose up -d"
-alias dcd="docker-compose down"
-alias dcst="docker-compose stop"
-alias dcb="docker-compose build --no-cache"
-alias dcc="docker-compose config"
+alias dc="docker compose"
+alias dcv="docker compose -v"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down"
+alias dcst="docker compose stop"
+alias dcb="docker compose build --no-cache"
+alias dcc="docker compose config"
 
 ###################
 # Editors
@@ -157,6 +157,7 @@ alias gt='git tag'
 
 # Restore
 alias gr='git restore'
+alias gr.='git restore .'
 alias grs='git restore --staged'
 
 # Rebase
