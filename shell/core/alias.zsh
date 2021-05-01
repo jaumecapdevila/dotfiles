@@ -16,6 +16,8 @@ alias br='brew'
 alias brl='brew list'
 alias brs='brew search'
 alias bru='brew update'
+alias brug='brew upgrade'
+alias brc='brew cleanup'
 
 ###################
 # Navigation
