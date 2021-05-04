@@ -212,6 +212,7 @@ alias mk='make'
 alias php:has="php -m | grep -i"
 alias ci="composer install"
 alias cu="composer update"
+alias cul="composer update --lock"
 alias cr="composer require"
 alias crm="composer remove"
 alias crd="composer require --dev"
