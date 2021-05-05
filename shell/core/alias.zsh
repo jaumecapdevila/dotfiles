@@ -115,6 +115,7 @@ alias sr='subl ~/Projects/Unaderecetas/recipes-book'
 alias g='git'
 alias gs='git status -sb'
 alias ga='git add'
+alias ga.='git add .'
 alias gap='git add -p'
 alias gaa='git add -A'
 
