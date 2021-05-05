@@ -4,8 +4,7 @@
 # General
 ###################
 
-alias catr='cat'
-alias cat='bat --theme=DarkNeon --show-all'
+alias bat='bat --theme=DarkNeon --show-all'
 
 ###################
 # Package managers
@@ -13,6 +12,7 @@ alias cat='bat --theme=DarkNeon --show-all'
 # Brew
 
 alias br='brew'
+alias bri='brew install'
 alias brl='brew list'
 alias brs='brew search'
 alias bru='brew update'
