@@ -59,6 +59,7 @@ alias dl="docker login --username=jaumecapdevila"
 alias di="docker images"
 alias dip="docker image prune -f"
 alias drmi="docker rmi"
+alias dpl="docker pull"
 
 # Containers
 alias dps='docker ps --format "<{{.Names}}> with id <{{.ID}}> - {{.Status}}"'
