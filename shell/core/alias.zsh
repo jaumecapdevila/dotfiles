@@ -47,6 +47,14 @@ alias magento='cd ~/Projects/Magento'
 alias sublime='cd ~/Library/Application\ Support/Sublime\ Text/Packages/User'
 
 ###################
+# Kubectl
+###################
+alias kb='kubectl'
+alias kbcf='kubectl create -f'
+alias kbg='kubectl get'
+alias kbr='kubectl run'
+
+###################
 # Docker
 ###################
 
