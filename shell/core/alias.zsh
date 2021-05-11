@@ -220,6 +220,7 @@ alias mk='make'
 
 # PHP
 alias php:has="php -m | grep -i"
+alias c="composer"
 alias ci="composer install"
 alias cu="composer update"
 alias cul="composer update --lock"
