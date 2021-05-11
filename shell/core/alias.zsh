@@ -130,10 +130,11 @@ alias gaa='git add -A'
 
 # Committing
 alias gc='git commit -v'
+alias gcm='git commit -v -m'
 alias gce='git commit -v --allow-empty'
 alias gac='git commit -a -v'
 alias gc!='git commit -v --amend'
-alias gcm='git commit -m'
+alias gc!m='git commit -v --amend -m'
 alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
