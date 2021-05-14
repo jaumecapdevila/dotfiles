@@ -62,6 +62,7 @@ alias kbr='kubectl run'
 alias d="docker"
 alias dv="docker -v"
 alias dl="docker login --username=jaumecapdevila"
+alias dsp="docker system prune"
 
 # Images
 alias di="docker images"
@@ -70,7 +71,7 @@ alias drmi="docker rmi"
 alias dpl="docker pull"
 
 # Containers
-alias dps='docker ps --format "<{{.Names}}> with id <{{.ID}}> - {{.Status}}"'
+alias dps='docker ps --format "Container {{.Names}}:{{.ID}} - {{.Image}} - {{.Status}}"'
 alias dpsa="docker ps -a"
 alias dcp="docker container prune -f"
 alias dci="docker inspect"
