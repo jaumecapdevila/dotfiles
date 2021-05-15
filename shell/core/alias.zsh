@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+ #!/usr/bin/env zsh
 
 ###################
 # General
@@ -71,7 +71,7 @@ alias drmi="docker rmi"
 alias dpl="docker pull"
 
 # Containers
-alias dps='docker ps --format "Container {{.Names}}:{{.ID}} - {{.Image}} - {{.Status}}"'
+alias dps='docker ps --format "Container {{.Names}}:{{.ID}} ({{.Image}}) - {{.Status}}"'
 alias dpsa="docker ps -a"
 alias dcp="docker container prune -f"
 alias dci="docker inspect"
