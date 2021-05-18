@@ -216,7 +216,9 @@ syntax enable
 " set background=dark
 " colorscheme solarized
 
-colorscheme atom-dark
+" colorscheme atom-dark
+
+colorscheme default
 
 " Set extra options when running in GUI mode
 if has("gui_running")
