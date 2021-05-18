@@ -46,6 +46,11 @@ export PATH=$HOME/.gems/bin:$PATH
 export VAULT_ADDR="https://vault.or1.adobe.net"
 export OMS_CODE="$HOME/Projects/Magento/apps/oms"
 
+# Secret exports
+if [ -f "$HOME/.secrets" ]; then
+   source "$HOME/.secrets"
+fi
+
 # Languages
 export GOPATH="$HOME/projects/golang"
 
