@@ -300,6 +300,7 @@ alias ssha='ssh-add'
 
 # Dotfiles
 alias .ef='subl ~/.dotfiles'
+alias .es='subl ~/.secrets'
 
 # Digital garden
 alias dg='subl ~/Projects/Personal/inside-out'
