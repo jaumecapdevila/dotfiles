@@ -25,6 +25,7 @@ alias brc='brew cleanup'
 
 alias p='pwd'
 alias ls='exa -l --color=never --icons'
+alias lk='k'
 alias lo='ls --sort=old'
 alias la='ls -a'
 alias lf='ls -d */'
@@ -44,6 +45,9 @@ alias udr='cd ~/Projects/Personal/Unaderecetas'
 alias pers='cd ~/Projects/Personal'
 alias .f='cd $DOTFILES_PATH'
 alias magento='cd ~/Projects/Magento'
+alias pay='cd ~/Projects/Magento/payments'
+alias pays='cd ~/Projects/Magento/payments/services'
+alias payt='cd ~/Projects/Magento/payments/tooling'
 alias sublime='cd ~/Library/Application\ Support/Sublime\ Text/Packages/User'
 
 ###################
