@@ -24,9 +24,9 @@ alias brc='brew cleanup'
 ###################
 
 alias p='pwd'
-alias ll='exa -l --icons'
-alias lo='exa -l --sort=old --icons'
-alias la='exa -la --icons'
+alias ls='exa -l --color=never --icons'
+alias lo='ls --sort=old'
+alias la='ls -a'
 alias lf='ls -d */'
 alias lc='colorls -lA --sd'
 alias ctree='exa -T'
@@ -267,7 +267,7 @@ alias count_files_recursive_per_directory='ls -d */ | xargs -I _ sh -c "find \"_
 alias emptytrash='sudo empty_trash'
 alias find_broken_symlinks='find -L . -type l'
 alias flat_this_dir="sudo find . -mindepth 2 -type f -exec mv -i '{}' . ';'"
-alias k='kill -9'
+alias k9='kill -9'
 alias map="xargs -n1"
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"

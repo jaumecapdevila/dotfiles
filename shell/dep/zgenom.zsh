@@ -14,6 +14,7 @@ if ! zgenom saved; then
     zgen load zsh-users/zsh-completions
     # zgen load unixorn/autoupdate-zgen
     zgen load unixorn/fzf-zsh-plugin
+    zgen load supercrabtree/k
     # zgen load unixorn/tumult.plugin.zsh
     # generate the init script from plugins above
     zgenom save
