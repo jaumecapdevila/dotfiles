@@ -66,9 +66,10 @@ alias dsp="docker system prune"
 
 # Images
 alias di="docker images"
-alias dip="docker image prune -f"
+alias dipf="docker image prune -f"
 alias drmi="docker rmi"
-alias dpl="docker pull"
+alias dipl="docker pull"
+alias dih="docker history"
 
 # Containers
 alias dps='docker ps --format "Container {{.Names}}:{{.ID}} ({{.Image}}) - {{.Status}}"'
@@ -160,7 +161,7 @@ alias gplum='git pull upstream master'
 # Working with branches
 alias gb='git branch'
 alias gbd='git branch -d'
-alias gbD='git:branch-remove'
+alias gbD='git branch -D'
 alias gm='git merge --no-ff'
 alias gco='git-checkout-branch'
 alias gcom='git checkout master'
