@@ -45,6 +45,7 @@
         [:s [:open "Sublime Text"]]
         [:c [:open "Visual Studio Code"]]
         [:e [:open "PhpStorm"]]
+        [:i [:open "IntelliJ IDEA Ultimate"]]
         [:m [:open "Postman"]]
         [:d [:open "TablePlus"]]
         ;; Utils
