@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Read date format with a default value
+format="${1:-+%Y/%m}"
+
+# Use the proper delimiter
+format=$(echo $format | tr "-" "/")
+
+for f in *; do
+    # Skip directories
+    # [ -d "$f" ] && continue
+
+    # Get last modification date
+    d=$(date -r "$f" "$format")
+
+    # Split date by -
+    IFS='/' read -ra info <<< "$d"
+    path=${info[0]}/${info[1]}}
+
+    # Create folder hierarchy and move the file/folder inside
+    mkdir -p "$path"
+    echo "Moving file $f into $path"
+    mv -- "$f" "$path/"
+done
