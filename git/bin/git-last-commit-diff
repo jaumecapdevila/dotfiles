@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Displays the diff with the last commit
+git diff HEAD^ HEAD
