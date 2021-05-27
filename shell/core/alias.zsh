@@ -260,6 +260,7 @@ alias tkss='tmux kill-session -t'
 alias sudo='sudo '
 
 # Utils
+alias ec="echo $?"
 alias aux='ps uax'
 alias fuck='sudo !!'
 alias edithosts='sudo vim /etc/hosts'
