@@ -24,13 +24,13 @@ alias brc='brew cleanup'
 ###################
 
 alias p='pwd'
-alias ls='exa -l --color=never --icons'
+alias ls='ls -l'
 alias lk='k'
 alias lo='ls --sort=old'
 alias la='ls -a'
 alias lf='ls -d */'
 alias lc='colorls -lA --sd'
-alias ctree='exa -T'
+alias tree='exa -T'
 alias j='z'
 alias wls='watch -n 5 ls -la'
 
