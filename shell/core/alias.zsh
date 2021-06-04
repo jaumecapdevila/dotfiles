@@ -225,6 +225,10 @@ alias python='python3'
 # Makefile
 alias mk='make'
 
+# NPM
+alias npms='npm start'
+alias npmr='npm run'
+
 # PHP
 alias php:has="php -m | grep -i"
 alias c="composer"
