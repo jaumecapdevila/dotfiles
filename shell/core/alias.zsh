@@ -316,4 +316,5 @@ alias .es='subl ~/.secrets'
 alias dg='subl ~/Projects/Personal/inside-out'
 
 # Slides
-alias present='reveal-md --theme solarized --highlight-theme monokai-sublime'
+alias present='reveal-md --theme solarized'
+alias rvmd='reveal-md'
