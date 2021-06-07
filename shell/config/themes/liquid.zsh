@@ -22,7 +22,7 @@ LP_MARK_DIRSTACK="≣"
 LP_ENABLE_TIME=0
 
 # Path settings
-LP_PATH_METHOD="truncate_chars_to_unique_dir"
+LP_PATH_METHOD="truncate_to_last_dir"
 LP_ENABLE_SHORTEN_PATH=1
 LP_PATH_KEEP=1
 LP_PATH_LENGTH=5
