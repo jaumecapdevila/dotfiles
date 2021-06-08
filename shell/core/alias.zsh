@@ -161,6 +161,9 @@ alias gpl='git pull --rebase --autostash'
 alias gpom='git push origin master'
 alias gplom='git pull origin master'
 alias gplum='git pull upstream master'
+alias grmt='git remote'
+alias grmts='git remote show'
+alias grmtso='git remote show origin'
 
 # Working with branches
 alias gb='git branch'
