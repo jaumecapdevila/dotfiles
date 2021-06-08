@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -eu pipefail
+
+if [ $# -eq 0 ]
+  then
+    echo "Missing port argument!"
+    exit 1
+fi
+
+PORT=$1
+
+PID=$(lsof -nP -iTCP -sTCP:LISTEN | grep "$PORT" | awk '{print $2}')
+
+if [ -z "$PID" ]; then
+  echo "No process detected running locally on port $PORT"
+  exit
+fi
+
+echo "Killing process with id $PID"
+kill "$PID"
+echo "Done!"
