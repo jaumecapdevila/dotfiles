@@ -67,13 +67,14 @@ alias d="docker"
 alias dv="docker -v"
 alias dl="docker login --username=jaumecapdevila"
 alias dsp="docker system prune"
+alias ds="docker search"
 
 # Images
 alias di="docker images"
-alias dipf="docker image prune -f"
+alias dpfi="docker image prune -f"
 alias drmi="docker rmi"
-alias dipl="docker pull"
-alias dih="docker history"
+alias dpli="docker pull"
+alias dhi="docker history"
 
 # Containers
 alias dps='docker ps --format "Container {{.Names}}:{{.ID}} ({{.Image}}) - {{.Status}}"'
