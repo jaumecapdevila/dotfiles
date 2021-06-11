@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # General
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)

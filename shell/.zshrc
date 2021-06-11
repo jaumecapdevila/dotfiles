@@ -21,3 +21,5 @@ source "$DOTFILES_PATH/shell/dep/zgenom.zsh"
 # Load external SDK
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Load completions
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)

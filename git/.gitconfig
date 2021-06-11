@@ -12,6 +12,7 @@
     count-commits = rev-list --count
     cl = clone
     co = checkout
+    tk = --track
     contains = describe --all --contains
     d = diff
     ds = diff --staged

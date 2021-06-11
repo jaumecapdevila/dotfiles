@@ -56,6 +56,9 @@ alias sublime='cd ~/Library/Application\ Support/Sublime\ Text/Packages/User'
 alias kb='kubectl'
 alias kbcf='kubectl create -f'
 alias kbg='kubectl get'
+alias kbgp='kubectl get pods'
+alias kbgs='kubectl get services --sort-by=.metadata.name'
+alias kbd='kubectl describe'
 alias kbr='kubectl run'
 
 ###################
@@ -173,6 +176,7 @@ alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gm='git merge --no-ff'
 alias gco='git-checkout-branch'
+alias gcot='git checkout --track'
 alias gcom='git checkout master'
 alias gcob='git checkout -b'
 
