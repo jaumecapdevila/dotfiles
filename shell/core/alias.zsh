@@ -62,6 +62,16 @@ alias kbd='kubectl describe'
 alias kbr='kubectl run'
 
 ###################
+# Terraform
+###################
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfp='terraform plan'
+alias tfd='terraform destroy'
+alias tfv='terraform validate'
+alias tff='terraform fmt'
+
+###################
 # Docker
 ###################
 
