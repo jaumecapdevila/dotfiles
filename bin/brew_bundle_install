@@ -2,17 +2,7 @@
 
 set -euo pipefail
 
-source $DOTFILES_PATH/scripting/_main.sh
-
-##? Install dependencies defined in the Brewfile
-#?? 1.0.0
-##?
-##? Usage:
-##?    brew_bundle_install
-
-docs::eval "$@"
-
-brew bundle install --file=${HOMEBREW_BUNDLE_FILE_PATH}
-brew bundle cleanup --file=${HOMEBREW_BUNDLE_FILE_PATH} --force
+brew bundle install --file="$HOMEBREW_BUNDLE_FILE_PATH"
+brew bundle cleanup --file="$HOMEBREW_BUNDLE_FILE_PATH" --force
 
 echo 'Dependencies installed from Brewfile!'

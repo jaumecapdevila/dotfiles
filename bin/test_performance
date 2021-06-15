@@ -2,10 +2,4 @@
 
 set -euo pipefail
 
-##? Test the performance of the current prompt
-#?? 1.0.0
-##?
-##? Usage:
-##?    test_performance
-
-for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done
+for i in $(seq 1 10); do /usr/bin/time "$SHELL" -i -c exit; done

@@ -40,14 +40,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias projects='cd ~/Projects'
 alias slides='cd ~/Documents/Slides'
-alias salle='cd ~/Projects/Salle'
 alias udr='cd ~/Projects/Personal/Unaderecetas'
 alias pers='cd ~/Projects/Personal'
 alias .f='cd $DOTFILES_PATH'
 alias magento='cd ~/Projects/Magento'
 alias pay='cd ~/Projects/Magento/payments'
 alias pays='cd ~/Projects/Magento/payments/services'
-alias payt='cd ~/Projects/Magento/payments/tooling'
 alias sublime='cd ~/Library/Application\ Support/Sublime\ Text/Packages/User'
 
 ###################
@@ -85,7 +83,7 @@ alias ds="docker search"
 # Images
 alias di="docker images"
 alias dpfi="docker image prune -f"
-alias drmi="docker rmi"
+# alias drmi="docker rmi"
 alias dpli="docker pull"
 alias dhi="docker history"
 
@@ -96,8 +94,8 @@ alias dcp="docker container prune -f"
 alias dci="docker inspect"
 alias dciip="docker inspect -f \"{{ .NetworkSettings.IPAddress }}\""
 alias de="docker exec -it"
-alias drm="docker rm"
-alias dstp="docker stop"
+# alias drm="docker rm"
+# alias dstp="docker stop"
 
 # Networks
 alias dnls="docker network ls"
@@ -134,7 +132,6 @@ alias v.='vim .'
 
 # Edit
 alias edit-github-profile='subl ~/Projects/Personal/github-profile'
-alias sr='subl ~/Projects/Unaderecetas/recipes-book'
 
 ###################
 # Git
@@ -216,6 +213,7 @@ alias gclfd='git clean -fd'
 ###################
 # Github cli
 ###################
+
 # PR
 alias pr='gh pr create'
 alias prv='gh pr view --web'
@@ -226,8 +224,10 @@ alias prci='gh pr checks'
 alias prcm='gh pr comment --web'
 alias prcl='gh pr close'
 alias prl='gh pr list --state open'
+
 # Repos
 alias repo:clone='gh repo clone'
+
 # Releases
 alias rlc='gh release create'
 alias rld='gh release delete'
@@ -263,6 +263,9 @@ alias gog='go get'
 alias got='go test'
 alias gomi='go mod init'
 alias golm='go list -m all'
+
+# Java
+alias jdks='ls /Library/Java/JavaVirtualMachines'
 
 ###################
 # Tmux

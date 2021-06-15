@@ -2,18 +2,8 @@
 
 set -euo pipefail
 
-source $DOTFILES_PATH/scripting/_main.sh
-
-##? Generates and copy to the clipboard a UUID
-#?? 1.0.0
-##?
-##? Usage:
-##?    uuid_code
-
-docs::eval "$@"
-
 uuid=$(uuidgen | tr '[:upper:]' '[:lower:]')
-echo -n $uuid | pbcopy
-echo $uuid
+echo -n "$uuid" | pbcopy
+echo "$uuid"
 
 osascript -e 'display notification "'"$uuid"'" with title "UUID copied to the clipboard"'

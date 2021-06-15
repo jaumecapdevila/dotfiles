@@ -2,16 +2,6 @@
 
 set -euo pipefail
 
-source $DOTFILES_PATH/scripting/_main.sh
-
-##? Print all outdated packages
-#?? 1.0.0
-##?
-##? Usage:
-##?    outdated
-
-docs::eval "$@"
-
 log::note "♢ Outdated App Store apps:"
 mas outdated
 

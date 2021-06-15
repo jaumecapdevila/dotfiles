@@ -1,14 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 set -euo pipefail
-
-##? Empty the trash and remove cache files
-#?? 1.0.0
-##?
-##? Usage:
-##?    empty_trash
-
-docs::eval_zsh "$0" "$@"
 
 sudo rm -rfv /Volumes/*/.Trashes
 echo '[x] Volumes trash empty'

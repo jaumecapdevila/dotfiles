@@ -14,6 +14,7 @@ export KLAM_PYTHON="/usr/bin/python"
 export MY_SSH_USERNAME='jaume.capdevila'
 export FZF_DEFAULT_OPTS='--color=bg+:24 --reverse'
 export PIPENV_IGNORE_VIRTUALENVS=1
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # System
 export HISTCONTROL=ignorespace

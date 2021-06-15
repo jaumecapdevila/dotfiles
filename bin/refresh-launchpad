@@ -2,14 +2,4 @@
 
 set -euo pipefail
 
-source $DOTFILES_PATH/scripting/_main.sh
-
-##? Refresh Launchpad Contents in MacOS X
-#?? 1.0.0
-##?
-##? Usage:
-##?    refresh-launchpad
-
-docs::eval "$@"
-
 rm ~/Library/Application\ Support/Dock/*.db ; killall Dock

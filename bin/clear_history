@@ -2,18 +2,8 @@
 
 set -euo pipefail
 
-source $DOTFILES_PATH/scripting/_main.sh
-
-##? Clears command history
-#?? 1.0.0
-##?
-##? Usage:
-##?    clear_history zsh      # Clears zsh history
-##?    clear_history bash     # Clears bash history
-
-docs::eval_help "$@"
-
 HISTORY_FILE="$HOME/.zsh_history"
+
 echo "Removing $HISTORY_FILE"
-rm $HISTORY_FILE
+rm "$HISTORY_FILE"
 echo "Done!"

@@ -6,6 +6,7 @@ if ! zgenom saved; then
     # specify plugins here
     zgen load chrissicool/zsh-256color
     zgen load djui/alias-tips
+    zgen load changyuheng/zsh-interactive-cd
     # zgen load nojhan/liquidprompt . stable
     # zgen load mafredri/zsh-async
     # zgen load sindresorhus/pure
