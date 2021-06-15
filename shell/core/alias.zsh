@@ -331,8 +331,8 @@ alias sshl='ssh-add -l'
 alias ssha='ssh-add'
 
 # Dotfiles
-alias .ef='subl ~/.dotfiles'
-alias .es='subl ~/.secrets'
+alias .ef='vim ~/.dotfiles'
+alias .es='vim ~/.secrets'
 
 # Digital garden
 alias dg='subl ~/Projects/Personal/inside-out'
