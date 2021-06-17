@@ -75,6 +75,8 @@ alias tff='terraform fmt'
 
 # General
 alias d="docker"
+alias dr="docker run"
+alias drrm="docker run --rm"
 alias dv="docker -v"
 alias dl="docker login --username=jaumecapdevila"
 alias dsp="docker system prune"
