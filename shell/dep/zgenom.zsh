@@ -1,4 +1,4 @@
-hsl(0, 0%, 0%)#!/usr/bin/env zsh
+#!/usr/bin/env zsh
 
 source "${HOME}/.zgenom/zgenom.zsh"
 
