@@ -4,7 +4,7 @@
 export ZSH_COLORIZE_STYLE="emacs"
 
 # Zsh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
 # Work
 export KLAM_BROWSER="Firefox"
