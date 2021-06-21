@@ -139,8 +139,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    let g:monochrome_italic_comments = 1
-    colorscheme monochrome
+    colorscheme peaksea
 catch
 endtry
 
