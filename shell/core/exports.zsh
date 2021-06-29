@@ -41,7 +41,6 @@ export LC_CTYPE=UTF-8
 
 # Ruby exports
 export GEM_HOME=$HOME/.gems
-export PATH=$HOME/.gems/bin:$PATH
 
 # Work
 export VAULT_ADDR="https://vault.or1.adobe.net"
@@ -68,6 +67,7 @@ PATH=$HOME/.composer/vendor/bin:$PATH
 PATH=$HOME/.npm-global/bin:$PATH
 PATH=${GOPATH}/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
+PATH=$HOME/.gems/bin:$PATH
 PATH=${DOTFILES_PATH}/git/bin:$PATH
 PATH=${DOTFILES_PATH}/bin:$PATH
 
