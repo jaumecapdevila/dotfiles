@@ -74,7 +74,7 @@
 
 [delta]
     features = side-by-side line-numbers decorations
-    syntax-theme = Dracula
+    syntax-theme = 1337
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
