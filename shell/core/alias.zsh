@@ -4,7 +4,7 @@
 # General
 ###################
 
-alias bat='bat --theme=DarkNeon --show-all'
+alias bat='bat --theme=Dracula --show-all'
 
 ###################
 # Package managers
