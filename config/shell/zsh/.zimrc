@@ -1,0 +1,13 @@
+# If you modify this execute `zimfw uninstall & zimfw install`
+zmodule zimfw/environment
+zmodule zimfw/input
+zmodule zimfw/k
+zmodule zimfw/archive
+zmodule zimfw/homebrew
+zmodule zimfw/utility
+zmodule zimfw/completion
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+zmodule djui/alias-tips
+zmodule Aloxaf/fzf-tab
+zmodule akarzim/zsh-docker-aliases

@@ -1,0 +1,31 @@
+local M = {}
+
+M.catppuccin = {
+  flavour = "frappe",
+  transparent_background = false,
+  no_underline = true,           -- Force no underline
+  styles = {                     -- Handles the styles of general hi groups (see `:h highlight-args`):
+    comments = { "italic" },     -- Change the style of comments
+    conditionals = { "italic" },
+    loops = { "italic" },
+    functions = { "bold" },
+    keywords = { "italic" },
+    strings = {},
+    variables = {},
+    numbers = { "bold" },
+    booleans = { "bold" },
+    properties = { "italic" },
+    types = { "italic" },
+    operators = { "bold" },
+  },
+  color_overrides = {},
+  custom_highlights = {},
+  integrations = {
+    cmp = true,
+    gitsigns = true,
+    nvimtree = true,
+    telescope = true,
+  },
+}
+
+return M

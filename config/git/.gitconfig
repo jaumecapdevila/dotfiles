@@ -1,0 +1,46 @@
+[user]
+    name = jaumecapdevila
+    email = contact@jaumecapdevila.net
+
+[fetch]
+    prune = true
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[pull]
+    rebase = true
+
+[alias]
+    g = "git"
+
+[color]
+    ui = true
+
+[core]
+    excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes
+    editor = nvim
+    pager = delta --dark
+    ignorecase = false
+
+[interactive]
+	diffFilter = delta --color-only
+
+[diff]
+	colorMoved = default
+
+[delta]
+	navigate = true
+	line-numbers = true
+
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+
+[mergetool]
+	path = nvim
+
+[init]
+    defaultBranch = main

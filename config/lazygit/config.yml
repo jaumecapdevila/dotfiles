@@ -1,0 +1,68 @@
+os:
+  editPreset: "nvim"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --features dark-mode --paging=never
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
+
+gui:
+  border: "rounded"
+  showFileTree: true
+  scrollHeight: 20
+  scrollPastBottom: false
+  showIcons: false
+  showBottomLine: false
+  commandLogSize: 8
+  authorColors: # in case you're not happy with the randomly assigned colour
+    "jaumecapdevila": "#10b1fe"
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - magenta
+      - bold
+    selectedLineBgColor:
+      - default
+    selectedRangeBgColor:
+      - default
+
+customCommands:
+  - key: "f"
+    command: "git difftool -y {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}"
+    context: "commitFiles"
+    description: "Compare (difftool) with local copy"
+  - key: "E"
+    context: "files"
+    command: "gitmoji -c"
+    loadingText: "Loading gitmoji"
+    subprocess: true
+  - key: "z"
+    command: "~/.dotfiles/bin/gc"
+    context: "files"
+    loadingText: "Commitizen prompt"
+    subprocess: true
+  - key: "<c-p>"
+    context: "global"
+    loadingText: "pushing"
+    prompts:
+      - type: "input"
+        title: "which branch do you want to push to?"
+    command: "git push origin {{index .PromptResponses 0}}"
+  - key: "<c-P>"
+    description: "Push to a specific remote repository"
+    context: "global"
+    loadingText: "Pushing ..."
+    prompts:
+      - type: "menuFromCommand"
+        title: "Which remote repository to push to?"
+        command: bash -c "git remote --verbose | grep '/.* (push)'"
+        filter: '(?P<remote>.*)\s+(?P<url>.*) \(push\)'
+        valueFormat: "{{ .remote }}"
+        labelFormat: "{{ .remote | bold | cyan }} {{ .url }}"
+      - type: "menu"
+        title: "How to push?"
+        options:
+          - value: "push"
+          - value: "push --force-with-lease"
+          - value: "push --force"
