@@ -37,7 +37,7 @@ conflicted = " "
 up_to_date = " "
 untracked = " "
 ahead = "⇡${count} "
-diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+diverged = "⇡${ahead_count}⇣${behind_count} "
 behind = "⇣${count} "
 stashed = " "
 modified = " "
@@ -45,7 +45,7 @@ renamed = "󰀉 "
 deleted = " "
 
 [python]
-format = ' [󱚝 $version](bold green) '
+format = ' [󱔎 ${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 
 [nodejs]
 format = ' [󱚝 $version](bold green) '
