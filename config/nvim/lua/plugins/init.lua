@@ -5,10 +5,23 @@ local default_plugins = {
 
   -- colorschemes
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     lazy = false,
     priority = 1000,
+    opts = function()
+      return require("plugins.configs.colors").tokyonight
+    end,
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    enabled = false,
     opts = function()
       return require("plugins.configs.colors").catppuccin
     end,

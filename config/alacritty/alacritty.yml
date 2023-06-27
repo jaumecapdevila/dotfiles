@@ -25,7 +25,7 @@ font:
   bold_italic:
     family: "OperatorMono Nerd Font"
     style: "Bold Italic"
-  size: 20
+  size: 22
   offset:
     x: 0 # For letter spacing (default: 0).
     y: 0 # For line spacing (default: 0).
@@ -95,4 +95,4 @@ key_bindings:
   - { key: Z, mods: Command, chars: "\x1Az" } # toggle zoom state of the current tmux pane
 
 import:
-  - "~/.dotfiles/config/alacritty/themes/catppuccin.yml"
+  - "~/.dotfiles/config/alacritty/themes/tokyonight.yml"
