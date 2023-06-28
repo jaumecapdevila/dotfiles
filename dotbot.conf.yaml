@@ -19,6 +19,7 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
+    ~/.hyper.js: config/hyper/hyper.js
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
     ~/.gitconfig: config/git/.gitconfig
     ~/.gitignore_global: config/git/.gitignore_global
