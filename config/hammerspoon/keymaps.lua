@@ -12,11 +12,11 @@ local apps = {
   c = "Visual Studio Code",
   f = "Finder",
   m = "Microsoft Outlook", -- Mail
-  n = "NoteApp", -- Notes
-  s = "Slack", -- Messaging
-  o = "Obsidian", -- Life OS
+  n = "NoteApp",           -- Notes
+  s = "Slack",             -- Messaging
+  o = "Obsidian",          -- Life OS
   p = "1Password",
-  t = "iTerm", -- Terminal
+  t = "Hyper",             -- Terminal
   z = "Reminders",
 }
 
