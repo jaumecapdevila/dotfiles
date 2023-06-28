@@ -73,7 +73,7 @@ vim.env.PATH = vim.env.PATH
     .. "/mason/bin"
 
 -------------------------------------- mappings ------------------------------------------
-require("core.utils").load_mappings(mappings.general)
+require("core.utils").map(mappings.general)
 
 -------------------------------------- autocmds ------------------------------------------
 require("core.autocmds")

@@ -46,8 +46,8 @@ M.luasnip = function(opts)
   vim.api.nvim_create_autocmd("InsertLeave", {
     callback = function()
       if
-        require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
-        and not require("luasnip").session.jump_active
+          require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+          and not require("luasnip").session.jump_active
       then
         require("luasnip").unlink_current()
       end
@@ -65,7 +65,7 @@ M.gitsigns = {
     untracked = { text = "│" },
   },
   on_attach = function(bufnr)
-    utils.load_mappings(mappings.gitsigns, { buffer = bufnr })
+    utils.map(mappings.gitsigns, { buffer = bufnr })
   end,
 }
 
@@ -107,23 +107,23 @@ M.symbols_outline = {
 M.surround = {
   highlight_duration = 500,
   mappings = {
-    add = "sa", -- Add surrounding in Normal and Visual modes
-    delete = "sd", -- Delete surrounding
-    find = "sf", -- Find surrounding (to the right)
-    find_left = "sF", -- Find surrounding (to the left)
-    highlight = "sh", -- Highlight surrounding
-    replace = "sr", -- Replace surrounding
+    add = "sa",            -- Add surrounding in Normal and Visual modes
+    delete = "sd",         -- Delete surrounding
+    find = "sf",           -- Find surrounding (to the right)
+    find_left = "sF",      -- Find surrounding (to the left)
+    highlight = "sh",      -- Highlight surrounding
+    replace = "sr",        -- Replace surrounding
     update_n_lines = "sn", -- Update `n_lines`
-    suffix_last = "l", -- Suffix to search with "prev" method
-    suffix_next = "n", -- Suffix to search with "next" method
+    suffix_last = "l",     -- Suffix to search with "prev" method
+    suffix_next = "n",     -- Suffix to search with "next" method
   },
 }
 
 M.whichkey = {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "-", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
+    separator = "-",  -- symbol used between a key and it's label
+    group = "+",      -- symbol prepended to a group
   },
 }
 

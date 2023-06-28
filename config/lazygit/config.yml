@@ -1,5 +1,5 @@
 os:
-  editPreset: "nvim"
+  editPreset: "vscode"
 
 git:
   paging:
@@ -12,20 +12,9 @@ gui:
   showFileTree: true
   scrollHeight: 20
   scrollPastBottom: false
-  showIcons: false
+  nerdFontsVersion: "3"
   showBottomLine: false
-  commandLogSize: 8
-  authorColors: # in case you're not happy with the randomly assigned colour
-    "jaumecapdevila": "#10b1fe"
-  theme:
-    lightTheme: false
-    activeBorderColor:
-      - magenta
-      - bold
-    selectedLineBgColor:
-      - default
-    selectedRangeBgColor:
-      - default
+  commandLogSize: 10
 
 customCommands:
   - key: "f"

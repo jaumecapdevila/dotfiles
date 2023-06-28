@@ -8,10 +8,10 @@ M.on_attach = function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
   client.server_capabilities.semanticTokensProvider = nil
-  utils.load_mappings(mappings.lspconfig, { buffer = bufnr })
-  utils.load_mappings(mappings.lspsaga, { buffer = bufnr })
+  utils.map(mappings.lspconfig, { buffer = bufnr })
+  utils.map(mappings.lspsaga, { buffer = bufnr })
   if client.name == "tsserver" then
-    utils.load_mappings(mappings.typescript, { buffer = bufnr })
+    utils.map(mappings.typescript, { buffer = bufnr })
   end
 end
 

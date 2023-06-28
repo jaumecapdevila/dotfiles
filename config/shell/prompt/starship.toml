@@ -14,7 +14,6 @@ command_timeout = 1000
 format = """
 $directory\
 $git_branch\
-$git_status\
 $python\
 $nodejs\
 $cmd_duration\
@@ -25,11 +24,11 @@ style = "bold blue"
 
 [git_branch]
 format = "[$branch]($style) "
-style = "brigth-black"
 truncation_length = 10
 truncation_symbol = "…/"
 
 [git_status]
+disabled = true
 format = '[$all_status$ahead_behind]($style)'
 style = "bold cyan"
 staged = " ${count} "
@@ -45,10 +44,10 @@ renamed = "󰀉 "
 deleted = " "
 
 [python]
-format = ' [󱔎 ${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+format = '[󱔎 ${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 
 [nodejs]
-format = ' [󱚝 $version](bold green) '
+format = '[󱚝 $version](bold green) '
 
 [cmd_duration]
 format = "[$duration]($style) "

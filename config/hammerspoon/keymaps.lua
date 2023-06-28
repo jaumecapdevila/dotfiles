@@ -16,7 +16,7 @@ local apps = {
   s = "Slack", -- Messaging
   o = "Obsidian", -- Life OS
   p = "1Password",
-  t = "Alacritty", -- Terminal
+  t = "iTerm", -- Terminal
   z = "Reminders",
 }
 
