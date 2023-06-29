@@ -132,12 +132,15 @@ module.exports = {
     preserveCWD: true,
     // for advanced config flags please refer to https://hyper.is/#cfg
 
+    catppuccinTheme: "Frappé",
+
     // hyperborder
     hyperBorder: {
       animate: {
         duration: "200", // default is 18000
       },
       borderColors: ["#FF2C70", "#6937FF"],
+      // borderColors: ["#81C8BE", "#F4B8E4"],
     },
   },
   // a list of plugins to fetch and install from npm
@@ -146,7 +149,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["shades-of-purple-hyper", "hyperborder"],
+  plugins: ["hyperborder", "hypurr", "shades-of-purple-hyper"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed

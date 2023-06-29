@@ -1,10 +1,3 @@
-local mappings = require("core.mappings")
-local utils = require("core.utils")
-
-if utils.isVscode() then
-  return {}
-end
-
 return {
   -- load luasnips + cmp related in insert mode only
   {
@@ -79,7 +72,6 @@ return {
   {
     "numToStr/Comment.nvim",
     keys = { "gcc", "gbc" },
-    init = function() require("core.utils").map("comment") end,
     config = function() require("Comment").setup() end,
   },
 }

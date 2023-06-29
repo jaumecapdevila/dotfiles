@@ -1,10 +1,3 @@
-local mappings = require("core.mappings")
-local utils = require("core.utils")
-
-if utils.isVscode() then
-  return {}
-end
-
 return {
   -- golang
   {

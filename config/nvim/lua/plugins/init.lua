@@ -1,7 +1,27 @@
-return {
+local utils = require("core.utils")
+local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.loop.fs_stat(lazy_path) then
+  utils.echo("  Installing lazy.nvim & plugins ...")
+
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--branch=stable",
+    "https://github.com/folke/lazy.nvim.git",
+    lazy_path,
+  })
+end
+
+vim.opt.rtp:prepend(lazy_path)
+
+local specs = require("plugins.specs")
+
+require("lazy").setup({
+  spec = vim.g.vscode == nil and specs.default or specs.vscode,
   defaults = { lazy = false },
   install = { colorscheme = { "catppuccin" } },
-
   ui = {
     icons = {
       ft = "",
@@ -10,7 +30,6 @@ return {
       not_loaded = "",
     },
   },
-
   performance = {
     rtp = {
       disabled_plugins = {
@@ -44,4 +63,4 @@ return {
       },
     },
   },
-}
+})

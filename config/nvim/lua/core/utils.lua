@@ -6,10 +6,6 @@ M.echo = function(str)
   vim.api.nvim_echo({ { str, "Bold" } }, true, {})
 end
 
-M.isVscode = function()
-  return vim.g.vscode ~= nil
-end
-
 M.map = function(section, extra_opts)
   local core_mappings = require("core.mappings")
   -- TODO handle invalid section

@@ -1,1 +1,2 @@
-require("core.boot")
+require("core")
+require("plugins")
