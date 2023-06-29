@@ -27,9 +27,6 @@ source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 # Load fzf
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
-# Custom iterm tabs
-[ -f "$DOTFILES/config/iterm/scripts/random_tab_color.sh" ] && source "$DOTFILES/config/iterm/scripts/random_tab_color.sh"
-
 # External
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

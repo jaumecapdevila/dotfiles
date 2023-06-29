@@ -65,7 +65,7 @@ M.gitsigns = {
     untracked = { text = "│" },
   },
   on_attach = function(bufnr)
-    utils.map(mappings.gitsigns, { buffer = bufnr })
+    utils.map("gitsigns", { buffer = bufnr })
   end,
 }
 

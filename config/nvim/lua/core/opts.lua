@@ -1,5 +1,3 @@
-local mappings = require("core.mappings")
-
 local opt = vim.opt
 local g = vim.g
 local o = vim.o
@@ -71,9 +69,3 @@ vim.env.PATH = vim.env.PATH
     .. (is_windows and ";" or ":")
     .. vim.fn.stdpath("data")
     .. "/mason/bin"
-
--------------------------------------- mappings ------------------------------------------
-require("core.utils").map(mappings.general)
-
--------------------------------------- autocmds ------------------------------------------
-require("core.autocmds")

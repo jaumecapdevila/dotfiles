@@ -1,17 +1,20 @@
-local M = {}
 local utils = require("core.utils")
+local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-M.install = function(install_path)
+if not vim.loop.fs_stat(lazy_path) then
   utils.echo("  Installing lazy.nvim & plugins ...")
-  local repo = "https://github.com/folke/lazy.nvim.git"
+
   vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
     "--branch=stable",
-    repo,
-    install_path,
+    "https://github.com/folke/lazy.nvim.git",
+    lazy_path,
   })
 end
 
-return M
+vim.opt.rtp:prepend(lazy_path)
+
+local lazy_opts = require("plugins.configs.lazy")
+require("lazy").setup("plugins", lazy_opts)

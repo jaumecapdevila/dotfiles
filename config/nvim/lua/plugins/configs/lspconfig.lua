@@ -1,6 +1,5 @@
 local M = {}
 local utils = require("core.utils")
-local mappings = require("core.mappings")
 
 -- export on_attach & capabilities for custom lspconfigs
 
@@ -8,10 +7,10 @@ M.on_attach = function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
   client.server_capabilities.semanticTokensProvider = nil
-  utils.map(mappings.lspconfig, { buffer = bufnr })
-  utils.map(mappings.lspsaga, { buffer = bufnr })
+  utils.map("lspconfig", { buffer = bufnr })
+  utils.map("lspsaga", { buffer = bufnr })
   if client.name == "tsserver" then
-    utils.map(mappings.typescript, { buffer = bufnr })
+    utils.map("typescript", { buffer = bufnr })
   end
 end
 
