@@ -6,7 +6,7 @@ M.vscode = {
 
 M.default = {
   { import = "plugins.groups.coding" },
-  { import = "plugins.groups.colorschemes" },
+  { import = "plugins.groups.themes" },
   { import = "plugins.groups.debug" },
   { import = "plugins.groups.editor" },
   { import = "plugins.groups.lang" },

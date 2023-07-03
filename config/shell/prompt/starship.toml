@@ -9,23 +9,41 @@
 # https://starship.rs
 
 command_timeout = 1000
+add_newline = true
 
 # Change the default prompt format
-format = """
-$directory\
-$git_branch\
-$python\
-$nodejs\
-$cmd_duration\
-$character"""
+format = '$os$all'
+
+[os]
+format ='[$symbol](bold white)'
+disabled = false
+
+[character]
+success_symbol = "[](white) "
+error_symbol = "[](red) "
+vicmd_symbol = "[](green) "
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style) "
+show_always = false
 
 [directory]
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "󰋞 ~"
+read_only_style = "197"
+read_only = "  "
 style = "bold blue"
+format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-format = "[$branch]($style) "
+symbol = "󰊢 "
+format = "on [$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
+style = "bold green"
 
 [git_status]
 disabled = true
@@ -43,17 +61,33 @@ modified = " "
 renamed = "󰀉 "
 deleted = " "
 
+[terraform]
+format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+
+[vagrant]
+format = "via [ vagrant $version]($style) "
+
+[docker_context]
+format = "via [ $context](bold blue) "
+
+[helm]
+format = "via [ $version](bold purple) "
+
 [python]
-format = '[󱔎 ${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+symbol = "󰌠 "
+python_binary = "python3"
 
 [nodejs]
-format = '[󱚝 $version](bold green) '
+format = "via [󱚝 $version](bold green) "
+disabled = true
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+[ruby]
+format = "via [ $version]($style) "
 
-[character]
-success_symbol = "[](white) "
-error_symbol = "[](red) "
-vicmd_symbol = "[](green) "
+[kubernetes]
+format = 'on [ $context\($namespace\)](bold purple) '
+disabled = false
+
+[kubernetes.context_aliases]
+"clcreative-k8s-staging" = "cl-k8s-staging"
+"clcreative-k8s-production" = "cl-k8s-prod"
