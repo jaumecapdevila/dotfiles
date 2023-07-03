@@ -36,16 +36,12 @@ local LaunchOrToggle = function(key, app_name, app_filename)
 
       app = hs.application.find(app_name)
 
-      if not app then return print("App not found: " .. app_name) end
-
       hs.application.launchOrFocus(app_name)
       app.setFrontmost(app)
       app.activate(app)
     end
   end)
 end
-
-hs.application.enableSpotlightForNameSearches(true)
 
 for key, app_name in pairs(apps) do
   if type(app_name) == "table" then
