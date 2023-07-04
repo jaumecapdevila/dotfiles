@@ -5,6 +5,7 @@ zmodule zimfw/k
 zmodule zimfw/archive
 zmodule zimfw/homebrew
 zmodule zimfw/utility
+zmodule zimfw/git
 zmodule zimfw/completion
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
