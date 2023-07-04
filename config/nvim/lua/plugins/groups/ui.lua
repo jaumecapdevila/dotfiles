@@ -13,11 +13,13 @@ return {
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
+      {
+        "rcarriga/nvim-notify",
+        opts = function() return require("plugins.configs.notify") end,
+        config = function(_, opts) require("notify").setup(opts) end,
+      },
     },
-    opts = function()
-      return require("plugins.configs.noice")
-    end,
+    opts = function() return require("plugins.configs.noice") end,
     config = function(_, opts) require("noice").setup(opts) end,
   },
 
