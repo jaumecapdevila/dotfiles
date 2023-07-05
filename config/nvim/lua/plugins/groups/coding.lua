@@ -53,24 +53,10 @@ return {
     config = function(_, opts) require("copilot").setup(opts) end,
   },
 
-  -- easily add, remove, change surroundings
-  {
-    "echasnovski/mini.surround",
-    event = "VeryLazy",
-    opts = function() return require("plugins.configs.others").surround end,
-    config = function(_, opts) require("mini.surround").setup(opts) end,
-  },
-
   -- autoclose tags in html, jsx only
   {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter",
     config = function() require("nvim-ts-autotag").setup() end,
-  },
-
-  -- Easily toggle comments
-  {
-    "numToStr/Comment.nvim",
-    config = function() require("Comment").setup() end,
   },
 }

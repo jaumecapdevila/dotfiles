@@ -1,10 +1,12 @@
 local M = {}
 
 M.vscode = {
+  { import = "plugins.groups.actions" },
   { import = "plugins.groups.treesitter" }
 }
 
 M.default = {
+  { import = "plugins.groups.actions" },
   { import = "plugins.groups.coding" },
   { import = "plugins.groups.themes" },
   { import = "plugins.groups.debug" },
