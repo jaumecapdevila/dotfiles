@@ -19,9 +19,8 @@ format ='[$symbol](bold white)'
 disabled = false
 
 [character]
-success_symbol = "[](white) "
-error_symbol = "[](red) "
-vicmd_symbol = "[](green) "
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
 
 [username]
 style_user = "white bold"
