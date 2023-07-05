@@ -19,8 +19,8 @@ M.tokyonight = {
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = false,
-  no_underline = true, -- Force no underline
-  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true,       -- Force no underline
+  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },
@@ -43,6 +43,16 @@ M.catppuccin = {
     telescope = true,
     notify = true,
   },
+}
+
+M.rosepine = {
+  variant = 'moon',
+  dark_variant = 'moon',
+  bold_vert_split = true,
+  dim_nc_background = false,
+  disable_background = false,
+  disable_float_background = false,
+  disable_italics = false,
 }
 
 return M

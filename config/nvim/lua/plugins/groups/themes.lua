@@ -12,4 +12,30 @@ return {
       vim.cmd("colorscheme catppuccin")
     end,
   },
+
+  {
+    "rose-pine/neovim",
+    enabled = false,
+    name = "rose-pine",
+    opts = function()
+      return require("plugins.configs.colors").rosepine
+    end,
+    config = function(_, opts)
+      require("rose-pine").setup(opts)
+      vim.cmd("colorscheme rose-pine")
+    end,
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    enabled = false,
+    name = "tokyonight",
+    opts = function()
+      return require("plugins.configs.colors").tokyonight
+    end,
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
 }
