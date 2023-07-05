@@ -71,7 +71,6 @@ return {
   -- Easily toggle comments
   {
     "numToStr/Comment.nvim",
-    keys = { "gcc", "gbc" },
     config = function() require("Comment").setup() end,
   },
 }
