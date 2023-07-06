@@ -1,12 +1,21 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
     lazy = false,
     priority = 1000,
-    opts = function()
-      return require("plugins.configs.colors").catppuccin
+    opts = function() return require("plugins.configs.colors").github end,
+    config = function(_, opts)
+      require("github-theme").setup(opts)
+      vim.cmd("colorscheme github_dark_dimmed")
     end,
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    enabled = false,
+    opts = function() return require("plugins.configs.colors").catppuccin end,
     config = function(_, opts)
       require("catppuccin").setup(opts)
       vim.cmd("colorscheme catppuccin")
@@ -17,9 +26,7 @@ return {
     "rose-pine/neovim",
     enabled = false,
     name = "rose-pine",
-    opts = function()
-      return require("plugins.configs.colors").rosepine
-    end,
+    opts = function() return require("plugins.configs.colors").rosepine end,
     config = function(_, opts)
       require("rose-pine").setup(opts)
       vim.cmd("colorscheme rose-pine")
@@ -30,9 +37,7 @@ return {
     "folke/tokyonight.nvim",
     enabled = false,
     name = "tokyonight",
-    opts = function()
-      return require("plugins.configs.colors").tokyonight
-    end,
+    opts = function() return require("plugins.configs.colors").tokyonight end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
       vim.cmd("colorscheme tokyonight")
