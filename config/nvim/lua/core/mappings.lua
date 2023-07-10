@@ -135,14 +135,34 @@ M.comment = {
 M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
   n = {
-    ["gD"] = {
-      function() vim.lsp.buf.declaration() end,
-      "LSP declaration",
+    ["gd"] = {
+      "<CMD>Glance definitions<CR>",
+      "Glance definitions",
+    },
+
+    ["gr"] = {
+      "<CMD>Glance references<CR>",
+      "Glance references",
     },
 
     ["gi"] = {
-      function() vim.lsp.buf.implementation() end,
-      "LSP implementation",
+      "<CMD>Glance implementations<CR>",
+      "Glance implementations",
+    },
+
+    ["<leader>ca"] = {
+      function() vim.lsp.buf.code_action() end,
+      "LSP rename",
+    },
+
+    ["<leader>rn"] = {
+      function() vim.lsp.buf.rename() end,
+      "LSP rename",
+    },
+
+    ["gD"] = {
+      function() vim.lsp.buf.declaration() end,
+      "LSP declaration",
     },
 
     ["<leader>ls"] = {
@@ -158,50 +178,6 @@ M.lspconfig = {
     ["<leader>fm"] = {
       function() vim.lsp.buf.format({ async = true }) end,
       "LSP formatting",
-    },
-  },
-}
-
-M.lspsaga = {
-  n = {
-    ["gd"] = {
-      "<cmd>Lspsaga goto_definition<CR>",
-      "LSP definition",
-    },
-
-    ["K"] = {
-      "<cmd>Lspsaga hover_doc<CR>",
-      "LSP hover",
-    },
-
-    ["<leader>D"] = {
-      "<cmd>Lspsaga goto_type_definition<CR>",
-      "LSP definition type",
-    },
-
-    ["<leader>ra"] = {
-      "<cmd>Lspsaga rename<CR>",
-      "LSP rename",
-    },
-
-    ["<leader>ca"] = {
-      "<cmd>Lspsaga code_action<CR>",
-      "LSP code action",
-    },
-
-    ["gr"] = {
-      "<cmd>Lspsaga lsp_finder<CR>",
-      "LSP references",
-    },
-
-    ["[d"] = {
-      "<cmd>Lspsaga diagnostic_jump_prev<CR>",
-      "Goto prev",
-    },
-
-    ["]d"] = {
-      "<cmd>Lspsaga diagnostic_jump_next<CR>",
-      "Goto next",
     },
   },
 }
@@ -401,6 +377,15 @@ M.gopher = {
     ["<leader>gsy"] = {
       "<cmd> GoTagAdd yaml <CR>",
       "Add yaml struct tags",
+    },
+  },
+}
+
+M.code_action = {
+  n = {
+    ["<leader>ca"] = {
+      "<cmd>CodeActionMenu<cr>",
+      "Code Action Menu",
     },
   },
 }

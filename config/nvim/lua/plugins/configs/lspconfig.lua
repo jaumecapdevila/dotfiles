@@ -8,7 +8,6 @@ M.on_attach = function(client, bufnr)
   client.server_capabilities.documentRangeFormattingProvider = false
   client.server_capabilities.semanticTokensProvider = nil
   utils.map("lspconfig", { buffer = bufnr })
-  utils.map("lspsaga", { buffer = bufnr })
   if client.name == "tsserver" then
     utils.map("typescript", { buffer = bufnr })
   end
@@ -43,7 +42,7 @@ local simple_servers = {
   "clangd",
   "jsonls",
   "bashls",
-  "phpactor"
+  "phpactor",
 }
 
 for _, lsp in ipairs(simple_servers) do

@@ -36,18 +36,39 @@ return {
         "jose-elias-alvarez/null-ls.nvim",
         config = function() require("plugins.configs.null-ls") end,
       },
+      -- improved UI
+      {
+        "dnlhc/glance.nvim",
+        cmd = "Glance",
+        ---@class GlanceOpts
+        opts = function() return require("plugins.configs.glance") end,
+        config = function(_, opts) require("glance").setup(opts) end,
+      },
     },
     config = function() require("plugins.configs.lspconfig") end,
   },
 
+  -- VSCode like breadcrums
   {
-    "glepnir/lspsaga.nvim",
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
     dependencies = {
-      { "nvim-tree/nvim-web-devicons" },
-      { "nvim-treesitter/nvim-treesitter" },
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons",
     },
-    event = "LspAttach",
-    opts = function() return require("plugins.configs.lspsaga") end,
-    config = function(_, opts) require("lspsaga").setup(opts) end,
+  },
+
+  {
+    "weilbith/nvim-code-action-menu",
+    enabled = false,
+    cmd = "CodeActionMenu",
+    init = function() require("core.utils").map("code_action") end,
+  },
+
+  -- VSCode like code actions lightbulb
+  {
+    "kosayoda/nvim-lightbulb",
+    opts = function() return require("plugins.configs.lightbulb") end,
+    config = function(_, opts) require("nvim-lightbulb").setup(opts) end,
   },
 }

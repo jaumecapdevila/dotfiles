@@ -2,20 +2,20 @@ local M = {}
 
 M.github = {
   options = {
-    transparent = false,   -- Disable setting background
-    dim_inactive = false,  -- Non focused panes set to alternative background
+    transparent = false, -- Disable setting background
+    dim_inactive = false, -- Non focused panes set to alternative background
     module_default = true, -- Default enable value for modules
-    styles = {             -- Style to be applied to different syntax groups
-      comments = 'italic', -- Value is any valid attr-list value `:help attr-list`
-      functions = 'bold',
-      keywords = 'italic',
-      variables = 'NONE',
-      conditionals = 'bold',
-      constants = 'bold',
-      numbers = 'bold',
-      operators = 'bold',
-      strings = 'NONE',
-      types = 'italic',
+    styles = { -- Style to be applied to different syntax groups
+      comments = "italic", -- Value is any valid attr-list value `:help attr-list`
+      functions = "bold",
+      keywords = "italic",
+      variables = "NONE",
+      conditionals = "bold",
+      constants = "bold",
+      numbers = "bold",
+      operators = "bold",
+      strings = "NONE",
+      types = "italic",
     },
     darken = { -- Darken floating windows and sidebar-like windows
       floats = true,
@@ -54,8 +54,8 @@ M.tokyonight = {
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = false,
-  no_underline = true,       -- Force no underline
-  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true, -- Force no underline
+  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },
@@ -77,6 +77,15 @@ M.catppuccin = {
     nvimtree = true,
     telescope = true,
     notify = true,
+    noice = true,
+    treesitter = true,
+    which_key = true,
+    barbecue = {
+      dim_dirname = true, -- directory name is dimmed by default
+      bold_basename = true,
+      dim_context = true,
+      alt_background = false,
+    },
   },
 }
 
