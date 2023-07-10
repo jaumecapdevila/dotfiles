@@ -150,6 +150,11 @@ M.lspconfig = {
       "Glance implementations",
     },
 
+    ["<leader>D"] = {
+      "<CMD>Glance type_definitions<CR>",
+      "Glance implementations",
+    },
+
     ["<leader>ca"] = {
       function() vim.lsp.buf.code_action() end,
       "LSP rename",
