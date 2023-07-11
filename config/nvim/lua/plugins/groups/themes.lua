@@ -34,7 +34,8 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     name = "tokyonight",
     opts = function() return require("plugins.configs.colors").tokyonight end,
     config = function(_, opts)
@@ -45,8 +46,7 @@ return {
 
   {
     "LunarVim/synthwave84.nvim",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     name = "synthwave84",
     opts = function() return require("plugins.configs.colors").synthwave84 end,
     config = function(_, opts)
