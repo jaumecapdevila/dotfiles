@@ -3,7 +3,7 @@ local lualine = require("lualine")
 -- Color table for highlights
 -- stylua: ignore
 
-local colors = require("plugins.configs.lualine.themes.github").dimmed
+local colors = require("plugins.configs.lualine.themes.tokyo").storm
 
 local conditions = {
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,

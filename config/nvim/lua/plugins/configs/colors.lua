@@ -2,10 +2,10 @@ local M = {}
 
 M.github = {
   options = {
-    transparent = false, -- Disable setting background
-    dim_inactive = false, -- Non focused panes set to alternative background
+    transparent = false,   -- Disable setting background
+    dim_inactive = false,  -- Non focused panes set to alternative background
     module_default = true, -- Default enable value for modules
-    styles = { -- Style to be applied to different syntax groups
+    styles = {             -- Style to be applied to different syntax groups
       comments = "italic", -- Value is any valid attr-list value `:help attr-list`
       functions = "bold",
       keywords = "italic",
@@ -47,15 +47,23 @@ M.tokyonight = {
     sidebars = "dark",
     floats = "dark",
   },
-  sidebars = { "qf", "help", "terminal" },
+  sidebars = {
+    "qf",
+    "vista_kind",
+    "terminal",
+    "packer",
+    "spectre_panel",
+    "NeogitStatus",
+    "help"
+  },
   lualine_bold = true,
 }
 
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = false,
-  no_underline = true, -- Force no underline
-  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true,       -- Force no underline
+  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },

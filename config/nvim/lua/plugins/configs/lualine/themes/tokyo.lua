@@ -1,8 +1,8 @@
 local M = {}
 
-M.night = {
-  bg = "#16161e",
-  fg = "#787c99",
+M.storm = {
+  bg = "#1f2335",
+  fg = "#7982a9",
   white = "#a9b1d6",
   yellow = "#e0af68",
   cyan = "#7dcfff",
@@ -12,9 +12,9 @@ M.night = {
   red = "#f7768e",
 }
 
-M.storm = {
-  bg = "#1f2335",
-  fg = "#7982a9",
+M.night = {
+  bg = "#16161e",
+  fg = "#787c99",
   white = "#a9b1d6",
   yellow = "#e0af68",
   cyan = "#7dcfff",
