@@ -2,7 +2,8 @@ return {
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     opts = function() return require("plugins.configs.colors").github end,
     config = function(_, opts)
       require("github-theme").setup(opts)
@@ -34,8 +35,7 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     name = "tokyonight",
     opts = function() return require("plugins.configs.colors").tokyonight end,
     config = function(_, opts)
