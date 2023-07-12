@@ -1,5 +1,16 @@
 return {
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    enabled = false,
+    opts = function() return require("plugins.configs.colors").catppuccin end,
+    config = function(_, opts)
+      require("catppuccin").setup(opts)
+      vim.cmd("colorscheme catppuccin")
+    end,
+  },
+
+  {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
     lazy = false,
@@ -8,17 +19,6 @@ return {
     config = function(_, opts)
       require("github-theme").setup(opts)
       vim.cmd("colorscheme github_dark_dimmed")
-    end,
-  },
-
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    enabled = false,
-    opts = function() return require("plugins.configs.colors").catppuccin end,
-    config = function(_, opts)
-      require("catppuccin").setup(opts)
-      vim.cmd("colorscheme catppuccin")
     end,
   },
 
