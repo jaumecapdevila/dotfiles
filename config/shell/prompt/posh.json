@@ -66,7 +66,7 @@
                         "always_enabled": true
                     },
                     "style": "diamond",
-                    "template": "{{ if gt .Code 0 }} \uf06a {{ else }} \uf058 {{ end }}",
+                    "template": "{{ if gt .Code 0 }} \uf467 {{ else }} \ueab2 {{ end }}",
                     "trailing_diamond": "\ue0b0",
                     "type": "exit"
                 }
@@ -141,15 +141,6 @@
                     "style": "powerline",
                     "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
                     "type": "session"
-                },
-                {
-                    "background": "white",
-                    "foreground": "black",
-                    "leading_diamond": "<transparent,white>\ue0b0</>",
-                    "style": "diamond",
-                    "template": " \uf0a9 ",
-                    "trailing_diamond": "\ue0b0",
-                    "type": "text"
                 }
             ],
             "type": "prompt"
