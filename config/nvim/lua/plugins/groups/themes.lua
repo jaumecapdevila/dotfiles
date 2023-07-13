@@ -1,4 +1,28 @@
 return {
+  -- vimscript
+  {
+    "embark-theme/vim",
+    name = "embark",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.embark_terminal_italics = 1
+    end,
+    config = function()
+      vim.cmd("colorscheme embark")
+    end,
+  },
+
+  {
+    "pineapplegiant/spaceduck",
+    name = "spaceduck",
+    enabled = false,
+    config = function()
+      vim.cmd("colorscheme spaceduck")
+    end,
+  },
+
+  -- lua
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -13,8 +37,7 @@ return {
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.configs.colors").github end,
     config = function(_, opts)
       require("github-theme").setup(opts)
