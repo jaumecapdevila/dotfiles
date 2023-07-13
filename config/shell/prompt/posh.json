@@ -22,14 +22,14 @@
                     "foreground": "black",
                     "leading_diamond": "\ue0b6",
                     "style": "diamond",
-                    "template": " \ue795 ",
+                    "template": " \uf489  ",
                     "type": "text"
                 },
                 {
                     "background": "blue",
                     "foreground": "black",
                     "properties": {
-                        "home_icon": "\ue617",
+                        "home_icon": "~",
                         "style": "mixed"
                     },
                     "style": "diamond",
