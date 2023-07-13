@@ -3,8 +3,7 @@ return {
   {
     "embark-theme/vim",
     name = "embark",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     init = function()
       vim.g.embark_terminal_italics = 1
     end,
@@ -26,7 +25,8 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     opts = function() return require("plugins.configs.colors").catppuccin end,
     config = function(_, opts)
       require("catppuccin").setup(opts)

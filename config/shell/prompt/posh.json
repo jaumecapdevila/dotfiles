@@ -1,0 +1,161 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "white",
+                    "style": "plain",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "leading_diamond": "\ue0b6",
+                    "style": "diamond",
+                    "template": " \ue795 ",
+                    "type": "text"
+                },
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "properties": {
+                        "home_icon": "\ue617",
+                        "style": "mixed"
+                    },
+                    "style": "diamond",
+                    "template": "{{ .Path }} ",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "path"
+                },
+                {
+                    "background": "cyan",
+                    "foreground": "black",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "fetch_stash_count": false,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": false,
+                        "branch_icon": "\uf418 ",
+                        "github_icon": "\uea84 "
+                    },
+                    "style": "powerline",
+                    "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}\ueb4b {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+                    "type": "git"
+                },
+                {
+                    "leading_diamond": "<transparent>\ue0b0</>",
+                    "style": "plain",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "text"
+                },
+                {
+                    "background": "magenta",
+                    "foreground": "black",
+                    "leading_diamond": "<transparent,magenta>\ue0b0</>",
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "diamond",
+                    "template": "{{ if gt .Code 0 }} \uf06a {{ else }} \uf058 {{ end }}",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "exit"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "invert_powerline": true,
+                    "leading_diamond": "\ue0b6",
+                    "properties": {
+                        "charged_icon": "\ueb2d ",
+                        "charging_icon": "\uf492 ",
+                        "discharging_icon": "\uf243 "
+                    },
+                    "style": "diamond",
+                    "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}% <transparent>\ue0b2</>",
+                    "type": "battery"
+                },
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "invert_powerline": true,
+                    "leading_diamond": "\ue0b2",
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "diamond",
+                    "template": " \udb82\udd54 {{ .FormattedMs }} <transparent>\ue0b2</>",
+                    "type": "executiontime"
+                },
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "invert_powerline": true,
+                    "leading_diamond": "\ue0b2",
+                    "properties": {
+                        "time_format": "_2,15:04"
+                    },
+                    "style": "diamond",
+                    "template": " \uf073 {{ .CurrentDate | date .Format }}",
+                    "trailing_diamond": "\ue0b4",
+                    "type": "time"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "background": "blue",
+                    "foreground": "black",
+                    "leading_diamond": "\ue0b6",
+                    "trailing_diamond": "\ue0b0",
+                    "style": "diamond",
+                    "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+                    "type": "os"
+                },
+                {
+                    "background": "yellow",
+                    "foreground": "black",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "display_host": false
+                    },
+                    "style": "powerline",
+                    "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
+                    "type": "session"
+                },
+                {
+                    "background": "white",
+                    "foreground": "black",
+                    "leading_diamond": "<transparent,white>\ue0b0</>",
+                    "style": "diamond",
+                    "template": " \uf0a9 ",
+                    "trailing_diamond": "\ue0b0",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "console_title_template": "{{if .Root}}Admin: {{end}} {{.Folder}}",
+    "final_space": true,
+    "version": 2
+}
