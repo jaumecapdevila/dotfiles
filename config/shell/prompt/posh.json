@@ -21,17 +21,17 @@
                     "leading_diamond": "\ue0b6",
                     "trailing_diamond": "\ue0b0",
                     "background": "yellow",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "properties": {
                         "display_host": false
                     },
                     "style": "diamond",
-                    "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
+                    "template": "\ueac4 {{ .UserName }} ",
                     "type": "session"
                 },
                 {
                     "background": "blue",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "properties": {
                         "home_icon": "\ueb06 ",
                         "style": "mixed"
@@ -43,7 +43,7 @@
                 },
                 {
                     "background": "cyan",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "leading_diamond": "<transparent,cyan>\ue0b0</>",
                     "trailing_diamond": "\ue0b0",
                     "properties": {
@@ -59,7 +59,7 @@
                 },
                 {
                     "background": "magenta",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "leading_diamond": "<transparent,magenta>\ue0b0</>",
                     "properties": {
                         "always_enabled": true
@@ -77,7 +77,7 @@
             "segments": [
                 {
                     "background": "blue",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "invert_powerline": true,
                     "leading_diamond": "\ue0b6",
                     "properties": {
@@ -91,7 +91,7 @@
                 },
                 {
                     "background": "blue",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "invert_powerline": true,
                     "leading_diamond": "\ue0b2",
                     "properties": {
@@ -103,7 +103,7 @@
                 },
                 {
                     "background": "blue",
-                    "foreground": "black",
+                    "foreground": "#1e2228",
                     "invert_powerline": true,
                     "leading_diamond": "\ue0b2",
                     "properties": {
