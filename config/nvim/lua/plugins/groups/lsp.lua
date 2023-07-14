@@ -32,12 +32,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       {
-        -- format & linting
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function() require("plugins.configs.null-ls") end,
-      },
-      -- improved UI
-      {
         "dnlhc/glance.nvim",
         cmd = "Glance",
         ---@class GlanceOpts

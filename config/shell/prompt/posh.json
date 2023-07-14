@@ -20,24 +20,13 @@
                 {
                     "leading_diamond": "\ue0b6",
                     "trailing_diamond": "\ue0b0",
-                    "background": "yellow",
-                    "foreground": "#1e2228",
-                    "properties": {
-                        "display_host": false
-                    },
-                    "style": "diamond",
-                    "template": "\ueac4 {{ .UserName }} ",
-                    "type": "session"
-                },
-                {
                     "background": "blue",
                     "foreground": "#1e2228",
                     "properties": {
                         "home_icon": "\ueb06 ",
-                        "style": "mixed"
+                        "style": "agnoster_short"
                     },
-                    "powerline_symbol": "\ue0b0",
-                    "style": "powerline",
+                    "style": "diamond",
                     "template": " {{ .Path }} ",
                     "type": "path"
                 },
@@ -51,23 +40,13 @@
                         "fetch_status": true,
                         "fetch_upstream_icon": false,
                         "branch_icon": "\uf418 ",
-                        "github_icon": "\uea84 "
+                        "github_icon": "\uea84 ",
+                        "branch_max_length": 20,
+                        "truncate_symbol": ".."
                     },
                     "style": "diamond",
                     "template": " {{ .HEAD }} ",
                     "type": "git"
-                },
-                {
-                    "background": "magenta",
-                    "foreground": "#1e2228",
-                    "leading_diamond": "<transparent,magenta>\ue0b0</>",
-                    "properties": {
-                        "always_enabled": true
-                    },
-                    "style": "diamond",
-                    "template": "{{ if gt .Code 0 }} \uf467 {{ else }} \ueab2 {{ end }}",
-                    "trailing_diamond": "\ue0b0",
-                    "type": "exit"
                 }
             ],
             "type": "prompt"
@@ -124,7 +103,7 @@
                 {
                     "foreground": "magenta",
                     "style": "plain",
-                    "template": "\uea9c ",
+                    "template": "{{ if gt .Code 0 }} <red>\uea9c</> {{ else }} <magenta>\uea9c</> {{ end }}",
                     "type": "text"
                 }
             ],
