@@ -24,8 +24,8 @@ return {
 
   {
     "rose-pine/neovim",
-    enabled = false,
     name = "rose-pine",
+    enabled = false,
     opts = function() return require("plugins.configs.colors").rosepine end,
     config = function(_, opts)
       require("rose-pine").setup(opts)
@@ -35,8 +35,8 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    enabled = false,
     name = "tokyonight",
+    enabled = false,
     opts = function() return require("plugins.configs.colors").tokyonight end,
     config = function(_, opts)
       require("tokyonight").setup(opts)

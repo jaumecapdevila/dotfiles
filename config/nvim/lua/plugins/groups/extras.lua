@@ -1,7 +1,6 @@
 return {
   {
     "mhartington/formatter.nvim",
-    name = "formatter",
     init = function()
       require("core.utils").map("formatter")
     end,
