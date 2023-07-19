@@ -58,7 +58,7 @@
                     "background": "blue",
                     "foreground": "#1e2228",
                     "invert_powerline": true,
-                    "leading_diamond": "\ue0b6",
+                    "leading_diamond": "\ue0b2",
                     "properties": {
                         "charged_icon": "",
                         "charging_icon": "\ueb2d ",
