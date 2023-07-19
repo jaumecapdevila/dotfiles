@@ -8,16 +8,16 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
   this, a table can be passed which contains the app name followed by the filename
 ]]
 local apps = {
-  b = "Firefox", -- Browser
-  c = "Visual Studio Code",
-  f = "Finder",
-  m = "Microsoft Outlook", -- Mail
-  n = "NoteApp",           -- Notes
-  s = "Slack",             -- Messaging
-  o = "Obsidian",          -- Life OS
-  p = "1Password",
-  t = "kitty",             -- Terminal
-  z = "Reminders",
+  b = "Firefox",            -- Browser
+  c = "Visual Studio Code", -- Code Editor
+  f = "Finder",             -- File Explorer
+  m = "Microsoft Outlook",  -- Mail
+  n = "NoteApp",            -- Notes
+  s = "Slack",              -- Messaging
+  o = "Obsidian",           -- Life OS
+  p = "1Password",          -- Password Manager
+  t = "kitty",              -- Terminal
+  h = "Hyper",              -- Secondary Terminal
 }
 
 local LaunchOrToggle = function(key, app_name, app_filename)

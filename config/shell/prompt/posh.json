@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "palette": {
-        "terminalBg": "#22272e"
+        "terminalBg": "#303446"
     },
     "blocks": [
         {
@@ -77,7 +77,8 @@
                     "invert_powerline": true,
                     "leading_diamond": "\ue0b2",
                     "properties": {
-                        "always_enabled": true
+                        "always_enabled": false,
+                        "threshold": 1000
                     },
                     "style": "diamond",
                     "template": " \uead8 {{ .FormattedMs }} <transparent>\ue0b2</>",

@@ -11,8 +11,15 @@
 command_timeout = 1000
 add_newline = true
 
-# Change the default prompt format
-format = '$os$all'
+# update default format
+format = """
+$directory\
+$git_branch\
+$cmd_duration\
+$python\
+$nodejs\
+$line_break\
+$character"""
 
 [line_break]
 disabled = false
@@ -22,9 +29,9 @@ format ='[$symbol](bold white)'
 disabled = true
 
 [character]
-success_symbol = '[❯](bold green)'
-error_symbol = '[❯](bold red)'
-vicmd_symbol = '[❮](bold green)'
+success_symbol = '[](bold purple)'
+error_symbol = '[](bold red)'
+vicmd_symbol = '[](bold green)'
 
 [username]
 style_user = "white bold"
@@ -35,9 +42,9 @@ show_always = false
 [directory]
 truncation_length = 3
 truncation_symbol = "…/"
-home_symbol = "󰋞 ~"
+home_symbol = " ~"
 read_only_style = "197"
-read_only = "  "
+read_only = " "
 style = "bold blue"
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
@@ -46,51 +53,11 @@ symbol = " "
 format = "on [$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
-style = "bold green"
-
-[git_status]
-disabled = true
-format = '[$all_status$ahead_behind]($style)'
 style = "bold cyan"
-staged = " ${count} "
-conflicted = " "
-up_to_date = " "
-untracked = " "
-ahead = "⇡${count} "
-diverged = "⇡${ahead_count}⇣${behind_count} "
-behind = "⇣${count} "
-stashed = " "
-modified = " "
-renamed = "󰀉 "
-deleted = " "
-
-[terraform]
-format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
-
-[vagrant]
-format = "via [ vagrant $version]($style) "
-
-[docker_context]
-format = "via [ $context](bold blue) "
-
-[helm]
-format = "via [ $version](bold purple) "
 
 [python]
-symbol = "󰌠 "
+symbol = "󱔎 "
 python_binary = "python3"
 
 [nodejs]
-format = "via [󱚝 $version](bold green) "
-disabled = true
-
-[ruby]
-format = "via [ $version]($style) "
-
-[kubernetes]
-format = 'on [ $context\($namespace\)](bold purple) '
-disabled = false
-
-[kubernetes.context_aliases]
-"clcreative-k8s-staging" = "cl-k8s-staging"
-"clcreative-k8s-production" = "cl-k8s-prod"
+symbol = "󱚝 "

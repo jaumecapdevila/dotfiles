@@ -29,8 +29,8 @@ source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 
 # External
 eval "$(zoxide init zsh)"
-# eval "$(starship init zsh)"
-eval "$(oh-my-posh init zsh --config "$DOTFILES/config/shell/prompt/posh.json")"
+eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh --config "$DOTFILES/config/shell/prompt/posh.json")"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
