@@ -180,25 +180,20 @@ M.lspconfig = {
       "Diagnostic setloclist",
     },
 
-    ["<leader>fm"] = {
-      function() vim.lsp.buf.format({ async = true }) end,
-      "LSP formatting",
-    },
+    -- ["<leader>fm"] = {
+    --   function() vim.lsp.buf.format({ async = true }) end,
+    --   "LSP formatting",
+    -- },
   },
 }
 
-M.typescript = {
+M.formatter = {
   n = {
-    ["<leader>co"] = {
-      "<cmd>TypescriptOrganizeImports<CR>",
-      "Organize Imports",
+    ["<leader>fm"] = {
+      "<cmd> FormatWrite <CR>",
+      "Format Write",
     },
-
-    ["<leader>cR"] = {
-      "<cmd>TypescriptRenameFile<CR>",
-      "Rename file",
-    },
-  },
+  }
 }
 
 M.nvimtree = {

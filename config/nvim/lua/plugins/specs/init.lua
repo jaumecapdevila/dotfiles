@@ -13,6 +13,7 @@ M.default = {
   { import = "plugins.groups.editor" },
   { import = "plugins.groups.lang" },
   { import = "plugins.groups.lsp" },
+  { import = "plugins.groups.extras" },
   { import = "plugins.groups.treesitter" },
   { import = "plugins.groups.ui" },
   { import = "plugins.groups.utils" },
