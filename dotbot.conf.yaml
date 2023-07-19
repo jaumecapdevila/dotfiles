@@ -19,7 +19,6 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/zellij/config.kdl: config/zellij/config.kdl
-    ~/.config/alacritty/alacritty.yml: config/alacritty/alacritty.yml
     ~/.config/kitty: config/kitty
     ~/.hyper.js: config/hyper/hyper.js
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
