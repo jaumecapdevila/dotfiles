@@ -8,8 +8,9 @@ git:
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
 
 gui:
+  windowSzie: "full"
   border: "rounded"
-  showFileTree: true
+  showFileTree: false
   scrollHeight: 20
   scrollPastBottom: false
   nerdFontsVersion: "3"
