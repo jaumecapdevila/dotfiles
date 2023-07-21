@@ -35,7 +35,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     init = function() require("core.utils").map("telescope") end,
@@ -54,8 +54,10 @@ return {
   -- Git UI
   {
     "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
     dependencies = { "nvim-lua/plenary.nvim" },
+    init = function()
+      vim.g.lazygit_floating_window_use_plenary = 1
+    end,
     keys = {
       {
         "<leader>lg",
@@ -64,6 +66,8 @@ return {
       },
     },
   },
+
+  { "tpope/vim-fugitive", cmd = { "Git", "G" } },
 
   -- keymaps cheatsheet
   {
@@ -94,9 +98,7 @@ return {
     config = function(_, opts)
       require("colorizer").setup(opts)
       -- execute colorizer as soon as possible
-      vim.defer_fn(function()
-        require("colorizer").attach_to_buffer(0)
-      end, 0)
+      vim.defer_fn(function() require("colorizer").attach_to_buffer(0) end, 0)
     end,
   },
 

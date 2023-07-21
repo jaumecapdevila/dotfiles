@@ -12,6 +12,18 @@ M.storm = {
   red = "#f7768e",
 }
 
+M.moon = {
+  bg = "#222436",
+  fg = "#c8d3f5",
+  white = "#a9b1d6",
+  yellow = "#e0af68",
+  cyan = "#7dcfff",
+  green = "#9ece6a",
+  magenta = "#bb9af7",
+  blue = "#7aa2f7",
+  red = "#f7768e",
+}
+
 M.night = {
   bg = "#16161e",
   fg = "#787c99",

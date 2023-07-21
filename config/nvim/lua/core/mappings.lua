@@ -189,9 +189,13 @@ M.lspconfig = {
 
 M.formatter = {
   n = {
-    ["<leader>fm"] = {
+    ["<leader>rc"] = {
+      "<cmd> Format <CR>",
+      "Reformat Code",
+    },
+    ["<leader>rw"] = {
       "<cmd> FormatWrite <CR>",
-      "Format Write",
+      "Reformat Code Write",
     },
   }
 }
@@ -388,6 +392,31 @@ M.code_action = {
       "Code Action Menu",
     },
   },
+}
+
+M.harpoon = {
+  n = {
+    ["<leader>'"] = {
+      function() require("harpoon.mark").add_file() end,
+      "Add to Harpoon",
+    },
+    ["<leader>0"] = {
+      function() require("harpoon.ui").toggle_quick_menu() end,
+      "Show harpoon menu",
+    },
+    ["<leader>1"] = {
+      function() require("harpoon.ui").nav_file(1) end,
+      "Navigato to Harpoon Buffer 1",
+    },
+    ["<leader>2"] = {
+      function() require("harpoon.ui").nav_file(2) end,
+      "Navigato to Harpoon Buffer 2",
+    },
+    ["<leader>3"] = {
+      function() require("harpoon.ui").nav_file(3) end,
+      "Navigato to Harpoon Buffer 3",
+    },
+  }
 }
 
 return M

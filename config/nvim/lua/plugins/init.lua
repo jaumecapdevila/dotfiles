@@ -21,7 +21,7 @@ local specs = require("plugins.specs")
 require("lazy").setup({
   spec = vim.g.vscode == nil and specs.default or specs.vscode,
   defaults = { lazy = false },
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "github_dark_dimmed" } },
   ui = {
     icons = {
       ft = "",

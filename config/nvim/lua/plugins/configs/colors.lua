@@ -74,7 +74,7 @@ M.github = {
 }
 
 M.tokyonight = {
-  style = "storm",
+  style = "night",
   transparent = false,
   styles = {
     comments = { italic = true },
@@ -83,7 +83,7 @@ M.tokyonight = {
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
     sidebars = "dark",
-    floats = "dark",
+    floats = "transparent",
   },
   sidebars = {
     "qf",

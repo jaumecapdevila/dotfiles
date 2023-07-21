@@ -2,8 +2,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.configs.colors").catppuccin end,
     config = function(_, opts)
       require("catppuccin").setup(opts)
@@ -14,7 +13,8 @@ return {
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     opts = function() return require("plugins.configs.colors").github end,
     config = function(_, opts)
       require("github-theme").setup(opts)
