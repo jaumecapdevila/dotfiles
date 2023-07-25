@@ -51,7 +51,7 @@ truncation_symbol = "…/"
 style = "bold cyan"
 
 [cmd_duration]
-min_time = 500
+min_time = 5000
 format = '⌛ [$duration](bold yellow) '
 
 [status]
