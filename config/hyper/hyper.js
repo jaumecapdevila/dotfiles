@@ -139,8 +139,8 @@ module.exports = {
       animate: {
         duration: "200", // default is 18000
       },
-      // borderColors: ["#81C8BE", "#F4B8E4", "#F2D4BA", "#F4E3BA"],
-      borderColors: ["#7dcfff", "#bb9af7", "#f7768e", "#e0af68"],
+      borderColors: ["#81C8BE", "#F4B8E4", "#F2D4BA", "#F4E3BA"],
+      // borderColors: ["#7dcfff", "#bb9af7", "#f7768e", "#e0af68"],
     },
   },
   // a list of plugins to fetch and install from npm
@@ -149,7 +149,12 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperborder", "hyper-tokyo-night", "hyper-tokyo-night-storm"],
+  plugins: [
+    "hyperborder",
+    "hyper-tokyo-night",
+    "hyper-tokyo-night-storm",
+    "hypurr",
+  ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
