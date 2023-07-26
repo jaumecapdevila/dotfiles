@@ -120,4 +120,20 @@ M.synthwave84 = {
   }
 }
 
+M.dracula = {
+  -- show the '~' characters after the end of buffers
+  show_end_of_buffer = false,
+  -- do not use transparent background
+  transparent_bg = false,
+  -- set italic comment
+  italic_comment = true,
+  -- override theme colors and highlight groups
+  overrides = function(colors)
+    return {
+      Nothing = {},                                -- clear highlight of Nothing
+      NonText = { fg = colors.white },             -- set NonText fg to white of theme
+    }
+  end,
+}
+
 return M

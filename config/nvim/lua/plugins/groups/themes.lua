@@ -12,6 +12,16 @@ return {
   },
 
   {
+    "Mofiqul/dracula.nvim",
+    enabled = false,
+    opts = function() return require("plugins.configs.colors").dracula end,
+    config = function(_, opts)
+      require("dracula").setup(opts)
+      vim.cmd("colorscheme dracula")
+    end,
+  },
+
+  {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
     enabled = false,
