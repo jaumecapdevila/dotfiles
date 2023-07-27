@@ -79,6 +79,17 @@ return {
     config = function(_, opts) require("which-key").setup(opts) end,
   },
 
+  -- easily access pinned buffers
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = "nvim-lua/plenary.nvim",
+    init = function ()
+      require('core.utils').map("harpoon")
+    end,
+    opts = function() require("plugins.configs.harpoon") end,
+    config = function(_, opts) require("harpoon").setup(opts) end,
+  },
+
   -- dim inactive windows
   {
     "andreadev-it/shade.nvim",

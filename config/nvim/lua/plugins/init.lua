@@ -18,8 +18,10 @@ vim.opt.rtp:prepend(lazy_path)
 
 local specs = require("plugins.specs")
 
+-- current specs: vscode, ide, text
+
 require("lazy").setup({
-  spec = vim.g.vscode == nil and specs.default or specs.vscode,
+  spec = vim.g.vscode == nil and specs.text or specs.vscode,
   defaults = { lazy = false },
   install = { colorscheme = { "github_dark_dimmed" } },
   ui = {

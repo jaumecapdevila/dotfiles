@@ -83,7 +83,7 @@ M.tokyonight = {
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
     sidebars = "dark",
-    floats = "transparent",
+    floats = "normal",
   },
   sidebars = {
     "qf",
