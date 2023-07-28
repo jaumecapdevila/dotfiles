@@ -27,7 +27,7 @@ disabled = false
 success_symbol = '[❯](bold purple)'
 error_symbol = '[❯](bold red)'
 vicmd_symbol = '[❮](bold green)'
-disabled = true
+disabled = false
 
 [username]
 style_user = "white bold"

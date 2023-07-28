@@ -42,6 +42,17 @@ return {
     config = function() require("plugins.configs.lspconfig") end,
   },
 
+  -- display lsp symbols
+  {
+    "simrat39/symbols-outline.nvim",
+    keys = {
+      { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
+    },
+    opts = function() return require("plugins.configs.others").symbols_outline end,
+    config = function(_, opts) require("symbols-outline").setup(opts) end,
+  },
+
+
   -- VSCode like breadcrums
   {
     "utilyre/barbecue.nvim",

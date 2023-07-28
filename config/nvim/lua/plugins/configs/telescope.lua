@@ -49,7 +49,7 @@ local options = {
     },
   },
 
-  extensions_list = { "fzf", "file_browser", "harpoon", "notify" },
+  extensions_list = { "fzf", "file_browser", "notify" },
 }
 
 return options

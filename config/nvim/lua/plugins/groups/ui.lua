@@ -35,6 +35,18 @@ return {
     config = function(_, opts) require("indent_blankline").setup(opts) end,
   },
 
+  -- file explorer
+  {
+    "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    init = function() require("core.utils").map("nvimtree") end,
+    opts = function() return require("plugins.configs.nvimtree") end,
+    config = function(_, opts)
+      require("nvim-tree").setup(opts)
+      vim.g.nvimtree_side = opts.view.side
+    end,
+  },
+
   -- buffer management
   {
     "akinsho/bufferline.nvim",

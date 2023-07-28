@@ -1,12 +1,13 @@
 # If you modify this execute `zimfw uninstall & zimfw install`
-zmodule zimfw/environment
-zmodule zimfw/homebrew
-zmodule zimfw/utility
-zmodule zimfw/git
-zmodule zsh-users/zsh-syntax-highlighting
+
+zmodule Aloxaf/fzf-tab
 zmodule djui/alias-tips
-# zmodule zimfw/completion
-# zmodule zimfw/input
-# zmodule zsh-users/zsh-autosuggestions
-# zmodule zimfw/k
-# zmodule Aloxaf/fzf-tab
+zmodule zimfw/completion
+zmodule zimfw/environment
+zmodule zimfw/git
+zmodule zimfw/homebrew
+zmodule zimfw/input
+zmodule zimfw/k
+zmodule zimfw/utility
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-syntax-highlighting

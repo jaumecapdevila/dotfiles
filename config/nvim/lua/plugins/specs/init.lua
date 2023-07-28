@@ -5,7 +5,7 @@ M.vscode = {
   { import = "plugins.groups.treesitter" }
 }
 
-M.ide= {
+M.ide = {
   { import = "plugins.groups.actions" },
   { import = "plugins.groups.coding" },
   { import = "plugins.groups.debug" },
@@ -19,9 +19,10 @@ M.ide= {
   { import = "plugins.groups.utils" },
 }
 
-M.text= {
+M.text = {
   { import = "plugins.groups.actions" },
   { import = "plugins.groups.coding" },
+  { import = "plugins.groups.editor" },
   { import = "plugins.groups.themes" },
   { import = "plugins.groups.treesitter" },
   { import = "plugins.groups.ui" },

@@ -1,5 +1,40 @@
 local M = {}
 
+M.github = {
+  options = {
+    transparent = false,   -- Disable setting background
+    dim_inactive = false,  -- Non focused panes set to alternative background
+    module_default = true, -- Default enable value for modules
+    styles = {             -- Style to be applied to different syntax groups
+      comments = "italic", -- Value is any valid attr-list value `:help attr-list`
+      functions = "bold",
+      keywords = "italic",
+      variables = "NONE",
+      conditionals = "bold",
+      constants = "bold",
+      numbers = "bold",
+      operators = "bold",
+      strings = "NONE",
+      types = "italic",
+    },
+    darken = { -- Darken floating windows and sidebar-like windows
+      floats = true,
+      sidebars = {
+        enable = true,
+        list = {
+          "qf",
+          "vista_kind",
+          "terminal",
+          "packer",
+          "spectre_panel",
+          "NeogitStatus",
+          "help",
+        },
+      },
+    },
+  },
+}
+
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = false,
@@ -34,41 +69,6 @@ M.catppuccin = {
       bold_basename = true,
       dim_context = true,
       alt_background = false,
-    },
-  },
-}
-
-M.github = {
-  options = {
-    transparent = false,   -- Disable setting background
-    dim_inactive = false,  -- Non focused panes set to alternative background
-    module_default = true, -- Default enable value for modules
-    styles = {             -- Style to be applied to different syntax groups
-      comments = "italic", -- Value is any valid attr-list value `:help attr-list`
-      functions = "bold",
-      keywords = "italic",
-      variables = "NONE",
-      conditionals = "bold",
-      constants = "bold",
-      numbers = "bold",
-      operators = "bold",
-      strings = "NONE",
-      types = "italic",
-    },
-    darken = { -- Darken floating windows and sidebar-like windows
-      floats = true,
-      sidebars = {
-        enable = true,
-        list = {
-          "qf",
-          "vista_kind",
-          "terminal",
-          "packer",
-          "spectre_panel",
-          "NeogitStatus",
-          "help",
-        },
-      },
     },
   },
 }
@@ -118,22 +118,6 @@ M.synthwave84 = {
     buffer_visible_target = true,
     buffer_inactive_target = true,
   }
-}
-
-M.dracula = {
-  -- show the '~' characters after the end of buffers
-  show_end_of_buffer = false,
-  -- do not use transparent background
-  transparent_bg = false,
-  -- set italic comment
-  italic_comment = true,
-  -- override theme colors and highlight groups
-  overrides = function(colors)
-    return {
-      Nothing = {},                                -- clear highlight of Nothing
-      NonText = { fg = colors.white },             -- set NonText fg to white of theme
-    }
-  end,
 }
 
 return M
