@@ -20,6 +20,7 @@
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/zellij/config.kdl: config/zellij/config.kdl
     ~/.config/kitty: config/kitty
+    ~/.config/fish: config/shell/fish
     ~/.warp: config/warp
     ~/.hyper.js: config/hyper/hyper.js
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml

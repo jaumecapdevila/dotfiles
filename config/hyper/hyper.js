@@ -93,7 +93,7 @@ module.exports = {
     //
     // Cygwin
     // - Example: `C:\\cygwin64\\bin\\bash.exe`
-    shell: "",
+    shell: "/opt/homebrew/bin/fish",
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
     shellArgs: ["--login"],
@@ -139,7 +139,6 @@ module.exports = {
       animate: {
         duration: "200", // default is 18000
       },
-      // borderColors: ["#50fa7b", "#ff79c6", "#f1fa8c", "#bd93f9"],
       borderColors: ["#81C8BE", "#F4B8E4", "#E5C890", "#8CAAEE"],
     },
   },

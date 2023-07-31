@@ -16,7 +16,7 @@ local apps = {
   s = "Slack",              -- Messaging
   o = "Obsidian",           -- Life OS
   p = "1Password",          -- Password Manager
-  t = "kitty",              -- Terminal
+  t = "Warp",               -- Terminal
   h = "Hyper",              -- Secondary Terminal
 }
 
