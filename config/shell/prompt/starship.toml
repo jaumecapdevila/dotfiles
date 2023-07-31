@@ -17,16 +17,28 @@ $directory\
 $git_branch\
 $cmd_duration\
 $status\
-$line_break\
 $character"""
 
+right_format = """
+$shell\
+$python\
+$nodejs\
+$time"""
+
 [line_break]
+disabled = true
+
+[shell]
+zsh_indicator='zsh'
+fish_indicator = 'fish'
+nu_indicator='nu'
+unknown_indicator = '?'
+style = 'cyan bold'
 disabled = false
 
 [character]
-success_symbol = '[❯](bold purple)'
-error_symbol = '[❯](bold red)'
-vicmd_symbol = '[❮](bold green)'
+success_symbol = '[➜](bold purple)'
+error_symbol = '[➜](bold red)'
 disabled = false
 
 [username]
@@ -56,8 +68,8 @@ min_time = 5000
 format = '[$duration](bold yellow) '
 
 [status]
-symbol = '😡 '
-success_symbol = '🚀 '
+symbol = '😡'
+success_symbol = '🚀'
 format = '[$symbol$common_meaning]($style) '
 disabled = false
 
