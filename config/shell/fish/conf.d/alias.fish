@@ -1,3 +1,7 @@
+# editors
+alias vi vim
+alias vim nvim
+
 # Pnpm
 alias pn pnpm
 

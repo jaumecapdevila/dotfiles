@@ -9,17 +9,19 @@
 # https://starship.rs
 
 command_timeout = 1000
-add_newline = false
+add_newline = true
 
 # update default format
 format = """
 $directory\
 $git_branch\
 $cmd_duration\
-$status"""
+$status\
+$line_break\
+$character"""
 
 [line_break]
-disabled = true
+disabled = false
 
 [directory]
 truncation_length = 3
@@ -53,3 +55,8 @@ python_binary = "python3"
 
 [nodejs]
 symbol = "🤖"
+
+[character]
+success_symbol = '[❯](bold purple)'
+error_symbol = '[❯](bold red)'
+
