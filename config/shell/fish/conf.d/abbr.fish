@@ -6,9 +6,8 @@ abbr cl clear
 abbr claer clear
 abbr clera clear
 abbr cx "chmod +x"
-
 abbr e exit
-
+abbr lg lazygit
 abbr fi "fisher install"
 abbr fr "fisher refresh"
 abbr fu "fisher update"

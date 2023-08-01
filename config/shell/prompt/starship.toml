@@ -9,16 +9,14 @@
 # https://starship.rs
 
 command_timeout = 1000
-add_newline = true
+add_newline = false
 
 # update default format
 format = """
 $directory\
 $git_branch\
 $cmd_duration\
-$status\
-$line_break\
-$character"""
+$status"""
 
 [line_break]
 disabled = true
@@ -48,11 +46,6 @@ symbol = '😡'
 success_symbol = '🚀'
 format = '[$symbol$common_meaning]($style) '
 disabled = false
-
-[character]
-success_symbol = '[❯](bold purple)'
-error_symbol = '[❯](bold red)'
-disabled = true
 
 [python]
 symbol = "🐍"

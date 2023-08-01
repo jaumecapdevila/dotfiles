@@ -16,11 +16,6 @@ gui:
   nerdFontsVersion: "3"
   showBottomLine: false
   commandLogSize: 10
-  theme:
-    selectedLineBgColor:
-      - default
-    selectedRangeBgColor:
-      - default
 
 customCommands:
   - key: "f"
