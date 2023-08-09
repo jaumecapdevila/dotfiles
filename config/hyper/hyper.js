@@ -141,24 +141,6 @@ module.exports = {
       },
       borderColors: ["#81C8BE", "#F4B8E4", "#E5C890", "#8CAAEE"],
     },
-
-    paneNavigation: {
-      debug: false,
-      hotkeys: {
-        navigation: {
-          up: "ctrl+k",
-          down: "ctrl+j",
-          left: "ctrl+h",
-          right: "ctrl+l",
-        },
-        jump_prefix: "ctrl+alt", // completed with 1-9 digits
-        permutation_modifier: "shift", // Added to jump and navigation hotkeys for pane permutation
-        maximize: "meta+enter",
-      },
-      showIndicators: false,
-      focusOnMouseHover: false,
-      inactivePaneOpacity: 1.0,
-    },
   },
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
@@ -166,7 +148,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperborder", "hypurr", "hyper-pane"],
+  plugins: ["hyperborder", "hypurr"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
@@ -174,6 +156,8 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+    "pane:next": "ctrl+l",
+    "pane:prev": "ctrl+h",
   },
 };
 //# sourceMappingURL=config-default.js.map

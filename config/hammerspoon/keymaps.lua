@@ -16,8 +16,7 @@ local apps = {
   s = "Slack",              -- Messaging
   o = "Obsidian",           -- Life OS
   p = "1Password",          -- Password Manager
-  t = "Warp",               -- Terminal
-  h = "Hyper",              -- Secondary Terminal
+  t = "Hyper",              -- Terminal
 }
 
 local LaunchOrToggle = function(key, app_name, app_filename)
