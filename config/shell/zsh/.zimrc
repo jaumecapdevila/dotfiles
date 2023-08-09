@@ -10,4 +10,4 @@ zmodule zimfw/input
 zmodule zimfw/k
 zmodule zimfw/utility
 # zmodule zsh-users/zsh-autosuggestions
-# zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-syntax-highlighting
