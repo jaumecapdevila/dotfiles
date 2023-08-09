@@ -38,6 +38,7 @@ return {
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
+    enabled = false,
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     init = function() require("core.utils").map("nvimtree") end,
     opts = function() return require("plugins.configs.nvimtree") end,
@@ -51,6 +52,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
+    enabled = false,
     keys = {
       { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
       {

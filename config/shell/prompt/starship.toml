@@ -44,7 +44,7 @@ min_time = 5000
 format = '[$duration](bold yellow) '
 
 [status]
-symbol = '😡'
+symbol = '😡 '
 success_symbol = '🚀'
 format = '[$symbol$common_meaning]($style) '
 disabled = false
@@ -59,4 +59,5 @@ symbol = "🤖"
 [character]
 success_symbol = '[❯](bold purple)'
 error_symbol = '[❯](bold red)'
+disabled = false
 

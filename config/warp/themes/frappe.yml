@@ -1,7 +1,7 @@
 background: "#303446"
 accent:
-  left: "#f2d5cf"
-  right: "#f4b8e4"
+  left: "#f4b8e4"
+  right: "#81c8be"
 foreground: "#c6d0f5"
 details: darker
 terminal_colors:
