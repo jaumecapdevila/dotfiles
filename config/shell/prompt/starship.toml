@@ -44,9 +44,9 @@ min_time = 5000
 format = '[$duration](bold yellow) '
 
 [status]
-symbol = '😡 '
+symbol = '😡'
 success_symbol = '🚀'
-format = '[$symbol$common_meaning]($style) '
+format = '[$symbol]($style) '
 disabled = false
 
 [python]

@@ -21,7 +21,7 @@ local specs = require("plugins.specs")
 -- current specs: vscode, ide, text
 
 require("lazy").setup({
-  spec = vim.g.vscode == nil and specs.text or specs.vscode,
+  spec = vim.g.vscode == nil and specs.ide or specs.vscode,
   defaults = { lazy = false },
   install = { colorscheme = { "catppuccin" } },
   ui = {
