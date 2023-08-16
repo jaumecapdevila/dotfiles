@@ -12,6 +12,17 @@ return {
   },
 
   {
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
+    enabled = false,
+    opts = function() return require("plugins.configs.colors").tokyonight end,
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+
+  {
     "Mofiqul/dracula.nvim",
     enabled = false,
     opts = function() return require("plugins.configs.colors").dracula end,
@@ -40,17 +51,6 @@ return {
     config = function(_, opts)
       require("rose-pine").setup(opts)
       vim.cmd("colorscheme rose-pine")
-    end,
-  },
-
-  {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
-    enabled = false,
-    opts = function() return require("plugins.configs.colors").tokyonight end,
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-      vim.cmd("colorscheme tokyonight")
     end,
   },
 
