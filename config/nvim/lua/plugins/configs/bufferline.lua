@@ -2,7 +2,7 @@ local options = {
   options = {
     indicator = { style = "none" },
     separator_style = "none",
-    always_show_bufferline = false,
+    always_show_bufferline = true,
     diagnostics = "nvim_lsp",
     left_trunc_marker = "",
     right_trunc_marker = "",
