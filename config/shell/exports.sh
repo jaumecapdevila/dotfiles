@@ -9,7 +9,7 @@ export LC_CTYPE="en_US.UTF-8"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
-export FZF_DEFAULT_OPTS="--reverse --no-info --prompt=' ' \
+export FZF_DEFAULT_OPTS="--reverse --no-info --border --prompt=' ' \
   --color gutter:-1,bg+:-1,header:4,separator:0,info:0,label:4,border:4,prompt:7,pointer:5,query:7,prompt:7"
 export FZF_CTRL_R_OPTS="--border-label=' History ' --prompt='󰍉 '"
 export FZF_DEFAULT_COMMAND="fd -H -E '.git'"
@@ -45,6 +45,7 @@ export path=(
 	"/opt/homebrew/opt/node@14/bin"
 	"/opt/homebrew/opt/python@3.9/libexec/bin"
 	"/opt/homebrew/bin"
+	"/opt/homebrew/sbin"
 	"/usr/local/bin"
 	"/bin"
 	"/usr/bin"

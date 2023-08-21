@@ -15,9 +15,10 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
+$git_status\
 $cmd_duration\
-$status\
 $line_break\
+$status\
 $character"""
 
 [line_break]
@@ -39,6 +40,20 @@ truncation_length = 10
 truncation_symbol = "…/"
 style = "bold cyan"
 
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = ''
+ahead = ''
+behind = '😰'
+diverged = '😵'
+up_to_date = ''
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = ''
+renamed = ''
+deleted = '🗑'
+
 [cmd_duration]
 min_time = 5000
 format = '[$duration](bold yellow) '
@@ -59,5 +74,5 @@ symbol = "🤖"
 [character]
 success_symbol = '[❯](bold purple)'
 error_symbol = '[❯](bold red)'
-disabled = false
+disabled = true
 

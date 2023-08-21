@@ -1,5 +1,28 @@
 local M = {}
 
+M.tokyonight = {
+  style = "storm",
+  transparent = false,
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = { bold = true },
+    variables = {},
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "dark",
+    floats = "transparent",
+  },
+  sidebars = {
+    "qf",
+    "vista_kind",
+    "terminal",
+    "packer",
+    "spectre_panel",
+    "NeogitStatus",
+    "help"
+  },
+}
+
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = false,
@@ -36,30 +59,6 @@ M.catppuccin = {
       alt_background = false,
     },
   },
-}
-
-M.tokyonight = {
-  style = "storm",
-  transparent = false,
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = { bold = true },
-    variables = {},
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark",
-    floats = "normal",
-  },
-  sidebars = {
-    "qf",
-    "vista_kind",
-    "terminal",
-    "packer",
-    "spectre_panel",
-    "NeogitStatus",
-    "help"
-  },
-  lualine_bold = true,
 }
 
 return M
