@@ -76,5 +76,6 @@ return {
     "kosayoda/nvim-lightbulb",
     opts = function() return require("plugins.configs.lightbulb") end,
     config = function(_, opts) require("nvim-lightbulb").setup(opts) end,
+    enabled = false,
   },
 }
