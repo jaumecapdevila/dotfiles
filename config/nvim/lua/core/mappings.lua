@@ -180,10 +180,10 @@ M.lspconfig = {
       "Diagnostic setloclist",
     },
 
-    -- ["<leader>fm"] = {
-    --   function() vim.lsp.buf.format({ async = true }) end,
-    --   "LSP formatting",
-    -- },
+    ["<leader>fm"] = {
+      function() vim.lsp.buf.format({ async = true }) end,
+      "LSP formatting",
+    },
   },
 }
 

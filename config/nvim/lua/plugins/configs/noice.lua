@@ -18,6 +18,12 @@ local options = {
     inc_rename = false,           -- enables an input dialog for inc-rename.nvim
     lsp_doc_border = false,       -- add a border to hover docs and signature help
   },
+  cmdline = {
+    format = {
+      search_down = { icon = " " },
+      search_up = { icon = " " },
+    }
+  }
 }
 
 return options
