@@ -52,7 +52,7 @@ stashed = '📦'
 modified = '📝'
 staged = ''
 renamed = ''
-deleted = '🗑'
+deleted = '🗑  '
 
 [cmd_duration]
 min_time = 5000

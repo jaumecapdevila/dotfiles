@@ -24,7 +24,7 @@ M.tokyonight = {
 }
 
 M.catppuccin = {
-  flavour = "frappe",
+  flavour = "mocha",
   transparent_background = false,
   no_underline = true,       -- Force no underline
   styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
