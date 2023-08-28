@@ -3,7 +3,7 @@ local lualine = require("lualine")
 -- Color table for highlights
 -- stylua: ignore
 
-local colors = require("plugins.configs.lualine.themes.catppuccin").frappe
+local colors = require("plugins.configs.lualine.themes.tokyo").night
 
 local conditions = {
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
@@ -27,8 +27,8 @@ local config = {
       -- are just setting default looks o statusline
       -- normal = { c = { fg = colors.fg, bg = "NONE" } },
       -- inactive = { c = { fg = colors.fg, bg = "NONE" } },
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
+      normal = { c = { fg = colors.fg, bg = vim.g.transparency and "NONE" or colors.bg } },
+      inactive = { c = { fg = colors.fg, bg = vim.g.transparency and "NONE" or colors.bg } },
     },
   },
   sections = {

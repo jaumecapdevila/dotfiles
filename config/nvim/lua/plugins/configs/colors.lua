@@ -1,15 +1,15 @@
 local M = {}
 
 M.tokyonight = {
-  style = "storm",
-  transparent = false,
+  style = "night",
+  transparent = true,
   styles = {
     comments = { italic = true },
     keywords = { italic = true },
     functions = { bold = true },
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark",
+    sidebars = "transparent",
     floats = "transparent",
   },
   sidebars = {

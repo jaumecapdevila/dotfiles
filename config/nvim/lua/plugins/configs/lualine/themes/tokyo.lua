@@ -1,7 +1,7 @@
 local M = {}
 
 M.storm = {
-  bg = "#1f2335",
+  bg = "#24283b",
   fg = "#7982a9",
   white = "#a9b1d6",
   yellow = "#e0af68",
@@ -25,7 +25,7 @@ M.moon = {
 }
 
 M.night = {
-  bg = "#16161e",
+  bg = "#1a1b26",
   fg = "#787c99",
   white = "#a9b1d6",
   yellow = "#e0af68",
