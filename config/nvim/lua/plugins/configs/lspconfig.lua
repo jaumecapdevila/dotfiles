@@ -42,7 +42,6 @@ local simple_servers = {
   "clangd",
   "jsonls",
   "bashls",
-  "phpactor",
 }
 
 for _, lsp in ipairs(simple_servers) do

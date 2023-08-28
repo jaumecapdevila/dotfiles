@@ -1,5 +1,5 @@
 local options = {
-  logging = true,
+  logging = false,
   filetype = {
     lua = {
       require("formatter.filetypes.lua").stylua,
