@@ -1,6 +1,5 @@
 local M = {}
 local utils = require("core.utils")
-local mappings = require("core.mappings")
 
 M.blankline = {
   indentLine_enabled = 1,
@@ -122,8 +121,8 @@ M.surround = {
 M.whichkey = {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "-",  -- symbol used between a key and it's label
-    group = "+",      -- symbol prepended to a group
+    separator = "-", -- symbol used between a key and it's label
+    group = "+", -- symbol prepended to a group
   },
 }
 
