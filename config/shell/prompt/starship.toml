@@ -27,11 +27,11 @@ disabled = false
 [directory]
 truncation_length = 3
 truncation_symbol = "…/"
-home_symbol = "🏠"
+home_symbol = "~"
 read_only_style = "197"
 read_only = "🔒"
 style = "bold blue"
-format = "at [$path]($style)[$read_only]($read_only_style) "
+format = "📂 [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 symbol = "🐙 "
@@ -52,7 +52,7 @@ stashed = '📦'
 modified = '📝'
 staged = ''
 renamed = ''
-deleted = '🗑  '
+deleted = '💣'
 
 [cmd_duration]
 min_time = 5000
