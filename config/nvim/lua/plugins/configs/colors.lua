@@ -1,7 +1,7 @@
 local M = {}
 
 M.tokyonight = {
-  style = "night",
+  style = "storm",
   transparent = true,
   styles = {
     comments = { italic = true },

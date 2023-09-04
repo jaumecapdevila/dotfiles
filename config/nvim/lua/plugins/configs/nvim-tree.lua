@@ -13,8 +13,8 @@ local options = {
     update_root = false,
   },
   view = {
-    adaptive_size = true,
-    width = 30,
+    adaptive_size = false,
+    width = 35,
     side = "left",
   },
   git = {
@@ -42,7 +42,7 @@ local options = {
       show = {
         file = true,
         folder = true,
-        folder_arrow = false,
+        folder_arrow = true,
         git = false,
       },
 

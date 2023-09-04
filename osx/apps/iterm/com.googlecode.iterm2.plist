@@ -2202,13 +2202,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1176470588235294</real>
+				<real>0.18431372549019609</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.086274509803921595</real>
+				<real>0.1254901960784314</real>
 				<key>Red Component</key>
-				<real>0.082352941176470601</real>
+				<real>0.1137254901960784</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -2412,13 +2412,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901960784313731</real>
+				<real>0.23137254901960791</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1058823529411765</real>
+				<real>0.15686274509803921</real>
 				<key>Red Component</key>
-				<real>0.1019607843137255</real>
+				<real>0.14117647058823529</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string>/Users/capdevil/Pictures/wallpapers/wp6195919-cyberpunk-aesthetic-4k-wallpapers.jpg</string>
@@ -2438,7 +2438,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.14999999999999999</real>
+			<real>0.099999999999999992</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -2499,13 +2499,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901960784313731</real>
+				<real>0.23137254901960791</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1058823529411765</real>
+				<real>0.15686274509803921</real>
 				<key>Red Component</key>
-				<real>0.1019607843137255</real>
+				<real>0.14117647058823529</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -3044,13 +3044,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3411764705882353</real>
+				<real>0.39215686274509798</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.20392156862745101</real>
+				<real>0.23529411764705879</real>
 				<key>Red Component</key>
-				<real>0.15686274509803921</real>
+				<real>0.1803921568627451</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>

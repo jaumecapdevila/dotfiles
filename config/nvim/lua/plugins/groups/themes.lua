@@ -21,15 +21,4 @@ return {
       vim.cmd("colorscheme tokyonight")
     end,
   },
-
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    enabled = false,
-    opts = function() return require("plugins.configs.colors").rosepine end,
-    config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
-    end,
-  },
 }

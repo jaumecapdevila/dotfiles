@@ -1,0 +1,20 @@
+local options = {
+  options = {
+    separator_style = { "", "" },
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "File Explorer",
+        text_align = "left",
+        separator = false,
+      },
+    },
+    indicator = { style = "none" },
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    show_tab_indicators = false,
+    always_show_bufferline = false,
+  },
+}
+
+return options
