@@ -23,7 +23,7 @@ local specs = require("plugins.specs")
 require("lazy").setup({
   spec = vim.g.vscode == nil and specs.ide or specs.vscode,
   defaults = { lazy = false },
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "tokyonight" } },
   ui = {
     icons = {
       ft = "",
@@ -31,6 +31,13 @@ require("lazy").setup({
       loaded = "",
       not_loaded = "",
     },
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
   },
   performance = {
     rtp = {

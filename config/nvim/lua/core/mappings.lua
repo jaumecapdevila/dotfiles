@@ -200,7 +200,7 @@ M.formatter = {
   }
 }
 
-M.nvimtree = {
+M.nvim_tree = {
   n = {
     -- toggle
     ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },

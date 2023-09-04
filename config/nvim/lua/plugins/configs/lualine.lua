@@ -1,9 +1,9 @@
-local lualine = require("lualine")
+local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 -- Color table for highlights
 -- stylua: ignore
 
-local colors = require("plugins.configs.lualine.themes.catppuccin").frappe
+local colors = require("plugins.configs.lualine.themes.tokyo").night
 
 local conditions = {
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
@@ -76,7 +76,7 @@ ins_left({
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
-      n = colors.red,
+      n = colors.magenta,
       i = colors.green,
       v = colors.blue,
       [""] = colors.blue,
@@ -137,6 +137,12 @@ ins_left({
 
 -- Add components to right sections
 ins_right({
+  lazy_status.updates,
+  cond = lazy_status.has_updates,
+  color = { fg = colors.yellow, gui = "bold" },
+})
+
+ins_right({
   "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
@@ -146,7 +152,7 @@ ins_right({
 ins_right({
   "fileformat",
   fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+  icons_enabled = true,
   color = { fg = colors.green, gui = "bold" },
 })
 
