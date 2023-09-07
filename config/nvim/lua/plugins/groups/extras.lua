@@ -1,16 +1,4 @@
 return {
-  -- colorize
-  {
-    "NvChad/nvim-colorizer.lua",
-    event = { "BufRead", "BufWinEnter", "BufNewFile" },
-    opts = function() return require("plugins.configs.colorizer") end,
-    config = function(_, opts)
-      require("colorizer").setup(opts)
-      -- execute colorizer as soon as possible
-      vim.defer_fn(function() require("colorizer").attach_to_buffer(0) end, 0)
-    end,
-  },
-
   -- Git UI
   {
     "kdheepak/lazygit.nvim",

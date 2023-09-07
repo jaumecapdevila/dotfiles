@@ -52,30 +52,10 @@ return {
     config = function(_, opts) require("symbols-outline").setup(opts) end,
   },
 
-
-  -- VSCode like breadcrums
-  {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    enabled = false,
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-
-  {
-    "weilbith/nvim-code-action-menu",
-    enabled = false,
-    cmd = "CodeActionMenu",
-    init = function() require("core.utils").map("code_action") end,
-  },
-
   -- VSCode like code actions lightbulb
   {
     "kosayoda/nvim-lightbulb",
     opts = function() return require("plugins.configs.lightbulb") end,
     config = function(_, opts) require("nvim-lightbulb").setup(opts) end,
-    enabled = false,
   },
 }

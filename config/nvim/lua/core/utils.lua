@@ -8,8 +8,13 @@ end
 
 M.map = function(section, extra_opts)
   local core_mappings = require("core.mappings")
-  -- TODO handle invalid section
+
   local mappings = core_mappings[section]
+
+  if not mappings then
+    M.echo("No mappings found for " .. section)
+    return
+  end
 
   for mode, mode_values in pairs(mappings) do
     local default_opts = merge_tb("force", { mode = mode }, extra_opts or {})

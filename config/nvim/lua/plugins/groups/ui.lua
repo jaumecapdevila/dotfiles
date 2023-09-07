@@ -47,7 +47,7 @@ return {
     end,
   },
 
-   -- buffer management
+  -- buffer management
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
