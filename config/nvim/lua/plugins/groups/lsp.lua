@@ -40,6 +40,6 @@ return {
         config = function(_, opts) require("glance").setup(opts) end,
       },
     },
-    config = function() require("plugins.configs.lspconfig") end,
+    config = function() require("plugins.configs.lsp") end,
   },
 }
