@@ -126,19 +126,6 @@ M.lspconfig = {
   },
 }
 
-M.formatter = {
-  n = {
-    ["<leader>rc"] = {
-      "<cmd> Format <CR>",
-      "Reformat Code",
-    },
-    ["<leader>rw"] = {
-      "<cmd> FormatWrite <CR>",
-      "Reformat Code Write",
-    },
-  }
-}
-
 M.nvim_tree = {
   n = {
     -- toggle

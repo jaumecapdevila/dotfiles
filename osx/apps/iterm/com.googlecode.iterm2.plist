@@ -1463,7 +1463,7 @@
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabNumber</key>
-	<true/>
+	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>IRMemory</key>
@@ -1713,7 +1713,7 @@
 				<real>0.14117647058823529</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/capdevil/Pictures/wallpapers/wp8114704-retro-waves-4k-ultra-hd-wallpapers.jpg</string>
+			<string>/Users/capdevil/Pictures/wallpapers/wp6100620-tokyo-neon-retro-4k-wallpapers.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>

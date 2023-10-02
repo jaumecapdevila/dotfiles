@@ -21,39 +21,6 @@ M.blankline = {
   show_current_context_start = false,
 }
 
-M.luasnip = function(opts)
-  require("luasnip").config.set_config(opts)
-
-  -- vscode format
-  require("luasnip.loaders.from_vscode").lazy_load()
-  require("luasnip.loaders.from_vscode").lazy_load({
-    paths = vim.g.vscode_snippets_path or "",
-  })
-
-  -- snipmate format
-  require("luasnip.loaders.from_snipmate").load()
-  require("luasnip.loaders.from_snipmate").lazy_load({
-    paths = vim.g.snipmate_snippets_path or "",
-  })
-
-  -- lua format
-  require("luasnip.loaders.from_lua").load()
-  require("luasnip.loaders.from_lua").lazy_load({
-    paths = vim.g.lua_snippets_path or "",
-  })
-
-  vim.api.nvim_create_autocmd("InsertLeave", {
-    callback = function()
-      if
-          require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
-          and not require("luasnip").session.jump_active
-      then
-        require("luasnip").unlink_current()
-      end
-    end,
-  })
-end
-
 M.gitsigns = {
   signs = {
     add = { text = "│" },
@@ -66,41 +33,6 @@ M.gitsigns = {
   on_attach = function(bufnr)
     utils.map("gitsigns", { buffer = bufnr })
   end,
-}
-
-M.symbols_outline = {
-  show_guides = true,
-  auto_close = true,
-  symbols = {
-    File = { icon = "", hl = "@text.uri" },
-    Module = { icon = "󰕳", hl = "@namespace" },
-    Namespace = { icon = "", hl = "@namespace" },
-    Package = { icon = "", hl = "@namespace" },
-    Class = { icon = "", hl = "@type" },
-    Method = { icon = "ƒ", hl = "@method" },
-    Property = { icon = "", hl = "@method" },
-    Field = { icon = "", hl = "@field" },
-    Constructor = { icon = "", hl = "@constructor" },
-    Enum = { icon = "", hl = "@type" },
-    Interface = { icon = "", hl = "@type" },
-    Function = { icon = "󰊕", hl = "@function" },
-    Variable = { icon = "", hl = "@constant" },
-    Constant = { icon = "", hl = "@constant" },
-    String = { icon = "", hl = "@string" },
-    Number = { icon = "", hl = "@number" },
-    Boolean = { icon = "", hl = "@boolean" },
-    Array = { icon = "", hl = "@constant" },
-    Object = { icon = "⦿", hl = "@type" },
-    Key = { icon = "🔐", hl = "@type" },
-    Null = { icon = "NULL", hl = "@type" },
-    EnumMember = { icon = "", hl = "@field" },
-    Struct = { icon = "", hl = "@type" },
-    Event = { icon = "", hl = "@type" },
-    Operator = { icon = "+", hl = "@operator" },
-    TypeParameter = { icon = "", hl = "@parameter" },
-    Component = { icon = "", hl = "@function" },
-    Fragment = { icon = "", hl = "@constant" },
-  },
 }
 
 M.surround = {

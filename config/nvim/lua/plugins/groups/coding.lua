@@ -10,7 +10,9 @@ return {
         dependencies = "rafamadriz/friendly-snippets",
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
         config = function(_, opts)
-          require("plugins.configs.others").luasnip(opts)
+          require("luasnip").config.set_config(opts)
+          -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
+          require("luasnip.loaders.from_vscode").lazy_load()
         end,
       },
 
@@ -37,9 +39,9 @@ return {
       {
         "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+        "onsails/lspkind.nvim", -- vs-code like pictograms
       },
     },
     opts = function() return require("plugins.configs.cmp") end,

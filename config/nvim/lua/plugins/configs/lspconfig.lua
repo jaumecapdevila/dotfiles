@@ -1,40 +1,33 @@
-local M = {}
 local utils = require("core.utils")
 
--- export on_attach & capabilities for custom lspconfigs
-
-M.on_attach = function(client, bufnr)
+local on_attach = function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
   client.server_capabilities.semanticTokensProvider = nil
   utils.map("lspconfig", { buffer = bufnr })
-  if client.name == "tsserver" then
-    utils.map("typescript", { buffer = bufnr })
-  end
 end
 
-M.capabilities = vim.lsp.protocol.make_client_capabilities()
+local lspconfig = require("lspconfig")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local lspconfig_util = require("lspconfig/util")
 
-M.capabilities.textDocument.completion.completionItem = {
-  documentationFormat = { "markdown", "plaintext" },
-  snippetSupport = true,
-  preselectSupport = true,
-  insertReplaceSupport = true,
-  labelDetailsSupport = true,
-  deprecatedSupport = true,
-  commitCharactersSupport = true,
-  tagSupport = { valueSet = { 1 } },
-  resolveSupport = {
-    properties = {
-      "documentation",
-      "detail",
-      "additionalTextEdits",
-    },
-  },
+-- used to enable autocompletion (assign to every lsp server config)
+local capabilities = cmp_nvim_lsp.default_capabilities()
+
+-- this is for diagnositcs signs on the line number column
+-- use this to beautify the plain E W signs to more fun ones
+-- !important nerdfonts needs to be setup for this to work in your terminal
+local signs = {
+  Error = " ",
+  Warn = " ",
+  Info = " ",
+  Hint = " ",
 }
 
-local lspconfig = require("lspconfig")
-local lspconfig_util = require("lspconfig/util")
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 local simple_servers = {
   "html",
@@ -46,13 +39,13 @@ local simple_servers = {
 
 for _, lsp in ipairs(simple_servers) do
   lspconfig[lsp].setup({
-    on_attach = M.on_attach,
-    capabilities = M.capabilities,
+    on_attach = on_attach,
+    capabilities = capabilities,
   })
 end
 
 lspconfig.tsserver.setup({
-  on_attach = M.on_attach,
+  on_attach = on_attach,
   -- filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   filetypes = {
     "javascript",
@@ -63,13 +56,13 @@ lspconfig.tsserver.setup({
     "typescript.tsx",
   },
   cmd = { "typescript-language-server", "--stdio" },
-  capabilities = M.capabilities,
+  capabilities = capabilities,
 })
 
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({
-  capabilities = M.capabilities,
-  on_attach = M.on_attach,
+  capabilities = capabilities,
+  on_attach = on_attach,
   filetypes = {
     "html",
     "typescriptreact",
@@ -84,8 +77,8 @@ lspconfig["emmet_ls"].setup({
 
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
-  capabilities = M.capabilities,
-  on_attach = M.on_attach,
+  capabilities = capabilities,
+  on_attach = on_attach,
   settings = {
     Lua = {
       -- make the language server recognize "vim" global
@@ -105,8 +98,8 @@ lspconfig["lua_ls"].setup({
 
 -- configure gopls server
 lspconfig.gopls.setup({
-  on_attach = M.on_attach,
-  capabilities = M.capabilities,
+  on_attach = on_attach,
+  capabilities = capabilities,
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   root_dir = lspconfig_util.root_pattern("go.work", "go.mod", ".git"),
@@ -120,20 +113,3 @@ lspconfig.gopls.setup({
     },
   },
 })
-
--- this is for diagnositcs signs on the line number column
--- use this to beautify the plain E W signs to more fun ones
--- !important nerdfonts needs to be setup for this to work in your terminal
-local signs = {
-  Error = " ",
-  Warn = " ",
-  Info = " ",
-  Hint = " ",
-}
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
-return M
