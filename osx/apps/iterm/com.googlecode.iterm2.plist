@@ -1737,6 +1737,8 @@
 			<true/>
 			<key>Blur</key>
 			<true/>
+			<key>Blur Radius</key>
+			<real>5</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2357,7 +2359,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>4</integer>
+			<integer>0</integer>
 			<key>Title Components</key>
 			<integer>4</integer>
 			<key>Transparency</key>

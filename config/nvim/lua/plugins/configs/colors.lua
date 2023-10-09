@@ -19,15 +19,15 @@ M.tokyonight = {
     "packer",
     "spectre_panel",
     "NeogitStatus",
-    "help"
+    "help",
   },
 }
 
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = true,
-  no_underline = true,       -- Force no underline
-  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true, -- Force no underline
+  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },
