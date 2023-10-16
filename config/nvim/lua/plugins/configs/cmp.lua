@@ -16,13 +16,21 @@ local options = {
   },
 
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-    ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+    ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
+    ["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ["<S-CR>"] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    ["<C-CR>"] = function(fallback)
+      cmp.abort()
+      fallback()
+    end,
   },
 
   sources = {

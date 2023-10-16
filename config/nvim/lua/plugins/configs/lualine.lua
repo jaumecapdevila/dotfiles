@@ -3,7 +3,7 @@ local lazy_status = require("lazy.status") -- to configure lazy pending updates 
 -- Color table for highlights
 -- stylua: ignore
 
-local colors = require("plugins.configs.lualine.themes.tokyo").storm
+local colors = require("plugins.configs.lualine.themes.catppuccin").frappe
 
 local conditions = {
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
@@ -66,7 +66,7 @@ end
 
 ins_left({
   function() return "▊" end,
-  color = { fg = colors.blue },      -- Sets highlighting of component
+  color = { fg = colors.blue }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
@@ -143,7 +143,7 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = "bold" },
