@@ -2,22 +2,17 @@
 local hyper = { "cmd", "alt", "ctrl", "shift" }
 
 ------------------------------- APP LAUNCH/TOGGLE ------------------------------
---[[
-  The list of keys and apps which enable launching and toggling
-  Some apps have a different process name to their name on disk. To address
-  this, a table can be passed which contains the app name followed by the filename
-]]
 local apps = {
-  b = "Firefox",            -- Browser
+  b = "Firefox", -- Browser
   c = "Visual Studio Code", -- Code Editor
-  f = "Finder",             -- File Explorer
-  m = "Microsoft Outlook",  -- Mail
-  n = "NoteApp",            -- Notes
-  s = "Slack",              -- Messaging
-  o = "Obsidian",           -- Life OS
-  p = "1Password",          -- Password Manager
-  t = "iTerm",              -- Terminal
-  h = "Hyper",              -- Secondary Terminal
+  f = "Finder", -- File Explorer
+  m = "Microsoft Outlook", -- Mail
+  n = "NoteApp", -- Notes
+  s = "Slack", -- Messaging
+  o = "Obsidian", -- Life OS
+  p = "Postman", -- API Client
+  t = "iTerm", -- Terminal
+  ["1"] = "1Password", -- Password Manager
 }
 
 local LaunchOrToggle = function(key, app_name, app_filename)
@@ -44,9 +39,5 @@ local LaunchOrToggle = function(key, app_name, app_filename)
 end
 
 for key, app_name in pairs(apps) do
-  if type(app_name) == "table" then
-    LaunchOrToggle(key, app_name[1], app_name[2])
-  else
-    LaunchOrToggle(key, app_name)
-  end
+  LaunchOrToggle(key, app_name)
 end
