@@ -44,6 +44,7 @@ M.general = {
 
     -- utils
     ["<leader>qq"] = { "<cmd>qa<cr>", "Quit all" },
+    ["<leader>cl"] = { "<cmd>LspInfo<cr>", "Lsp info" },
   },
 
   t = {
@@ -96,7 +97,7 @@ M.lspconfig = {
 
     ["<leader>ca"] = {
       function() vim.lsp.buf.code_action() end,
-      "LSP rename",
+      "LSP code action",
     },
 
     ["<leader>rn"] = {
@@ -107,6 +108,11 @@ M.lspconfig = {
     ["gD"] = {
       function() vim.lsp.buf.declaration() end,
       "LSP declaration",
+    },
+
+    ["K"] = {
+      function() vim.lsp.buf.hover() end,
+      "LSP hover",
     },
 
     ["<leader>ls"] = {
