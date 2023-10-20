@@ -2297,11 +2297,11 @@
 			<key>Name</key>
 			<string>Cool</string>
 			<key>Non Ascii Font</key>
-			<string>PragmataProMonoNF-Regular 22</string>
+			<string>PragmataProMonoNF-Regular 20</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>PragmataProMonoLiga-Regular 22</string>
+			<string>PragmataPro-Regular 20</string>
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
