@@ -2301,7 +2301,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>PragmataPro-Regular 20</string>
+			<string>MonoLisaNF-Regular 19</string>
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -2375,7 +2375,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>

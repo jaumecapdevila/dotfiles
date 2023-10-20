@@ -1,7 +1,7 @@
 local M = {}
 
 M.frappe = {
-  bg = "#303446",
+  bg = "#292c3c",
   fg = "#c6d0f5",
   white = "#b5bfe2",
   yellow = "#e5c890",

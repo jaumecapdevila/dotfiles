@@ -1,6 +1,29 @@
 local M = {}
 local g = vim.g
 
+M.tokyonight = {
+  style = "storm",
+  transparent = g.transparency,
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = { bold = true },
+    variables = {},
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = g.transparency and "transparent" or "dark",
+    floats = "transparent",
+  },
+  sidebars = {
+    "qf",
+    "vista_kind",
+    "terminal",
+    "packer",
+    "spectre_panel",
+    "NeogitStatus",
+    "help"
+  },
+}
+
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = g.transparency,

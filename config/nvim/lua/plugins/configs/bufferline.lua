@@ -4,7 +4,7 @@ local options = {
     offsets = {
       {
         filetype = "NvimTree",
-        text = "File Explorer",
+        text = "EXPLORER",
         text_align = "left",
         separator = false,
       },
