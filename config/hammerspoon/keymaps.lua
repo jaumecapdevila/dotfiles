@@ -3,7 +3,7 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
 
 ------------------------------- APP LAUNCH/TOGGLE ------------------------------
 local apps = {
-  b = "Firefox", -- Browser
+  b = "Brave Browser", -- Browser
   c = "Visual Studio Code", -- Code Editor
   f = "Finder", -- File Explorer
   m = "Microsoft Outlook", -- Mail
