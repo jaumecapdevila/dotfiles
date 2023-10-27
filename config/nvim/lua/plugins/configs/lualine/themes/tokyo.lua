@@ -13,7 +13,7 @@ M.storm = {
 }
 
 M.night = {
-  bg = "#1a1b26",
+  bg = "#16161E",
   fg = "#787c99",
   white = "#a9b1d6",
   yellow = "#e0af68",
