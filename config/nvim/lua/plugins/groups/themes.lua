@@ -13,7 +13,7 @@ return {
     name = "rose-pine",
     lazy = false,
     priority = 1000,
-    opts = function() return require("plugins.configs.colors").rosepine() end,
+    opts = function() return require("plugins.configs.colors").rosepine end,
     config = function(_, opts)
       require("rose-pine").setup(opts)
       vim.cmd("colorscheme rose-pine")
