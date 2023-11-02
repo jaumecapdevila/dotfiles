@@ -1,11 +1,12 @@
+local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 -- Color table for highlights
 -- stylua: ignore
 
-local colors = require("plugins.configs.lualine.themes.catppuccin").frappe
 
 local conditions = {
+  has_plugin_updates = function() return lazy_status.has_updates() end,
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
   hide_in_width = function() return vim.fn.winwidth(0) > 80 end,
   check_git_workspace = function()
@@ -15,22 +16,17 @@ local conditions = {
   end,
 }
 
-if vim.g.transparency then colors.bg = "NONE" end
+local theme = require("plugins.configs.lualine.themes.rosepine").main
+local bg = g.transparency and "NONE" or theme.bg
 
 -- Config
 local config = {
   options = {
-    -- Disable sections and component separators
     component_separators = "",
     section_separators = "",
     theme = {
-      -- We are going to use lualine_c an lualine_x as left and
-      -- right section. Both are highlighted by c theme .  So we
-      -- are just setting default looks o statusline
-      -- normal = { c = { fg = colors.fg, bg = "NONE" } },
-      -- inactive = { c = { fg = colors.fg, bg = "NONE" } },
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
+      normal = { c = { fg = theme.fg, bg = bg } },
+      inactive = { c = { fg = theme.fg, bg = bg } },
     },
   },
   sections = {
@@ -66,44 +62,15 @@ end
 
 ins_left({
   function() return "▊" end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = theme.blue },       -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
 ins_left({
-  -- mode component
-  function() return "󰊠" end,
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.magenta,
-      i = colors.green,
-      v = colors.blue,
-      [""] = colors.blue,
-      V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.yellow,
-      S = colors.yellow,
-      [""] = colors.yellow,
-      ic = colors.yellow,
-      R = colors.magenta,
-      Rv = colors.magenta,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ["r?"] = colors.cyan,
-      ["!"] = colors.red,
-      t = colors.red,
-    }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  padding = { right = 1 },
+  function() return "🐶" end,
 })
 
 ins_left({
-  -- filesize component
   "filesize",
   cond = conditions.buffer_not_empty,
 })
@@ -111,21 +78,21 @@ ins_left({
 ins_left({
   "filename",
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.magenta, gui = "bold" },
+  color = { fg = theme.magenta, gui = "bold" },
 })
 
 ins_left({ "location" })
 
-ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+ins_left({ "progress", color = { fg = theme.fg, gui = "bold" } })
 
 ins_left({
   "diagnostics",
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    color_error = { fg = colors.red },
-    color_warn = { fg = colors.yellow },
-    color_info = { fg = colors.cyan },
+    color_error = { fg = theme.red },
+    color_warn = { fg = theme.yellow },
+    color_info = { fg = theme.cyan },
   },
 })
 
@@ -139,32 +106,32 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = colors.yellow, gui = "bold" },
+  color = { fg = theme.yellow, gui = "bold" },
 })
 
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
+  "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = theme.green, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = colors.green, gui = "bold" },
+  color = { fg = theme.green, gui = "bold" },
 })
 
 ins_right({
   "branch",
-  icon = "",
-  color = { fg = colors.magenta, gui = "bold" },
+  icon = "",
+  color = { fg = theme.magenta, gui = "bold" },
 })
 
 ins_right({
   function() return "▊" end,
-  color = { fg = colors.blue },
+  color = { fg = theme.blue },
   padding = { left = 1 },
 })
 
