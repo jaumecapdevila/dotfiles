@@ -1,31 +1,6 @@
 local M = {}
 local g = vim.g
 
-local style = g.transparency and "transparent" or "dark"
-
-M.tokyonight = {
-  style = "storm",
-  transparent = g.transparency,
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = { bold = true },
-    variables = {},
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = style,
-    floats = style,
-  },
-  sidebars = {
-    "qf",
-    "vista_kind",
-    "terminal",
-    "packer",
-    "spectre_panel",
-    "NeogitStatus",
-    "help",
-  },
-}
-
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = g.transparency,
@@ -44,8 +19,6 @@ M.catppuccin = {
     types = { "italic" },
     operators = { "bold" },
   },
-  color_overrides = {},
-  custom_highlights = {},
   integrations = {
     cmp = true,
     gitsigns = true,
@@ -55,49 +28,6 @@ M.catppuccin = {
     noice = true,
     treesitter = true,
     which_key = true,
-  },
-}
-
--- local config = require("rose-pine.config")
-
-M.rosepine = {
-  variant = "moon",
-  dark_variant = "moon",
-  bold_vert_split = true,
-  dim_nc_background = false,
-  disable_background = g.transparency,
-  disable_float_background = true,
-  disable_italics = false,
-
-  -- https://github.com/rose-pine/neovim/wiki/Recipes
-  highlight_groups = {
-    ColorColumn = { bg = "rose" },
-
-    -- Custom diagnostic highlights
-    -- ["DiagnosticUnderlineError"] = {
-    --   sp = config.options.groups.error,
-    --   undercurl = false,
-    -- },
-    -- ["DiagnosticUnderlineHint"] = {
-    --   sp = config.options.groups.hint,
-    --   undercurl = false,
-    -- },
-    -- ["DiagnosticUnderlineInfo"] = {
-    --   sp = config.options.groups.info,
-    --   undercurl = false,
-    -- },
-    -- ["DiagnosticUnderlineWarn"] = {
-    --   sp = config.options.groups.warn,
-    --   undercurl = false,
-    -- },
-
-    -- Blend colours against the "base" background
-    CursorLine = { bg = "foam", blend = 10 },
-
-    -- GitSigns
-    -- GitSignsAdd = { fg = config.options.groups.git_add, bg = "NONE" },
-    -- GitSignsChange = { fg = config.options.groups.git_change, bg = "NONE" },
-    -- GitSignsDelete = { fg = config.options.groups.git_delete, bg = "NONE" },
   },
 }
 
