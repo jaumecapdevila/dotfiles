@@ -29,8 +29,8 @@ M.tokyonight = {
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = g.transparency,
-  no_underline = true,       -- Force no underline
-  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true, -- Force no underline
+  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },
@@ -58,11 +58,11 @@ M.catppuccin = {
   },
 }
 
-local config = require("rose-pine.config")
+-- local config = require("rose-pine.config")
 
 M.rosepine = {
-  variant = "main",
-  dark_variant = "main",
+  variant = "moon",
+  dark_variant = "moon",
   bold_vert_split = true,
   dim_nc_background = false,
   disable_background = g.transparency,
@@ -73,13 +73,31 @@ M.rosepine = {
   highlight_groups = {
     ColorColumn = { bg = "rose" },
 
+    -- Custom diagnostic highlights
+    -- ["DiagnosticUnderlineError"] = {
+    --   sp = config.options.groups.error,
+    --   undercurl = false,
+    -- },
+    -- ["DiagnosticUnderlineHint"] = {
+    --   sp = config.options.groups.hint,
+    --   undercurl = false,
+    -- },
+    -- ["DiagnosticUnderlineInfo"] = {
+    --   sp = config.options.groups.info,
+    --   undercurl = false,
+    -- },
+    -- ["DiagnosticUnderlineWarn"] = {
+    --   sp = config.options.groups.warn,
+    --   undercurl = false,
+    -- },
+
     -- Blend colours against the "base" background
     CursorLine = { bg = "foam", blend = 10 },
 
     -- GitSigns
-    GitSignsAdd = { fg = config.options.groups.git_add, bg = "NONE" },
-    GitSignsChange = { fg = config.options.groups.git_change, bg = "NONE" },
-    GitSignsDelete = { fg = config.options.groups.git_delete, bg = "NONE" },
+    -- GitSignsAdd = { fg = config.options.groups.git_add, bg = "NONE" },
+    -- GitSignsChange = { fg = config.options.groups.git_change, bg = "NONE" },
+    -- GitSignsDelete = { fg = config.options.groups.git_delete, bg = "NONE" },
   },
 }
 

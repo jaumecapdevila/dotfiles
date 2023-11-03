@@ -14,6 +14,7 @@ local options = {
     "go",
     "php",
     "graphql",
+    "python",
   },
 
   highlight = {

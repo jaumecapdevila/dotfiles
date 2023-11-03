@@ -35,6 +35,7 @@ local simple_servers = {
   "clangd",
   "jsonls",
   "bashls",
+  "pyright",
 }
 
 for _, lsp in ipairs(simple_servers) do

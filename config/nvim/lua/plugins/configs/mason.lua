@@ -21,6 +21,9 @@ local options = {
     "goimports-reviser",
     "golines",
 
+    -- python
+    "pylint",
+
     -- php
     "phpactor",
 

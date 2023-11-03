@@ -4,7 +4,6 @@ local lazy_status = require("lazy.status") -- to configure lazy pending updates 
 -- Color table for highlights
 -- stylua: ignore
 
-
 local conditions = {
   has_plugin_updates = function() return lazy_status.has_updates() end,
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
@@ -16,7 +15,7 @@ local conditions = {
   end,
 }
 
-local theme = require("plugins.configs.lualine.themes.rosepine").main
+local theme = require("plugins.configs.lualine.themes.catppuccin").frappe
 local bg = g.transparency and "NONE" or theme.bg
 
 -- Config
@@ -100,7 +99,7 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = theme.yellow, gui = "bold" },
+  color = { fg = theme.cyan, gui = "bold" },
 })
 
 ins_right({
