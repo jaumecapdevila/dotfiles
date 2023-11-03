@@ -1,6 +1,32 @@
 local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
+-- custom themes
+local themes = {
+  frappe = {
+    bg = "#292c3c",
+    fg = "#c6d0f5",
+    white = "#b5bfe2",
+    yellow = "#e5c890",
+    cyan = "#81c8be",
+    green = "#a6d189",
+    magenta = "#f4b8e4",
+    blue = "#8caaee",
+    red = "#e78284",
+  },
+  mocha = {
+    bg = "#1e1e2e",
+    fg = "#cdd6f4",
+    white = "#bac2de",
+    yellow = "#f9e2af",
+    cyan = "#94e2d5",
+    green = "#a6e3a1",
+    magenta = "#f5c2e7",
+    blue = "#89b4fa",
+    red = "#f38ba8",
+  }
+}
+
 -- Color table for highlights
 -- stylua: ignore
 
@@ -15,10 +41,10 @@ local conditions = {
   end,
 }
 
-local theme = require("plugins.configs.lualine.themes.catppuccin").frappe
+-- Config
+local theme = themes.frappe
 local bg = g.transparency and "NONE" or theme.bg
 
--- Config
 local config = {
   options = {
     component_separators = "",
@@ -103,7 +129,7 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
+  "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = theme.green, gui = "bold" },

@@ -10,7 +10,7 @@ local apps = {
   n = "NoteApp", -- Notes
   s = "Slack", -- Messaging
   o = "Obsidian", -- Life OS
-  p = "Postman", -- API Client
+  p = "HTTPie", -- API Client
   t = "iTerm", -- Terminal
   ["1"] = "1Password", -- Password Manager
 }
