@@ -24,7 +24,7 @@ local themes = {
     magenta = "#f5c2e7",
     blue = "#89b4fa",
     red = "#f38ba8",
-  }
+  },
 }
 
 -- Color table for highlights
@@ -129,7 +129,7 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = theme.green, gui = "bold" },

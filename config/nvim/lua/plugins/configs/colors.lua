@@ -4,8 +4,8 @@ local g = vim.g
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = g.transparency,
-  no_underline = true,       -- Force no underline
-  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
+  no_underline = true, -- Force no underline
+  styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
     comments = { "italic" }, -- Change the style of comments
     conditionals = { "italic" },
     loops = { "italic" },
@@ -28,6 +28,7 @@ M.catppuccin = {
     noice = true,
     treesitter = true,
     which_key = true,
+    semantic_tokens = true,
   },
 }
 

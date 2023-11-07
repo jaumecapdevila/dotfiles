@@ -26,15 +26,6 @@ return {
     config = function(_, dashboard) require("alpha").setup(dashboard.opts) end,
   },
 
-  -- render indent lines
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
-    event = { "BufReadPost", "BufNewFile" },
-    opts = function() return require("plugins.configs.others").blankline end,
-    config = function(_, opts) require("indent_blankline").setup(opts) end,
-  },
-
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
