@@ -25,13 +25,17 @@ M.map = function(section, extra_opts)
       mapping_info.opts, opts.mode = nil, nil
       opts.desc = mapping_info[2]
 
-      if opts.remap and not vim.g.vscode then
-        opts.remap = nil
-      end
+      if opts.remap and not vim.g.vscode then opts.remap = nil end
 
       vim.keymap.set(mode, keybind, mapping_info[1], opts)
     end
   end
+end
+
+M.diagnostic_goto = function(next, severity)
+  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+  severity = severity and vim.diagnostic.severity[severity] or nil
+  return function() go({ severity = severity }) end
 end
 
 return M

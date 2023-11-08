@@ -85,24 +85,15 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left({
-  function() return "🐶" end,
-})
+-- ins_left({
+--   function() return "🐶" end,
+-- })
 
 ins_left({
-  "filesize",
-  cond = conditions.buffer_not_empty,
-})
-
-ins_left({
-  "filename",
-  cond = conditions.buffer_not_empty,
+  "branch",
+  icon = "",
   color = { fg = theme.magenta, gui = "bold" },
 })
-
-ins_left({ "location" })
-
-ins_left({ "progress", color = { fg = theme.fg, gui = "bold" } })
 
 ins_left({
   "diagnostics",
@@ -122,30 +113,34 @@ ins_left({
 })
 
 -- Add components to right sections
+
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
   color = { fg = theme.cyan, gui = "bold" },
 })
 
+ins_right({ "location" })
+
+ins_right({ "progress", color = { fg = theme.fg, gui = "bold" } })
+
+ins_right({
+  "filesize",
+  cond = conditions.buffer_not_empty,
+})
+
 ins_right({
   "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = theme.green, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = theme.green, gui = "bold" },
-})
-
-ins_right({
-  "branch",
-  icon = "",
-  color = { fg = theme.magenta, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 return config

@@ -5,9 +5,9 @@ M.gitsigns = {
   signs = {
     add = { text = "│" },
     change = { text = "│" },
-    delete = { text = "󰍵" },
-    topdelete = { text = "‾" },
-    changedelete = { text = "~" },
+    delete = { text = "│" },
+    topdelete = { text = "│" },
+    changedelete = { text = "│" },
     untracked = { text = "│" },
   },
   on_attach = function(bufnr) utils.map("gitsigns", { buffer = bufnr }) end,
@@ -16,23 +16,23 @@ M.gitsigns = {
 M.surround = {
   highlight_duration = 500,
   mappings = {
-    add = "sa", -- Add surrounding in Normal and Visual modes
-    delete = "sd", -- Delete surrounding
-    find = "sf", -- Find surrounding (to the right)
-    find_left = "sF", -- Find surrounding (to the left)
-    highlight = "sh", -- Highlight surrounding
-    replace = "sr", -- Replace surrounding
+    add = "sa",            -- Add surrounding in Normal and Visual modes
+    delete = "sd",         -- Delete surrounding
+    find = "sf",           -- Find surrounding (to the right)
+    find_left = "sF",      -- Find surrounding (to the left)
+    highlight = "sh",      -- Highlight surrounding
+    replace = "sr",        -- Replace surrounding
     update_n_lines = "sn", -- Update `n_lines`
-    suffix_last = "l", -- Suffix to search with "prev" method
-    suffix_next = "n", -- Suffix to search with "next" method
+    suffix_last = "l",     -- Suffix to search with "prev" method
+    suffix_next = "n",     -- Suffix to search with "next" method
   },
 }
 
 M.whichkey = {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "-", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
+    separator = "-",  -- symbol used between a key and it's label
+    group = "+",      -- symbol prepended to a group
   },
 }
 

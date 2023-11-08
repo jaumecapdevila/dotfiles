@@ -2,6 +2,8 @@
 
 local M = {}
 
+local utils = require("core.utils")
+
 M.general = {
   i = {
     -- go to  beginning and end
@@ -43,8 +45,18 @@ M.general = {
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
     -- utils
+    ["<leader>wf"] = { "<cmd>enew<cr>", "New file" },
     ["<leader>qq"] = { "<cmd>qa<cr>", "Quit all" },
     ["<leader>cl"] = { "<cmd>LspInfo<cr>", "Lsp info" },
+
+    -- diagnostic
+    ["<leader>cd"] = { vim.diagnostic.open_float, "Line diagnostics" },
+    ["]d"] = { utils.diagnostic_goto(true), "Next Diagnostic" },
+    ["[d"] = { utils.diagnostic_goto(false), "Prev Diagnostic" },
+    ["]e"] = { utils.diagnostic_goto(true, "ERROR"), "Next Error" },
+    ["[e"] = { utils.diagnostic_goto(false, "ERROR"), "Prev Error" },
+    ["]w"] = { utils.diagnostic_goto(true, "WARNING"), "Next Warning" },
+    ["[w"] = { utils.diagnostic_goto(false, "WARNING"), "Prev Warning" },
   },
 
   t = {

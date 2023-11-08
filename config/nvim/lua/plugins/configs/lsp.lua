@@ -15,13 +15,11 @@ local lspconfig_util = require("lspconfig/util")
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- this is for diagnositcs signs on the line number column
--- use this to beautify the plain E W signs to more fun ones
--- !important nerdfonts needs to be setup for this to work in your terminal
 local signs = {
-  Error = " ",
-  Warn = " ",
-  Info = " ",
-  Hint = " ",
+  Error = "",
+  Warn = "",
+  Info = "",
+  Hint = "",
 }
 
 for type, icon in pairs(signs) do
