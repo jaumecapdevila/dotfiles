@@ -3,9 +3,7 @@ return {
   {
     "kdheepak/lazygit.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    init = function()
-      vim.g.lazygit_floating_window_use_plenary = 0
-    end,
+    init = function() vim.g.lazygit_floating_window_use_plenary = 0 end,
     keys = {
       {
         "<leader>lg",
@@ -19,7 +17,7 @@ return {
   {
     "mfussenegger/nvim-lint",
     lazy = true,
-    event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       local lint = require("lint")
 
@@ -27,16 +25,20 @@ return {
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-        group = lint_augroup,
-        callback = function()
-          lint.try_lint()
-        end,
-      })
+      vim.api.nvim_create_autocmd(
+        { "BufEnter", "BufWritePost", "InsertLeave" },
+        {
+          group = lint_augroup,
+          callback = function() lint.try_lint() end,
+        }
+      )
 
-      vim.keymap.set("n", "<leader>lt", function()
-        lint.try_lint()
-      end, { desc = "Trigger linting for current file" })
+      vim.keymap.set(
+        "n",
+        "<leader>lt",
+        function() lint.try_lint() end,
+        { desc = "Trigger linting for current file" }
+      )
     end,
   },
 
@@ -51,13 +53,18 @@ return {
 
       conform.setup(opts)
 
-      vim.keymap.set({ "n", "v" }, "<leader>rc", function()
-        conform.format({
-          lsp_fallback = true,
-          async = false,
-          timeout_ms = 1000,
-        })
-      end, { desc = "Format file or selection" })
+      vim.keymap.set(
+        { "n", "v" },
+        "<leader>rc",
+        function()
+          conform.format({
+            lsp_fallback = true,
+            async = false,
+            timeout_ms = 1000,
+          })
+        end,
+        { desc = "Format file or selection" }
+      )
     end,
-  }
+  },
 }

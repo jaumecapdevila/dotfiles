@@ -8,6 +8,7 @@ local options = {
     "yaml",
     "markdown",
     "bash",
+    "regex",
     "lua",
     "tsx",
     "typescript",

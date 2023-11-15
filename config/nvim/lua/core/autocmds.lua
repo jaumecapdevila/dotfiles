@@ -19,9 +19,7 @@ autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
 -- Highlight on yank
 autocmd("TextYankPost", {
   group = augroup("highlight_yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+  callback = function() vim.highlight.on_yank() end,
 })
 
 -- Remove whitespace on save
@@ -34,6 +32,14 @@ autocmd("BufWritePre", {
 autocmd("BufEnter", {
   pattern = "",
   command = "set fo-=c fo-=r fo-=o",
+})
+
+-- Restore cursor when Neovim is closed
+-- block, hor{N}, ver{N}, blinkon{N}, blinkoff{N}
+-- check https://neovim.io/doc/user/options.html#'guicursor'
+autocmd({ "VimLeave", "VimSuspend" }, {
+  group = augroup("restore_cursor", { clear = true }),
+  command = "set guicursor=a:ver50-blinkon100",
 })
 
 -- Settings for filetypes:

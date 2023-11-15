@@ -95,6 +95,8 @@ ins_left({
   color = { fg = theme.magenta, gui = "bold" },
 })
 
+ins_left({ "filename" })
+
 ins_left({
   "diagnostics",
   sources = { "nvim_diagnostic" },
