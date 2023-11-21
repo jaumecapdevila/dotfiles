@@ -25,6 +25,17 @@ local themes = {
     blue = "#89b4fa",
     red = "#f38ba8",
   },
+  rose = {
+    bg = "#191724",
+    fg = "#e0def4",
+    white = "#e0def4",
+    yellow = "#f6c177",
+    cyan = "#ebbcba",
+    green = "#9ccfd8",
+    magenta = "#c4a7e7",
+    blue = "#31748f",
+    red = "#eb6f92",
+  },
 }
 
 -- Color table for highlights
