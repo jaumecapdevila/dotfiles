@@ -1739,7 +1739,7 @@
 				<real>0.18823529411764706</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/capdevil/Pictures/wallpapers/1335160.jpeg</string>
+			<string>/Users/capdevil/Pictures/wallpapers/1333741.png</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -1756,7 +1756,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.14999999999999999</real>
+			<real>0.099999999999999992</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
