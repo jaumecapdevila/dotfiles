@@ -8,16 +8,16 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
     // default font size in pixels for all tabs
-    fontSize: 22,
+    fontSize: 19,
     // font family with optional fallbacks
     fontFamily:
-      '"PragmataProMono Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"BerkeleyMono Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: "bold",
     // line height as a relative unit
-    lineHeight: 1.2,
+    lineHeight: 1.0,
     // letter spacing as a relative unit
     letterSpacing: 0,
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
@@ -140,7 +140,6 @@ module.exports = {
         duration: "200", // default is 18000
       },
       borderColors: ["#81C8BE", "#F4B8E4", "#8CAAEE"],
-      // borderColors: ["#7dcfff", "#bb9af7", "#f7768e"],
     },
   },
   // a list of plugins to fetch and install from npm
@@ -149,12 +148,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    "hyperborder",
-    "hyper-tokyo-night",
-    "hyper-tokyo-night-storm",
-    "hypurr",
-  ],
+  plugins: ["hyperborder", "hypurr"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
