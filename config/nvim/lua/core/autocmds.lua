@@ -47,7 +47,8 @@ autocmd({ "VimLeave", "VimSuspend" }, {
 
 -- Associate .gql, .graphql and .graphlql with graphql
 augroup("setFiletype", { clear = true })
-autocmd("BufNewFile,BufRead", {
+
+autocmd({ "BufNewFile", "BufRead" }, {
   group = "setFiletype",
   pattern = { "*.gql", "*.graphql", "*.graphlql" },
   command = "setfiletype graphql",

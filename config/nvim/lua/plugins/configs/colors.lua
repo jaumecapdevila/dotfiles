@@ -1,6 +1,26 @@
 local M = {}
 local g = vim.g
 
+M.tokyonight = {
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  light_style = "day", -- The theme is used when the background is set to light
+  transparent = g.transparency, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+  styles = {
+    -- Style to be applied to different syntax groups
+    -- Value is any valid attr-list value for `:help nvim_set_hl`
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = {},
+    variables = {},
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = g.transparency and "transparent" or "dark", -- style for sidebars, see below
+    floats = "transparent", -- style for floating windows
+  },
+  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
+}
+
 M.catppuccin = {
   flavour = "frappe",
   transparent_background = g.transparency,
@@ -22,7 +42,7 @@ M.catppuccin = {
   integrations = {
     cmp = true,
     gitsigns = true,
-    nvimtree = false,
+    nvimtree = g.transparency and false or true,
     telescope = true,
     notify = true,
     noice = true,

@@ -10,14 +10,18 @@ export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
 export FZF_DEFAULT_OPTS=" \
---reverse --no-info --border --prompt=' ' \ 
---color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
---color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
---color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
-export FZF_CTRL_R_OPTS="--border-label=' History ' --prompt='󰍉 '"
-export FZF_DEFAULT_COMMAND="fd -H -E '.git'"
-export FZF_TMUX_OPTS="-p --no-info --ansi \
-  --color gutter:-1,bg+:-1,header:4,separator:0,info:0,label:4,border:4,prompt:7,pointer:5,query:7,prompt:7"
+--reverse \
+--border rounded \
+--border-label=' Fuzzy Search ' \
+--no-info \
+--pointer=' ' \
+--marker=' ' \
+--ansi \
+--color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
+export FZF_CTRL_R_OPTS=" \
+--border-label=' History ' \
+--prompt='  '"
+export FZF_TMUX_OPTS="-p 55%,60%"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244,bg=default"
 export ZSH_AUTOSUGGEST_USE_ASYNC=true

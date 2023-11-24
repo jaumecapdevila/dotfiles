@@ -25,17 +25,6 @@ local themes = {
     blue = "#89b4fa",
     red = "#f38ba8",
   },
-  rose = {
-    bg = "#191724",
-    fg = "#e0def4",
-    white = "#e0def4",
-    yellow = "#f6c177",
-    cyan = "#ebbcba",
-    green = "#9ccfd8",
-    magenta = "#c4a7e7",
-    blue = "#31748f",
-    red = "#eb6f92",
-  },
 }
 
 -- Color table for highlights
@@ -96,10 +85,6 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
--- ins_left({
---   function() return "🐶" end,
--- })
-
 ins_left({
   "branch",
   icon = "",
@@ -143,7 +128,7 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = theme.fg, gui = "bold" },
