@@ -1,5 +1,6 @@
 local options = {
   formatters_by_ft = {
+    astro = { "prettier" },
     javascript = { "prettier" },
     typescript = { "prettier" },
     javascriptreact = { "prettier" },

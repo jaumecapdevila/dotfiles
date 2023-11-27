@@ -5,6 +5,8 @@ local options = {
     "stylua",
 
     -- web dev
+    "astro-language-server",
+    "tailwindcss-language-server",
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
@@ -13,7 +15,6 @@ local options = {
     "eslint_d",
     "emmet-ls",
     "json-lsp",
-    -- "tailwindcss-language-server",
 
     -- golang
     "gopls",

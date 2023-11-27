@@ -4,7 +4,7 @@ local lazy_status = require("lazy.status") -- to configure lazy pending updates 
 -- custom themes
 local themes = {
   frappe = {
-    bg = "#292c3c",
+    bg = "NONE",
     fg = "#c6d0f5",
     white = "#b5bfe2",
     yellow = "#e5c890",
@@ -15,7 +15,7 @@ local themes = {
     red = "#e78284",
   },
   mocha = {
-    bg = "#1e1e2e",
+    bg = "NONE",
     fg = "#cdd6f4",
     white = "#bac2de",
     yellow = "#f9e2af",
@@ -43,7 +43,6 @@ local conditions = {
 
 -- Config
 local theme = themes.frappe
-local bg = g.transparency and "NONE" or theme.bg
 
 local config = {
   options = {

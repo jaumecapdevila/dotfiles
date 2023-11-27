@@ -1,5 +1,6 @@
 local options = {
   ensure_installed = {
+    "astro",
     "html",
     "css",
     "javascript",

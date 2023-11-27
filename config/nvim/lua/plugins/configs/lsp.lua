@@ -28,6 +28,8 @@ for type, icon in pairs(signs) do
 end
 
 local simple_servers = {
+  "astro",
+  "tailwindcss",
   "html",
   "cssls",
   "clangd",
