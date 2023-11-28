@@ -2,21 +2,10 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = false,
-    priority = 1000,
     opts = function() return require("plugins.configs.colors").catppuccin end,
     config = function(_, opts)
       require("catppuccin").setup(opts)
-      vim.cmd([[colorscheme catppuccin]])
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
-    opts = function() return require("plugins.configs.colors").tokyonight end,
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-      -- vim.cmd([[colorscheme tokyonight]])
+      -- vim.cmd([[colorscheme catppuccin]])
     end,
   },
   {
@@ -26,6 +15,17 @@ return {
     config = function(_, opts)
       require("rose-pine").setup(opts)
       -- vim.cmd([[colorscheme rose-pine]])
+    end,
+  },
+  {
+    "marko-cerovac/material.nvim",
+    lazy = false,
+    priority = 1000,
+    name = "material",
+    opts = function() return require("plugins.configs.colors").material end,
+    config = function(_, opts)
+      require("material").setup(opts)
+      vim.cmd([[colorscheme material]])
     end,
   },
 }

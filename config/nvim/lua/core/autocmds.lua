@@ -39,7 +39,7 @@ autocmd("BufEnter", {
 -- check https://neovim.io/doc/user/options.html#'guicursor'
 autocmd({ "VimLeave", "VimSuspend" }, {
   group = augroup("restore_cursor", { clear = true }),
-  command = "set guicursor=a:block-blinkon100",
+  command = "set guicursor=a:ver50-blinkon100",
 })
 
 -- Settings for filetypes:
