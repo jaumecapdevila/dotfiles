@@ -4,26 +4,34 @@ local lazy_status = require("lazy.status") -- to configure lazy pending updates 
 -- custom themes
 local themes = {
   frappe = {
-    bg = "NONE",
     fg = "#c6d0f5",
-    white = "#b5bfe2",
-    yellow = "#e5c890",
-    cyan = "#81c8be",
-    green = "#a6d189",
-    magenta = "#f4b8e4",
-    blue = "#8caaee",
     red = "#e78284",
+    green = "#a6d189",
+    yellow = "#e5c890",
+    blue = "#8caaee",
+    magenta = "#f4b8e4",
+    cyan = "#81c8be",
+    white = "#b5bfe2",
   },
   mocha = {
-    bg = "NONE",
     fg = "#cdd6f4",
-    white = "#bac2de",
-    yellow = "#f9e2af",
-    cyan = "#94e2d5",
-    green = "#a6e3a1",
-    magenta = "#f5c2e7",
-    blue = "#89b4fa",
     red = "#f38ba8",
+    green = "#a6e3a1",
+    yellow = "#f9e2af",
+    blue = "#89b4fa",
+    magenta = "#f5c2e7",
+    cyan = "#94e2d5",
+    white = "#bac2de",
+  },
+  pale = {
+    fg = "#959dcb",
+    red = "#f07178",
+    green = "#c3e88d",
+    yellow = "#ffcb6b",
+    blue = "#82aaff",
+    magenta = "#c792ea",
+    cyan = "#89ddff",
+    white = "#d0d0d0",
   },
 }
 
@@ -42,15 +50,15 @@ local conditions = {
 }
 
 -- Config
-local theme = themes.frappe
+local theme = themes.pale
 
 local config = {
   options = {
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = theme.fg, bg = bg } },
-      inactive = { c = { fg = theme.fg, bg = bg } },
+      normal = { c = { fg = theme.fg, bg = "NONE" } },
+      inactive = { c = { fg = theme.fg, bg = "NONE" } },
     },
   },
   sections = {

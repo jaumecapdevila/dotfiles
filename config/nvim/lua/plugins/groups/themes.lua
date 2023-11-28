@@ -1,5 +1,19 @@
 return {
   {
+    "marko-cerovac/material.nvim",
+    lazy = false,
+    priority = 1000,
+    name = "material",
+    opts = function()
+      local base = require("material.colors")
+      return require("plugins.configs.colors").material(base)
+    end,
+    config = function(_, opts)
+      require("material").setup(opts)
+      vim.cmd([[colorscheme material]])
+    end,
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = function() return require("plugins.configs.colors").catppuccin end,
@@ -15,17 +29,6 @@ return {
     config = function(_, opts)
       require("rose-pine").setup(opts)
       -- vim.cmd([[colorscheme rose-pine]])
-    end,
-  },
-  {
-    "marko-cerovac/material.nvim",
-    lazy = false,
-    priority = 1000,
-    name = "material",
-    opts = function() return require("plugins.configs.colors").material end,
-    config = function(_, opts)
-      require("material").setup(opts)
-      vim.cmd([[colorscheme material]])
     end,
   },
 }
