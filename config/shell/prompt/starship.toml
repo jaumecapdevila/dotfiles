@@ -17,8 +17,8 @@ $directory\
 $git_branch\
 $git_status\
 $cmd_duration\
-$line_break\
 $status\
+$line_break\
 $character"""
 
 [line_break]
@@ -41,12 +41,13 @@ truncation_symbol = "…/"
 style = "bold purple"
 
 [git_status]
+disabled = true
 format = "([$all_status$ahead_behind]($style) )"
 conflicted = ''
 ahead = ''
 behind = '😰'
 diverged = '😵'
-up_to_date = '✅'
+up_to_date = ''
 untracked = '🤔'
 stashed = '📦'
 modified = '📝'
@@ -59,10 +60,10 @@ min_time = 2000
 format = '⏱️  [$duration](bold yellow) '
 
 [status]
+disabled = false
 symbol = '😡'
 success_symbol = '🚀'
 format = '[$symbol]($style) '
-disabled = false
 
 [python]
 symbol = "🐍"
@@ -73,4 +74,6 @@ symbol = "🤖"
 
 [character]
 disabled = true
+success_symbol = '[➜](green) '
+error_symbol = '[➜](red) '
 
