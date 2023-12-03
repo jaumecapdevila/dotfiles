@@ -9,11 +9,6 @@ return {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      {
-        "rcarriga/nvim-notify",
-        opts = function() return require("plugins.configs.notify") end,
-        config = function(_, opts) require("notify").setup(opts) end,
-      },
     },
     opts = function() return require("plugins.configs.noice") end,
     config = function(_, opts) require("noice").setup(opts) end,

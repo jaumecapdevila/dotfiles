@@ -57,7 +57,7 @@ deleted = '🔥'
 
 [cmd_duration]
 min_time = 2000
-format = '⏱️  [$duration](bold yellow) '
+format = '[$duration](bold yellow) '
 
 [status]
 disabled = false
@@ -74,6 +74,6 @@ symbol = "🤖"
 
 [character]
 disabled = true
-success_symbol = '[➜](green) '
-error_symbol = '[➜](red) '
+success_symbol = '[❯](green) '
+error_symbol = '[❮](red) '
 

@@ -13,15 +13,11 @@
 - link:
     ~/.hammerspoon: config/hammerspoon
     ~/.config/tmux: config/tmux
-    ~/.config/lf: config/lf
     ~/.config/nvim: config/nvim
     ~/.config/neofetch/config.conf: config/neofetch/config.conf
     ~/.config/karabiner: config/karabiner
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/zellij/config.kdl: config/zellij/config.kdl
-    ~/.config/kitty: config/kitty
-    ~/.config/fish: config/shell/fish
-    ~/.warp: config/warp
     ~/.hyper.js: config/hyper/hyper.js
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
     ~/.gitconfig: config/git/.gitconfig
@@ -34,6 +30,7 @@
     ~/.zshrc: config/shell/zsh/.zshrc
     ~/.bash_profile: config/shell/bash/.bash_profile
     ~/.bashrc: config/shell/bash/.bashrc
+    ~/.warp: osx/apps/warp
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

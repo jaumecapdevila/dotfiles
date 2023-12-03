@@ -11,7 +11,7 @@ local apps = {
   s = "Slack", -- Messaging
   o = "Obsidian", -- Life OS
   p = "HTTPie", -- API Client
-  t = "iTerm", -- Terminal
+  t = "Warp", -- Terminal
   ["1"] = "1Password", -- Password Manager
 }
 

@@ -23,16 +23,6 @@ local themes = {
     cyan = "#94e2d5",
     white = "#bac2de",
   },
-  pale = {
-    fg = "#959dcb",
-    red = "#f07178",
-    green = "#c3e88d",
-    yellow = "#ffcb6b",
-    blue = "#82aaff",
-    magenta = "#c792ea",
-    cyan = "#89ddff",
-    white = "#d0d0d0",
-  },
 }
 
 -- Color table for highlights
@@ -50,7 +40,7 @@ local conditions = {
 }
 
 -- Config
-local theme = themes.pale
+local theme = themes.frappe
 
 local config = {
   options = {
