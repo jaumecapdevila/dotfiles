@@ -2,7 +2,7 @@ accent:
   left: "#f07178"
   right: "#ffcb6b"
 background: "#292d3e"
-foreground: "#d0d0d0"
+foreground: "#959dcb"
 details: lighter
 terminal_colors:
   bright:

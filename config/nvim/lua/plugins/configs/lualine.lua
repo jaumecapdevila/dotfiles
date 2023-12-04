@@ -2,27 +2,15 @@ local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 -- custom themes
-local themes = {
-  frappe = {
-    fg = "#c6d0f5",
-    red = "#e78284",
-    green = "#a6d189",
-    yellow = "#e5c890",
-    blue = "#8caaee",
-    magenta = "#f4b8e4",
-    cyan = "#81c8be",
-    white = "#b5bfe2",
-  },
-  mocha = {
-    fg = "#cdd6f4",
-    red = "#f38ba8",
-    green = "#a6e3a1",
-    yellow = "#f9e2af",
-    blue = "#89b4fa",
-    magenta = "#f5c2e7",
-    cyan = "#94e2d5",
-    white = "#bac2de",
-  },
+local theme = {
+  fg = "#959dcb",
+  red = "#f07178",
+  green = "#c3e88d",
+  yellow = "#ffcb6b",
+  blue = "#82aaff",
+  magenta = "#c792ea",
+  cyan = "#89ddff",
+  white = "#d0d0d0",
 }
 
 -- Color table for highlights
@@ -38,9 +26,6 @@ local conditions = {
     return gitdir and #gitdir > 0 and #gitdir < #filepath
   end,
 }
-
--- Config
-local theme = themes.frappe
 
 local config = {
   options = {

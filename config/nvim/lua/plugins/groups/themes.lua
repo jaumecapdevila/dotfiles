@@ -1,9 +1,14 @@
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  opts = function() return require("plugins.configs.colors").catppuccin end,
+  "marko-cerovac/material.nvim",
+  lazy = false,
+  priority = 1000,
+  name = "material",
+  opts = function()
+    local base = require("material.colors")
+    return require("plugins.configs.colors").material(base)
+  end,
   config = function(_, opts)
-    require("catppuccin").setup(opts)
-    vim.cmd([[colorscheme catppuccin]])
+    require("material").setup(opts)
+    vim.cmd([[colorscheme material]])
   end,
 }
