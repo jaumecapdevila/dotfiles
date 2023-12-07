@@ -30,4 +30,3 @@ source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 # External
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
