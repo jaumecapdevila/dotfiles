@@ -1,55 +1,51 @@
 local M = {}
 local g = vim.g
 
-M.catppuccin = {
-  flavour = "mocha",
-  transparent_background = g.transparency,
-  no_underline = true,       -- Force no underline
-  styles = {                 -- Handles the styles of general hi groups (see `:h highlight-args`):
-    comments = { "italic" }, -- Change the style of comments
-    conditionals = { "italic" },
-    loops = { "italic" },
-    functions = {},
-    keywords = { "italic" },
-    strings = {},
-    variables = {},
-    numbers = { "bold" },
-    booleans = { "bold" },
-    properties = { "italic" },
-    types = { "italic" },
-    operators = {},
-  },
-  integrations = {
-    cmp = true,
-    gitsigns = true,
-    nvimtree = true,
-    telescope = true,
-    notify = true,
-    noice = true,
-    treesitter = true,
-    which_key = true,
-    semantic_tokens = true,
-  },
-}
+local base = require("material.colors")
 
-M.rosepine = {
-  variant = "main",
-  dark_variant = "main",
-  bold_vert_split = true,
-  dim_nc_background = false,
-  disable_background = g.transparency,
-  disable_float_background = true,
-  disable_italics = false,
-
-  groups = {
-    background = g.transparency and "NONE" or "base",
+M.material = {
+  contrast = {
+    terminal = false,            -- Enable contrast for the built-in terminal
+    sidebars = false,            -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+    floating_windows = false,    -- Enable contrast for floating windows
+    cursor_line = false,         -- Enable darker background for the cursor line
+    non_current_windows = false, -- Enable contrasted background for non-current windows
   },
 
-  -- Change specific vim highlight groups
-  -- https://github.com/rose-pine/neovim/wiki/Recipes
-  highlight_groups = {
-    ColorColumn = { bg = "rose" },
-    CursorLine = { bg = "foam", blend = 10 },
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = true }
+  },
+
+  plugins = {
+    "dashboard",
+    "gitsigns",
+    "noice",
+    "nvim-cmp",
+    "nvim-tree",
+    "nvim-web-devicons",
+    "rainbow-delimiters",
+    "telescope",
+    "which-key",
+  },
+
+  disable = {
+    colored_cursor = false,
+    borders = false,
+    background = false,
+    term_colors = false,
+    eob_lines = false
+  },
+
+  high_visibility = {
+    lighter = false, -- Enable higher contrast text for lighter style
+    darker = false   -- Enable higher contrast text for darker style
+  },
+
+  async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
+  custom_highlights = {
+    ["@field"]    = { fg = base.editor.fg },
+    ["@property"] = { fg = base.editor.fg },
   },
 }
 

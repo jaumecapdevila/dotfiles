@@ -1,31 +1,16 @@
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
--- custom themes
-local themes = {
-  mocha = {
-    fg = "#cdd6f4",
-    red = "#f38ba8",
-    green = "#a6e3a1",
-    yellow = "#f9e2af",
-    blue = "#89b4fa",
-    magenta = "#f5c2e7",
-    cyan = "#94e2d5",
-    white = "#bac2de",
-  },
-  rose = {
-    fg = "#e0def4",
-    red = "#eb6f92",
-    green = "#31748f",
-    yellow = "#f6c177",
-    blue = "#c4a7e7",
-    magenta = "#ebbcba",
-    cyan = "#9ccfd8",
-    white = "#e0def4",
-  },
+-- custom theme
+local theme = {
+  fg = "#959dcb",
+  red = "#f07178",
+  green = "#c3e88d",
+  yellow = "#ffcb6b",
+  blue = "#82aaff",
+  magenta = "#c792ea",
+  cyan = "#89ddff",
+  white = "#d0d0d0",
 }
-
--- selected theme
-local theme = themes.rose
 
 
 -- Color table for highlights
