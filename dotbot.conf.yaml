@@ -11,26 +11,25 @@
     - ~/.hushlogin
 
 - link:
-    ~/.hammerspoon: config/hammerspoon
-    ~/.config/tmux: config/tmux
-    ~/.config/nvim: config/nvim
-    ~/.config/neofetch/config.conf: config/neofetch/config.conf
+    ~/.bash_profile: config/shell/bash/.bash_profile
+    ~/.bashrc: config/shell/bash/.bashrc
     ~/.config/karabiner: config/karabiner
+    ~/.config/neofetch/config.conf: config/neofetch/config.conf
+    ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/shell/prompt/starship.toml
-    ~/.config/zellij/config.kdl: config/zellij/config.kdl
-    ~/.hyper.js: config/hyper/hyper.js
-    ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+    ~/.config/tmux: config/tmux
+    ~/.gitattributes: config/git/.gitattributes
     ~/.gitconfig: config/git/.gitconfig
     ~/.gitignore_global: config/git/.gitignore_global
-    ~/.gitattributes: config/git/.gitattributes
+    ~/.hammerspoon: config/hammerspoon
+    ~/.hyper.js: config/hyper/hyper.js
+    ~/.warp: osx/apps/warp
     ~/.zimrc: config/shell/zsh/.zimrc
     ~/.zlogin: config/shell/zsh/.zlogin
     ~/.zprofile: config/shell/zsh/.zprofile
     ~/.zshenv: config/shell/zsh/.zshenv
     ~/.zshrc: config/shell/zsh/.zshrc
-    ~/.bash_profile: config/shell/bash/.bash_profile
-    ~/.bashrc: config/shell/bash/.bashrc
-    ~/.warp: osx/apps/warp
+    ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

@@ -16,6 +16,8 @@ format = """
 $directory\
 $git_branch\
 $git_status\
+$nodejs\
+$lua\
 $cmd_duration\
 $status\
 $line_break\
@@ -38,7 +40,7 @@ symbol = "🐙 "
 format = "[$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
-style = "bold purple"
+style = "bold cyan"
 
 [git_status]
 disabled = true
@@ -60,7 +62,7 @@ min_time = 2000
 format = '[$duration](bold yellow) '
 
 [status]
-disabled = false
+disabled = true
 symbol = '😡'
 success_symbol = '🚀'
 format = '[$symbol]($style) '
@@ -70,10 +72,14 @@ symbol = "🐍"
 python_binary = "python3"
 
 [nodejs]
-symbol = "🤖"
+symbol = "🤖 "
+format = "[$symbol($version )]($style)"
+
+[lua]
+symbol = "🌑 "
+format = "[$symbol($version )]($style)"
 
 [character]
-disabled = true
-success_symbol = '[❯](green) '
-error_symbol = '[❮](red) '
+success_symbol = '[➜](purple)'
+error_symbol = '[➜](red)'
 

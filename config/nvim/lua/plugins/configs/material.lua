@@ -1,20 +1,17 @@
-local M = {}
-local g = vim.g
-
 local base = require("material.colors")
 
-M.material = {
+return {
   contrast = {
-    terminal = false,            -- Enable contrast for the built-in terminal
-    sidebars = false,            -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-    floating_windows = false,    -- Enable contrast for floating windows
-    cursor_line = false,         -- Enable darker background for the cursor line
+    terminal = false, -- Enable contrast for the built-in terminal
+    sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+    floating_windows = false, -- Enable contrast for floating windows
+    cursor_line = false, -- Enable darker background for the cursor line
     non_current_windows = false, -- Enable contrasted background for non-current windows
   },
 
   styles = {
     comments = { italic = true },
-    keywords = { italic = true }
+    keywords = { italic = true },
   },
 
   plugins = {
@@ -34,19 +31,17 @@ M.material = {
     borders = false,
     background = false,
     term_colors = false,
-    eob_lines = false
+    eob_lines = false,
   },
 
   high_visibility = {
     lighter = false, -- Enable higher contrast text for lighter style
-    darker = false   -- Enable higher contrast text for darker style
+    darker = false, -- Enable higher contrast text for darker style
   },
 
   async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
   custom_highlights = {
-    ["@field"]    = { fg = base.editor.fg },
+    ["@field"] = { fg = base.editor.fg },
     ["@property"] = { fg = base.editor.fg },
   },
 }
-
-return M

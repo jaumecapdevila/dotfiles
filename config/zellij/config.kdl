@@ -1,5 +1,0 @@
-on_force_close "quit"
-simplified_ui true
-pane_frames false
-theme "solarized-dark"
-default_layout "compact"

@@ -160,29 +160,6 @@ M.nvim_tree = {
   },
 }
 
-M.bufferline = {
-  n = {
-    ["<tab>"] = {
-      "<Cmd>BufferLineCycleNext<CR>",
-      "Goto next buffer",
-    },
-
-    ["<S-tab>"] = {
-      "<Cmd>BufferLineCyclePrev<CR>",
-      "Goto prev buffer",
-    },
-
-    ["<leader>x"] = {
-      "<Cmd>BufferLinePickClose<CR>",
-      "Close buffer",
-    },
-    ["<leader>bo"] = {
-      "<Cmd>BufferLineCloseOthers<CR>",
-      "Close other buffer",
-    },
-  },
-}
-
 M.telescope = {
   n = {
     -- find
@@ -270,49 +247,6 @@ M.gitsigns = {
     ["<leader>td"] = {
       function() require("gitsigns").toggle_deleted() end,
       "Toggle deleted",
-    },
-  },
-}
-
-M.dap = {
-  n = {
-    ["<leader>db"] = {
-      "<cmd> DapToggleBreakpoint <CR>",
-      "Add breakpoint at line",
-    },
-    ["<leader>dus"] = {
-      function()
-        local widgets = require("dap.ui.widgets")
-        local sidebar = widgets.sidebar(widgets.scopes)
-        sidebar.open()
-      end,
-      "Open debugging sidebar",
-    },
-  },
-}
-
-M.dap_go = {
-  n = {
-    ["<leader>dgt"] = {
-      function() require("dap-go").debug_test() end,
-      "Debug go test",
-    },
-    ["<leader>dgl"] = {
-      function() require("dap-go").debug_last() end,
-      "Debug last go test",
-    },
-  },
-}
-
-M.gopher = {
-  n = {
-    ["<leader>gsj"] = {
-      "<cmd> GoTagAdd json <CR>",
-      "Add json struct tags",
-    },
-    ["<leader>gsy"] = {
-      "<cmd> GoTagAdd yaml <CR>",
-      "Add yaml struct tags",
     },
   },
 }

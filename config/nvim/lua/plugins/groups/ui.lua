@@ -33,16 +33,6 @@ return {
     end,
   },
 
-  -- buffer management
-  {
-    "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    enabled = false,
-    init = function() require("core.utils").map("bufferline") end,
-    opts = function() return require("plugins.configs.bufferline") end,
-    config = function(_, opts) require("bufferline").setup(opts) end,
-  },
-
   -- custom statusline
   {
     "nvim-lualine/lualine.nvim",
