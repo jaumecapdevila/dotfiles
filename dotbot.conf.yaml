@@ -13,8 +13,9 @@
 - link:
     ~/.bash_profile: config/shell/bash/.bash_profile
     ~/.bashrc: config/shell/bash/.bashrc
+    ~/.config/gh: config/gh
     ~/.config/karabiner: config/karabiner
-    ~/.config/neofetch/config.conf: config/neofetch/config.conf
+    ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/tmux: config/tmux

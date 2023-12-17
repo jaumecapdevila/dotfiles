@@ -32,7 +32,7 @@ local options = {
     "shfmt",
     "shellcheck",
     "bash-language-server",
-  }, -- not an option from mason.nvim
+  },
 
   PATH = "skip",
 

@@ -28,4 +28,5 @@ M.text = {
   { import = "plugins.groups.ui" },
   { import = "plugins.groups.utils" },
 }
+
 return M

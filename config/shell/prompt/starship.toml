@@ -19,9 +19,8 @@ $git_status\
 $nodejs\
 $lua\
 $cmd_duration\
-$status\
 $line_break\
-$character"""
+$status"""
 
 [line_break]
 disabled = false
@@ -62,20 +61,23 @@ min_time = 2000
 format = '[$duration](bold yellow) '
 
 [status]
-disabled = true
+disabled = false
 symbol = '😡'
 success_symbol = '🚀'
 format = '[$symbol]($style) '
 
 [python]
+disabled = true
 symbol = "🐍"
 python_binary = "python3"
 
 [nodejs]
+disabled = true
 symbol = "🤖 "
 format = "[$symbol($version )]($style)"
 
 [lua]
+disabled = true
 symbol = "🌑 "
 format = "[$symbol($version )]($style)"
 

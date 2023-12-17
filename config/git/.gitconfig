@@ -40,7 +40,7 @@
 	tool = vimdiff
 
 [mergetool]
-  prompt = false
+    prompt = false
 	path = nvim
 
 [init]

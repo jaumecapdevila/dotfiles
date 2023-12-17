@@ -1,17 +1,29 @@
 # Uncomment for debug with `zprof`
 # zmodload zsh/zprof
 
-# ZSH Ops
+## History
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY_TIME
+setopt EXTENDED_HISTORY
 setopt HIST_FCNTL_LOCK
-setopt +o nomatch
-# setopt autopushd
+setopt HIST_NO_STORE
 
-# Customize zim modules
+## Autocd
+setopt +o nomatch
+
+# zim plugins
 zstyle ':zim:git' aliases-prefix 'g'
+
+# fzf config
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # Start zim
 source "$ZIM_HOME/init.zsh"
+
+# Load fzf keybindings
+source $HOME/.fzf.zsh
 
 # Load Custom Config
 source "$DOTFILES/config/shell/init.sh"

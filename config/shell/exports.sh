@@ -14,15 +14,16 @@ export FZF_DEFAULT_OPTS=" \
 --border rounded \
 --border-label=' Fuzzy Search ' \
 --no-info \
---pointer=' ' \
---marker=' ' \
+--pointer='👉🏻' \
+--marker='📌' \
 --ansi \
 --color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
+
 export FZF_CTRL_R_OPTS=" \
 --border-label=' History ' \
---prompt='  '"
-export FZF_TMUX_OPTS="-p 55%,60%"
+--prompt='🔃 '"
 
+export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244,bg=default"
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
 
@@ -32,7 +33,7 @@ export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
 
-export BAT_THEME='ansi'
+export BAT_THEME='base16'
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -49,7 +50,6 @@ export path=(
 	"$GOPATH/bin"
 	"$HOME/.cargo/bin"
 	"/opt/homebrew/opt/ruby/bin"
-	"/opt/homebrew/opt/node@14/bin"
 	"/opt/homebrew/opt/python@3.9/libexec/bin"
 	"/opt/homebrew/bin"
 	"/opt/homebrew/sbin"
@@ -58,6 +58,5 @@ export path=(
 	"/usr/bin"
 	"/usr/sbin"
 	"/sbin"
-	"$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin"
 	"$HOME/.magento-cloud/bin"
 )
