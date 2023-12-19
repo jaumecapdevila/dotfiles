@@ -12,6 +12,8 @@ return {
   styles = {
     comments = { italic = true },
     keywords = { italic = true },
+    functions = { bold = true },
+    strings = { bold = true },
   },
 
   plugins = {

@@ -36,6 +36,3 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias tmp="cd ~/Desktop/tmp"
 alias c='cd ~/coexdexe'
-
-# remove alias from plugins
-unalias gh
