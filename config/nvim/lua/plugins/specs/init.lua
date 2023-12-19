@@ -11,7 +11,6 @@ M.ide = {
   { import = "plugins.groups.debug" },
   { import = "plugins.groups.editor" },
   { import = "plugins.groups.extras" },
-  { import = "plugins.groups.lang" },
   { import = "plugins.groups.lsp" },
   { import = "plugins.groups.theme" },
   { import = "plugins.groups.treesitter" },
