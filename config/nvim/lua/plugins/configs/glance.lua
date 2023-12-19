@@ -4,6 +4,9 @@ local options = {
     top_char = "―",
     bottom_char = "―",
   },
+  indent_lines = {
+    enable = false,
+  },
 }
 
 return options
