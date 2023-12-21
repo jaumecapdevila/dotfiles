@@ -37,12 +37,6 @@ local options = {
   PATH = "skip",
 
   ui = {
-    icons = {
-      package_pending = " ",
-      package_installed = "󰄳 ",
-      package_uninstalled = " 󰚌",
-    },
-
     keymaps = {
       toggle_server_expand = "<CR>",
       install_server = "i",

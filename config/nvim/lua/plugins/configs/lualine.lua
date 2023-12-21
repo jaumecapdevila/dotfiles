@@ -1,7 +1,7 @@
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
--- custom theme
-local tokyo = {
+-- tokyonight
+local theme = {
   fg = "#c0caf5",
   red = "#f7768e",
   green = "#9ece6a",
@@ -31,8 +31,8 @@ local config = {
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = tokyo.fg, bg = "NONE" } },
-      inactive = { c = { fg = tokyo.fg, bg = "NONE" } },
+      normal = { c = { fg = theme.fg, bg = "NONE" } },
+      inactive = { c = { fg = theme.fg, bg = "NONE" } },
     },
   },
   sections = {
@@ -68,8 +68,8 @@ end
 
 ins_left({
   "branch",
-  icon = "",
-  color = { fg = tokyo.magenta, gui = "bold" },
+  icon = "🐙",
+  color = { fg = theme.magenta, gui = "bold" },
 })
 
 ins_left({ "filename" })
@@ -79,9 +79,9 @@ ins_left({
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    color_error = { fg = tokyo.red },
-    color_warn = { fg = tokyo.yellow },
-    color_info = { fg = tokyo.cyan },
+    color_error = { fg = theme.red },
+    color_warn = { fg = theme.yellow },
+    color_info = { fg = theme.cyan },
   },
 })
 
@@ -96,12 +96,12 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = tokyo.cyan, gui = "bold" },
+  color = { fg = theme.cyan, gui = "bold" },
 })
 
 ins_right({ "location" })
 
-ins_right({ "progress", color = { fg = tokyo.fg, gui = "bold" } })
+ins_right({ "progress", color = { fg = theme.fg, gui = "bold" } })
 
 ins_right({
   "filesize",
@@ -112,14 +112,14 @@ ins_right({
   "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = tokyo.fg, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = tokyo.fg, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 return config

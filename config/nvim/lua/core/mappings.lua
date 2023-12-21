@@ -181,6 +181,12 @@ M.telescope = {
     -- file browser
     ["<leader>fr"] = { "<cmd> Telescope file_browser <CR>", "File Browser" },
 
+    -- lsp
+    ["<leader>fs"] = {
+      "<cmd> Telescope lsp_document_symbols <CR>",
+      "Document Symbols",
+    },
+
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },

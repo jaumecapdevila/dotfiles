@@ -32,3 +32,6 @@ source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 # External
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+# Load NVM
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
