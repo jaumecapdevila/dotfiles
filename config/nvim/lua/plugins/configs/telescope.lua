@@ -13,8 +13,6 @@ local options = {
       prompt_position = "top",
     },
     path_display = { "smart" },
-    border = {},
-    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     color_devicons = true,
   },
 
