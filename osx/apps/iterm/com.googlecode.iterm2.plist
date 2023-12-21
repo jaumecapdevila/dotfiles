@@ -1158,7 +1158,7 @@
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>MinimumWeightDifferenceForBoldFont</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
