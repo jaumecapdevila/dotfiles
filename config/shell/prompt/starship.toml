@@ -23,7 +23,7 @@ $line_break\
 $status"""
 
 [line_break]
-disabled = false
+disabled = true
 
 [directory]
 truncation_length = 3

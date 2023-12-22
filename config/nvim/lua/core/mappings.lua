@@ -63,13 +63,19 @@ M.general = {
     ["[e"] = { utils.diagnostic_goto(false, "ERROR"), "Prev Error" },
     ["]w"] = { utils.diagnostic_goto(true, "WARNING"), "Next Warning" },
     ["[w"] = { utils.diagnostic_goto(false, "WARNING"), "Prev Warning" },
+
+    -- terminal
+    ["<C-t>"] = { ":Term<CR>", "Open terminal" },
   },
 
   t = {
-    ["<C-x>"] = {
-      vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true),
-      "Escape terminal mode",
-    },
+    ["<Esc>"] = { "<c-\\><c-n>", "Enter Normal Mode" },
+    ["<C-h>"] = { "<cmd>wincmd h<cr>", "Go to left window" },
+    ["<C-j>"] = { "<cmd>wincmd j<cr>", "Go to lower window" },
+    ["<C-k>"] = { "<cmd>wincmd k<cr>", "Go to upper window" },
+    ["<C-l>"] = { "<cmd>wincmd l<cr>", "Go to right window" },
+    ["<C-/>"] = { "<cmd>close<cr>", "Hide Terminal" },
+    ["<c-_>"] = { "<cmd>close<cr>", "which_key_ignore" }
   },
 }
 
