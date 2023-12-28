@@ -1160,7 +1160,7 @@
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>MinimumWeightDifferenceForBoldFont</key>
-	<integer>0</integer>
+	<integer>4</integer>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
@@ -2016,7 +2016,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>OperatorMonoNerdFont-Book 18</string>
+			<string>BerkeleyMonoNF-Regular 17</string>
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -2069,19 +2069,6 @@
 			<false/>
 			<key>Sync Title</key>
 			<false/>
-			<key>Tab Color</key>
-			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
-				<key>Blue Component</key>
-				<real>0.23137254901960785</real>
-				<key>Color Space</key>
-				<string>sRGB</string>
-				<key>Green Component</key>
-				<real>0.15686274509803921</real>
-				<key>Red Component</key>
-				<real>0.14117647058823529</real>
-			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>

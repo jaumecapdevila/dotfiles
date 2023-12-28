@@ -13,7 +13,7 @@ local options = {
       width = 0.90,
     },
     layout_strategy = "horizontal",
-    path_display = { "smart" },
+    path_display = { "truncate" },
     prompt_prefix = "🔭 ",
     selection_caret = "  ",
     sorting_strategy = "ascending",

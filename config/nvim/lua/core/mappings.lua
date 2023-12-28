@@ -33,6 +33,10 @@ M.general = {
     ["<leader>w|"] = { "<C-W>v", "Split window right" },
     ["<leader>-"] = { "<C-W>s", "Split window below" },
     ["<leader>|"] = { "<C-W>v", "Split window right" },
+    ["<C-Up>"] = { "<cmd>resize +2<cr>", "Increase window height" },
+    ["<C-Down>"] = { "<cmd>resize -2<cr>", "Decrease window height" },
+    ["<C-Left>"] = { "<cmd>vertical resize -2<cr>", "Decrease window width" },
+    ["<C-Right>"] = { "<cmd>vertical resize +2<cr>", "Increase window width" },
 
     -- buffer managenent
     ["<leader>bo"] = { "<cmd> %bd | e# <CR>", "Close other buffers" },
