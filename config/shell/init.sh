@@ -2,3 +2,4 @@
 source "$DOTFILES/config/shell/aliases.sh"
 source "$DOTFILES/config/shell/exports.sh"
 source "$DOTFILES/config/shell/functions.sh"
+source "$DOTFILES/config/shell/extras.sh"
