@@ -12,11 +12,11 @@ local options = {
   },
 
   messages = {
-    enabled = true,
+    enabled = false,
   },
 
   notify = {
-    enabled = true,
+    enabled = false,
   },
   presets = {
     bottom_search = true, -- use a classic bottom cmdline for search

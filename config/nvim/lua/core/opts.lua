@@ -11,6 +11,7 @@ opt.cursorline = true
 
 -- Colorscheme
 o.background = "dark"
+g.material_style = "palenight"
 g.tokyo_style = "storm"
 g.transparency = false
 
