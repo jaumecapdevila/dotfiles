@@ -21,9 +21,29 @@ local themes = {
     cyan = "#89ddff",
     white = "#d0d0d0",
   },
+  ayu_dark = {
+    fg = "#b3b1ad",
+    red = "#f07178",
+    green = "#c2d94c",
+    yellow = "#ffb454",
+    blue = "#59c2ff",
+    magenta = "#ffee99",
+    cyan = "#78dce8",
+    white = "#c7c7c7",
+  },
+  ayu_mirage = {
+    fg = "#cbccc6",
+    red = "#f28779",
+    green = "#bae67e",
+    yellow = "#ffd580",
+    blue = "#73d0ff",
+    magenta = "#d4bfff",
+    cyan = "#95e6cb",
+    white = "#c7c7c7",
+  },
 }
 
-local theme = themes.pale
+local theme = themes.ayu_dark
 
 -- Color table for highlights
 -- stylua: ignore

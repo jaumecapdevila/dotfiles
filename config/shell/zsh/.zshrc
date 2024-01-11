@@ -15,8 +15,6 @@ setopt +o nomatch
 
 # zim plugins
 zstyle ':zim:git' aliases-prefix 'g'
-
-# fzf config
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # Start zim
@@ -34,4 +32,4 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # Load NVM
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"

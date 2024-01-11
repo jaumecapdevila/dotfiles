@@ -14,7 +14,6 @@ local options = {
     "tsx",
     "typescript",
     "go",
-    "php",
     "graphql",
     "python",
   },

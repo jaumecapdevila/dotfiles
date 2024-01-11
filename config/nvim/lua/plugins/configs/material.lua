@@ -12,8 +12,6 @@ return {
   styles = {
     comments = { italic = true },
     keywords = { italic = true },
-    types = { italic = true },
-    functions = { bold = true },
   },
 
   plugins = {
@@ -36,11 +34,9 @@ return {
     eob_lines = false,
   },
 
-  async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
+  async_loading = true,
   custom_highlights = {
     ["@field"] = { fg = base.main.yellow },
     ["@property"] = { fg = base.main.yellow },
-    -- ["@field"] = { fg = base.editor.fg_dark },
-    -- ["@property"] = { fg = base.editor.fg_dark },
   },
 }
