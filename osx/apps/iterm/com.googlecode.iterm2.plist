@@ -1861,7 +1861,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Title Setting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -2702,7 +2702,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>BerkeleyMonoNF-Regular 18</string>
+			<string>OperatorMonoNerdFont-Book 18</string>
 			<key>Open Password Manager Automatically</key>
 			<true/>
 			<key>Open Toolbelt</key>
