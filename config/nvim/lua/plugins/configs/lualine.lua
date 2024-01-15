@@ -1,3 +1,4 @@
+local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 local themes = {
@@ -43,7 +44,7 @@ local themes = {
   },
 }
 
-local theme = themes.ayu_dark
+local theme = themes[g.lualine_theme] or themes.pale
 
 -- Color table for highlights
 -- stylua: ignore

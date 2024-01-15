@@ -7,7 +7,7 @@ return {
     opts = function() return require("plugins.configs.material") end,
     config = function(_, opts)
       require("material").setup(opts)
-      -- vim.cmd([[colorscheme material]])
+      vim.cmd([[colorscheme material]])
     end,
   },
   {
@@ -29,7 +29,7 @@ return {
     end,
     config = function(_, opts)
       require("ayu").setup(opts)
-      vim.cmd([[colorscheme ayu]])
+      -- vim.cmd([[colorscheme ayu]])
     end,
   },
 }

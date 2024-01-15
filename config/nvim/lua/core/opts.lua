@@ -9,11 +9,12 @@ opt.showmode = false
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
--- Colorscheme
+-- Theming
 o.background = "dark"
+g.transparency = false
 g.material_style = "palenight"
 g.tokyo_style = "storm"
-g.transparency = false
+g.lualine_theme = "pale"
 
 -- Indenting
 opt.expandtab = true
