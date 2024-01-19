@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -o pipefail
+
+SCRIPTS_DIR="$DOTFILES/scripts"
+SCRIPTS=$(find "$SCRIPTS_DIR" -type f | sed "s|$SCRIPTS_DIR/||g")
+
+SELECTED_SCRIPT=$(echo "$SCRIPTS" | fzf)
+
+if [[ -n "$SELECTED_SCRIPT" ]]; then
+  "$SCRIPTS_DIR/$SELECTED_SCRIPT"
+fi
