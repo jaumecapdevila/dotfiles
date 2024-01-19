@@ -17,7 +17,7 @@ dashboard.section.buttons.val = {
   ),
   dashboard.button("g", "🔍" .. " Find text", ":Telescope live_grep <CR>"),
   dashboard.button("l", "📦" .. " Lazy", ":Lazy<CR>"),
-  dashboard.button("q", "👋" .. " Quit", ":qa<CR>"),
+  dashboard.button("q", "🚪" .. " Quit", ":qa<CR>"),
 }
 dashboard.section.header.opts.hl = "AlphaHeader"
 dashboard.opts.layout[1].val = 6

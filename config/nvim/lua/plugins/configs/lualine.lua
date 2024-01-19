@@ -68,6 +68,8 @@ local config = {
       normal = { c = { fg = theme.fg, bg = "NONE" } },
       inactive = { c = { fg = theme.fg, bg = "NONE" } },
     },
+    globalstatus = true,
+    -- disabled_filetypes = { "NvimTree" },
   },
   sections = {
     -- these are to remove the defaults
@@ -88,6 +90,11 @@ local config = {
     lualine_c = {},
     lualine_x = {},
   },
+  -- extensions = {
+  --   "nvim-tree",
+  --   "mason",
+  --   "lazy",
+  -- },
 }
 
 -- Inserts a component in lualine_c at left section

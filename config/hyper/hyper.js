@@ -8,7 +8,7 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
     // default font size in pixels for all tabs
-    fontSize: 19,
+    fontSize: 18,
     // font family with optional fallbacks
     fontFamily:
       '"BerkeleyMono Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -123,7 +123,7 @@ module.exports = {
     // todo: does not pick up config changes automatically, need to restart terminal :/
     webLinksActivationKey: "",
     // if `false` (without backticks and without quotes), Hyper will use ligatures provided by some fonts
-    disableLigatures: true,
+    disableLigatures: false,
     // set to true to disable auto updates
     disableAutoUpdates: false,
     // set to true to enable screen reading apps (like NVDA) to read the contents of the terminal
@@ -132,14 +132,12 @@ module.exports = {
     preserveCWD: true,
     // for advanced config flags please refer to https://hyper.is/#cfg
 
-    catppuccinTheme: "Frappé",
-
     // hyperborder
     hyperBorder: {
       animate: {
         duration: "200", // default is 18000
       },
-      borderColors: ["#81C8BE", "#F4B8E4", "#8CAAEE"],
+      borderColors: ["#82aaff", "#c792ea", "#ffcb6b"],
     },
   },
   // a list of plugins to fetch and install from npm
@@ -148,16 +146,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperborder", "hypurr"],
+  plugins: ["hyperborder"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: [],
-  keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
-    "pane:next": "ctrl+l",
-    "pane:prev": "ctrl+h",
-  },
 };
 //# sourceMappingURL=config-default.js.map

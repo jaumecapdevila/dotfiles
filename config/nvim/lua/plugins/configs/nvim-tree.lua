@@ -1,8 +1,4 @@
 local options = {
-  filters = {
-    dotfiles = false,
-    exclude = { vim.fn.stdpath("config") .. "/lua/custom" },
-  },
   disable_netrw = true,
   hijack_netrw = true,
   hijack_cursor = true,
@@ -13,8 +9,7 @@ local options = {
     update_root = false,
   },
   view = {
-    adaptive_size = false,
-    width = 40,
+    adaptive_size = true,
     side = "right",
   },
   git = {

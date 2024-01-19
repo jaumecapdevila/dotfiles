@@ -14,10 +14,6 @@
 
 # Mac
 .DS_Store
-*.paw
-
-# Custom
-.no-commit
 
 # Cache
 .php_cs.cache
