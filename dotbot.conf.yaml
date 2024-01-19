@@ -23,7 +23,7 @@
     ~/.gitconfig: config/git/.gitconfig
     ~/.gitignore_global: config/git/.gitignore_global
     ~/.hammerspoon: config/hammerspoon
-    ~/.warp: osx/apps/warp
+    ~/.warp: mac/apps/warp
     ~/.zimrc: config/shell/zsh/.zimrc
     ~/.zlogin: config/shell/zsh/.zlogin
     ~/.zprofile: config/shell/zsh/.zprofile
