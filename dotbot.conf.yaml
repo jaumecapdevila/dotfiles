@@ -17,6 +17,7 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
+    ~/.config/sketchybar: config/sketchybar
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/tmux: config/tmux
     ~/.gitattributes: config/git/.gitattributes
