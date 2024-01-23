@@ -24,6 +24,7 @@ return {
     "rainbow-delimiters",
     "telescope",
     "which-key",
+    "nvim-notify",
   },
 
   disable = {
