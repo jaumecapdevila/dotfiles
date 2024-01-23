@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# Fonts
-export FONT="SF Pro"
+# Font
+export FONT_FACE="OperatorMono Nerd Font"
+export FONT_SIZE=17.0
 
 # Sizes
-export BAR_HEIGHT=32
-export ITEM_HEIGHT=24
+export BAR_HEIGHT=40
+export ITEM_HEIGHT=26
 
 # Margins and paddings
-export GAP=8
+export BAR_OFFSET_TOP=8
+export BAR_MARGIN=8
 export BAR_PADDING=10
 export ICON_PADDING=4
 export LABEL_PADDING=4
@@ -16,10 +18,11 @@ export ITEM_PADDING=4
 
 # Other
 export RADIUS=5
+export BORDER=2
+export BLUR_LEVEL=30
 
-# Colorscheme
-export BAR_COLOR=0xff292d3e
-export ITEM_BG_COLOR=0xff82aaff
+# Colors
+export BAR_FOREGROUND=0xBABED8FF
+export BAR_BACKGROUND=0xff292d3e
 export ACCENT_COLOR=0xffab47bc
-export ICON_COLOR=0xffe5e9f0
-export LABEL_COLOR=0xffe5e9f0
+export ICON_COLOR=0x82AAFFFF

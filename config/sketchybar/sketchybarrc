@@ -1,58 +1,63 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 source "$CONFIG_DIR/theme.sh"
 
-ITEM_DIR="$CONFIG_DIR/items" # Directory where the items are configured
-PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
 
 ##### Bar Appearance #####
-# Configuring the general appearance of the bar, these are only some of the
-# options available. For all options see:
 # https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
 bar=(
-  height=$BAR_HEIGHT
-  color=$BAR_COLOR
-  shadow=on
+  color="$BAR_BACKGROUND"
+  corner_radius="$RADIUS"
+  height="$BAR_HEIGHT"
+  margin="$BAR_MARGIN"
+  padding_left="$BAR_PADDING"
+  padding_right="$BAR_PADDING"
   position=top
+  shadow=on
   sticky=on
-  padding_right=$BAR_PADDING
-  padding_left=$BAR_PADDING
-  y_offset=$GAP
-  margin=$GAP
-  corner_radius=$RADIUS
   topmost=window
+  y_offset="$BAR_OFFSET_TOP"
 )
 
 sketchybar --bar "${bar[@]}"
 
-##### Changing Defaults #####
-# We now change some default values that are applied to all further items
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
-
+# Setting up default values
 defaults=(
-  icon.font="$FONT:Bold:14.0"
-  icon.color=$ICON_COLOR
-  icon.padding_left=$ICON_PADDING
-  icon.padding_right=$ICON_PADDING
-  label.font="$FONT:Semibold:13.0"
-  label.color=$LABEL_COLOR
-  label.padding_left=$LABEL_PADDING
-  label.padding_right=$LABEL_PADDING
-  padding_right=$ITEM_PADDING
-  padding_left=$ITEM_PADDING
-  background.height=$ITEM_HEIGHT
-  background.corner_radius=$RADIUS
+  background.border_width="$BORDER"
+  background.corner_radius="$RADIUS"
+  background.height="$ITEM_HEIGHT"
+  icon.color="$ICON_COLOR"
+  icon.font="$FONT_FACE:Bold:$FONT_SIZE"
+  icon.padding_left="$ICON_PADDING"
+  icon.padding_right="$ICON_PADDING"
+  label.color="$BAR_FOREGROUND"
+  label.font="$FONT_FACE:Medium:$FONT_SIZE"
+  label.padding_left="$LABEL_PADDING"
+  label.padding_right="$LABEL_PADDING"
+  padding_left="$ITEM_PADDING"
+  padding_right="$ITEM_PADDING"
+  popup.background.border_color="$POPUP_BORDER_COLOR"
+  popup.background.border_width="$BORDER"
+  popup.background.color="$POPUP_BACKGROUND_COLOR"
+  popup.background.corner_radius="$RADIUS"
+  popup.background.shadow.drawing=on
+  popup.blur_radius="$BLUR_LEVEL"
+  scroll_texts=on
+  updates=when_shown
 )
 
 sketchybar --default "${defaults[@]}"
 
 # -- Left Side Items --
+source "$ITEM_DIR/front_app.sh"
 
-source $ITEM_DIR/calendar.sh
+# -- Right Side Items --
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/brew.sh"
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update
