@@ -4,15 +4,15 @@ INPUT="$(defaults read ~/Library/Preferences/com.apple.HIToolbox.plist AppleCurr
 LAYOUT_ID="${INPUT##*.}"
 
 case "$LAYOUT_ID" in
-  "British")
-    LAYOUT="EN"
-    ;;
-  "Spanish-ISO")
-    LAYOUT="ES"
-    ;;
-  *)
-    LAYOUT="$LAYOUT_NAME"
-    ;;
+"British")
+  LAYOUT="EN"
+  ;;
+"Spanish-ISO")
+  LAYOUT="ES"
+  ;;
+*)
+  LAYOUT="$LAYOUT_NAME"
+  ;;
 esac
 
 sketchybar --set keyboard label="$LAYOUT"

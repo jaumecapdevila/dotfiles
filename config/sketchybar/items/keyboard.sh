@@ -1,8 +1,9 @@
 #!/bin/bash
 
 keyboard=(
-  # icon.drawing=off
-  icon="⌨️ "
+  icon.color="$COLOR_WHITE"
+  icon="$ICON_KEYBOARD"
+  label.color="$COLOR_WHITE"
   label.font="$FONT_FACE:Medium:$FONT_SIZE"
   script="$PLUGIN_DIR/keyboard.sh"
 )

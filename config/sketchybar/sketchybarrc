@@ -1,16 +1,21 @@
 #!/usr/bin/env zsh
 
-source "$CONFIG_DIR/theme.sh"
-
-PLUGIN_DIR="$CONFIG_DIR/plugins"
+CORE_DIR="$CONFIG_DIR/core"
 ITEM_DIR="$CONFIG_DIR/items"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+source "$CORE_DIR/colors.sh"
+source "$CORE_DIR/icons.sh"
+source "$CORE_DIR/styles.sh"
 
 ##### Bar Appearance #####
 # https://felixkratz.github.io/SketchyBar/config/bar
 
 bar=(
-  color="$BAR_BACKGROUND"
-  corner_radius="$RADIUS"
+  border_color="$COLOR_BLUE"
+  border_width="$BORDER_WIDTH"
+  color="$COLOR_BACKGROUND"
+  corner_radius="$BORDER_RADIUS"
   height="$BAR_HEIGHT"
   margin="$BAR_MARGIN"
   padding_left="$BAR_PADDING"
@@ -26,23 +31,23 @@ sketchybar --bar "${bar[@]}"
 
 # Setting up default values
 defaults=(
-  background.border_width="$BORDER"
-  background.corner_radius="$RADIUS"
+  background.border_width="$BORDER_WIDTH"
+  background.corner_radius="$BORDER_RADIUS"
   background.height="$ITEM_HEIGHT"
-  icon.color="$ICON_COLOR"
-  icon.font="$FONT_FACE:Bold:$FONT_SIZE"
+  icon.color="$COLOR_WHITE"
+  icon.font="$FONT_FACE:Bold:$FONT_SIZE_LARGE"
   icon.padding_left="$ICON_PADDING"
   icon.padding_right="$ICON_PADDING"
-  label.color="$BAR_FOREGROUND"
+  label.color="$COLOR_FOREGROUND"
   label.font="$FONT_FACE:Medium:$FONT_SIZE"
   label.padding_left="$LABEL_PADDING"
   label.padding_right="$LABEL_PADDING"
   padding_left="$ITEM_PADDING"
   padding_right="$ITEM_PADDING"
-  popup.background.border_color="$POPUP_BORDER_COLOR"
-  popup.background.border_width="$BORDER"
-  popup.background.color="$POPUP_BACKGROUND_COLOR"
-  popup.background.corner_radius="$RADIUS"
+  popup.background.border_color="$COLOR_ACCENT"
+  popup.background.border_width="$BORDER_WIDTH"
+  popup.background.color="$COLOR_BACKGROUND"
+  popup.background.corner_radius="$BORDER_RADIUS"
   popup.background.shadow.drawing=on
   popup.blur_radius="$BLUR_LEVEL"
   scroll_texts=on
@@ -56,9 +61,9 @@ source "$ITEM_DIR/front_app.sh"
 
 # -- Right Side Items --
 source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/keyboard.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/brew.sh"
-source "$ITEM_DIR/keyboard.sh"
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update
