@@ -8,6 +8,7 @@ local apps = {
   f = "Finder", -- File Explorer
   e = "Microsoft Outlook", -- Mail
   n = "Notes", -- Notes
+  m = "Microsoft Outlook", -- Mail
   s = "Slack", -- Messaging
   o = "Obsidian", -- Life OS
   p = "HTTPie", -- API Client

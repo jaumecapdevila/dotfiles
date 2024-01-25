@@ -18,7 +18,7 @@ layouts:
   # - tall
   - fullscreen
   # - tall-right
-  - wide
+  # - wide
   - two-pane
   # - middle-wide
   # - 3column-left
