@@ -58,14 +58,14 @@ sketchybar --default "${defaults[@]}"
 
 # -- Left Side Items --
 source "$ITEM_DIR/front_app.sh"
+source "$ITEM_DIR/brew.sh"
+source "$ITEM_DIR/slack.sh"
 
 # -- Right Side Items --
 source "$ITEM_DIR/network.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/keyboard.sh"
 source "$ITEM_DIR/volume.sh"
-source "$ITEM_DIR/slack.sh"
-source "$ITEM_DIR/brew.sh"
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update

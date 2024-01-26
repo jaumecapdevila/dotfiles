@@ -16,8 +16,8 @@ case "$STATUS_LABEL" in
   ;;
 *)
   STATUS_LABEL="0"
-  COLOR="$COLOR_FOREGROUND"
+  COLOR="$COLOR_MAGENTA"
   ;;
 esac
 
-sketchybar --set $NAME icon.color="$COLOR" label.color="$COLOR" label="$STATUS_LABEL"
+sketchybar --set "$NAME" icon.color="$COLOR" label.color="$COLOR" label="$STATUS_LABEL"
