@@ -1,9 +1,10 @@
 #!/bin/bash
 
 front_app=(
-  icon.color="$COLOR_BLUE"
-  script="$PLUGIN_DIR/front_app.sh"
   click_script="open -a 'Mission Control'"
+  icon.color="$COLOR_BLUE"
+  label.color="$COLOR_BLUE"
+  script="$PLUGIN_DIR/front_app.sh"
 )
 
 sketchybar --add item front_app left \
