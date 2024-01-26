@@ -7,6 +7,6 @@ slack=(
   script="$PLUGIN_DIR/slack.sh"
 )
 
-sketchybar --add item slack right \
+sketchybar --add item slack left \
   --set slack "${slack[@]}" \
   --subscribe slack system_woke
