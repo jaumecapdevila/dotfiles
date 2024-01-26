@@ -1,8 +1,6 @@
 #!/bin/bash
 
 volume=(
-  icon.color="$COLOR_WHITE"
-  label.color="$COLOR_WHITE"
   script="$PLUGIN_DIR/volume.sh"
 )
 

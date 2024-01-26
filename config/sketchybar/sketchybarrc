@@ -34,7 +34,7 @@ defaults=(
   background.border_width="$BORDER_WIDTH"
   background.corner_radius="$BORDER_RADIUS"
   background.height="$ITEM_HEIGHT"
-  icon.color="$COLOR_WHITE"
+  icon.color="$COLOR_FOREGROUND"
   icon.font="$FONT_FACE:Bold:$FONT_SIZE_LARGE"
   icon.padding_left="$ICON_PADDING"
   icon.padding_right="$ICON_PADDING"
@@ -63,6 +63,7 @@ source "$ITEM_DIR/front_app.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/keyboard.sh"
 source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/slack.sh"
 source "$ITEM_DIR/brew.sh"
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
