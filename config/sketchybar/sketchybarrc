@@ -60,6 +60,7 @@ sketchybar --default "${defaults[@]}"
 source "$ITEM_DIR/front_app.sh"
 
 # -- Right Side Items --
+source "$ITEM_DIR/network.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/keyboard.sh"
 source "$ITEM_DIR/volume.sh"

@@ -15,8 +15,8 @@ case "$STATUS_LABEL" in
   COLOR="$COLOR_YELLOW"
   ;;
 *)
-  STATUS_LABEL="?"
-  COLOR="$COLOR_MAGENTA"
+  STATUS_LABEL="0"
+  COLOR="$COLOR_FOREGROUND"
   ;;
 esac
 
