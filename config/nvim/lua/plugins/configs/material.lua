@@ -1,3 +1,4 @@
+local g = vim.g
 local base = require("material.colors")
 
 return {
@@ -30,7 +31,7 @@ return {
   disable = {
     colored_cursor = false,
     borders = false,
-    background = false,
+    background = g.transparency,
     term_colors = false,
     eob_lines = false,
   },

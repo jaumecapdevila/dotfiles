@@ -1,7 +1,7 @@
 local g = vim.g
 
 return {
-  style = g.tokyo_style,
+  style = g.tokyo_style or "storm",
   transparent = g.transparency,
   terminal_colors = true,
   styles = {

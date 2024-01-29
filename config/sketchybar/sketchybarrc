@@ -12,9 +12,10 @@ source "$CORE_DIR/styles.sh"
 # https://felixkratz.github.io/SketchyBar/config/bar
 
 bar=(
+  blur_radius="$BLUR_LEVEL"
   border_color="$COLOR_BLUE"
   border_width="$BORDER_WIDTH"
-  color="$COLOR_BACKGROUND"
+  color="$COLOR_BACKGROUND_TRANSPARENT"
   corner_radius="$BORDER_RADIUS"
   height="$BAR_HEIGHT"
   margin="$BAR_MARGIN"
@@ -63,6 +64,7 @@ source "$ITEM_DIR/slack.sh"
 
 # -- Right Side Items --
 source "$ITEM_DIR/network.sh"
+source "$ITEM_DIR/time.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/keyboard.sh"
 source "$ITEM_DIR/volume.sh"

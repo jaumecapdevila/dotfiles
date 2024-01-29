@@ -3,6 +3,7 @@
 # Palenight theme
 
 export COLOR_BACKGROUND=0xff292d3e
+export COLOR_BACKGROUND_TRANSPARENT=0xcc292d3e
 export COLOR_FOREGROUND=0xBABED8FF
 
 export COLOR_ACCENT=0xffab47bc
