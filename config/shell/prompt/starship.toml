@@ -38,7 +38,7 @@ symbol = "󰘬 "
 format = "[$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
-style = "bold cyan"
+style = "bold purple"
 
 [cmd_duration]
 min_time = 2000
@@ -63,6 +63,6 @@ style = "bold blue"
 format = "[$symbol($version )]($style)"
 
 [character]
-success_symbol = '[󱓞](purple)'
+success_symbol = '[󱓞](green)'
 error_symbol = '[󰈸](red)'
 
