@@ -44,7 +44,7 @@ local themes = {
   },
 }
 
-local theme = themes[g.lualine_theme] or themes.pale
+local theme = themes[g.lualine_theme] or themes.tokyo
 
 -- Color table for highlights
 -- stylua: ignore
@@ -109,11 +109,11 @@ end
 
 ins_left({
   "branch",
-  icon = "🐙",
+  icon = "󰘬",
   color = { fg = theme.magenta, gui = "bold" },
 })
 
-ins_left({ "filename", icon = "🗃️" })
+ins_left({ "filename", icon = "󰈔" })
 
 ins_left({
   "diagnostics",

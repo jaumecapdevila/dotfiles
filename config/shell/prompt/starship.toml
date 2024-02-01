@@ -15,12 +15,11 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
-$git_status\
 $nodejs\
 $lua\
 $cmd_duration\
 $line_break\
-$status"""
+$character"""
 
 [line_break]
 disabled = true
@@ -30,58 +29,40 @@ truncation_length = 3
 truncation_symbol = "…/"
 home_symbol = "~"
 read_only_style = "197"
-read_only = "🔒"
+read_only = "󰌾"
 style = "bold blue"
-format = "📁 [$path]($style)[$read_only]($read_only_style) "
+format = "[󰉋 $path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = "🐙 "
+symbol = "󰘬 "
 format = "[$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
 style = "bold cyan"
 
-[git_status]
-disabled = true
-format = "([$all_status$ahead_behind]($style) )"
-conflicted = ''
-ahead = ''
-behind = '😰'
-diverged = '😵'
-up_to_date = ''
-untracked = '🤔'
-stashed = '📦'
-modified = '📝'
-staged = ''
-renamed = ''
-deleted = '🔥'
-
 [cmd_duration]
 min_time = 2000
-format = '[$duration](bold yellow) '
-
-[status]
-disabled = false
-symbol = '😡'
-success_symbol = '🚀'
-format = '[$symbol]($style) '
+format = '[󰥔 $duration](bold yellow) '
 
 [python]
 disabled = true
-symbol = "🐍"
+symbol = "󱔎"
+style = "bold yellow"
 python_binary = "python3"
 
 [nodejs]
-disabled = true
-symbol = "🤖 "
+disabled = false
+symbol = "󰚩 "
+style = "bold green"
 format = "[$symbol($version )]($style)"
 
 [lua]
-disabled = true
-symbol = "🌑 "
+disabled = false
+symbol = "󰽢 "
+style = "bold blue"
 format = "[$symbol($version )]($style)"
 
 [character]
-success_symbol = '[➜](purple)'
-error_symbol = '[➜](red)'
+success_symbol = '[󱓞](purple)'
+error_symbol = '[󰈸](red)'
 
