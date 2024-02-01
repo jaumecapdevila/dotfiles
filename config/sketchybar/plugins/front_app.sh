@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/core/icons.sh"
+source "$CONFIG_DIR/theme/icons.sh"
 
 if [ "$SENDER" != "front_app_switched" ]; then
   exit 0

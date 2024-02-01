@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-source "$CONFIG_DIR/core/colors.sh"
+source "$CONFIG_DIR/theme/colors.sh"
 
 # example output: "StatusLabel"={ "label"="2" }
 SLACK_STATUS=$(lsappinfo info -only StatusLabel "Slack")

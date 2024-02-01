@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$CONFIG_DIR/core/icons.sh"
+source "$CONFIG_DIR/theme/icons.sh"
 
 # The volume_change event supplies a $INFO variable in which the current volume
 # percentage is passed to the script.

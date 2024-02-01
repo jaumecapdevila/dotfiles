@@ -1,7 +1,7 @@
 #!/bin/sh
 
-source "$CONFIG_DIR/core/colors.sh"
-source "$CONFIG_DIR/core/icons.sh"
+source "$CONFIG_DIR/theme/colors.sh"
+source "$CONFIG_DIR/theme/icons.sh"
 
 NETWORK_INFO=$(scutil --nwi)
 IP_ADDRESS=$(echo "$NETWORK_INFO" | grep address | sed 's/.*://' | tr -d ' ' | head -1)

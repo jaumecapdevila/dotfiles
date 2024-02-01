@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
-CORE_DIR="$CONFIG_DIR/core"
+THEME_DIR="$CONFIG_DIR/theme"
 ITEM_DIR="$CONFIG_DIR/items"
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-source "$CORE_DIR/colors.sh"
-source "$CORE_DIR/icons.sh"
-source "$CORE_DIR/styles.sh"
+source "$THEME_DIR/colors.sh"
+source "$THEME_DIR/icons.sh"
+source "$THEME_DIR/styles.sh"
 
 ##### Bar Appearance #####
 # https://felixkratz.github.io/SketchyBar/config/bar
