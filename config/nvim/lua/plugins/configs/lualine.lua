@@ -1,50 +1,16 @@
 local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-local themes = {
-  tokyo = {
-    fg = "#c0caf5",
-    red = "#f7768e",
-    green = "#9ece6a",
-    yellow = "#e0af68",
-    blue = "#7aa2f7",
-    magenta = "#bb9af7",
-    cyan = "#7dcfff",
-    white = "#a9b1d6",
-  },
-  pale = {
-    fg = "#959dcb",
-    red = "#f07178",
-    green = "#c3e88d",
-    yellow = "#ffcb6b",
-    blue = "#82aaff",
-    magenta = "#c792ea",
-    cyan = "#89ddff",
-    white = "#d0d0d0",
-  },
-  ayu_dark = {
-    fg = "#b3b1ad",
-    red = "#f07178",
-    green = "#c2d94c",
-    yellow = "#ffb454",
-    blue = "#59c2ff",
-    magenta = "#ffee99",
-    cyan = "#78dce8",
-    white = "#c7c7c7",
-  },
-  ayu_mirage = {
-    fg = "#cbccc6",
-    red = "#f28779",
-    green = "#bae67e",
-    yellow = "#ffd580",
-    blue = "#73d0ff",
-    magenta = "#d4bfff",
-    cyan = "#95e6cb",
-    white = "#c7c7c7",
-  },
+local theme = {
+  fg = "#959dcb",
+  red = "#f07178",
+  green = "#c3e88d",
+  yellow = "#ffcb6b",
+  blue = "#82aaff",
+  magenta = "#c792ea",
+  cyan = "#89ddff",
+  white = "#d0d0d0",
 }
-
-local theme = themes[g.lualine_theme] or themes.tokyo
 
 -- Color table for highlights
 -- stylua: ignore

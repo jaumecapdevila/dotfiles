@@ -63,6 +63,7 @@ style = "bold blue"
 format = "[$symbol($version )]($style)"
 
 [character]
-success_symbol = '[󱓞](green)'
+disabled = true
+success_symbol = '[❯](purple)'
 error_symbol = '[󰈸](red)'
 

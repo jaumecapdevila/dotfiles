@@ -1,13 +1,11 @@
 return {
-  "Shatur/neovim-ayu",
-  name = "ayu",
-  opts = function()
-    return {
-      mirage = true
-    }
-  end,
+  "marko-cerovac/material.nvim",
+  name = "material",
+  lazy = false,
+  priority = 1000,
+  opts = function() return require("plugins.configs.material") end,
   config = function(_, opts)
-    require("ayu").setup(opts)
-    vim.cmd([[colorscheme ayu]])
-  end
+    require("material").setup(opts)
+    vim.cmd([[colorscheme material]])
+  end,
 }
