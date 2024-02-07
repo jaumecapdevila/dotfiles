@@ -1,5 +1,5 @@
 # If you modify this execute `zimfw uninstall & zimfw install`
-#zmodule zimfw/completion
+# zmodule zimfw/completion
 # zmodule Aloxaf/fzf-tab
 zmodule zimfw/environment
 zmodule zimfw/git

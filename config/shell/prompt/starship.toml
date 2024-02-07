@@ -18,6 +18,7 @@ $git_branch\
 $nodejs\
 $lua\
 $cmd_duration\
+$status\
 $line_break\
 $character"""
 
@@ -38,7 +39,7 @@ symbol = "󰘬 "
 format = "[$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
-style = "bold purple"
+style = "bold cyan"
 
 [cmd_duration]
 min_time = 2000
@@ -51,16 +52,22 @@ style = "bold yellow"
 python_binary = "python3"
 
 [nodejs]
-disabled = false
+disabled = true
 symbol = "󰚩 "
 style = "bold green"
 format = "[$symbol($version )]($style)"
 
 [lua]
-disabled = false
+disabled = true
 symbol = "󰽢 "
 style = "bold blue"
 format = "[$symbol($version )]($style)"
+
+[status]
+symbol = '[󰈸](red)'
+success_symbol = '[󱓞](purple)'
+format = '[$symbol]($style) '
+disabled = false
 
 [character]
 disabled = true

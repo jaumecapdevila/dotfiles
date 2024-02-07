@@ -11,6 +11,10 @@ local options = {
     },
   },
 
+  notify = {
+    enabled = false,
+  },
+
   messages = {
     enabled = false,
   },
@@ -25,8 +29,8 @@ local options = {
 
   cmdline = {
     format = {
-      search_down = { icon = "👀 " },
-      search_up = { icon = "👀 " },
+      search_down = { icon = "👀 󰁅" },
+      search_up = { icon = "👀 󰁝" },
     },
   },
 }

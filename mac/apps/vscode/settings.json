@@ -1,0 +1,123 @@
+{
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+  "breadcrumbs.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Operator Mono', 'OperatorMono Nerd Font', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": true,
+  "editor.guides.indentation": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 28,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "none",
+  "editor.scrollBeyondLastLine": false,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Italic comments",
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Italic keywords",
+        "scope": ["keyword"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Remove italic for some scopes",
+        "scope": ["keyword.operator"],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "Bolder functions and methods",
+        "scope": ["entity.name.function", "entity.name.method"],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.excludeWorkspaces": ["/Users/capdevil/.dotfiles"],
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false,
+    "yaml": false
+  },
+  "material-icon-theme.activeIconPack": "none",
+  "material-icon-theme.folders.color": "#82aaff",
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "materialTheme.accent": "Purple",
+  "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorCustomizations": {
+    "[Material Theme Palenight]": {
+      "activityBar.activeBorder": "#AB47BC",
+      "activityBarBadge.background": "#AB47BC",
+      "breadcrumb.activeSelectionForeground": "#AB47BC",
+      "editor.findMatchBorder": "#AB47BC",
+      "editorSuggestWidget.highlightForeground": "#AB47BC",
+      "editorWidget.border": "#AB47BC",
+      "editorWidget.resizeBorder": "#AB47BC",
+      "list.activeSelectionForeground": "#AB47BC",
+      "list.highlightForeground": "#AB47BC",
+      "list.inactiveSelectionForeground": "#AB47BC",
+      "menu.selectionForeground": "#AB47BC",
+      "menubar.selectionForeground": "#AB47BC",
+      "notificationLink.foreground": "#AB47BC",
+      "panelTitle.activeBorder": "#AB47BC",
+      "pickerGroup.foreground": "#AB47BC",
+      "progressBar.background": "#AB47BC",
+      "scrollbarSlider.activeBackground": "#AB47BC50",
+      "selection.background": "#AB47BC40",
+      "settings.headerForeground": "#AB47BC",
+      "settings.modifiedItemIndicator": "#AB47BC",
+      "statusBarItem.remoteBackground": "#AB47BC",
+      "tab.activeBorder": "#AB47BC",
+      "textLink.foreground": "#AB47BC"
+    }
+  },
+  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.tabSize": 2
+}

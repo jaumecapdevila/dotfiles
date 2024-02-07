@@ -23,7 +23,7 @@ local specs = require("plugins.specs")
 require("lazy").setup({
   spec = vim.g.vscode == nil and specs.ide or specs.vscode,
   defaults = { lazy = false },
-  install = { colorscheme = { "material" } },
+  install = { colorscheme = { "tokyonight" } },
   ui = {
     icons = {
       ft = "",

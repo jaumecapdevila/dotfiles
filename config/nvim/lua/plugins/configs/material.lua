@@ -1,5 +1,9 @@
 local g = vim.g
-local base = require("material.colors")
+
+local colors = require("material.colors.conditionals")
+
+local m = colors.main
+local e = colors.editor
 
 return {
   contrast = {
@@ -13,6 +17,7 @@ return {
   styles = {
     comments = { italic = true },
     keywords = { italic = true },
+    functions = { bold = true },
   },
 
   plugins = {
@@ -37,8 +42,12 @@ return {
   },
 
   async_loading = true,
+
   custom_highlights = {
-    ["@field"] = { fg = base.main.yellow },
-    ["@property"] = { fg = base.main.yellow },
+    Search = { fg = e.title, bg = e.selection, bold = true },
+    IncSearch = { fg = e.title, bg = e.selection, underline = false },
+    CurSearch = { fg = e.bg, bg = m.yellow, bold = true },
+    ["@field"] = { fg = m.yellow },
+    ["@property"] = { fg = m.yellow },
   },
 }

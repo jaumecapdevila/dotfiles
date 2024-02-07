@@ -29,11 +29,9 @@ local options = {
     group_empty = true,
     highlight_git = false,
     highlight_opened_files = "none",
-
     indent_markers = {
       enable = false,
     },
-
     icons = {
       show = {
         file = true,

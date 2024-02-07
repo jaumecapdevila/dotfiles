@@ -31,6 +31,7 @@
     ~/.zprofile: config/shell/zsh/.zprofile
     ~/.zshenv: config/shell/zsh/.zshenv
     ~/.zshrc: config/shell/zsh/.zshrc
+    ~/Library/Application Support/Code/User/settings.json: mac/apps/vscode/settings.json
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
 
 - shell:

@@ -9,7 +9,6 @@ return {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
     },
     opts = function() return require("plugins.configs.noice") end,
     config = function(_, opts) require("noice").setup(opts) end,
@@ -18,6 +17,7 @@ return {
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
+    enabled = false,
     opts = function() return require("plugins.configs.dashboard") end,
     config = function(_, dashboard) require("alpha").setup(dashboard.opts) end,
   },
