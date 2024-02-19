@@ -13,14 +13,13 @@ add_newline = true
 
 # update default format
 format = """
+$character\
 $directory\
 $git_branch\
 $nodejs\
 $lua\
 $cmd_duration\
-$status\
-$line_break\
-$character"""
+$line_break"""
 
 [line_break]
 disabled = true
@@ -29,8 +28,8 @@ disabled = true
 truncation_length = 3
 truncation_symbol = "…/"
 home_symbol = "~"
-read_only_style = "197"
-read_only = "󰌾"
+read_only_style = "red"
+read_only = " 󰌾"
 style = "bold blue"
 format = "[󰉋 $path]($style)[$read_only]($read_only_style) "
 
@@ -39,11 +38,11 @@ symbol = "󰘬 "
 format = "[$symbol$branch]($style) "
 truncation_length = 10
 truncation_symbol = "…/"
-style = "bold cyan"
+style = "bold purple"
 
 [cmd_duration]
 min_time = 2000
-format = '[󰥔 $duration](bold yellow) '
+format = '[$duration](bold yellow) '
 
 [python]
 disabled = true
@@ -67,10 +66,10 @@ format = "[$symbol($version )]($style)"
 symbol = '[󰈸](red)'
 success_symbol = '[󱓞](purple)'
 format = '[$symbol]($style) '
-disabled = false
+disabled = true
 
 [character]
-disabled = true
-success_symbol = '[❯](purple)'
-error_symbol = '[󰈸](red)'
+disabled = false
+success_symbol = '[󰬪](purple) '
+error_symbol = '[󰈸](red) '
 

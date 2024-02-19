@@ -1,16 +1,30 @@
 local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-local theme = {
-  fg = "#959dcb",
-  red = "#f07178",
-  green = "#c3e88d",
-  yellow = "#ffcb6b",
-  blue = "#82aaff",
-  magenta = "#c792ea",
-  cyan = "#89ddff",
-  white = "#d0d0d0",
+local colors = {
+  pale = {
+    fg = "#959dcb",
+    red = "#f07178",
+    green = "#c3e88d",
+    yellow = "#ffcb6b",
+    blue = "#82aaff",
+    magenta = "#c792ea",
+    cyan = "#89ddff",
+    white = "#d0d0d0",
+  },
+  mirage = {
+    fg = "#cbccc6",
+    red = "#f28779",
+    green = "#bae67e",
+    yellow = "#ffd580",
+    blue = "#73d0ff",
+    magenta = "#d4bfff",
+    cyan = "#95e6cb",
+    white = "#c7c7c7",
+  },
 }
+
+local theme = colors.mirage
 
 -- Color table for highlights
 -- stylua: ignore

@@ -28,7 +28,7 @@ source "$DOTFILES/config/shell/init.sh"
 source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 
 # External
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # Load NVM

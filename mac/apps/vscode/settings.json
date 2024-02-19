@@ -1,17 +1,15 @@
 {
-  "[shellscript]": {
-    "editor.defaultFormatter": "mkhl.shfmt"
-  },
   "breadcrumbs.enabled": false,
+  "dotnet.dotnetPath": "/opt/homebrew/bin",
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "always",
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "'Operator Mono', 'OperatorMono Nerd Font', monospace",
-  "editor.fontLigatures": false,
-  "editor.fontSize": 18,
+  "editor.fontFamily": "'PragmataPro Mono Liga', 'PragmataProMono Nerd Font', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 19,
   "editor.formatOnSave": true,
   "editor.glyphMargin": true,
   "editor.guides.indentation": false,
@@ -26,24 +24,18 @@
   "editor.semanticHighlighting.enabled": false,
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "name": "Italic comments",
-        "scope": ["comment", "punctuation.definition.comment"],
+        "name": "Italiczise comments and keywords",
+        "scope": ["comment", "punctuation.definition.comment", "keyword"],
         "settings": {
           "fontStyle": "italic"
         }
       },
       {
-        "name": "Italic keywords",
-        "scope": ["keyword"],
-        "settings": {
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "name": "Remove italic for some scopes",
+        "name": "Reset some scopes",
         "scope": ["keyword.operator"],
         "settings": {
           "fontStyle": ""
@@ -79,8 +71,8 @@
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
   "materialTheme.accent": "Purple",
-  "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontFamily": "'PragmataProMono Nerd Font', monospace",
+  "terminal.integrated.fontSize": 19,
   "terminal.integrated.smoothScrolling": true,
   "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
@@ -110,7 +102,7 @@
       "textLink.foreground": "#AB47BC"
     }
   },
-  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.colorTheme": "Ayu Mirage Bordered",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
@@ -118,6 +110,5 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
-  "workbench.tree.renderIndentGuides": "none",
-  "editor.tabSize": 2
+  "workbench.tree.renderIndentGuides": "none"
 }
