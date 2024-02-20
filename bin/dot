@@ -3,7 +3,8 @@
 set -o pipefail
 
 SCRIPTS_DIR="$DOTFILES/scripts"
-SCRIPTS=$(find "$SCRIPTS_DIR" -type f | sed "s|$SCRIPTS_DIR/||g")
+
+SCRIPTS=$(find "$SCRIPTS_DIR" -type f ! -name ".DS_Store" | sed "s|$SCRIPTS_DIR/||g")
 
 SELECTED_SCRIPT=$(echo "$SCRIPTS" | fzf)
 

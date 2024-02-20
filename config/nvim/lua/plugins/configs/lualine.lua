@@ -2,29 +2,15 @@ local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 local colors = {
-  pale = {
-    fg = "#959dcb",
-    red = "#f07178",
-    green = "#c3e88d",
-    yellow = "#ffcb6b",
-    blue = "#82aaff",
-    magenta = "#c792ea",
-    cyan = "#89ddff",
-    white = "#d0d0d0",
-  },
-  mirage = {
-    fg = "#cbccc6",
-    red = "#f28779",
-    green = "#bae67e",
-    yellow = "#ffd580",
-    blue = "#73d0ff",
-    magenta = "#d4bfff",
-    cyan = "#95e6cb",
-    white = "#c7c7c7",
-  },
+  fg = "#959dcb",
+  red = "#f07178",
+  green = "#c3e88d",
+  yellow = "#ffcb6b",
+  blue = "#82aaff",
+  magenta = "#c792ea",
+  cyan = "#89ddff",
+  white = "#d0d0d0",
 }
-
-local theme = colors.mirage
 
 -- Color table for highlights
 -- stylua: ignore
@@ -45,8 +31,8 @@ local config = {
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = theme.fg, bg = "NONE" } },
-      inactive = { c = { fg = theme.fg, bg = "NONE" } },
+      normal = { c = { fg = colors.fg, bg = "NONE" } },
+      inactive = { c = { fg = colors.fg, bg = "NONE" } },
     },
     globalstatus = true,
     -- disabled_filetypes = { "NvimTree" },
@@ -90,7 +76,7 @@ end
 ins_left({
   "branch",
   icon = "󰘬",
-  color = { fg = theme.magenta, gui = "bold" },
+  color = { fg = colors.magenta, gui = "bold" },
 })
 
 ins_left({ "filename", icon = "󰈔" })
@@ -100,9 +86,9 @@ ins_left({
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    color_error = { fg = theme.red },
-    color_warn = { fg = theme.yellow },
-    color_info = { fg = theme.cyan },
+    color_error = { fg = colors.red },
+    color_warn = { fg = colors.yellow },
+    color_info = { fg = colors.cyan },
   },
 })
 
@@ -117,12 +103,12 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = theme.cyan, gui = "bold" },
+  color = { fg = colors.cyan, gui = "bold" },
 })
 
 ins_right({ "location" })
 
-ins_right({ "progress", color = { fg = theme.fg, gui = "bold" } })
+ins_right({ "progress", color = { fg = colors.fg, gui = "bold" } })
 
 ins_right({
   "filesize",
@@ -133,14 +119,14 @@ ins_right({
   "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = theme.fg, gui = "bold" },
+  color = { fg = colors.fg, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = theme.fg, gui = "bold" },
+  color = { fg = colors.fg, gui = "bold" },
 })
 
 return config

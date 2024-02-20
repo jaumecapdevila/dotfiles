@@ -15,17 +15,15 @@ setopt +o nomatch
 
 # zim plugins
 zstyle ':zim:git' aliases-prefix 'g'
-# zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # Start zim
 source "$ZIM_HOME/init.zsh"
 
 # Load fzf keybindings
-# source $HOME/.fzf.zsh
+source $HOME/.fzf.zsh
 
-# Load Custom Config
 source "$DOTFILES/config/shell/init.sh"
-source "$DOTFILES/config/shell/zsh/key-bindings.zsh"
 
 # External
 eval "$(zoxide init --cmd cd zsh)"
