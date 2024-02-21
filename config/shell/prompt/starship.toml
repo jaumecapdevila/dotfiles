@@ -71,5 +71,5 @@ disabled = true
 [character]
 disabled = false
 success_symbol = '[󰬪](purple) '
-error_symbol = '[󰈸](red) '
+error_symbol = '[󰬪](red) '
 

@@ -1,15 +1,15 @@
-local g = vim.g
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 local colors = {
-  fg = "#959dcb",
-  red = "#f07178",
-  green = "#c3e88d",
-  yellow = "#ffcb6b",
+  accent = "#AB47BC",
   blue = "#82aaff",
-  magenta = "#c792ea",
   cyan = "#89ddff",
+  fg = "#676e95",
+  green = "#c3e88d",
+  magenta = "#c792ea",
+  red = "#f07178",
   white = "#d0d0d0",
+  yellow = "#ffcb6b",
 }
 
 -- Color table for highlights
@@ -76,10 +76,19 @@ end
 ins_left({
   "branch",
   icon = "󰘬",
-  color = { fg = colors.magenta, gui = "bold" },
+  color = { fg = colors.accent },
 })
 
-ins_left({ "filename", icon = "󰈔" })
+ins_left({
+  "filename",
+  icon = "󰈔",
+  symbols = {
+    modified = "[+]", -- Text to show when the file is modified.
+    readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+    unnamed = "", -- Text to show for unnamed buffers.
+    newfile = "[New]", -- Text to show for newly created file before first write
+  },
+})
 
 ins_left({
   "diagnostics",

@@ -1,6 +1,3 @@
-# Uncomment for debug with `zprof`
-# zmodload zsh/zprof
-
 ## History
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS

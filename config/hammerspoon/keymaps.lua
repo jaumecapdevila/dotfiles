@@ -3,15 +3,15 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
 
 ------------------------------- APP LAUNCH/TOGGLE ------------------------------
 local apps = {
+  a = "HTTPie", -- API Client
   b = "Arc", -- Browser
   c = "Visual Studio Code", -- Code Editor
-  f = "Finder", -- File Explorer
   e = "Microsoft Outlook", -- Mail
-  n = "Notes", -- Notes
+  f = "Finder", -- File Explorer
+  g = "Things", -- Time Management
+  n = "Bear", -- Notes Taking
   m = "Microsoft Outlook", -- Mail
   s = "Slack", -- Messaging
-  o = "Obsidian", -- Life OS
-  p = "HTTPie", -- API Client
   t = "iTerm", -- Terminal
   ["1"] = "1Password", -- Password Manager
 }

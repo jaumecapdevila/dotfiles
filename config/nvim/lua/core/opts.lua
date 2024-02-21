@@ -11,8 +11,8 @@ opt.cursorline = true
 
 -- Theming
 o.background = "dark"
+g.transparent = true
 g.material_style = "palenight"
-g.transparent_background = false
 
 -- Indenting
 opt.expandtab = true
