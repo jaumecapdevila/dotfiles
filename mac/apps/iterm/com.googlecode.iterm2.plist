@@ -696,7 +696,7 @@
 	<key>Default Toolbelt Width</key>
 	<real>250</real>
 	<key>DimInactiveSplitPanes</key>
-	<false/>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
 	<key>DoubleClickPerformsSmartSelection</key>
@@ -827,7 +827,7 @@
 	<key>MinimalSelectedTabUnderlineProminence</key>
 	<real>0.0</real>
 	<key>MinimalSplitPaneDividerProminence</key>
-	<real>0.20000000298023224</real>
+	<real>0.0</real>
 	<key>MinimumWeightDifferenceForBoldFont</key>
 	<integer>0</integer>
 	<key>NeverWarnAboutMeta</key>
@@ -1845,6 +1845,8 @@
 	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.10000000000000001</real>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
