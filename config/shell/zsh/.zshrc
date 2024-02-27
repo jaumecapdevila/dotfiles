@@ -27,4 +27,4 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # Load NVM
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"

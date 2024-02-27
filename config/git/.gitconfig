@@ -1,6 +1,6 @@
 [user]
-    name = jaumecapdevila
-    email = contact@jaumecapdevila.net
+	name = Jaume Capdevila
+	email = capdevil@adobe.com
 
 [fetch]
     prune = true
@@ -45,3 +45,8 @@
 
 [init]
     defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

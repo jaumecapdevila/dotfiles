@@ -18,7 +18,7 @@
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
   "editor.scrollBeyondLastLine": false,
   "editor.semanticHighlighting.enabled": true,
@@ -67,16 +67,20 @@
     "yaml": false
   },
   "material-icon-theme.activeIconPack": "none",
-  "material-icon-theme.folders.color": "#AB47BC",
+  // "material-icon-theme.folders.color": "#AB47BC",
+  "material-icon-theme.folders.color": "#d759e0",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
   "materialTheme.accent": "Purple",
+  "search.exclude": {
+    "**/dist": true
+  },
   "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.smoothScrolling": true,
   "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
-    "[Material Theme Palenight]": {
+    "[Material Theme Palenight], [Material Theme Palenight High Contrast]": {
       "activityBar.activeBorder": "#AB47BC",
       "activityBarBadge.background": "#AB47BC",
       "breadcrumb.activeSelectionForeground": "#AB47BC",
@@ -102,7 +106,6 @@
       "textLink.foreground": "#AB47BC"
     }
   },
-  "workbench.colorTheme": "Material Theme Palenight",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
@@ -110,5 +113,9 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
-  "workbench.tree.renderIndentGuides": "none"
+  "workbench.tree.renderIndentGuides": "none",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "workbench.colorTheme": "One Dark Vivid"
 }

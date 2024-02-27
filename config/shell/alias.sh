@@ -1,28 +1,28 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# editor
+# Editor
 alias vi="vim"
 alias vim="nvim"
 
-# ls
+# Files
 alias ls='lsd'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
-# utils
+# Utils
 alias cl="clear"
 alias lg="lazygit"
 
-# terraform
+# Terraform
 alias tf="terraform"
 
-# python
+# Python
 alias py="python"
 
-# tmux
+# Tmux
 alias tn="tmux new -s"
 alias tna="tmux new -ADs"
 alias ta="tmux a"
@@ -30,9 +30,19 @@ alias tat="tmux attach -t"
 alias td="t dotfiles"
 alias tk="tmux kill-server"
 
-# jumps
+# Yarn
+alias y="yarn"
+alias yt="yarn test --coverage false"
+alias yc="yarn test --coverage true"
+alias ys="yarn serve"
+
+# Jumps
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
 alias tmp="cd ~/Desktop/tmp"
 alias c='cd ~/coexdexe'
+
+# Github
+alias ai="gh copilot"
+alias ais="gh copilot suggest"

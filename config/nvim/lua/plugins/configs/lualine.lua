@@ -1,16 +1,32 @@
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-local colors = {
-  accent = "#AB47BC",
-  blue = "#82aaff",
-  cyan = "#89ddff",
-  fg = "#676e95",
-  green = "#c3e88d",
-  magenta = "#c792ea",
-  red = "#f07178",
-  white = "#d0d0d0",
-  yellow = "#ffcb6b",
+local themes = {
+  pale = {
+    accent = "#AB47BC",
+    bg = "#292d3e",
+    blue = "#82aaff",
+    cyan = "#89ddff",
+    fg = "#676e95",
+    green = "#c3e88d",
+    magenta = "#c792ea",
+    red = "#f07178",
+    white = "#d0d0d0",
+    yellow = "#ffcb6b",
+  },
+  onedark = {
+    accent = "#8a3fa0",
+    blue = "#61afef",
+    cyan = "#56b6c2",
+    fg = "#9da5b4",
+    green = "#98c379",
+    magenta = "#c678dd",
+    red = "#e86671",
+    white = "#5c6370",
+    yellow = "#e5c07b",
+  }
 }
+
+local colors = themes.onedark
 
 -- Color table for highlights
 -- stylua: ignore
@@ -31,8 +47,8 @@ local config = {
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = colors.fg, bg = "NONE" } },
-      inactive = { c = { fg = colors.fg, bg = "NONE" } },
+      normal = { c = { fg = colors.fg, bg = colors.bg } },
+      inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
     globalstatus = true,
     -- disabled_filetypes = { "NvimTree" },
@@ -76,16 +92,16 @@ end
 ins_left({
   "branch",
   icon = "󰘬",
-  color = { fg = colors.accent },
+  color = { fg = colors.fg },
 })
 
 ins_left({
   "filename",
   icon = "󰈔",
   symbols = {
-    modified = "[+]", -- Text to show when the file is modified.
-    readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
-    unnamed = "", -- Text to show for unnamed buffers.
+    modified = "[+]",  -- Text to show when the file is modified.
+    readonly = "[-]",  -- Text to show when the file is non-modifiable or readonly.
+    unnamed = "",      -- Text to show for unnamed buffers.
     newfile = "[New]", -- Text to show for newly created file before first write
   },
 })
@@ -112,7 +128,7 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = colors.cyan, gui = "bold" },
+  color = { fg = colors.accent, gui = "bold" },
 })
 
 ins_right({ "location" })
@@ -125,7 +141,7 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding", -- option component same as &encoding in viml
+  "o:encoding",       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.fg, gui = "bold" },

@@ -17,18 +17,18 @@
 layouts:
   # - tall
   - fullscreen
-  # - tall-right
-  # - wide
+  - tall-right
+  - wide
   - two-pane
   # - middle-wide
   # - 3column-left
-  # - middle-wide # The legacy name of "3column-middle"
+  # - middle-wide
   # - 3column-right
   # - 4column-left
   # - 4column-right
   # - column
   # - row
-  - floating
+  # - floating
   # - widescreen-tall
   # - widescreen-tall-right
   # - bsp
@@ -285,7 +285,7 @@ mouse-resizes-windows: false
 enables-layout-hud: true
 
 # true to display the name of the layout when moving to a new space (default true).
-enables-layout-hud-on-space-change: true
+enables-layout-hud-on-space-change: false
 
 # true to get updates to beta versions of the software (default false).
 use-canary-build: false

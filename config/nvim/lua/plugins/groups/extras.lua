@@ -2,6 +2,7 @@ return {
   -- Git UI
   {
     "kdheepak/lazygit.nvim",
+    enabled = false,
     dependencies = { "nvim-lua/plenary.nvim" },
     init = function() vim.g.lazygit_floating_window_use_plenary = 0 end,
     keys = {

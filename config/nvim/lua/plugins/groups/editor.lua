@@ -4,7 +4,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     init = function() require("core.utils").map("telescope") end,
@@ -44,8 +44,11 @@ return {
   -- smooth scrolling
   {
     "karb94/neoscroll.nvim",
-    keys = { "<C-d>", "<C-u>" },
-    config = function() require("neoscroll").setup() end,
+    config = function()
+      require("neoscroll").setup({
+        hide_cursor = true,
+      })
+    end,
   },
 
   -- git stuff

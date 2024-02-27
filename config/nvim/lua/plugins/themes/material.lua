@@ -44,13 +44,13 @@ return {
   async_loading = true,
 
   custom_highlights = {
-    ["@field"] = { fg = m.yellow },
-    ["@property"] = { fg = m.yellow },
     CurSearch = { fg = e.bg, bg = m.yellow, bold = true },
     IncSearch = { fg = e.title, bg = e.selection, underline = false },
     NvimTreeFolderIcon = { fg = e.accent, bold = false },
     NvimTreeFolderName = { fg = e.fg, bold = false },
     NvimTreeOpenedFolderName = { fg = e.accent, bold = false },
     Search = { fg = e.title, bg = e.selection, bold = true },
+    ["@field"] = { fg = m.yellow },
+    ["@property"] = { fg = m.yellow },
   },
 }
