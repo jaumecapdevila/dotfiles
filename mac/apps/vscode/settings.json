@@ -67,8 +67,7 @@
     "yaml": false
   },
   "material-icon-theme.activeIconPack": "none",
-  // "material-icon-theme.folders.color": "#AB47BC",
-  "material-icon-theme.folders.color": "#d759e0",
+  "material-icon-theme.folders.color": "#AB47BC",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
   "materialTheme.accent": "Purple",
@@ -117,5 +116,6 @@
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
   },
-  "workbench.colorTheme": "One Dark Vivid"
+  "oneDark.italic": false,
+  "workbench.colorTheme": "Material Theme Palenight High Contrast"
 }

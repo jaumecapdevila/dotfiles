@@ -11,8 +11,7 @@ opt.cursorline = true
 
 -- Theming
 o.background = "dark"
-g.transparent = false
-g.github_style = "github_dark_dimmed"
+g.transparent = true
 g.material_style = "palenight"
 
 -- Indenting
@@ -28,7 +27,7 @@ opt.smartcase = true
 opt.mouse = "a"
 
 -- Scroll
-opt.scrolloff = 4     -- Lines of context
+opt.scrolloff = 4 -- Lines of context
 opt.sidescrolloff = 8 -- Columns of context
 
 -- Numbers
@@ -67,6 +66,6 @@ end
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 
 vim.env.PATH = vim.env.PATH
-    .. (is_windows and ";" or ":")
-    .. vim.fn.stdpath("data")
-    .. "/mason/bin"
+  .. (is_windows and ";" or ":")
+  .. vim.fn.stdpath("data")
+  .. "/mason/bin"

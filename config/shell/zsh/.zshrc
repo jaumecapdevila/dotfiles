@@ -20,6 +20,7 @@ source "$ZIM_HOME/init.zsh"
 # Load fzf keybindings
 source $HOME/.fzf.zsh
 
+# Shared shell configuration
 source "$DOTFILES/config/shell/init.sh"
 
 # External
@@ -27,4 +28,10 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # Load NVM
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+source $(brew --prefix nvm)/nvm.sh
+
+# Custom hooks
+autoload -U add-zsh-hook
+add-zsh-hook chpwd cwd_iterm_tab_color
+# add-zsh-hook precmd dash_prompt_separator
+

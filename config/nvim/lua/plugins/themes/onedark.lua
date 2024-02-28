@@ -1,7 +1,9 @@
 local g = vim.g
 
+local bg = g.transparent and "NONE" or "$bg0"
+
 return {
-  style = "darker",
+  style = "dark",
   transparent = g.transparent,
   term_colors = true,
   cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
@@ -17,11 +19,11 @@ return {
   -- Custom Highlights --
   colors = {},
   highlights = {
-    FloatBorder = { fg = "$grey", bg = "$bg0" },
-    NvimTreeEndOfBuffer = { fg = "$bg0", bg = "$bg0" },
+    FloatBorder = { fg = "$grey", bg = bg },
+    NvimTreeEndOfBuffer = { fg = "$bg0", bg = bg },
     NvimTreeFolderIcon = { fg = "$purple" },
     NvimTreeFolderName = { fg = "$purple" },
-    NvimTreeNormal = { fg = "$fg", bg = "$bg0" },
+    NvimTreeNormal = { fg = "$fg", bg = bg },
     NvimTreeOpenedFolderName = { fg = "$purple" },
     NvimTreeRootFolder = { fg = "$purple" },
     NvimTreeVertSplit = { fg = "$bg0" },
@@ -29,8 +31,8 @@ return {
 
   -- Plugins Config --
   diagnostics = {
-    darker = true, -- darker colors for diagnostic
+    darker = false, -- darker colors for diagnostic
     undercurl = false, -- use undercurl instead of underline for diagnostics
-    background = true, -- use background color for virtual text
+    background = g.transparent, -- use background color for virtual text
   },
 }
