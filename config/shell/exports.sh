@@ -22,7 +22,7 @@ export FZF_DEFAULT_OPTS=" \
 
 export FZF_CTRL_R_OPTS=" \
 --border-label=' History ' \
---prompt='󰋚 '"
+--prompt='󰞌 '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244,bg=default"

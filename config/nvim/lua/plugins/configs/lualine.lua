@@ -1,6 +1,6 @@
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-local themes = {
+local colors = {
   pale = {
     accent = "#AB47BC",
     bg = "#292d3e",
@@ -13,20 +13,33 @@ local themes = {
     white = "#d0d0d0",
     yellow = "#ffcb6b",
   },
-  onedark = {
-    accent = "#8a3fa0",
+  oceanic = {
+    accent = "#11bba3",
+    bg = "#192227",
     blue = "#61afef",
     cyan = "#56b6c2",
-    fg = "#9da5b4",
+    fg = "#546e7a",
     green = "#98c379",
     magenta = "#c678dd",
     red = "#e86671",
     white = "#5c6370",
     yellow = "#e5c07b",
-  }
+  },
+  deep_ocean = {
+    accent = "#84FFFF",
+    bg = "#090b10",
+    blue = "#61afef",
+    cyan = "#56b6c2",
+    fg = "#4b526d",
+    green = "#98c379",
+    magenta = "#c678dd",
+    red = "#e86671",
+    white = "#5c6370",
+    yellow = "#e5c07b",
+  },
 }
 
-local colors = themes.onedark
+local theme = colors.deep_ocean
 
 -- Color table for highlights
 -- stylua: ignore
@@ -47,8 +60,8 @@ local config = {
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
+      normal = { c = { fg = theme.fg, bg = colors.bg } },
+      inactive = { c = { fg = theme.fg, bg = colors.bg } },
     },
     globalstatus = true,
     -- disabled_filetypes = { "NvimTree" },
@@ -91,17 +104,17 @@ end
 
 ins_left({
   "branch",
-  icon = "󰘬",
-  color = { fg = colors.fg },
+  icon = "󰊤",
+  color = { fg = theme.fg },
 })
 
 ins_left({
   "filename",
   icon = "󰈔",
   symbols = {
-    modified = "[+]",  -- Text to show when the file is modified.
-    readonly = "[-]",  -- Text to show when the file is non-modifiable or readonly.
-    unnamed = "",      -- Text to show for unnamed buffers.
+    modified = "[+]", -- Text to show when the file is modified.
+    readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+    unnamed = "", -- Text to show for unnamed buffers.
     newfile = "[New]", -- Text to show for newly created file before first write
   },
 })
@@ -111,9 +124,9 @@ ins_left({
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    color_error = { fg = colors.red },
-    color_warn = { fg = colors.yellow },
-    color_info = { fg = colors.cyan },
+    color_error = { fg = theme.red },
+    color_warn = { fg = theme.yellow },
+    color_info = { fg = theme.cyan },
   },
 })
 
@@ -128,12 +141,12 @@ ins_left({
 ins_right({
   lazy_status.updates,
   cond = lazy_status.has_updates,
-  color = { fg = colors.accent, gui = "bold" },
+  color = { fg = theme.accent, gui = "bold" },
 })
 
 ins_right({ "location" })
 
-ins_right({ "progress", color = { fg = colors.fg, gui = "bold" } })
+ins_right({ "progress", color = { fg = theme.fg, gui = "bold" } })
 
 ins_right({
   "filesize",
@@ -141,17 +154,17 @@ ins_right({
 })
 
 ins_right({
-  "o:encoding",       -- option component same as &encoding in viml
+  "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.fg, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = colors.fg, gui = "bold" },
+  color = { fg = theme.fg, gui = "bold" },
 })
 
 return config

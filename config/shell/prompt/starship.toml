@@ -56,7 +56,7 @@ symbol = "󱔎"
 [nodejs]
 disabled = false
 format = "[$symbol($version )]($style)"
-style = "bold bg:green fg:black"
+style = "bold green"
 symbol = "󰚩 "
 
 [lua]

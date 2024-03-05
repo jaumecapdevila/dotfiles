@@ -1,9 +1,9 @@
 local g = vim.g
 
-local colors = require("material.colors.conditionals")
+local mc = require("material.colors.conditionals")
 
-local m = colors.main
-local e = colors.editor
+local m = mc.main
+local e = mc.editor
 
 return {
   contrast = {
@@ -42,6 +42,17 @@ return {
   },
 
   async_loading = true,
+
+  -- Custom colors must be a function that takes in the default colors table as
+  -- To see the available colors, see lua/material/colors/init.lua
+  custom_colors = function(base_colors)
+    if g.material_style == "oceanic" then
+      base_colors.editor.bg = "#263238"
+      base_colors.backgrounds.sidebars = "#263238"
+      base_colors.backgrounds.floating_windows = "#263238"
+      base_colors.backgrounds.non_current_windows = "#263238"
+    end
+  end,
 
   custom_highlights = {
     CurSearch = { fg = e.bg, bg = m.yellow, bold = true },

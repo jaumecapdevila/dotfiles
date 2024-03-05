@@ -33,7 +33,8 @@ alias tk="tmux kill-server"
 # Yarn
 alias y="yarn"
 alias yt="yarn test --coverage false"
-alias yc="yarn test --coverage true"
+alias ytc="yarn test --coverage true"
+alias ytu="yarn test -u"
 alias ys="yarn serve"
 
 # Jumps
