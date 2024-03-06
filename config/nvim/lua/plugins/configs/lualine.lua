@@ -25,12 +25,12 @@ local colors = {
     white = "#5c6370",
     yellow = "#e5c07b",
   },
-  deep_ocean = {
-    accent = "#84FFFF",
-    bg = "#090b10",
+  onedark = {
+    accent = "#D55FDE",
+    bg = "21252b",
     blue = "#61afef",
     cyan = "#56b6c2",
-    fg = "#4b526d",
+    fg = "#9da5b4",
     green = "#98c379",
     magenta = "#c678dd",
     red = "#e86671",
@@ -39,7 +39,7 @@ local colors = {
   },
 }
 
-local theme = colors.deep_ocean
+local theme = colors.onedark
 
 -- Color table for highlights
 -- stylua: ignore

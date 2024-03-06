@@ -21,7 +21,7 @@
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
   "editor.scrollBeyondLastLine": false,
-  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticHighlighting.enabled": false,
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
@@ -68,8 +68,8 @@
   },
   "material-icon-theme.activeIconPack": "none",
   // "material-icon-theme.folders.color": "#AB47BC",
-  "material-icon-theme.folders.color": "#11bba3",
-  // "material-icon-theme.folders.color": "#79b8ff",
+  // "material-icon-theme.folders.color": "#11bba3",
+  "material-icon-theme.folders.color": "#D55FDE",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
   "search.exclude": {
@@ -87,5 +87,5 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Material Theme Ocean High Contrast"
+  "workbench.colorTheme": "One Dark"
 }
