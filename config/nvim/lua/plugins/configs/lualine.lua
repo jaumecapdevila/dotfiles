@@ -20,7 +20,7 @@ local colors = {
   yellow = "#e5c07b",
 }
 
-local mode_theme = { fg = colors.fg, bg = colors.bg1 }
+local shared_mode = { fg = colors.fg, bg = colors.bg0 }
 
 local config = {
   options = {
@@ -31,8 +31,8 @@ local config = {
       -- all modes defaults to normal.
       -- you can specify a theme for all sections a,b,c x,y,z
       -- if a theme is not specified for x,y,z then they default to the c,b,a theme respectively
-      normal = { a = mode_theme, c = mode_theme },
-      inactive = { a = mode_theme, c = mode_theme },
+      normal = { c = shared_mode },
+      inactive = { c = shared_mode },
     },
   },
   -- remove defaults
@@ -58,11 +58,6 @@ local config = {
 -- | A | B | C                             X | Y | Z |
 -- +-------------------------------------------------+
 
--- Inserts a component in lualine_a at left section
-local function ins_first(component)
-  table.insert(config.sections.lualine_a, component)
-end
-
 -- Inserts a component in lualine_c at left section
 local function ins_left(component)
   table.insert(config.sections.lualine_c, component)
@@ -75,7 +70,7 @@ end
 
 -- Add components to the beginning of lualine
 
-ins_first({
+ins_left({
   "mode",
   icon = "",
   color = function()
@@ -89,8 +84,6 @@ ins_first({
     return { fg = mode_color[vim.fn.mode()], gui = "bold" }
   end,
 })
-
--- Add components to left sections
 
 ins_left({
   "branch",

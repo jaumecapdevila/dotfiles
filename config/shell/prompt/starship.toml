@@ -8,7 +8,9 @@
 # The minimal, blazing-fast, and infinitely customizable prompt
 # https://starship.rs
 
-command_timeout = 1000
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = true
 
 # change the default format

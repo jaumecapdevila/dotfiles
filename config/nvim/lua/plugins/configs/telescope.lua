@@ -1,6 +1,6 @@
 local options = {
   defaults = {
-    color_devicons = false,
+    color_devicons = true,
     entry_prefix = "",
     file_ignore_patterns = { ".git/", "node_modules" },
     initial_mode = "insert",

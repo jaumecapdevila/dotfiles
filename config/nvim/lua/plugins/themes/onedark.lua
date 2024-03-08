@@ -1,5 +1,18 @@
 local g = vim.g
 
+local colors = {
+  Blue = { fg = "$blue" },
+  EditorBg = { bg = "$bg0" },
+  FloatBorder = { fg = "$blue", bg = "NONE" },
+  Foat = { fg = "$fg", bg = "$bg1" },
+  Foreground = { fg = "$fg" },
+  Green = { fg = "$green" },
+  Grey = { fg = "$grey" },
+  Message = { fg = "$fg", bg = "$bg0" },
+  Purple = { fg = "$purple" },
+  TelescopeBorder = { bg = "$bg0", fg = "$purple" },
+}
+
 return {
   style = "dark",
   transparent = g.transparent,
@@ -8,7 +21,7 @@ return {
 
   code_style = {
     comments = "italic",
-    keywords = "bold,italic",
+    keywords = "italic",
     functions = "bold",
     strings = "none",
     variables = "none",
@@ -16,34 +29,42 @@ return {
 
   -- Custom Highlights --
   highlights = {
-    NormalFloat = { bg = "$bg1" },
-    FloatBorder = { fg = "$blue", bg = "$bg0" },
+    NormalFloat = colors.Float,
+    FloatBorder = colors.FloatBorder,
+
+    -- Copilot
+    CopilotSuggestions = colors.Grey,
 
     -- NvimTree
-    NvimTreeEndOfBuffer = { bg = "$bg0" },
-    NvimTreeFolderIcon = { fg = "$blue" },
-    NvimTreeFolderName = { fg = "$blue" },
-    NvimTreeNormal = { bg = "$bg0" },
-    NvimTreeOpenedFolderName = { fg = "$blue" },
-    NvimTreeRootFolder = { fg = "$blue" },
+    NvimTreeEndOfBuffer = colors.EditorBg,
+    NvimTreeFolderIcon = colors.Purple,
+    NvimTreeFolderName = colors.Blue,
+    NvimTreeNormal = colors.EditorBg,
+    NvimTreeOpenedFolderName = colors.Purple,
 
     -- Telescope
-    TelescopeBorder = { fg = "$purple" },
-    TelescopePromptBorder = { fg = "$purple" },
-    TelescopeResultsBorder = { fg = "$purple" },
-    TelescopePreviewBorder = { fg = "$purple" },
-    TelescopeMatching = { fg = "$purple", fmt = "bold" },
-    TelescopePromptPrefix = { fg = "$purple" },
-    TelescopeSelectionCaret = { fg = "$purple" },
+    TelescopeSelection = colors.Purple,
+    TelescopeSelectionCaret = colors.Purple,
+    TelescopeMultiSelection = colors.Grey,
+    TelescopeNormal = colors.Float,
+    TelescopeBorder = colors.TelescopeBorder,
+    TelescopePromptNormal = colors.Float,
+    TelescopePromptBorder = colors.TelescopeBorder,
+    TelescopeResultsBorder = colors.TelescopeBorder,
+    TelescopePreviewBorder = colors.TelescopeBorder,
+    TelescopePromptPrefix = colors.Purple,
+    TelescopeMatching = colors.Purple,
 
     -- Which Key
-    WhichKey = { fg = "$purple" },
-    WhichKeyDesc = { fg = "$fg" },
-    WhichKeyGroup = { fg = "$purple" },
+    WhichKey = colors.Purple,
+    WhichKeyDesc = colors.Foreground,
+    WhichKeySeparator = colors.Green,
+    WhichKeyFloat = colors.Float,
+    WhichKeyGroup = colors.Blue,
 
     -- Cmdline
-    ModeMsg = { fg = "$fg", fmt = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = { fg = "$fg", bg = "$bg1" }, -- Area for messages and cmdline
+    ModeMsg = colors.Foreground, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MsgArea = colors.Message, -- Area for messages and cmdline
   },
 
   -- Plugins Config --

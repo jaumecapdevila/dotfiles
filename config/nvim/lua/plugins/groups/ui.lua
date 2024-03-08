@@ -37,7 +37,6 @@ return {
   -- custom statusline
   {
     "nvim-lualine/lualine.nvim",
-    -- event = "VeryLazy",
     opts = function() return require("plugins.configs.lualine") end,
     config = function(_, opts) require("lualine").setup(opts) end,
   },
