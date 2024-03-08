@@ -33,6 +33,7 @@
     ~/.zshrc: config/shell/zsh/.zshrc
     ~/Library/Application Support/Code/User/settings.json: mac/apps/vscode/settings.json
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+    ~/Library/Application Support/Sublime Text/Packages/OneDark: mac/apps/sublime/packages/OneDark
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

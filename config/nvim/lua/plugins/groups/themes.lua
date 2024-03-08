@@ -2,6 +2,7 @@ return {
   {
     "kaicataldo/material.vim",
     name = "material-vim",
+    enabled = false,
     init = function()
       vim.g.material_terminal_italics = 1
       vim.g.material_theme_style = "default" -- default, palenight, ocean
@@ -17,19 +18,6 @@ return {
     config = function(_, opts)
       require("onedark").setup(opts)
       vim.cmd("colorscheme onedark")
-    end,
-  },
-  {
-    "marko-cerovac/material.nvim",
-    name = "material",
-    enabled = false,
-    init = function()
-      vim.g.material_style = "oceanic" -- oceanic, palenight
-    end,
-    opts = function() return require("plugins.themes.material") end,
-    config = function(_, opts)
-      require("material").setup(opts)
-      vim.cmd("colorscheme material")
     end,
   },
 }

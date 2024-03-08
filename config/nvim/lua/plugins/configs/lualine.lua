@@ -1,96 +1,67 @@
 local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-local colors = {
-  pale = {
-    accent = "#AB47BC",
-    bg = "#292d3e",
-    blue = "#82aaff",
-    cyan = "#89ddff",
-    fg = "#676e95",
-    green = "#c3e88d",
-    magenta = "#c792ea",
-    red = "#f07178",
-    white = "#d0d0d0",
-    yellow = "#ffcb6b",
-  },
-  oceanic = {
-    accent = "#11bba3",
-    bg = "#192227",
-    blue = "#61afef",
-    cyan = "#56b6c2",
-    fg = "#546e7a",
-    green = "#98c379",
-    magenta = "#c678dd",
-    red = "#e86671",
-    white = "#5c6370",
-    yellow = "#e5c07b",
-  },
-  onedark = {
-    accent = "#D55FDE",
-    bg = "21252b",
-    blue = "#61afef",
-    cyan = "#56b6c2",
-    fg = "#9da5b4",
-    green = "#98c379",
-    magenta = "#c678dd",
-    red = "#e86671",
-    white = "#5c6370",
-    yellow = "#e5c07b",
-  },
-}
-
-local theme = colors.onedark
-
--- Color table for highlights
--- stylua: ignore
-
 local conditions = {
-  has_plugin_updates = function() return lazy_status.has_updates() end,
+  outdated_plugins = function() return lazy_status.has_updates() end,
   buffer_not_empty = function() return vim.fn.empty(vim.fn.expand("%:t")) ~= 1 end,
   hide_in_width = function() return vim.fn.winwidth(0) > 80 end,
-  check_git_workspace = function()
-    local filepath = vim.fn.expand("%:p:h")
-    local gitdir = vim.fn.finddir(".git", filepath .. ";")
-    return gitdir and #gitdir > 0 and #gitdir < #filepath
-  end,
 }
+
+local colors = {
+  accent = "#528BFF",
+  bg0 = "#282c34",
+  bg1 = "#31353f",
+  blue = "#61afef",
+  cyan = "#56b6c2",
+  fg = "#9da5b4",
+  green = "#98c379",
+  magenta = "#c678dd",
+  red = "#e86671",
+  white = "#5c6370",
+  yellow = "#e5c07b",
+}
+
+local mode_theme = { fg = colors.fg, bg = colors.bg0 }
 
 local config = {
   options = {
+    globalstatus = true, -- have a single statusline at bottom of neovim instead of one for  every window
     component_separators = "",
     section_separators = "",
     theme = {
-      normal = { c = { fg = theme.fg, bg = colors.bg } },
-      inactive = { c = { fg = theme.fg, bg = colors.bg } },
+      -- all modes defaults to normal.
+      -- you can specify a theme for all sections a,b,c x,y,z
+      -- if a theme is not specified for x,y,z then they default to the c,b,a theme respectively
+      normal = { a = mode_theme, c = mode_theme },
+      inactive = { a = mode_theme, c = mode_theme },
     },
-    globalstatus = true,
-    -- disabled_filetypes = { "NvimTree" },
   },
+  -- remove defaults
   sections = {
-    -- these are to remove the defaults
     lualine_a = {},
     lualine_b = {},
-    lualine_y = {},
-    lualine_z = {},
-    -- These will be filled later
     lualine_c = {},
     lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
   },
   inactive_sections = {
-    -- these are to remove the defaults
     lualine_a = {},
     lualine_b = {},
-    lualine_y = {},
-    lualine_z = {},
     lualine_c = {},
     lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
   },
-  -- extensions = {
-  --   "nvim-tree",
-  --   "mason",
-  --   "lazy",
-  -- },
 }
+
+-- +-------------------------------------------------+
+-- | A | B | C                             X | Y | Z |
+-- +-------------------------------------------------+
+
+-- Inserts a component in lualine_a at left section
+local function ins_first(component)
+  table.insert(config.sections.lualine_a, component)
+end
 
 -- Inserts a component in lualine_c at left section
 local function ins_left(component)
@@ -102,21 +73,36 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
+-- Add components to the beginning of lualine
+
+ins_first({
+  "mode",
+  icon = "",
+  color = function()
+    -- auto change color according to neovims mode
+    local mode_color = {
+      n = colors.blue,
+      i = colors.green,
+      v = colors.yellow,
+      c = colors.purple,
+    }
+    return { fg = mode_color[vim.fn.mode()], gui = "bold" }
+  end,
+})
+
+-- Add components to left sections
+
 ins_left({
   "branch",
   icon = "󰊤",
-  color = { fg = theme.fg },
 })
 
 ins_left({
   "filename",
   icon = "󰈔",
-  symbols = {
-    modified = "[+]", -- Text to show when the file is modified.
-    readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
-    unnamed = "", -- Text to show for unnamed buffers.
-    newfile = "[New]", -- Text to show for newly created file before first write
-  },
+  file_status = false,
+  newfile_status = false,
+  symbols = { unnamed = "" },
 })
 
 ins_left({
@@ -124,9 +110,9 @@ ins_left({
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
   diagnostics_color = {
-    color_error = { fg = theme.red },
-    color_warn = { fg = theme.yellow },
-    color_info = { fg = theme.cyan },
+    color_error = { fg = colors.red },
+    color_warn = { fg = colors.yellow },
+    color_info = { fg = colors.cyan },
   },
 })
 
@@ -140,13 +126,13 @@ ins_left({
 
 ins_right({
   lazy_status.updates,
-  cond = lazy_status.has_updates,
-  color = { fg = theme.accent, gui = "bold" },
+  cond = conditions.outdated_plugins,
+  color = { fg = colors.accent, gui = "bold" },
 })
 
 ins_right({ "location" })
 
-ins_right({ "progress", color = { fg = theme.fg, gui = "bold" } })
+ins_right({ "progress" })
 
 ins_right({
   "filesize",
@@ -157,14 +143,12 @@ ins_right({
   "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = theme.fg, gui = "bold" },
 })
 
 ins_right({
   "fileformat",
   fmt = string.upper,
   icons_enabled = true,
-  color = { fg = theme.fg, gui = "bold" },
 })
 
 return config

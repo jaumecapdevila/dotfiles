@@ -3,9 +3,6 @@ local g = vim.g
 local o = vim.o
 
 -------------------------------------- options ------------------------------------------
-opt.laststatus = 3 -- global statusline
-opt.showmode = false
-
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
@@ -26,14 +23,18 @@ opt.smartcase = true
 opt.mouse = "a"
 
 -- Scroll
-opt.scrolloff = 4 -- Lines of context
-opt.sidescrolloff = 8 -- Columns of context
+opt.scrolloff = 0 -- Lines of context
+opt.sidescrolloff = 0 -- Columns of context
 
 -- Numbers
 opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
 opt.relativenumber = true
+
+-- Message area
+opt.showmode = false
+-- opt.cmdheight = 0
 
 -- disable nvim intro
 opt.shortmess:append("sI")

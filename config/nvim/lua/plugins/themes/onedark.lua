@@ -1,7 +1,5 @@
 local g = vim.g
 
-local bg = g.transparent and "NONE" or "$bg0"
-
 return {
   style = "dark",
   transparent = g.transparent,
@@ -13,26 +11,31 @@ return {
     keywords = "italic",
     functions = "bold",
     strings = "none",
-    variables = "none",
+    variables = "bold",
   },
 
   -- Custom Highlights --
-  colors = {},
   highlights = {
-    FloatBorder = { fg = "$grey", bg = bg },
-    NvimTreeEndOfBuffer = { fg = "$bg0", bg = bg },
-    NvimTreeFolderIcon = { fg = "$purple" },
-    NvimTreeFolderName = { fg = "$purple" },
-    NvimTreeNormal = { fg = "$fg", bg = bg },
-    NvimTreeOpenedFolderName = { fg = "$purple" },
-    NvimTreeRootFolder = { fg = "$purple" },
-    NvimTreeVertSplit = { fg = "$bg0" },
+    NormalFloat = { bg = "$bg1" },
+    FloatBorder = { fg = "$blue", bg = "$bg0" },
+
+    -- NvimTree
+    NvimTreeEndOfBuffer = { bg = "$bg0" },
+    NvimTreeFolderIcon = { fg = "$blue" },
+    NvimTreeFolderName = { fg = "$blue" },
+    NvimTreeNormal = { bg = "$bg0" },
+    NvimTreeOpenedFolderName = { fg = "$blue" },
+    NvimTreeRootFolder = { fg = "$blue" },
+
+    -- Cmdline
+    ModeMsg = { fg = "$fg", fmt = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MsgArea = { fg = "$fg", bg = "$bg0" }, -- Area for messages and cmdline
   },
 
   -- Plugins Config --
   diagnostics = {
     darker = false, -- darker colors for diagnostic
-    undercurl = false, -- use undercurl instead of underline for diagnostics
+    undercurl = true, -- use undercurl instead of underline for diagnostics
     background = g.transparent, -- use background color for virtual text
   },
 }
