@@ -34,7 +34,7 @@ opt.relativenumber = true
 
 -- Message area
 opt.showmode = false
--- opt.cmdheight = 0
+opt.cmdheight = 0
 
 -- disable nvim intro
 opt.shortmess:append("sI")

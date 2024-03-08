@@ -20,7 +20,7 @@ local colors = {
   yellow = "#e5c07b",
 }
 
-local mode_theme = { fg = colors.fg, bg = colors.bg0 }
+local mode_theme = { fg = colors.fg, bg = colors.bg1 }
 
 local config = {
   options = {

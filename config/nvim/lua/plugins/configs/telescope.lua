@@ -1,7 +1,7 @@
 local options = {
   defaults = {
-    color_devicons = true,
-    entry_prefix = "  ",
+    color_devicons = false,
+    entry_prefix = "",
     file_ignore_patterns = { ".git/", "node_modules" },
     initial_mode = "insert",
     layout_config = {
@@ -14,8 +14,8 @@ local options = {
     },
     layout_strategy = "horizontal",
     path_display = { "truncate" },
-    prompt_prefix = "🔭 ",
-    selection_caret = "  ",
+    prompt_prefix = "󰳟 ",
+    selection_caret = "",
     sorting_strategy = "ascending",
   },
 
