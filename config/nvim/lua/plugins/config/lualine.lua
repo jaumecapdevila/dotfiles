@@ -6,10 +6,10 @@ local conditions = {
   hide_in_width = function() return vim.fn.winwidth(0) > 80 end,
 }
 
+-- Onedark
 local colors = {
   accent = "#528BFF",
-  bg0 = "#282c34",
-  bg1 = "#31353f",
+  bg = "#282c34",
   blue = "#61afef",
   cyan = "#56b6c2",
   fg = "#9da5b4",
@@ -20,7 +20,7 @@ local colors = {
   yellow = "#e5c07b",
 }
 
-local shared_mode = { fg = colors.fg, bg = colors.bg0 }
+local shared_mode = { fg = colors.fg, bg = colors.bg }
 
 local config = {
   options = {

@@ -11,7 +11,7 @@ opt.cursorline = true
 
 -- Theming
 o.background = "dark"
-g.transparent = false
+g.transparent = true
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

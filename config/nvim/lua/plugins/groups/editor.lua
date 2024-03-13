@@ -1,4 +1,20 @@
+local u = require("utils")
+local k = require("config.keymaps")
+
 return {
+  -- colorscheme
+  {
+    "navarasu/onedark.nvim",
+    name = "onedark",
+    lazy = false,
+    priority = 1000,
+    opts = function() return require("plugins.config.onedark") end,
+    config = function(_, opts)
+      require("onedark").setup(opts)
+      vim.cmd("colorscheme onedark")
+    end,
+  },
+
   -- fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
@@ -7,8 +23,8 @@ return {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
-    init = function() require("core.utils").map("telescope") end,
-    opts = function() return require("plugins.configs.telescope") end,
+    init = function() u.map(k.telescope) end,
+    opts = function() return require("plugins.config.telescope") end,
     config = function(_, opts)
       local telescope = require("telescope")
       telescope.setup(opts)
@@ -25,8 +41,8 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     keys = { "<leader>", '"', "'", "`", "c", "v" },
-    init = function() require("core.utils").map("whichkey") end,
-    opts = function() return require("plugins.configs.others").whichkey end,
+    init = function() u.map(k.whichkey) end,
+    opts = function() return require("plugins.config.others").whichkey end,
     config = function(_, opts) require("which-key").setup(opts) end,
   },
 
@@ -55,7 +71,7 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },
-    opts = function() return require("plugins.configs.others").gitsigns end,
+    opts = function() return require("plugins.config.others").gitsigns end,
     config = function(_, opts) require("gitsigns").setup(opts) end,
   },
 

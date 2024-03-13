@@ -1,8 +1,8 @@
-local utils = require("core.utils")
+local u = require("utils")
 local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazy_path) then
-  utils.echo("  Installing lazy.nvim & plugins ...")
+  u.echo("  Installing lazy.nvim & plugins ...")
 
   vim.fn.system({
     "git",
@@ -16,14 +16,20 @@ end
 
 vim.opt.rtp:prepend(lazy_path)
 
-local specs = require("plugins.specs")
-
--- current specs: vscode, ide, text
-
 require("lazy").setup({
-  spec = vim.g.vscode == nil and specs.ide or specs.vscode,
+  spec = {
+    { import = "plugins.groups.actions" },
+    { import = "plugins.groups.coding" },
+    { import = "plugins.groups.debug" },
+    { import = "plugins.groups.editor" },
+    { import = "plugins.groups.extras" },
+    { import = "plugins.groups.lsp" },
+    { import = "plugins.groups.treesitter" },
+    { import = "plugins.groups.ui" },
+    { import = "plugins.groups.other" },
+  },
   defaults = { lazy = false },
-  install = { colorscheme = { "tokyonight" } },
+  install = { colorscheme = { "onedark" } },
   ui = {
     icons = {
       ft = "",

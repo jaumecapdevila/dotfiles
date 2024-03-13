@@ -2,7 +2,7 @@
 
 local M = {}
 
-local utils = require("core.utils")
+local u = require("utils")
 
 M.general = {
   i = {
@@ -61,12 +61,12 @@ M.general = {
 
     -- diagnostic
     ["<leader>cd"] = { vim.diagnostic.open_float, "Line diagnostics" },
-    ["]d"] = { utils.diagnostic_goto(true), "Next Diagnostic" },
-    ["[d"] = { utils.diagnostic_goto(false), "Prev Diagnostic" },
-    ["]e"] = { utils.diagnostic_goto(true, "ERROR"), "Next Error" },
-    ["[e"] = { utils.diagnostic_goto(false, "ERROR"), "Prev Error" },
-    ["]w"] = { utils.diagnostic_goto(true, "WARNING"), "Next Warning" },
-    ["[w"] = { utils.diagnostic_goto(false, "WARNING"), "Prev Warning" },
+    ["]d"] = { u.diagnostic_goto(true), "Next Diagnostic" },
+    ["[d"] = { u.diagnostic_goto(false), "Prev Diagnostic" },
+    ["]e"] = { u.diagnostic_goto(true, "ERROR"), "Next Error" },
+    ["[e"] = { u.diagnostic_goto(false, "ERROR"), "Prev Error" },
+    ["]w"] = { u.diagnostic_goto(true, "WARNING"), "Next Warning" },
+    ["[w"] = { u.diagnostic_goto(false, "WARNING"), "Prev Warning" },
 
     -- terminal
     ["<C-t>"] = { ":Term<CR>", "Open terminal" },

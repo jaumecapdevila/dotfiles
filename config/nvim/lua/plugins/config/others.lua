@@ -1,5 +1,6 @@
 local M = {}
-local utils = require("core.utils")
+local u = require("utils")
+local k = require("config.keymaps")
 
 M.gitsigns = {
   signs = {
@@ -10,7 +11,7 @@ M.gitsigns = {
     changedelete = { text = "│" },
     untracked = { text = "│" },
   },
-  on_attach = function(bufnr) utils.map("gitsigns", { buffer = bufnr }) end,
+  on_attach = function(bufnr) u.map(k.gitsigns, { buffer = bufnr }) end,
 }
 
 M.surround = {

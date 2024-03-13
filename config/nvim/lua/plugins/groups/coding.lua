@@ -44,14 +44,14 @@ return {
         "onsails/lspkind.nvim", -- vs-code like pictograms
       },
     },
-    opts = function() return require("plugins.configs.cmp") end,
+    opts = function() return require("plugins.config.cmp") end,
     config = function(_, opts) require("cmp").setup(opts) end,
   },
 
   -- Github Copilot
   {
     "zbirenbaum/copilot.lua",
-    opts = function() return require("plugins.configs.copilot") end,
+    opts = function() return require("plugins.config.copilot") end,
     config = function(_, opts) require("copilot").setup(opts) end,
   },
 

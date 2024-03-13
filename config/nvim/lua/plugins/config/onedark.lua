@@ -1,16 +1,18 @@
 local g = vim.g
+local t = g.transparent
 
 local colors = {
   Blue = { fg = "$blue" },
-  EditorBg = { bg = "$bg0" },
+  Sidebar = { fg = "$fg", bg = t and "NONE" or "$bg0" },
   FloatBorder = { fg = "$blue", bg = "NONE" },
-  Foat = { fg = "$fg", bg = "$bg1" },
+  Float = { fg = "$fg", bg = t and "NONE" or "$bg1" },
   Foreground = { fg = "$fg" },
   Green = { fg = "$green" },
   Grey = { fg = "$grey" },
-  Message = { fg = "$fg", bg = "$bg0" },
+  LightGrey = { fg = "$light_grey" },
+  Match = { fg = "$blue", bg = "NONE" },
   Purple = { fg = "$purple" },
-  TelescopeBorder = { bg = "$bg0", fg = "$purple" },
+  TelescopeBorder = { bg = t and "NONE" or "$bg0", fg = "$purple" },
 }
 
 return {
@@ -31,15 +33,19 @@ return {
   highlights = {
     NormalFloat = colors.Float,
     FloatBorder = colors.FloatBorder,
+    MatchParen = colors.Match,
 
     -- Copilot
     CopilotSuggestions = colors.Grey,
 
+    -- Treesitter
+    ["@constructor"] = colors.LightGrey,
+
     -- NvimTree
-    NvimTreeEndOfBuffer = colors.EditorBg,
+    NvimTreeEndOfBuffer = colors.Sidebar,
     NvimTreeFolderIcon = colors.Purple,
     NvimTreeFolderName = colors.Blue,
-    NvimTreeNormal = colors.EditorBg,
+    NvimTreeNormal = colors.Sidebar,
     NvimTreeOpenedFolderName = colors.Purple,
 
     -- Telescope
@@ -61,10 +67,6 @@ return {
     WhichKeySeparator = colors.Green,
     WhichKeyFloat = colors.Float,
     WhichKeyGroup = colors.Blue,
-
-    -- Cmdline
-    ModeMsg = colors.Foreground, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = colors.Message, -- Area for messages and cmdline
   },
 
   -- Plugins Config --

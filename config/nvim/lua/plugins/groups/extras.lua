@@ -22,7 +22,7 @@ return {
     config = function()
       local lint = require("lint")
 
-      lint.linters_by_ft = require("plugins.configs.linters")
+      lint.linters_by_ft = require("plugins.config.linters")
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
@@ -48,7 +48,7 @@ return {
     "stevearc/conform.nvim",
     lazy = true,
     event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
-    opts = function() return require("plugins.configs.formatting") end,
+    opts = function() return require("plugins.config.formatting") end,
     config = function(_, opts)
       local conform = require("conform")
 

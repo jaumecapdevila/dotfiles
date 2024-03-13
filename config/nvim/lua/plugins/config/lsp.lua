@@ -1,10 +1,11 @@
-local utils = require("core.utils")
+local u = require("utils")
+local k = require("config.keymaps")
 
 local on_attach = function(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
   client.server_capabilities.semanticTokensProvider = nil
-  utils.map("lspconfig", { buffer = bufnr })
+  u.map(k.lspconfig, { buffer = bufnr })
 end
 
 local lspconfig = require("lspconfig")

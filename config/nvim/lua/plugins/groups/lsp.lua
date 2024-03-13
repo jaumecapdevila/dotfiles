@@ -10,7 +10,7 @@ return {
       "MasonUninstallAll",
       "MasonLog",
     },
-    opts = function() return require("plugins.configs.mason") end,
+    opts = function() return require("plugins.config.mason") end,
     config = function(_, opts)
       require("mason").setup(opts)
 
@@ -36,10 +36,10 @@ return {
         "dnlhc/glance.nvim",
         cmd = "Glance",
         ---@class GlanceOpts
-        opts = function() return require("plugins.configs.glance") end,
+        opts = function() return require("plugins.config.glance") end,
         config = function(_, opts) require("glance").setup(opts) end,
       },
     },
-    config = function() require("plugins.configs.lsp") end,
+    config = function() require("plugins.config.lsp") end,
   },
 }

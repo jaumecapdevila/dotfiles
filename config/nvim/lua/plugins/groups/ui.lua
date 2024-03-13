@@ -1,3 +1,6 @@
+local u = require("utils")
+local k = require("config.keymaps")
+
 return {
   {
     "nvim-tree/nvim-web-devicons",
@@ -10,7 +13,7 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
-    opts = function() return require("plugins.configs.noice") end,
+    opts = function() return require("plugins.config.noice") end,
     config = function(_, opts) require("noice").setup(opts) end,
   },
 
@@ -18,7 +21,7 @@ return {
     "goolord/alpha-nvim",
     event = "VimEnter",
     enabled = false,
-    opts = function() return require("plugins.configs.dashboard") end,
+    opts = function() return require("plugins.config.dashboard") end,
     config = function(_, dashboard) require("alpha").setup(dashboard.opts) end,
   },
 
@@ -26,8 +29,8 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    init = function() require("core.utils").map("nvim_tree") end,
-    opts = function() return require("plugins.configs.nvim-tree") end,
+    init = function() u.map(k.nvim_tree) end,
+    opts = function() return require("plugins.config.nvim-tree") end,
     config = function(_, opts)
       require("nvim-tree").setup(opts)
       vim.g.nvimtree_side = opts.view.side
@@ -37,7 +40,7 @@ return {
   -- custom statusline
   {
     "nvim-lualine/lualine.nvim",
-    opts = function() return require("plugins.configs.lualine") end,
+    opts = function() return require("plugins.config.lualine") end,
     config = function(_, opts) require("lualine").setup(opts) end,
   },
 }

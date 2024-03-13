@@ -41,7 +41,7 @@ disabled = false
 format = "[$symbol$branch]($style) "
 style = "bold cyan"
 symbol = "󰊤 "
-truncation_length = 10
+truncation_length = 20
 truncation_symbol = "…/"
 
 [cmd_duration]
