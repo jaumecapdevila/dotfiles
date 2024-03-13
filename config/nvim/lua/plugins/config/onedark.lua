@@ -1,18 +1,18 @@
 local g = vim.g
-local t = g.transparent
+
+local accent = "#528bff"
 
 local colors = {
   Blue = { fg = "$blue" },
-  Sidebar = { fg = "$fg", bg = t and "NONE" or "$bg0" },
-  FloatBorder = { fg = "$blue", bg = "NONE" },
-  Float = { fg = "$fg", bg = t and "NONE" or "$bg1" },
+  Sidebar = { fg = "$fg", bg = "$bg0" },
+  FloatBorder = { fg = accent, bg = "NONE" },
+  Float = { fg = "$fg", bg = "$bg1" },
   Foreground = { fg = "$fg" },
   Green = { fg = "$green" },
   Grey = { fg = "$grey" },
   LightGrey = { fg = "$light_grey" },
   Match = { fg = "$blue", bg = "NONE" },
-  Purple = { fg = "$purple" },
-  TelescopeBorder = { bg = t and "NONE" or "$bg0", fg = "$purple" },
+  Accent = { fg = accent },
 }
 
 return {
@@ -43,26 +43,24 @@ return {
 
     -- NvimTree
     NvimTreeEndOfBuffer = colors.Sidebar,
-    NvimTreeFolderIcon = colors.Purple,
-    NvimTreeFolderName = colors.Blue,
+    NvimTreeFolderIcon = colors.Accent,
+    NvimTreeFolderName = colors.Foreground,
     NvimTreeNormal = colors.Sidebar,
-    NvimTreeOpenedFolderName = colors.Purple,
+    NvimTreeOpenedFolderName = colors.Accent,
 
     -- Telescope
-    TelescopeSelection = colors.Purple,
-    TelescopeSelectionCaret = colors.Purple,
+    TelescopeSelection = colors.Accent,
+    TelescopeSelectionCaret = colors.Accent,
     TelescopeMultiSelection = colors.Grey,
-    TelescopeNormal = colors.Float,
-    TelescopeBorder = colors.TelescopeBorder,
-    TelescopePromptNormal = colors.Float,
-    TelescopePromptBorder = colors.TelescopeBorder,
-    TelescopeResultsBorder = colors.TelescopeBorder,
-    TelescopePreviewBorder = colors.TelescopeBorder,
-    TelescopePromptPrefix = colors.Purple,
-    TelescopeMatching = colors.Purple,
+    TelescopeBorder = colors.Accent,
+    TelescopePromptBorder = colors.Accent,
+    TelescopeResultsBorder = colors.Accent,
+    TelescopePreviewBorder = colors.Accent,
+    TelescopePromptPrefix = colors.Accent,
+    TelescopeMatching = colors.Accent,
 
     -- Which Key
-    WhichKey = colors.Purple,
+    WhichKey = colors.Accent,
     WhichKeyDesc = colors.Foreground,
     WhichKeySeparator = colors.Green,
     WhichKeyFloat = colors.Float,
@@ -73,6 +71,6 @@ return {
   diagnostics = {
     darker = false, -- darker colors for diagnostic
     undercurl = true, -- use undercurl instead of underline for diagnostics
-    background = g.transparent, -- use background color for virtual text
+    background = false, -- use background color for virtual text
   },
 }

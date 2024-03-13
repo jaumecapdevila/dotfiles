@@ -11,7 +11,7 @@ opt.cursorline = true
 
 -- Theming
 o.background = "dark"
-g.transparent = true
+g.transparent = false
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs
@@ -38,7 +38,7 @@ opt.relativenumber = true
 -- Message area
 opt.showmode = false
 opt.showcmd = false
--- opt.cmdheight = 0
+opt.cmdheight = 0
 
 -- disable nvim intro
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
