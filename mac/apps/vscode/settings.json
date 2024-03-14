@@ -225,21 +225,13 @@
   "terminal.integrated.smoothScrolling": true,
   "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
-    "list.activeSelectionBackground": "#2c313a",
-    "list.activeSelectionForeground": "#528bff",
-    "list.highlightForeground": "#528bff",
-    "[One Dark]": {
+    "[Atom One Dark]": {
       "editorBracketHighlight.foreground1": "#D19A66",
       "editorBracketHighlight.foreground2": "#C678DD",
       "editorBracketHighlight.foreground3": "#56B6C2"
-    },
-    "[One Dark Vivid]": {
-      "editorBracketHighlight.foreground1": "#d29b62",
-      "editorBracketHighlight.foreground2": "#d759e0",
-      "editorBracketHighlight.foreground3": "#1cbac6"
     }
   },
-  "workbench.colorTheme": "One Dark",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
