@@ -9,7 +9,7 @@
   "editor.experimental.asyncTokenization": true,
   "editor.fontFamily": "'Operator Mono', 'OperatorMono Nerd Font', monospace",
   "editor.fontLigatures": false,
-  "editor.fontSize": 18,
+  "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.glyphMargin": true,
   "editor.guides.indentation": false,
@@ -221,9 +221,8 @@
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
   "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 17,
   "terminal.integrated.smoothScrolling": true,
-  "workbench.activityBar.location": "hidden",
   "workbench.colorCustomizations": {
     "[Atom One Dark]": {
       "editorBracketHighlight.foreground1": "#D19A66",
@@ -235,9 +234,14 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.settings.editor": "json",
+  "workbench.settings.editor": "ui",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.activityBar.location": "hidden",
+  "window.commandCenter": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.labelFormat": "short"
 }

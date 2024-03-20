@@ -10,6 +10,7 @@ local conditions = {
 local colors = {
   accent = "#528BFF",
   bg = "#282c34",
+  bg_darker = "#21252b",
   blue = "#61afef",
   cyan = "#56b6c2",
   fg = "#9da5b4",
@@ -44,6 +45,7 @@ local config = {
     lualine_y = {},
     lualine_z = {},
   },
+
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
@@ -72,7 +74,7 @@ end
 
 ins_left({
   "mode",
-  icon = "",
+  icon = "󱓞",
   color = function()
     -- auto change color according to neovims mode
     local mode_color = {
@@ -141,7 +143,7 @@ ins_right({
 ins_right({
   "fileformat",
   fmt = string.upper,
-  icons_enabled = true,
+  icons_enabled = false,
 })
 
 return config

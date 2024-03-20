@@ -2,17 +2,34 @@ local u = require("utils")
 local k = require("config.keymaps")
 
 return {
+  -- improved ui interfaces
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+  },
+
   {
     "nvim-tree/nvim-web-devicons",
     config = function(_, opts) require("nvim-web-devicons").setup(opts) end,
   },
 
   {
+    "rcarriga/nvim-notify",
+    keys = {
+      {
+        "<leader>un",
+        function() require("notify").dismiss({ silent = true, pending = true }) end,
+        desc = "Dismiss all Notifications",
+      },
+    },
+    opts = function() return require("plugins.config.notify") end,
+    config = function(_, opts) require("notify").setup(opts) end,
+  },
+
+  {
     "folke/noice.nvim",
     event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
+    dependencies = { "MunifTanjim/nui.nvim" },
     opts = function() return require("plugins.config.noice") end,
     config = function(_, opts) require("noice").setup(opts) end,
   },

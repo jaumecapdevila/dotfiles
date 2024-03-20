@@ -3,16 +3,19 @@ local g = vim.g
 local accent = "#528bff"
 
 local colors = {
+  Accent = { fg = accent },
   Blue = { fg = "$blue" },
-  Sidebar = { fg = "$fg", bg = "$bg0" },
+  Float = { fg = "$fg", bg = "$bg0" },
   FloatBorder = { fg = accent, bg = "NONE" },
-  Float = { fg = "$fg", bg = "$bg1" },
   Foreground = { fg = "$fg" },
   Green = { fg = "$green" },
   Grey = { fg = "$grey" },
   LightGrey = { fg = "$light_grey" },
-  Match = { fg = "$blue", bg = "NONE" },
-  Accent = { fg = accent },
+  Match = { fg = accent, bg = "NONE" },
+  Purple = { fg = "$purple" },
+  Red = { fg = "$red" },
+  Sidebar = { fg = "$fg", bg = "$bg0" },
+  Yellow = { fg = "$yellow" },
 }
 
 return {
@@ -26,14 +29,18 @@ return {
     keywords = "italic",
     functions = "bold",
     strings = "none",
-    variables = "none",
+    variables = "bold",
   },
 
   -- Custom Highlights --
   highlights = {
+    -- General
     NormalFloat = colors.Float,
     FloatBorder = colors.FloatBorder,
     MatchParen = colors.Match,
+
+    -- Syntax
+    Title = colors.Accent,
 
     -- Copilot
     CopilotSuggestions = colors.Grey,
@@ -59,18 +66,47 @@ return {
     TelescopePromptPrefix = colors.Accent,
     TelescopeMatching = colors.Accent,
 
+    -- Mason
+    MasonHighlight = colors.Accent,
+
+    -- Noice
+    NoiceCmdline = colors.Foreground,
+    NoiceCmdlineIcon = colors.Accent,
+    NoiceCmdlineIconSearch = colors.Accent,
+    NoiceCmdlinePopupBorder = colors.Accent,
+    NoiceCmdlinePopupBorderSearch = colors.Accent,
+    NoiceCmdlinePopupTitle = colors.Accent,
+    NoiceConfirmBorder = colors.Accent,
+
     -- Which Key
     WhichKey = colors.Accent,
     WhichKeyDesc = colors.Foreground,
-    WhichKeySeparator = colors.Green,
+    WhichKeySeparator = colors.Foreground,
     WhichKeyFloat = colors.Float,
-    WhichKeyGroup = colors.Blue,
+    WhichKeyGroup = colors.Purple,
+
+    -- Notifications
+    NotifyERRORBorder = colors.FloatBorder,
+    NotifyWARNBorder = colors.FloatBorder,
+    NotifyINFOBorder = colors.FloatBorder,
+    NotifyDEBUGBorder = colors.FloatBorder,
+    NotifyTRACEBorder = colors.FloatBorder,
+    NotifyERRORIcon = colors.Red,
+    NotifyWARNIcon = colors.Yellow,
+    NotifyINFOIcon = colors.Blue,
+    NotifyDEBUGIcon = colors.Blue,
+    NotifyTRACEIcon = colors.Blue,
+    NotifyERRORTitle = colors.Red,
+    NotifyWARNTitle = colors.Yellow,
+    NotifyINFOTitle = colors.Blue,
+    NotifyDEBUGTitle = colors.Blue,
+    NotifyTRACETitle = colors.Blue,
   },
 
   -- Plugins Config --
   diagnostics = {
     darker = false, -- darker colors for diagnostic
-    undercurl = true, -- use undercurl instead of underline for diagnostics
+    undercurl = false, -- use undercurl instead of underline for diagnostics
     background = false, -- use background color for virtual text
   },
 }

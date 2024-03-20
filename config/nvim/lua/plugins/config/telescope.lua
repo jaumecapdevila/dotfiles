@@ -1,25 +1,25 @@
 local options = {
   defaults = {
-    color_devicons = true,
-    entry_prefix = "",
-    file_ignore_patterns = { ".git/", "node_modules" },
-    initial_mode = "insert",
-    layout_config = {
-      height = 0.90,
-      horizontal = { preview_width = 0.60 },
-      preview_cutoff = 0,
-      prompt_position = "top",
-      vertical = { width = 0.55, height = 0.9, preview_cutoff = 0 },
-      width = 0.90,
-    },
-    layout_strategy = "horizontal",
-    path_display = { "truncate" },
-    prompt_prefix = "󰳟 ",
-    selection_caret = "",
+    entry_prefix = "  ",
+    prompt_prefix = " 󰳟  ",
+    results_title = false,
+    selection_caret = "  ",
     sorting_strategy = "ascending",
+    layout_strategy = "center",
+    layout_config = {
+      preview_cutoff = 1, -- Preview should always show (unless previewer = false)
+      width = function(_, max_columns, _) return math.min(max_columns, 120) end,
+      height = function(_, _, max_lines) return math.min(max_lines, 15) end,
+    },
+    border = true,
+    borderchars = {
+      prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
+      results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
+      preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    },
   },
 
-  extensions_list = { "fzf", "file_browser" },
+  extensions_list = { "fzf", "file_browser", "notify" },
 }
 
 return options
