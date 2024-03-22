@@ -38,7 +38,7 @@ M.whichkey = {
     group = "󰐗 ", -- symbol prepended to a group
   },
   window = {
-    border = "single", -- none, single, double, shadow
+    border = "none",
     position = "bottom", -- bottom, top
   },
 }

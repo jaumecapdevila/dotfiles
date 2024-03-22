@@ -13,6 +13,7 @@ return {
     config = function(_, opts) require("nvim-web-devicons").setup(opts) end,
   },
 
+  -- improved notifications
   {
     "rcarriga/nvim-notify",
     keys = {
@@ -34,10 +35,11 @@ return {
     config = function(_, opts) require("noice").setup(opts) end,
   },
 
+  -- custom start screen
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
-    enabled = false,
+    enabled = true,
     opts = function() return require("plugins.config.dashboard") end,
     config = function(_, dashboard) require("alpha").setup(dashboard.opts) end,
   },

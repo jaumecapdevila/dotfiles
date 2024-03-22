@@ -5,7 +5,7 @@ local accent = "#528bff"
 local colors = {
   Accent = { fg = accent },
   Blue = { fg = "$blue" },
-  Float = { fg = "$fg", bg = "$bg0" },
+  Float = { fg = "$fg", bg = "$bg1" },
   FloatBorder = { fg = accent, bg = "NONE" },
   Foreground = { fg = "$fg" },
   Green = { fg = "$green" },
@@ -86,11 +86,11 @@ return {
     WhichKeyGroup = colors.Purple,
 
     -- Notifications
-    NotifyERRORBorder = colors.FloatBorder,
-    NotifyWARNBorder = colors.FloatBorder,
-    NotifyINFOBorder = colors.FloatBorder,
-    NotifyDEBUGBorder = colors.FloatBorder,
-    NotifyTRACEBorder = colors.FloatBorder,
+    NotifyERRORBorder = colors.Red,
+    NotifyWARNBorder = colors.Yellow,
+    NotifyINFOBorder = colors.Blue,
+    NotifyDEBUGBorder = colors.Blue,
+    NotifyTRACEBorder = colors.Blue,
     NotifyERRORIcon = colors.Red,
     NotifyWARNIcon = colors.Yellow,
     NotifyINFOIcon = colors.Blue,
