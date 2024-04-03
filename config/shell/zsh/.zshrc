@@ -10,28 +10,34 @@ setopt HIST_NO_STORE
 ## Autocd
 setopt +o nomatch
 
-# zim plugins
-zstyle ':zim:git' aliases-prefix 'g'
-zstyle ':fzf-tab:*' switch-group ',' '.'
+# Load config
+source "$DOTFILES/config/shell/exports.sh"
 
-# Start zim
-source "$ZIM_HOME/init.zsh"
+# disable automatic updates entirely
+zstyle ':omz:update' mode disabled
+# defer nvm's load until its first usage to speed-up your zsh startup
+zstyle ':omz:plugins:nvm' lazy yes
 
-# Load fzf keybindings
-source $HOME/.fzf.zsh
+plugins=(
+  alias-tips
+  fzf
+  fzf-tab
+  git
+  nvm
+  starship
+  zoxide
+  zsh-syntax-highlighting
+)
 
-# Shared shell configuration
-source "$DOTFILES/config/shell/init.sh"
+# Load Oh My Zsh
+source "$ZSH/oh-my-zsh.sh"
 
-# External
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(starship init zsh)"
+# Load custom alias and bindings
+source "$DOTFILES/config/shell/alias.sh"
+source "$DOTFILES/config/shell/funcs.sh"
+source "$DOTFILES/config/shell/bindings.sh"
 
-# Load NVM
-source $(brew --prefix nvm)/nvm.sh
-
-# Custom hooks
+# Load custom hooks
 autoload -U add-zsh-hook
 add-zsh-hook chpwd cwd_iterm_tab_color
-# add-zsh-hook precmd dash_prompt_separator
-
+cwd_iterm_tab_color

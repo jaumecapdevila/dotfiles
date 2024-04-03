@@ -8,29 +8,30 @@
 # The minimal, blazing-fast, and infinitely customizable prompt
 # https://starship.rs
 
-# Get editor completions based on the config schema
+# get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+
+# inserts blank line between shell prompts
 add_newline = true
 
-# change the default format
+# sets which color palette from palettes to use
+palette = "onedark"
+
+# configure the format of the prompt
 format = """
+$character\
 $directory\
 $git_branch\
 $nodejs\
 $lua\
-$cmd_duration\
-$line_break\
-$character"""
-
-[line_break]
-disabled = true
+$cmd_duration"""
 
 [directory]
-format = "[󰉋 $path]($style) "
+format = "[$path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
-read_only_style = "bold white"
+read_only_style = "bold red"
 style = "bold blue"
 truncate_to_repo = true
 truncation_length = 2
@@ -40,9 +41,9 @@ truncation_symbol = "…/"
 disabled = false
 format = "[$symbol$branch]($style) "
 style = "bold cyan"
-symbol = "󰊤 "
+symbol = "󰘬 "
 truncation_length = 20
-truncation_symbol = "…/"
+truncation_symbol = "…"
 
 [cmd_duration]
 format = '[$duration]($style) '
@@ -69,5 +70,9 @@ symbol = "󰽢 "
 
 [character]
 disabled = false
-error_symbol = '[󰳟](red)'
-success_symbol = '[󰳟](purple)'
+error_symbol = '[󰳟](red) '
+success_symbol = '[󰳟](accent) '
+
+# Define custom colors
+[palettes.onedark]
+accent = "#528bff"

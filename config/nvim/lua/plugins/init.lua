@@ -31,7 +31,7 @@ require("lazy").setup({
   defaults = { lazy = false },
   install = { colorscheme = { "onedark" } },
   ui = {
-    border = "shadow",
+    border = "rounded",
     icons = {
       ft = "",
       lazy = "󰂠 ",

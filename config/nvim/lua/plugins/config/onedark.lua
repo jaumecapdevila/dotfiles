@@ -5,7 +5,7 @@ local accent = "#528bff"
 local colors = {
   Accent = { fg = accent },
   Blue = { fg = "$blue" },
-  Float = { fg = "$fg", bg = "$bg1" },
+  Float = { fg = "$fg", bg = "$bg0" },
   FloatBorder = { fg = accent, bg = "NONE" },
   Foreground = { fg = "$fg" },
   Green = { fg = "$green" },
@@ -29,7 +29,7 @@ return {
     keywords = "italic",
     functions = "bold",
     strings = "none",
-    variables = "bold",
+    variables = "none",
   },
 
   -- Custom Highlights --
@@ -46,7 +46,7 @@ return {
     CopilotSuggestions = colors.Grey,
 
     -- Treesitter
-    ["@constructor"] = colors.LightGrey,
+    ["@constructor"] = colors.Purple,
 
     -- NvimTree
     NvimTreeEndOfBuffer = colors.Sidebar,
@@ -86,21 +86,26 @@ return {
     WhichKeyGroup = colors.Purple,
 
     -- Notifications
-    NotifyERRORBorder = colors.Red,
-    NotifyWARNBorder = colors.Yellow,
-    NotifyINFOBorder = colors.Blue,
+    NotifyDEBUGBody = colors.Blue,
     NotifyDEBUGBorder = colors.Blue,
-    NotifyTRACEBorder = colors.Blue,
-    NotifyERRORIcon = colors.Red,
-    NotifyWARNIcon = colors.Yellow,
-    NotifyINFOIcon = colors.Blue,
     NotifyDEBUGIcon = colors.Blue,
-    NotifyTRACEIcon = colors.Blue,
-    NotifyERRORTitle = colors.Red,
-    NotifyWARNTitle = colors.Yellow,
-    NotifyINFOTitle = colors.Blue,
     NotifyDEBUGTitle = colors.Blue,
+    NotifyERRORBody = colors.Red,
+    NotifyERRORBorder = colors.Red,
+    NotifyERRORIcon = colors.Red,
+    NotifyERRORTitle = colors.Red,
+    NotifyINFOBody = colors.Blue,
+    NotifyINFOBorder = colors.Blue,
+    NotifyINFOIcon = colors.Blue,
+    NotifyINFOTitle = colors.Blue,
+    NotifyTRACEBody = colors.Blue,
+    NotifyTRACEBorder = colors.Blue,
+    NotifyTRACEIcon = colors.Blue,
     NotifyTRACETitle = colors.Blue,
+    NotifyWARNBody = colors.Yellow,
+    NotifyWARNBorder = colors.Yellow,
+    NotifyWARNIcon = colors.Yellow,
+    NotifyWARNTitle = colors.Yellow,
   },
 
   -- Plugins Config --

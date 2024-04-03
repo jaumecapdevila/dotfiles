@@ -4,9 +4,8 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
 ------------------------------- APP LAUNCH/TOGGLE ------------------------------
 local apps = {
   a = "HTTPie", -- API Client
-  b = "Arc", -- Browser
+  b = "Safari", -- Browser
   c = "Visual Studio Code", -- Code Editor
-  d = "Things", -- Time Management
   f = "Finder", -- File Explorer
   g = "GitHub Desktop", -- Git Client
   n = "Bear", -- Notes Taking

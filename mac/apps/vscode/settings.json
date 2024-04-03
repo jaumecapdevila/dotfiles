@@ -7,7 +7,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.experimental.asyncTokenization": true,
-  "editor.fontFamily": "'Operator Mono', 'OperatorMono Nerd Font', monospace",
+  "editor.fontFamily": "'Operator Mono', 'Berkeley Nerd Font', monospace",
   "editor.fontLigatures": false,
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
@@ -23,7 +23,6 @@
   "editor.scrollBeyondLastLine": false,
   "editor.semanticHighlighting.enabled": true,
   "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": false,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -220,7 +219,7 @@
   "material-icon-theme.folders.color": "#528bff",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
-  "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
+  "terminal.integrated.fontFamily": "'BerkeleyMono Nerd Font', monospace",
   "terminal.integrated.fontSize": 17,
   "terminal.integrated.smoothScrolling": true,
   "workbench.colorCustomizations": {
@@ -230,11 +229,9 @@
       "editorBracketHighlight.foreground3": "#56B6C2"
     }
   },
-  "workbench.colorTheme": "Atom One Dark",
   "workbench.editor.enablePreview": false,
-  "workbench.editor.showTabs": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.settings.editor": "ui",
+  "workbench.settings.editor": "json",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
@@ -243,5 +240,7 @@
   "workbench.activityBar.location": "hidden",
   "window.commandCenter": false,
   "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.editor.labelFormat": "short"
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.showTabs": "none",
+  "workbench.colorTheme": "Atom One Dark"
 }

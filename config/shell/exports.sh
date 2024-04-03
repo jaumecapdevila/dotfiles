@@ -14,27 +14,29 @@ export FZF_DEFAULT_OPTS=" \
 --border rounded \
 --border-label=' Fuzzy Search ' \
 --no-info \
---prompt='󰳟  ' \
---pointer='󰗠 ' \
 --marker='󰐃' \
+--pointer='  ' \
+--prompt='󰳟  ' \
 --ansi \
---color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
+--color=bg+:#323844,bg:#282c34,border:#528bff,spinner:#528bff \
+--color=hl:#abb2bf,fg:#abb2bf,header:#528bff,info:#e5c07b \
+--color=pointer:-1,marker:#c678dd,fg+:#abb2bf,preview-bg:#323844 \
+--color=gutter:-1,prompt:#528bff,hl+:#528bff"
 
 export FZF_CTRL_R_OPTS=" \
 --border-label=' History ' \
---prompt='󰞌 '"
+--pointer=' ' \
+--prompt='󰞌  '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244,bg=default"
-export ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+export ZOXIDE_CMD_OVERRIDE="cd"
 
 export HOMEBREW_AUTO_UPDATE_SECS=604800 # 1 week
 export HOMEBREW_NO_ANALYTICS=true
 export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
-
-export BAT_THEME='base16'
 
 GPG_TTY=$(tty)
 export GPG_TTY

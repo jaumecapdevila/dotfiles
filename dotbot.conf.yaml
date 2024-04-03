@@ -27,8 +27,6 @@
     ~/.hammerspoon: config/hammerspoon
     ~/.warp: mac/apps/warp
     ~/.zimrc: config/shell/zsh/.zimrc
-    ~/.zlogin: config/shell/zsh/.zlogin
-    ~/.zprofile: config/shell/zsh/.zprofile
     ~/.zshenv: config/shell/zsh/.zshenv
     ~/.zshrc: config/shell/zsh/.zshrc
     ~/Library/Application Support/Code/User/settings.json: mac/apps/vscode/settings.json

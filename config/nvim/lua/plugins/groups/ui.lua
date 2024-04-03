@@ -41,7 +41,11 @@ return {
     event = "VimEnter",
     enabled = true,
     opts = function() return require("plugins.config.dashboard") end,
-    config = function(_, dashboard) require("alpha").setup(dashboard.opts) end,
+    config = function(_, dashboard)
+      require("alpha").setup(dashboard.opts)
+      -- Disable folding on alpha buffer
+      vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+    end,
   },
 
   -- file explorer
