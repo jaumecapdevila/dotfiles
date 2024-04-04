@@ -2,37 +2,10 @@ local u = require("utils")
 local k = require("config.keymaps")
 
 return {
-  -- improved ui interfaces
-  {
-    "stevearc/dressing.nvim",
-    event = "VeryLazy",
-  },
-
+  -- file icons
   {
     "nvim-tree/nvim-web-devicons",
     config = function(_, opts) require("nvim-web-devicons").setup(opts) end,
-  },
-
-  -- improved notifications
-  {
-    "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<leader>un",
-        function() require("notify").dismiss({ silent = true, pending = true }) end,
-        desc = "Dismiss all Notifications",
-      },
-    },
-    opts = function() return require("plugins.config.notify") end,
-    config = function(_, opts) require("notify").setup(opts) end,
-  },
-
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    dependencies = { "MunifTanjim/nui.nvim" },
-    opts = function() return require("plugins.config.noice") end,
-    config = function(_, opts) require("noice").setup(opts) end,
   },
 
   -- custom start screen
@@ -58,12 +31,5 @@ return {
       require("nvim-tree").setup(opts)
       vim.g.nvimtree_side = opts.view.side
     end,
-  },
-
-  -- custom statusline
-  {
-    "nvim-lualine/lualine.nvim",
-    opts = function() return require("plugins.config.lualine") end,
-    config = function(_, opts) require("lualine").setup(opts) end,
   },
 }

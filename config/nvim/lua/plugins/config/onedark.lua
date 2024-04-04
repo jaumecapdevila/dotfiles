@@ -4,6 +4,9 @@ local colors = {
   Accent = { fg = "#528bff" },
   Purple = { fg = "$purple" },
   Orange = { fg = "$orange" },
+  Match = { fg = "$blue", bg = "NONE" },
+  Float = { fg = "$fg", bg = "$bg1" },
+  Border = { fg = "#528bff", bg = "NONE" },
 }
 
 return {
@@ -21,13 +24,15 @@ return {
   },
 
   highlights = {
+    -- General
+    MatchParen = colors.Match,
+
     -- Treesitter
     ["@constructor"] = colors.Purple,
     ["@variable"] = colors.Orange,
     ["@lsp.type.variable"] = colors.Orange,
 
     -- NvimTree
-    NvimTreeEndOfBuffer = colors.Sidebar,
     NvimTreeFolderIcon = colors.Accent,
     NvimTreeOpenedFolderName = colors.Accent,
   },

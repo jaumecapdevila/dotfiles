@@ -21,7 +21,7 @@
   "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "none",
   "editor.scrollBeyondLastLine": false,
-  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticHighlighting.enabled": false,
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
@@ -235,15 +235,15 @@
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.sideBar.location": "right",
   "workbench.preferredDarkColorTheme": "Atom One Dark",
   "workbench.activityBar.location": "hidden",
   "window.commandCenter": false,
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showTabs": "none",
-  "workbench.colorTheme": "Atom One Dark",
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
-  }
+  },
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.sideBar.location": "right"
 }

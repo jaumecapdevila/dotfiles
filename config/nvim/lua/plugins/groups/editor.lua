@@ -67,7 +67,7 @@ return {
     end,
   },
 
-  -- git stuff
+  -- git integration
   {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },

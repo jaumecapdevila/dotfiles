@@ -26,7 +26,7 @@ require("lazy").setup({
     { import = "plugins.groups.lsp" },
     { import = "plugins.groups.treesitter" },
     { import = "plugins.groups.ui" },
-    { import = "plugins.groups.other" },
+    { import = "plugins.groups.utils" },
   },
   defaults = { lazy = false },
   install = { colorscheme = { "onedark" } },

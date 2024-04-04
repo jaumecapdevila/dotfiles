@@ -37,7 +37,6 @@ local options = {
   PATH = "skip",
 
   ui = {
-    border = "none", -- "none" | "single" | "double" | "rounded" | "solid"  | "shadow"
     keymaps = {
       toggle_server_expand = "<CR>",
       install_server = "i",

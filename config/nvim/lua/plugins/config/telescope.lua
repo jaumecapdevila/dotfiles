@@ -19,7 +19,7 @@ local options = {
     },
   },
 
-  extensions_list = { "fzf", "file_browser", "notify" },
+  extensions_list = { "fzf", "file_browser" },
 }
 
 return options

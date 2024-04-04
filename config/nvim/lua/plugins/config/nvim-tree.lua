@@ -9,7 +9,8 @@ local options = {
     update_root = false,
   },
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
+    width = 40,
     side = "right",
   },
   git = {

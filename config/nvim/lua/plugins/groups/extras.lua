@@ -1,19 +1,4 @@
 return {
-  -- Git UI
-  {
-    "kdheepak/lazygit.nvim",
-    enabled = false,
-    dependencies = { "nvim-lua/plenary.nvim" },
-    init = function() vim.g.lazygit_floating_window_use_plenary = 0 end,
-    keys = {
-      {
-        "<leader>lg",
-        function() require("lazygit").lazygit() end,
-        desc = "LazyGit",
-      },
-    },
-  },
-
   -- linting
   {
     "mfussenegger/nvim-lint",

@@ -11,7 +11,6 @@
 # get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-
 # inserts blank line between shell prompts
 add_newline = true
 
@@ -24,9 +23,7 @@ $directory\
 $git_branch\
 $nodejs\
 $lua\
-$cmd_duration\
-$line_break\
-$character"""
+$cmd_duration"""
 
 [directory]
 format = "[$path]($style) "
@@ -68,11 +65,6 @@ disabled = false
 format = "[$symbol($version )]($style)"
 style = "bold blue"
 symbol = "󰽢 "
-
-[character]
-disabled = false
-error_symbol = '[❯](red)'
-success_symbol = '[❯](purple)'
 
 # Define custom colors
 [palettes.onedark]
