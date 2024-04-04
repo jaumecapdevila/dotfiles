@@ -20,12 +20,13 @@ palette = "onedark"
 
 # configure the format of the prompt
 format = """
-$character\
 $directory\
 $git_branch\
 $nodejs\
 $lua\
-$cmd_duration"""
+$cmd_duration\
+$line_break\
+$character"""
 
 [directory]
 format = "[$path]($style) "
@@ -70,8 +71,8 @@ symbol = "󰽢 "
 
 [character]
 disabled = false
-error_symbol = '[󰳟](red) '
-success_symbol = '[󰳟](accent) '
+error_symbol = '[❯](red)'
+success_symbol = '[❯](purple)'
 
 # Define custom colors
 [palettes.onedark]

@@ -7,7 +7,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.experimental.asyncTokenization": true,
-  "editor.fontFamily": "'Operator Mono', 'Berkeley Nerd Font', monospace",
+  "editor.fontFamily": "'Operator Mono', 'OperatorMono Nerd Font', monospace",
   "editor.fontLigatures": false,
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
@@ -219,7 +219,7 @@
   "material-icon-theme.folders.color": "#528bff",
   "material-icon-theme.folders.theme": "classic",
   "material-icon-theme.hidesExplorerArrows": true,
-  "terminal.integrated.fontFamily": "'BerkeleyMono Nerd Font', monospace",
+  "terminal.integrated.fontFamily": "'OperatorMono Nerd Font', monospace",
   "terminal.integrated.fontSize": 17,
   "terminal.integrated.smoothScrolling": true,
   "workbench.colorCustomizations": {
@@ -242,5 +242,8 @@
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showTabs": "none",
-  "workbench.colorTheme": "Atom One Dark"
+  "workbench.colorTheme": "Atom One Dark",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  }
 }

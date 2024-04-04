@@ -9,11 +9,10 @@ local conditions = {
 -- Onedark
 local colors = {
   accent = "#528BFF",
-  bg = "#282c34",
-  bg_darker = "#21252b",
+  bg = "#3b3f4c",
   blue = "#61afef",
   cyan = "#56b6c2",
-  fg = "#9da5b4",
+  fg = "#abb2bf",
   green = "#98c379",
   magenta = "#c678dd",
   red = "#e86671",
@@ -21,20 +20,45 @@ local colors = {
   yellow = "#e5c07b",
 }
 
-local shared_mode = { fg = colors.fg, bg = colors.bg }
+local custom_theme = {
+  normal = {
+    a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+  insert = {
+    a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+  visual = {
+    a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+  command = {
+    a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+  replace = {
+    a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+  inactive = {
+    a = { bg = colors.bg, fg = colors.fg, gui = "bold" },
+    c = { bg = colors.bg, fg = colors.fg },
+    x = { bg = colors.bg, fg = colors.fg },
+  },
+}
 
 local config = {
   options = {
     globalstatus = true, -- have a single statusline at bottom of neovim instead of one for  every window
     component_separators = "",
     section_separators = "",
-    theme = {
-      -- all modes defaults to normal.
-      -- you can specify a theme for all sections a,b,c x,y,z
-      -- if a theme is not specified for x,y,z then they default to the c,b,a theme respectively
-      normal = { c = shared_mode },
-      inactive = { c = shared_mode },
-    },
+    theme = custom_theme,
   },
   -- remove defaults
   sections = {
@@ -59,40 +83,23 @@ local config = {
 -- +-------------------------------------------------+
 -- | A | B | C                             X | Y | Z |
 -- +-------------------------------------------------+
-
--- Inserts a component in lualine_c at left section
-local function ins_left(component)
-  table.insert(config.sections.lualine_c, component)
+local function ins_comp(section, component)
+  table.insert(config.sections[section], component)
 end
 
--- Inserts a component in lualine_x at right section
-local function ins_right(component)
-  table.insert(config.sections.lualine_x, component)
-end
+ins_comp("lualine_a", {
+  "mode",
+  icon = "󱓞",
+})
 
 -- Add components to the beginning of lualine
 
-ins_left({
-  "mode",
-  icon = "󱓞",
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.blue,
-      i = colors.green,
-      v = colors.yellow,
-      c = colors.purple,
-    }
-    return { fg = mode_color[vim.fn.mode()], gui = "bold" }
-  end,
-})
-
-ins_left({
+ins_comp("lualine_c", {
   "branch",
-  icon = "󰊤",
+  icon = "󰘬",
 })
 
-ins_left({
+ins_comp("lualine_c", {
   "filename",
   icon = "󰈔",
   file_status = false,
@@ -100,47 +107,42 @@ ins_left({
   symbols = { unnamed = "" },
 })
 
-ins_left({
+ins_comp("lualine_c", {
   "diagnostics",
   sources = { "nvim_diagnostic" },
   symbols = { error = " ", warn = " ", info = " " },
-  diagnostics_color = {
-    color_error = { fg = colors.red },
-    color_warn = { fg = colors.yellow },
-    color_info = { fg = colors.cyan },
-  },
 })
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
-ins_left({
+ins_comp("lualine_c", {
   function() return "%=" end,
 })
 
 -- Add components to right sections
 
-ins_right({
+ins_comp("lualine_x", {
   lazy_status.updates,
   cond = conditions.outdated_plugins,
-  color = { fg = colors.accent, gui = "bold" },
+  color = { fg = colors.accent },
 })
 
-ins_right({ "location" })
+ins_comp("lualine_x", { "location" })
 
-ins_right({ "progress" })
+ins_comp("lualine_x", { "progress" })
 
-ins_right({
+ins_comp("lualine_x", {
   "filesize",
   cond = conditions.buffer_not_empty,
 })
 
-ins_right({
+ins_comp("lualine_x", {
   "o:encoding", -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
 })
 
-ins_right({
+ins_comp("lualine_x", {
   "fileformat",
   fmt = string.upper,
   icons_enabled = false,

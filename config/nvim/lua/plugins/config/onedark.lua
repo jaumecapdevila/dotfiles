@@ -1,21 +1,9 @@
 local g = vim.g
 
-local accent = "#528bff"
-
 local colors = {
-  Accent = { fg = accent },
-  Blue = { fg = "$blue" },
-  Float = { fg = "$fg", bg = "$bg0" },
-  FloatBorder = { fg = accent, bg = "NONE" },
-  Foreground = { fg = "$fg" },
-  Green = { fg = "$green" },
-  Grey = { fg = "$grey" },
-  LightGrey = { fg = "$light_grey" },
-  Match = { fg = accent, bg = "NONE" },
+  Accent = { fg = "#528bff" },
   Purple = { fg = "$purple" },
-  Red = { fg = "$red" },
-  Sidebar = { fg = "$fg", bg = "$bg0" },
-  Yellow = { fg = "$yellow" },
+  Orange = { fg = "$orange" },
 }
 
 return {
@@ -32,80 +20,16 @@ return {
     variables = "none",
   },
 
-  -- Custom Highlights --
   highlights = {
-    -- General
-    NormalFloat = colors.Float,
-    FloatBorder = colors.FloatBorder,
-    MatchParen = colors.Match,
-
-    -- Syntax
-    Title = colors.Accent,
-
-    -- Copilot
-    CopilotSuggestions = colors.Grey,
-
     -- Treesitter
     ["@constructor"] = colors.Purple,
+    ["@variable"] = colors.Orange,
+    ["@lsp.type.variable"] = colors.Orange,
 
     -- NvimTree
     NvimTreeEndOfBuffer = colors.Sidebar,
     NvimTreeFolderIcon = colors.Accent,
-    NvimTreeFolderName = colors.Foreground,
-    NvimTreeNormal = colors.Sidebar,
     NvimTreeOpenedFolderName = colors.Accent,
-
-    -- Telescope
-    TelescopeSelection = colors.Accent,
-    TelescopeSelectionCaret = colors.Accent,
-    TelescopeMultiSelection = colors.Grey,
-    TelescopeBorder = colors.Accent,
-    TelescopePromptBorder = colors.Accent,
-    TelescopeResultsBorder = colors.Accent,
-    TelescopePreviewBorder = colors.Accent,
-    TelescopePromptPrefix = colors.Accent,
-    TelescopeMatching = colors.Accent,
-
-    -- Mason
-    MasonHighlight = colors.Accent,
-
-    -- Noice
-    NoiceCmdline = colors.Foreground,
-    NoiceCmdlineIcon = colors.Accent,
-    NoiceCmdlineIconSearch = colors.Accent,
-    NoiceCmdlinePopupBorder = colors.Accent,
-    NoiceCmdlinePopupBorderSearch = colors.Accent,
-    NoiceCmdlinePopupTitle = colors.Accent,
-    NoiceConfirmBorder = colors.Accent,
-
-    -- Which Key
-    WhichKey = colors.Accent,
-    WhichKeyDesc = colors.Foreground,
-    WhichKeySeparator = colors.Foreground,
-    WhichKeyFloat = colors.Float,
-    WhichKeyGroup = colors.Purple,
-
-    -- Notifications
-    NotifyDEBUGBody = colors.Blue,
-    NotifyDEBUGBorder = colors.Blue,
-    NotifyDEBUGIcon = colors.Blue,
-    NotifyDEBUGTitle = colors.Blue,
-    NotifyERRORBody = colors.Red,
-    NotifyERRORBorder = colors.Red,
-    NotifyERRORIcon = colors.Red,
-    NotifyERRORTitle = colors.Red,
-    NotifyINFOBody = colors.Blue,
-    NotifyINFOBorder = colors.Blue,
-    NotifyINFOIcon = colors.Blue,
-    NotifyINFOTitle = colors.Blue,
-    NotifyTRACEBody = colors.Blue,
-    NotifyTRACEBorder = colors.Blue,
-    NotifyTRACEIcon = colors.Blue,
-    NotifyTRACETitle = colors.Blue,
-    NotifyWARNBody = colors.Yellow,
-    NotifyWARNBorder = colors.Yellow,
-    NotifyWARNIcon = colors.Yellow,
-    NotifyWARNTitle = colors.Yellow,
   },
 
   -- Plugins Config --

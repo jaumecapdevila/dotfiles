@@ -11,22 +11,16 @@ export VISUAL="$EDITOR"
 
 export FZF_DEFAULT_OPTS=" \
 --reverse \
---border rounded \
---border-label=' Fuzzy Search ' \
 --no-info \
---marker='󰐃' \
---pointer='  ' \
---prompt='󰳟  ' \
+--pointer=' ' \
+--prompt='  ' \
 --ansi \
---color=bg+:#323844,bg:#282c34,border:#528bff,spinner:#528bff \
---color=hl:#abb2bf,fg:#abb2bf,header:#528bff,info:#e5c07b \
---color=pointer:-1,marker:#c678dd,fg+:#abb2bf,preview-bg:#323844 \
---color=gutter:-1,prompt:#528bff,hl+:#528bff"
+--color=bg+:#3e4451,bg:#31353f,spinner:#528bff \
+--color=hl:#abb2bf,fg:#abb2bf,gutter:#31353f,hl+:#528bff"
 
 export FZF_CTRL_R_OPTS=" \
---border-label=' History ' \
 --pointer=' ' \
---prompt='󰞌  '"
+--prompt='  '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
