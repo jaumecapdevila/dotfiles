@@ -19,18 +19,20 @@ palette = "onedark"
 
 # configure the format of the prompt
 format = """
+$character\
 $directory\
 $git_branch\
-$nodejs\
 $lua\
+$nodejs\
+$python\
 $cmd_duration"""
 
 [directory]
-format = "[$path]($style) "
+format = "[󰉋 $path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
 read_only_style = "bold red"
-style = "bold blue"
+style = "bold accent"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = "…/"
@@ -48,12 +50,6 @@ format = '[$duration]($style) '
 min_time = 2000
 style = "bold yellow"
 
-[python]
-disabled = false
-python_binary = "python3"
-style = "bold yellow"
-symbol = "󱔎"
-
 [nodejs]
 disabled = false
 format = "[$symbol($version )]($style)"
@@ -66,6 +62,24 @@ format = "[$symbol($version )]($style)"
 style = "bold blue"
 symbol = "󰽢 "
 
+[python]
+disabled = false
+format = "[$virtualenv]($style)"
+python_binary = "python3"
+style = "bold yellow"
+symbol = "󱔎"
+
+[character]
+disabled = true
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
 # Define custom colors
 [palettes.onedark]
 accent = "#528bff"
+
+# Define custom colors
+[palettes.dracula]
+accent = "#ff79c6"
+

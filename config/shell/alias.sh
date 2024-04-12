@@ -6,11 +6,12 @@ alias vi="vim"
 alias vim="nvim"
 
 # Files
-alias ls='lsd'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+# https://github.com/athityakumar/colorls?tab=readme-ov-file#flags
+alias ls='colorls --sd --gs --dark'
+alias l='ls -l'                     # List
+alias la='ls -la'                   # List, show all files
+alias ll='ls -lA'                   # List, show almost all files (excludes ./ and ../)
+alias lt='ls --tree=5'              # Show tree heirarchy, capped at depth 5 just in case
 
 # Utils
 alias cl="clear"
@@ -20,15 +21,7 @@ alias lg="lazygit"
 alias tf="terraform"
 
 # Python
-alias py="python"
-
-# Tmux
-alias tn="tmux new -s"
-alias tna="tmux new -ADs"
-alias ta="tmux a"
-alias tat="tmux attach -t"
-alias td="t dotfiles"
-alias tk="tmux kill-server"
+alias py="python3"
 
 # Yarn
 alias y="yarn"
@@ -41,8 +34,6 @@ alias ys="yarn serve"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
-alias tmp="cd ~/Desktop/tmp"
-alias c='cd ~/coexdexe'
 
 # Github
 alias ai="gh copilot"

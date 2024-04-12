@@ -2,7 +2,7 @@ local u = require("utils")
 local k = require("config.keymaps")
 
 return {
-  -- colorscheme
+  -- colorschemes
   {
     "navarasu/onedark.nvim",
     name = "onedark",
@@ -12,6 +12,18 @@ return {
     config = function(_, opts)
       require("onedark").setup(opts)
       vim.cmd("colorscheme onedark")
+    end,
+  },
+
+  {
+    "Mofiqul/dracula.nvim",
+    name = "dracula",
+    lazy = false,
+    priority = 1000,
+    opts = function() return require("plugins.config.dracula") end,
+    config = function(_, opts)
+      require("dracula").setup(opts)
+      -- vim.cmd("colorscheme dracula-soft")
     end,
   },
 

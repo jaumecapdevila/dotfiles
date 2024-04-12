@@ -6,8 +6,9 @@ SCRIPTS_DIR="$DOTFILES/scripts"
 
 SCRIPTS=$(find "$SCRIPTS_DIR" -type f ! -name ".DS_Store" | sed "s|$SCRIPTS_DIR/||g")
 
-SELECTED_SCRIPT=$(echo "$SCRIPTS" | fzf)
-
-if [[ -n "$SELECTED_SCRIPT" ]]; then
-  "$SCRIPTS_DIR/$SELECTED_SCRIPT"
-fi
+select SCRIPT in $SCRIPTS; do
+  if [ -n "$SCRIPT" ]; then
+    "$SCRIPTS_DIR/$SCRIPT"
+  fi
+  break
+done

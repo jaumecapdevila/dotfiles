@@ -13,14 +13,15 @@ export FZF_DEFAULT_OPTS=" \
 --reverse \
 --no-info \
 --pointer=' ' \
---prompt='  ' \
+--prompt='󰈲 ' \
 --ansi \
---color=bg+:#3e4451,bg:#31353f,spinner:#528bff \
---color=hl:#abb2bf,fg:#abb2bf,gutter:#31353f,hl+:#528bff"
+--color=bg+:#3e4451,bg:#31353f,spinner:#c678dd,hl:#528bff \
+--color=fg:#abb2bf,header:#528bff,info:#e5c07b,pointer:#c678dd \
+--color=marker:#c678dd,fg+:#abb2bf,prompt:#528bff,gutter:#31353f,hl+:#528bff"
 
 export FZF_CTRL_R_OPTS=" \
 --pointer=' ' \
---prompt='  '"
+--prompt='󰈲 '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 

@@ -6,7 +6,8 @@ local colors = {
   Orange = { fg = "$orange" },
   Match = { fg = "$blue", bg = "NONE" },
   Float = { fg = "$fg", bg = "$bg1" },
-  Border = { fg = "#528bff", bg = "NONE" },
+  Border = { fg = "#528bff", bg = "none" },
+  Separator = { fg = "$bg1", bg = "$bg1" },
 }
 
 return {
@@ -25,6 +26,7 @@ return {
 
   highlights = {
     -- General
+    WinSeparator = colors.Separator,
     MatchParen = colors.Match,
 
     -- Treesitter
@@ -35,6 +37,16 @@ return {
     -- NvimTree
     NvimTreeFolderIcon = colors.Accent,
     NvimTreeOpenedFolderName = colors.Accent,
+
+    -- Telescope
+    TelescopeSelection = colors.Accent,
+    TelescopeSelectionCaret = colors.Accent,
+    TelescopeBorder = colors.Accent,
+    TelescopePromptBorder = colors.Accent,
+    TelescopeResultsBorder = colors.Accent,
+    TelescopePreviewBorder = colors.Accent,
+    TelescopePromptPrefix = colors.Accent,
+    TelescopeMatching = colors.Accent,
   },
 
   -- Plugins Config --
