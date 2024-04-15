@@ -15,17 +15,17 @@
 add_newline = true
 
 # sets which color palette from palettes to use
-palette = "onedark"
+palette = "ayu"
 
 # configure the format of the prompt
 format = """
-$character\
 $directory\
 $git_branch\
 $lua\
 $nodejs\
 $python\
-$cmd_duration"""
+$cmd_duration\
+$character"""
 
 [directory]
 format = "[󰉋 $path]($style) "
@@ -71,15 +71,14 @@ symbol = "󱔎"
 
 [character]
 disabled = true
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+success_symbol = "[󰳟](purple) "
+error_symbol = "[󰳟](red) "
+vimcmd_symbol = "[󰳝](green) "
 
 # Define custom colors
 [palettes.onedark]
 accent = "#528bff"
 
-# Define custom colors
-[palettes.dracula]
-accent = "#ff79c6"
+[palettes.ayu]
+accent = "#FFCC66"
 

@@ -4,11 +4,15 @@ set -o pipefail
 
 SCRIPTS_DIR="$DOTFILES/scripts"
 
+FILTER="$1"
 SCRIPTS=$(find "$SCRIPTS_DIR" -type f ! -name ".DS_Store" | sed "s|$SCRIPTS_DIR/||g")
 
+if [ -n "$FILTER" ]; then
+  SCRIPTS=$(echo "$SCRIPTS" | grep "$FILTER")
+fi
+
 select SCRIPT in $SCRIPTS; do
-  if [ -n "$SCRIPT" ]; then
-    "$SCRIPTS_DIR/$SCRIPT"
-  fi
-  break
+  "$SCRIPTS_DIR/$SCRIPT"
+  break;
 done
+

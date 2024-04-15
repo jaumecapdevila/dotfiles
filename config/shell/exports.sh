@@ -15,9 +15,10 @@ export FZF_DEFAULT_OPTS=" \
 --pointer=' ' \
 --prompt='󰈲 ' \
 --ansi \
---color=bg+:#3e4451,bg:#31353f,spinner:#c678dd,hl:#528bff \
+--border sharp \
+--color=bg+:#2c313a,bg:#353b45,border:#181a1f,spinner:#c678dd,hl:#528bff \
 --color=fg:#abb2bf,header:#528bff,info:#e5c07b,pointer:#c678dd \
---color=marker:#c678dd,fg+:#abb2bf,prompt:#528bff,gutter:#31353f,hl+:#528bff"
+--color=marker:#c678dd,fg+:#abb2bf,prompt:#528bff,gutter:#353b45,hl+:#528bff"
 
 export FZF_CTRL_R_OPTS=" \
 --pointer=' ' \

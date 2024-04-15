@@ -7,11 +7,12 @@ alias vim="nvim"
 
 # Files
 # https://github.com/athityakumar/colorls?tab=readme-ov-file#flags
-alias ls='colorls --sd --gs --dark'
-alias l='ls -l'                     # List
-alias la='ls -la'                   # List, show all files
-alias ll='ls -lA'                   # List, show almost all files (excludes ./ and ../)
-alias lt='ls --tree=5'              # Show tree heirarchy, capped at depth 5 just in case
+alias ls='colorls --sd --dark'
+alias l='ls -l'                # List
+alias la='ls -la'              # List, show all files
+alias ll='ls -lA'              # List, show almost all files (excludes ./ and ../)
+alias lt='ls --tree=5'         # Show tree heirarchy, capped at depth 5 just in case
+alias lg='lgs --gs'            # List and display git status
 
 # Utils
 alias cl="clear"

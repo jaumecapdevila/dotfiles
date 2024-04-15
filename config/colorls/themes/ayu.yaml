@@ -1,0 +1,47 @@
+# One Dark themed dark color settings for colorls
+#
+# Main Colors
+unrecognized_file: "#FFAD66" # Orange
+recognized_file: "#cccac2" # Foreground
+executable_file: "#95e6cb" # Cyan
+dir: "#ffcc66" # Accent
+
+# Link
+dead_link: "#f28779" # Red
+link: "#61afef" # Blue
+
+# Special Files
+socket: "#d5ff80" # Green
+blockdev: "#d5ff80" # Green
+chardev: "#d5ff80" # Green
+
+# Access Modes
+write: "#dfbfff" # Purple
+read: "#dfbfff" # Purple
+exec: "#95e6cb" # Cyan
+no_access: "#f28779" # Red
+
+# Age
+hour_old: "#cccac2" # Foreground
+day_old: "#B8CFE6" # Comment
+no_modifier: "#1A1F29" # Current Line
+
+# File Size
+file_large: "#f28779" # Red
+file_medium: "#FFAD66" # Orange
+file_small: "#d5ff80" # Green
+
+# Random
+report: "#d5ff80" # Green
+user: "#95e6cb" # Cyan
+tree: "#ffcc66" # Accent
+empty: "#B8CFE6" # Comment
+error: "#f28779" # Red
+normal: "#cccac2" # Foreground
+
+# Git
+addition: "#95e6cb" # Cyan
+modification: "#e5c07b" # Yellow
+deletion: "#f28779" # Red
+untracked: "#FFAD66" # Orange
+unchanged: "#d5ff80" # Green

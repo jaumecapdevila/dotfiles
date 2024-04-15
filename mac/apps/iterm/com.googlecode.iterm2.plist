@@ -815,9 +815,9 @@
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
-	<true/>
+	<false/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HideTabNumber</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -1681,7 +1681,7 @@
 			<key>Name</key>
 			<string>OneDark</string>
 			<key>Non Ascii Font</key>
-			<string>BerkeleyMonoNF-Regular 18</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -1862,7 +1862,7 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
-	<false/>
+	<true/>
 	<key>TerminalMargin</key>
 	<integer>8</integer>
 	<key>TerminalVMargin</key>
