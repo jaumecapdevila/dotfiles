@@ -1,0 +1,53 @@
+[include]
+    path = ~/.dotfiles/config/git/themes.gitconfig
+
+[alias]
+    g = "git"
+
+[user]
+	name = Jaume Capdevila
+	email = capdevil@adobe.com
+
+[init]
+	defaultBranch = main
+
+[fetch]
+    prune = true
+
+[push]
+    autoSetupRemote = true
+
+[pull]
+    rebase = false
+
+[core]
+	excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes
+    editor = nvim
+    pager = "delta"
+    ignorecase = false
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+  features = tokyo-storm
+	navigate = true
+
+[diff]
+	colorMoved = default
+
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+
+[mergetool]
+    prompt = false
+    path = nvim
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+

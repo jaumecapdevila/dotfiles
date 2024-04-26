@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+HISTORY_FILE="$HOME/.zsh_history"
+
+echo "Removing $HISTORY_FILE"
+rm "$HISTORY_FILE"
+echo "Done!"

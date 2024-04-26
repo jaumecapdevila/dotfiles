@@ -1,0 +1,47 @@
+# Tokyo themed dark color settings for colorls
+#
+# Main Colors
+unrecognized_file: '#ff9e64' # Orange
+recognized_file: '#a9b1d6' # Foreground
+executable_file: '#449dab' # Cyan
+dir: '#7aa2f7' # Blue
+
+# Link
+dead_link: '#ff7a93' # Red
+link: '#7da6ff' # Bright Blue
+
+# Special Files
+socket: '#9ece6a' # Green
+blockdev: '#9ece6a' # Green
+chardev: '#9ece6a' # Green
+
+# Access Modes
+write: '#ad8ee6' # Purple
+read: '#ad8ee6' # Purple
+exec: '#449dab' # Cyan
+no_access: '#ff7a93' # Red
+
+# Age
+hour_old: '#a9b1d6' # Comment - 20% lighter
+day_old: '#565f89' # Comment
+no_modifier: '#a9b1d6' # Current Line
+
+# File Size
+file_large: '#ff7a93' # Red
+file_medium: '#ff9e64' # Orange
+file_small: '#9ece6a' # Green
+
+# Random
+report: '#9ece6a' # Green
+user: '#449dab' # Cyan
+tree: '#7aa2f7' # Blue
+empty: '#5C6370' # Comment
+error: '#ff7a93' # Red
+normal: '#a9b1d6' # Foreground
+
+# Git
+addition: '#449dab' # Cyan
+modification: '#e0af68' # Yellow
+deletion: '#ff7a93' # Red
+untracked: '#ff9e64' # Orange
+unchanged: '#9ece6a' # Green

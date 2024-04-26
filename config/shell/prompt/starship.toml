@@ -1,0 +1,80 @@
+
+# ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗
+# ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
+# ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
+# ╚════██║   ██║   ██╔══██║██╔══██╗╚════██║██╔══██║██║██╔═══╝
+# ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║
+# ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝
+# The minimal, blazing-fast, and infinitely customizable prompt
+# https://starship.rs
+
+# get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# inserts blank line between shell prompts
+add_newline = true
+
+# sets which color palette from palettes to use
+palette = "tokyo"
+
+# configure the format of the prompt
+format = """
+$directory\
+$git_branch\
+$lua\
+$nodejs\
+$python\
+$cmd_duration\
+$character"""
+
+[directory]
+format = "[󰉋 $path]($style) "
+home_symbol = "~"
+read_only = " 󰌾"
+read_only_style = "bold red"
+style = "bold accent"
+truncate_to_repo = true
+truncation_length = 2
+truncation_symbol = "…/"
+
+[git_branch]
+disabled = false
+format = "[$symbol$branch]($style) "
+style = "bold purple"
+symbol = "󰘬 "
+truncation_length = 20
+truncation_symbol = "…"
+
+[cmd_duration]
+format = '[$duration]($style) '
+min_time = 2000
+style = "bold yellow"
+
+[nodejs]
+disabled = false
+format = "[$symbol($version )]($style)"
+style = "bold green"
+symbol = "󰚩 "
+
+[lua]
+disabled = false
+format = "[$symbol($version )]($style)"
+style = "bold blue"
+symbol = "󰽢 "
+
+[python]
+disabled = false
+format = "[$virtualenv]($style)"
+python_binary = "python3"
+style = "bold yellow"
+symbol = "󱔎"
+
+[character]
+disabled = true
+success_symbol = "[󰳟](purple) "
+error_symbol = "[󰳟](red) "
+vimcmd_symbol = "[󰳝](green) "
+
+# Define custom colors
+[palettes.tokyo]
+accent = "#7aa2f7"

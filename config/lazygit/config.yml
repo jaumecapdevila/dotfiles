@@ -1,0 +1,80 @@
+themes:
+  tokyo: &tokyo
+    activeBorderColor:
+      - "#7aa2f7"
+      - bold
+    inactiveBorderColor:
+      - "#444b6a"
+    selectedLineBgColor:
+      - "#292e42" # set to `default` to have no background colour
+    searchingActiveBorderColor:
+      - "#e0af68"
+      - bold
+    defaultFgColor:
+      - "#a9b1d6"
+
+os:
+  editPreset: "nvim"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --features tokyo-storm --paging=never
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
+
+gui:
+  border: "rounded" # one of 'single' | 'double' | 'rounded' | 'hidden'
+  commandLogSize: 10
+  filterMode: "fuzzy" # one of 'substring' | 'fuzzy'; see 'Filtering' section below
+  mainPanelSplitMode: "vertical" # one of 'horizontal' | 'flexible' | 'vertical'
+  nerdFontsVersion: "3"
+  scrollHeight: 20
+  scrollPastBottom: false
+  showBottomLine: false
+  showFileTree: false
+  showListFooter: false # for seeing the '5 of 20' message in list panels
+  windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
+  theme: *tokyo
+
+customCommands:
+  - key: "f"
+    command: "git difftool -y {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}"
+    context: "commitFiles"
+    description: "Compare (difftool) with local copy"
+  - key: "E"
+    context: "files"
+    command: "gitmoji -c"
+    loadingText: "Loading gitmoji"
+    subprocess: true
+  - key: "z"
+    command: "~/.dotfiles/bin/gc"
+    context: "files"
+    loadingText: "Commitizen prompt"
+    subprocess: true
+  - key: "<c-p>"
+    context: "global"
+    loadingText: "pushing"
+    prompts:
+      - type: "input"
+        title: "which branch do you want to push to?"
+    command: "git push origin {{index .PromptResponses 0}}"
+  - key: "<c-P>"
+    description: "Push to a specific remote repository"
+    context: "global"
+    loadingText: "Pushing ..."
+    prompts:
+      - type: "menuFromCommand"
+        title: "Which remote repository to push to?"
+        command: bash -c "git remote --verbose | grep '/.* (push)'"
+        filter: '(?P<remote>.*)\s+(?P<url>.*) \(push\)'
+        valueFormat: "{{ .remote }}"
+        labelFormat: "{{ .remote | bold | cyan }} {{ .url }}"
+      - type: "menu"
+        title: "How to push?"
+        options:
+          - value: "push"
+          - value: "push --force-with-lease"
+          - value: "push --force"
+
+includes:
+  - themes/onedark.yml
