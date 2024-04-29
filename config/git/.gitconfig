@@ -31,7 +31,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = tokyo-storm
+  features = night-owlish
 	navigate = true
 
 [diff]

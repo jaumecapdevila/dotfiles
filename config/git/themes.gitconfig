@@ -1,3 +1,7 @@
+[delta "night-owlish"]
+    dark = true
+    syntax-theme = Night Owlish
+
 [delta "tokyo-storm"]
     dark = true
     syntax-theme = Tokyo Storm
