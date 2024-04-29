@@ -15,10 +15,21 @@ return {
   },
 
   {
-    "oxfist/night-owl.nvim",
-    name = "night-owl",
+    "olivercederborg/poimandres.nvim",
+    name = "poimandres",
     lazy = false,
     priority = 1000,
+    opts = function() return require("plugins.themes.poimandres") end,
+    config = function(_, opts)
+      require("poimandres").setup(opts)
+      vim.cmd("colorscheme poimandres")
+    end,
+  },
+
+  {
+    "oxfist/night-owl.nvim",
+    name = "night-owl",
+    enabled = false,
     opts = function() return require("plugins.themes.nightowl") end,
     config = function(_, opts)
       require("night-owl").setup(opts)

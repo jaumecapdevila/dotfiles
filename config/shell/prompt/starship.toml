@@ -15,7 +15,7 @@
 add_newline = true
 
 # sets which color palette from palettes to use
-palette = "nightowl"
+palette = "poimandres"
 
 # configure the format of the prompt
 format = """
@@ -81,3 +81,6 @@ accent = "#7aa2f7"
 
 [palettes.nightowl]
 accent = "#82aaff"
+
+[palettes.poimandres]
+accent = "#89ddff"
