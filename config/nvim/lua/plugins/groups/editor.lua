@@ -6,12 +6,23 @@ return {
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
       vim.cmd("colorscheme tokyonight")
+    end,
+  },
+
+  {
+    "oxfist/night-owl.nvim",
+    name = "night-owl",
+    lazy = false,
+    priority = 1000,
+    opts = function() return require("plugins.themes.nightowl") end,
+    config = function(_, opts)
+      require("night-owl").setup(opts)
+      vim.cmd("colorscheme night-owl")
     end,
   },
 

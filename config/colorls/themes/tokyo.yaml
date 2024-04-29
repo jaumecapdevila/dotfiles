@@ -1,5 +1,3 @@
-# Tokyo themed dark color settings for colorls
-#
 # Main Colors
 unrecognized_file: '#ff9e64' # Orange
 recognized_file: '#a9b1d6' # Foreground
@@ -35,7 +33,7 @@ file_small: '#9ece6a' # Green
 report: '#9ece6a' # Green
 user: '#449dab' # Cyan
 tree: '#7aa2f7' # Blue
-empty: '#5C6370' # Comment
+empty: '#565f89' # Comment
 error: '#ff7a93' # Red
 normal: '#a9b1d6' # Foreground
 
