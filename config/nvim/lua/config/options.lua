@@ -7,7 +7,7 @@ g.maplocalleader = " "
 
 -------------------------------------- options ------------------------------------------
 opt.clipboard = "unnamedplus" -- sync with system clipboard
-opt.cursorline = true -- enable or disable line highlighting
+opt.cursorline = false -- enable or disable line highlighting
 
 -- Theming
 o.background = "dark"
