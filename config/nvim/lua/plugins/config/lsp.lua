@@ -9,6 +9,7 @@ local on_attach = function(_, bufnr) u.map(k.lspconfig, { buffer = bufnr }) end
 
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
+capabilities.semanticTokensProvider = nil
 
 -- used to register lsp servers with some extra options
 local setup_server = function(server, extra_opts)
