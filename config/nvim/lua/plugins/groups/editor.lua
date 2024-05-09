@@ -6,7 +6,8 @@ return {
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
@@ -15,14 +16,24 @@ return {
   },
 
   {
-    "olivercederborg/poimandres.nvim",
-    name = "poimandres",
-    lazy = false,
-    priority = 1000,
-    opts = function() return require("plugins.themes.poimandres") end,
+    "rose-pine/neovim",
+    name = "rose-pine",
+    enabled = false,
+    opts = function() return require("plugins.themes.rose-pine") end,
     config = function(_, opts)
-      require("poimandres").setup(opts)
-      vim.cmd("colorscheme poimandres")
+      require("rose-pine").setup(opts)
+      vim.cmd("colorscheme rose-pine")
+    end,
+  },
+
+  {
+    "ellisonleao/gruvbox.nvim",
+    name = "gruvbox",
+    enabled = false,
+    opts = function() return require("plugins.themes.gruvbox") end,
+    config = function(_, opts)
+      require("gruvbox").setup(opts)
+      vim.cmd("colorscheme gruvbox")
     end,
   },
 
@@ -30,10 +41,11 @@ return {
     "oxfist/night-owl.nvim",
     name = "night-owl",
     enabled = false,
-    opts = function() return require("plugins.themes.nightowl") end,
+    opts = function() return require("plugins.themes.night-owl") end,
     config = function(_, opts)
       require("night-owl").setup(opts)
       vim.cmd("colorscheme night-owl")
+      vim.cmd("hi clear SignColumn")
     end,
   },
 
@@ -72,6 +84,7 @@ return {
   {
     "andreadev-it/shade.nvim",
     keys = "<Bslash>",
+    enabled = false,
     config = function()
       require("shade").setup({
         exclude_filetypes = { "NvimTree" },
@@ -119,5 +132,27 @@ return {
     "NvChad/nvim-colorizer.lua",
     event = { "BufReadPre", "BufNewFile" },
     config = true,
+  },
+
+  -- Git UI
+  {
+    "kdheepak/lazygit.nvim",
+    enabled = false,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
   },
 }
