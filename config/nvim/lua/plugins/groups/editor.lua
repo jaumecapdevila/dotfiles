@@ -6,8 +6,7 @@ return {
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
@@ -38,14 +37,14 @@ return {
   },
 
   {
-    "oxfist/night-owl.nvim",
-    name = "night-owl",
-    enabled = false,
-    opts = function() return require("plugins.themes.night-owl") end,
+    "neanias/everforest-nvim",
+    name = "everforest",
+    lazy = false,
+    priority = 1000,
+    opts = function() return require("plugins.themes.everforest") end,
     config = function(_, opts)
-      require("night-owl").setup(opts)
-      vim.cmd("colorscheme night-owl")
-      vim.cmd("hi clear SignColumn")
+      require("everforest").setup(opts)
+      vim.cmd("colorscheme everforest")
     end,
   },
 
@@ -54,7 +53,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     init = function() u.map(k.telescope) end,

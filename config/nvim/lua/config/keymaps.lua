@@ -79,7 +79,7 @@ M.general = {
     ["<C-k>"] = { "<cmd>wincmd k<cr>", "Go to upper window" },
     ["<C-l>"] = { "<cmd>wincmd l<cr>", "Go to right window" },
     ["<C-/>"] = { "<cmd>close<cr>", "Hide Terminal" },
-    ["<c-_>"] = { "<cmd>close<cr>", "which_key_ignore" }
+    ["<c-_>"] = { "<cmd>close<cr>", "which_key_ignore" },
   },
 }
 

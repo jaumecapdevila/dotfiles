@@ -31,7 +31,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = tokyo-storm
+  features = everforest
 	navigate = true
 
 [diff]
@@ -50,4 +50,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-

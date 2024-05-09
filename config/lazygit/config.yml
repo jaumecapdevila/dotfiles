@@ -1,25 +1,10 @@
-themes:
-  tokyo: &tokyo
-    activeBorderColor:
-      - "#7aa2f7"
-      - bold
-    inactiveBorderColor:
-      - "#444b6a"
-    selectedLineBgColor:
-      - "#292e42" # set to `default` to have no background colour
-    searchingActiveBorderColor:
-      - "#e0af68"
-      - bold
-    defaultFgColor:
-      - "#a9b1d6"
-
 os:
   editPreset: "nvim"
 
 git:
   paging:
     colorArg: always
-    pager: delta --features tokyo-storm --paging=never
+    pager: delta --paging=never
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
 
 gui:
@@ -34,7 +19,6 @@ gui:
   showFileTree: false
   showListFooter: false # for seeing the '5 of 20' message in list panels
   windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
-  theme: *tokyo
 
 customCommands:
   - key: "f"
