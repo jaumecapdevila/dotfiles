@@ -6,7 +6,8 @@ return {
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
-    enabled = false,
+    lazy = false,
+    priority = 1000,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
@@ -15,32 +16,9 @@ return {
   },
 
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    enabled = false,
-    opts = function() return require("plugins.themes.rose-pine") end,
-    config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
-    end,
-  },
-
-  {
-    "ellisonleao/gruvbox.nvim",
-    name = "gruvbox",
-    enabled = false,
-    opts = function() return require("plugins.themes.gruvbox") end,
-    config = function(_, opts)
-      require("gruvbox").setup(opts)
-      vim.cmd("colorscheme gruvbox")
-    end,
-  },
-
-  {
     "neanias/everforest-nvim",
     name = "everforest",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.themes.everforest") end,
     config = function(_, opts)
       require("everforest").setup(opts)
@@ -53,7 +31,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     init = function() u.map(k.telescope) end,
