@@ -15,7 +15,7 @@
 add_newline = true
 
 # sets which color palette from palettes to use
-palette = "everforest"
+palette = "tokyonight"
 
 # configure the format of the prompt
 format = """
@@ -76,7 +76,7 @@ error_symbol = "[󰳟](red) "
 vimcmd_symbol = "[󰳝](green) "
 
 # Define custom colors
-[palettes.tokyo]
+[palettes.tokyonight]
 accent = "#7aa2f7"
 
 [palettes.everforest]

@@ -9,6 +9,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "BufReadPre",
+    enabled = false,
     opts = { mode = "cursor" },
   },
 }

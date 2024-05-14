@@ -53,8 +53,8 @@
     "font_family": "DankMono Nerd Font",
     "font_size": 17
   },
-  "theme": "Everforest Dark",
-  "ui_font_family": "Dank Mono",
+  "theme": "Tokyo Night Storm",
+  // "ui_font_family": "Dank Mono",
   "ui_font_size": 17,
   "vertical_scroll_margin": 0,
   "vim_mode": true,

@@ -2,21 +2,6 @@
     dark = true
     syntax-theme = Everforest
 
-[delta "tokyo-storm"]
-    dark = true
-    syntax-theme = Tokyo Storm
-    minus-style                   = syntax "#3f2d3d"
-    minus-non-emph-style          = syntax "#3f2d3d"
-    minus-emph-style              = syntax "#763842"
-    minus-empty-line-marker-style = syntax "#3f2d3d"
-    line-numbers-minus-style      = "#b2555b"
-    plus-style                    = syntax "#283b4d"
-    plus-non-emph-style           = syntax "#283b4d"
-    plus-emph-style               = syntax "#316172"
-    plus-empty-line-marker-style  = syntax "#283b4d"
-    line-numbers-plus-style       = "#266d6a"
-    line-numbers-zero-style       = "#3b4261"
-
 [delta "tokyo-night"]
     dark = true
     syntax-theme = Tokyo Night
@@ -29,5 +14,20 @@
     plus-non-emph-style           = syntax "#20303b"
     plus-emph-style               = syntax "#2c5a66"
     plus-empty-line-marker-style  = syntax "#20303b"
+    line-numbers-plus-style       = "#266d6a"
+    line-numbers-zero-style       = "#3b4261"
+
+[delta "tokyo-night-storm"]
+    dark = true
+    syntax-theme = Tokyo Night Storm
+    minus-style                   = syntax "#3f2d3d"
+    minus-non-emph-style          = syntax "#3f2d3d"
+    minus-emph-style              = syntax "#763842"
+    minus-empty-line-marker-style = syntax "#3f2d3d"
+    line-numbers-minus-style      = "#b2555b"
+    plus-style                    = syntax "#283b4d"
+    plus-non-emph-style           = syntax "#283b4d"
+    plus-emph-style               = syntax "#316172"
+    plus-empty-line-marker-style  = syntax "#283b4d"
     line-numbers-plus-style       = "#266d6a"
     line-numbers-zero-style       = "#3b4261"

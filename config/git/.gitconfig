@@ -31,7 +31,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = everforest
+  features = tokyo-night-storm
 	navigate = true
 
 [diff]
