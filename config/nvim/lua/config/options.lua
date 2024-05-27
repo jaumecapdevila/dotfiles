@@ -12,6 +12,7 @@ opt.cursorline = false -- enable or disable line highlighting
 -- Theming
 o.background = "dark"
 g.transparent = true
+g.material_style = "palenight"
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs
@@ -20,7 +21,7 @@ opt.smartindent = true
 opt.tabstop = 2
 opt.softtabstop = 2
 
-opt.fillchars = { eob = " " }
+opt.fillchars = { vert = " ", eob = " " }
 opt.ignorecase = true
 opt.smartcase = true
 opt.mouse = "a"

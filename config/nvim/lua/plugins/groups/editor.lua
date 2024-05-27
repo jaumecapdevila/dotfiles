@@ -4,10 +4,20 @@ local k = require("config.keymaps")
 return {
   -- colorschemes
   {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
+    "marko-cerovac/material.nvim",
     lazy = false,
     priority = 1000,
+    opts = function() return require("plugins.themes.material") end,
+    config = function(_, opts)
+      require("material").setup(opts)
+      vim.cmd("colorscheme material")
+    end,
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
+    enabled = false,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)

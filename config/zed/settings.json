@@ -11,11 +11,11 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Dank Mono",
+  "buffer_font_family": "PragmataPro Mono",
   "buffer_font_features": {
-    "liga": true
+    "liga": false
   },
-  "buffer_font_size": 17,
+  "buffer_font_size": 18,
   "chat_panel": {
     "button": false
   },
@@ -50,11 +50,10 @@
   "show_wrap_guides": false,
   "tab_size": 2,
   "terminal": {
-    "font_family": "DankMono Nerd Font",
-    "font_size": 17
+    "font_family": "PragmataProMono Nerd Font",
+    "font_size": 18
   },
-  "theme": "Tokyo Night Storm",
-  // "ui_font_family": "Dank Mono",
+  "theme": "Ayu Mirage",
   "ui_font_size": 17,
   "vertical_scroll_margin": 0,
   "vim_mode": true,

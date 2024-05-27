@@ -2,6 +2,10 @@
     dark = true
     syntax-theme = Everforest
 
+[delta "palenight"]
+    dark = true
+    syntax-theme = Palenight
+
 [delta "tokyo-night"]
     dark = true
     syntax-theme = Tokyo Night
