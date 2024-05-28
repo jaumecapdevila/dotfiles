@@ -15,7 +15,7 @@
 add_newline = true
 
 # sets which color palette from palettes to use
-palette = "tokyonight"
+palette = "palenight"
 
 # configure the format of the prompt
 format = """
@@ -81,3 +81,6 @@ accent = "#7aa2f7"
 
 [palettes.everforest]
 accent = "#7fbbb3"
+
+[palettes.palenight]
+accent = "#82aaff"
