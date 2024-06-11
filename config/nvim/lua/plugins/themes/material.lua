@@ -1,4 +1,5 @@
 local g = vim.g
+local colors = require("material.colors")
 
 return {
   contrast = {
@@ -36,5 +37,10 @@ return {
   },
   async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
   custom_colors = nil, -- If you want to override the default colors, set this to a function
-  custom_highlights = {}, -- Overwrite highlights with your own
+  custom_highlights = {
+    ["@property"] = { fg = colors.main.yellow },
+    ["@variable.member"] = { fg = colors.main.blue }, -- Fields
+    ["@string.escape"] = { fg = colors.editor.fg },
+    ["@string.special"] = { fg = colors.editor.fg },
+  },
 }

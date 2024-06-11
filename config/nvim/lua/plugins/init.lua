@@ -29,7 +29,7 @@ require("lazy").setup({
     { import = "plugins.groups.utils" },
   },
   defaults = { lazy = false },
-  install = { colorscheme = { "onedark" } },
+  install = { colorscheme = { "material" } },
   ui = {
     icons = {
       ft = "",
