@@ -31,7 +31,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = palenight
+  features = halcyon
 	navigate = true
 
 [diff]

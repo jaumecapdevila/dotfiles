@@ -1,4 +1,5 @@
 require("config.options")
+require("config.colors")
 require("config.autocmds")
 
 -- load general keymaps

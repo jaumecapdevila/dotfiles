@@ -4,6 +4,7 @@ local opt = vim.opt
 
 g.mapleader = " "
 g.maplocalleader = " "
+g.dotfiles_path = vim.fn.expand("~/.dotfiles")
 
 -------------------------------------- options ------------------------------------------
 opt.clipboard = "unnamedplus" -- sync with system clipboard

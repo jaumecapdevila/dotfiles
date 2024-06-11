@@ -14,9 +14,6 @@
 # inserts blank line between shell prompts
 add_newline = true
 
-# sets which color palette from palettes to use
-palette = "palenight"
-
 # configure the format of the prompt
 format = """
 $directory\
@@ -32,7 +29,7 @@ format = "[󰉋 $path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
 read_only_style = "bold red"
-style = "bold accent"
+style = "bold blue"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = "…/"
@@ -74,13 +71,3 @@ disabled = true
 success_symbol = "[󰳟](purple) "
 error_symbol = "[󰳟](red) "
 vimcmd_symbol = "[󰳝](green) "
-
-# Define custom colors
-[palettes.tokyonight]
-accent = "#7aa2f7"
-
-[palettes.everforest]
-accent = "#7fbbb3"
-
-[palettes.palenight]
-accent = "#82aaff"

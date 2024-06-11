@@ -4,9 +4,18 @@ local k = require("config.keymaps")
 return {
   -- colorschemes
   {
+    "Shatur/neovim-ayu",
+    enabled = false,
+    opts = function() return require("plugins.themes.ayu") end,
+    config = function(_, opts)
+      require("ayu").setup(opts)
+      vim.cmd("colorscheme ayu")
+    end,
+  },
+
+  {
     "marko-cerovac/material.nvim",
-    lazy = false,
-    priority = 1000,
+    enabled = false,
     opts = function() return require("plugins.themes.material") end,
     config = function(_, opts)
       require("material").setup(opts)
@@ -16,23 +25,11 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    name = "tokyonight",
     enabled = false,
     opts = function() return require("plugins.themes.tokyonight") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)
       vim.cmd("colorscheme tokyonight")
-    end,
-  },
-
-  {
-    "neanias/everforest-nvim",
-    name = "everforest",
-    enabled = false,
-    opts = function() return require("plugins.themes.everforest") end,
-    config = function(_, opts)
-      require("everforest").setup(opts)
-      vim.cmd("colorscheme everforest")
     end,
   },
 
