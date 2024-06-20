@@ -1,31 +1,3 @@
-themes:
-  palenight: &palenight
-    activeBorderColor:
-      - "#AB47BC"
-      - bold
-    inactiveBorderColor:
-      - "#444b6a"
-    selectedLineBgColor:
-      - "default" # set to `default` to have no background colour
-    searchingActiveBorderColor:
-      - "#ffcb6b"
-      - bold
-    defaultFgColor:
-      - "#969cc7"
-  halcyon: &halcyon
-    activeBorderColor:
-      - "#c3a6ff"
-      - bold
-    inactiveBorderColor:
-      - "#6679a4"
-    selectedLineBgColor:
-      - "#2f3b54" # set to `default` to have no background colour
-    searchingActiveBorderColor:
-      - "#ffcc66"
-      - bold
-    defaultFgColor:
-      - "#a2aabc"
-
 os:
   editPreset: "nvim"
 
@@ -47,7 +19,19 @@ gui:
   showFileTree: false
   showListFooter: false # for seeing the '5 of 20' message in list panels
   windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
-  theme: *palenight
+  theme:
+    activeBorderColor:
+      - "#c3a6ff"
+      - bold
+    inactiveBorderColor:
+      - "#6679a4"
+    selectedLineBgColor:
+      - "#2f3b54" # set to `default` to have no background colour
+    searchingActiveBorderColor:
+      - "#ffcc66"
+      - bold
+    defaultFgColor:
+      - "#a2aabc"
 
 customCommands:
   - key: "f"
@@ -88,6 +72,3 @@ customCommands:
           - value: "push"
           - value: "push --force-with-lease"
           - value: "push --force"
-
-includes:
-  - themes/onedark.yml

@@ -2,26 +2,25 @@ local u = require("utils")
 local k = require("config.keymaps")
 
 return {
-  -- colorschemes
+  -- colorscheme
   {
-    "marko-cerovac/material.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = function() return require("plugins.themes.material") end,
+    "Shatur/neovim-ayu",
+    name = "ayu",
+    enabled = false,
+    opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
-      require("material").setup(opts)
-      vim.cmd("colorscheme material")
+      require("ayu").setup(opts)
+      vim.cmd("colorscheme ayu")
     end,
   },
 
+  -- transparent ui
   {
-    "folke/tokyonight.nvim",
-    enabled = false,
-    opts = function() return require("plugins.themes.tokyonight") end,
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-      vim.cmd("colorscheme tokyonight")
-    end,
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+    cond = vim.g.transparent,
+    opts = function() return require("plugins.config.transparent") end,
+    config = function(_, opts) require("transparent").setup(opts) end,
   },
 
   -- fuzzy finder
