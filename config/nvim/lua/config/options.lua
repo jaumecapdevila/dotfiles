@@ -13,6 +13,7 @@ opt.cursorline = false -- enable or disable line highlighting
 -- Theming
 o.background = "dark"
 g.transparent = true
+g.colorscheme = "ayu"
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

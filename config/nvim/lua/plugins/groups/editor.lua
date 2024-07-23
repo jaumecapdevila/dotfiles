@@ -1,12 +1,27 @@
+local g = vim.g
 local u = require("utils")
 local k = require("config.keymaps")
 
 return {
   -- colorscheme
   {
+    cond = g.colorscheme == "halcyon",
+    dir = "~/Projects/Personal/Open Source/halcyon.nvim",
+    lazy = false,
+    name = "halcyon",
+    priority = 1000,
+    config = function()
+      require("halcyon").setup()
+      vim.cmd("colorscheme halcyon")
+    end,
+  },
+
+  {
     "Shatur/neovim-ayu",
+    cond = g.colorscheme == "ayu",
+    lazy = false,
     name = "ayu",
-    enabled = false,
+    priority = 1000,
     opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
       require("ayu").setup(opts)

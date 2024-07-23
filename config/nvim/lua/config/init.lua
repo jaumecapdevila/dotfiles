@@ -7,4 +7,4 @@ local k = require("config.keymaps")
 u.map(k.general)
 
 -- colorscheme
-vim.cmd("colorscheme halcyon")
+-- vim.cmd("colorscheme halcyon")

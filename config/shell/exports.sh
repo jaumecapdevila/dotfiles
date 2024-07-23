@@ -16,17 +16,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 export FZF_DEFAULT_OPTS=" \
---preview 'bat --color=always --style=numbers --line-range=:500 {}' \
 --reverse \
 --no-info \
---pointer=' ' \
+--pointer='󰳟 ' \
 --prompt='󰈲 ' \
 --ansi \
 --border rounded \
 --color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
 
 export FZF_CTRL_R_OPTS=" \
---pointer=' ' \
+--pointer='󰳟 ' \
 --prompt='󰈲 '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
@@ -46,13 +45,13 @@ export GPG_TTY
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 export path=(
-	"$HOME/bin"
-	"$HOME/.local/bin"
 	"$DOTFILES/bin"
-	"$JAVA_HOME/bin"
 	"$GEM_HOME/bin"
 	"$GOPATH/bin"
 	"$HOME/.cargo/bin"
+	"$HOME/.magento-cloud/bin"
+	"$HOME/.orbstack/bin"
+	"$JAVA_HOME/bin"
 	"/opt/homebrew/opt/ruby/bin"
 	"/opt/homebrew/opt/python@3.9/libexec/bin"
 	"/opt/homebrew/bin"
@@ -62,5 +61,4 @@ export path=(
 	"/usr/bin"
 	"/usr/sbin"
 	"/sbin"
-	"$HOME/.magento-cloud/bin"
 )

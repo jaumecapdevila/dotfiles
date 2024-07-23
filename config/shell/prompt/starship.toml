@@ -13,16 +13,27 @@
 
 # inserts blank line between shell prompts
 add_newline = true
+command_timeout = 3000
 
 # configure the format of the prompt
 format = """
+$username\
 $directory\
 $git_branch\
 $lua\
 $nodejs\
 $python\
 $cmd_duration\
+$line_break\
 $character"""
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style) '
+disabled = true
+show_always = true
+aliases = { "capdevil" = "jimmy" }
 
 [directory]
 format = "[󰉋 $path]($style) "
@@ -42,22 +53,17 @@ symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
 
-[cmd_duration]
-format = '[$duration]($style) '
-min_time = 2000
-style = "bold yellow"
+[lua]
+disabled = false
+format = "[$symbol($version )]($style)"
+style = "bold blue"
+symbol = "󰽢 "
 
 [nodejs]
 disabled = false
 format = "[$symbol($version )]($style)"
 style = "bold green"
 symbol = "󰚩 "
-
-[lua]
-disabled = false
-format = "[$symbol($version )]($style)"
-style = "bold blue"
-symbol = "󰽢 "
 
 [python]
 disabled = false
@@ -66,8 +72,17 @@ python_binary = "python3"
 style = "bold yellow"
 symbol = "󱔎"
 
+[cmd_duration]
+format = '[$duration]($style) '
+min_time = 2000
+style = "bold yellow"
+
+[line_break]
+disabled = true
+
 [character]
 disabled = true
-success_symbol = "[󰳟](purple) "
-error_symbol = "[󰳟](red) "
-vimcmd_symbol = "[󰳝](green) "
+success_symbol = "[](green) "
+error_symbol = "[](red) "
+vimcmd_symbol = "[](green) "
+

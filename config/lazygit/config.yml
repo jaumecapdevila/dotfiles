@@ -9,7 +9,7 @@ git:
 
 gui:
   border: "rounded" # one of 'single' | 'double' | 'rounded' | 'hidden'
-  commandLogSize: 10
+  commandLogSize: 5
   filterMode: "fuzzy" # one of 'substring' | 'fuzzy'; see 'Filtering' section below
   mainPanelSplitMode: "vertical" # one of 'horizontal' | 'flexible' | 'vertical'
   nerdFontsVersion: "3"

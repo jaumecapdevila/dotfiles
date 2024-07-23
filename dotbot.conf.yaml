@@ -19,9 +19,7 @@
     ~/.config/gh: config/gh
     ~/.config/karabiner: config/karabiner
     ~/.config/nvim: config/nvim
-    ~/.config/sketchybar: config/sketchybar
     ~/.config/starship.toml: config/shell/prompt/starship.toml
-    ~/.config/tmux: config/tmux
     ~/.config/zed/settings.json: config/zed/settings.json
     ~/.gitattributes: config/git/.gitattributes
     ~/.gitconfig: config/git/.gitconfig
