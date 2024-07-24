@@ -8,12 +8,11 @@ g.maplocalleader = " "
 
 -------------------------------------- options ------------------------------------------
 opt.clipboard = "unnamedplus" -- sync with system clipboard
-opt.cursorline = false -- enable or disable line highlighting
+opt.cursorline = true -- enable or disable line highlighting
 
 -- Theming
 o.background = "dark"
 g.transparent = true
-g.colorscheme = "ayu"
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

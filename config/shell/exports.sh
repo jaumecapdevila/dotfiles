@@ -18,14 +18,14 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_DEFAULT_OPTS=" \
 --reverse \
 --no-info \
---pointer='󰳟 ' \
+--pointer='󰳟' \
 --prompt='󰈲 ' \
 --ansi \
 --border rounded \
 --color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
 
 export FZF_CTRL_R_OPTS=" \
---pointer='󰳟 ' \
+--pointer='󰳟' \
 --prompt='󰈲 '"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)

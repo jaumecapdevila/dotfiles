@@ -5,28 +5,10 @@ local k = require("config.keymaps")
 return {
   -- colorscheme
   {
-    cond = g.colorscheme == "halcyon",
-    dir = "~/Projects/Personal/Open Source/halcyon.nvim",
+    "tjdevries/colorbuddy.nvim",
     lazy = false,
-    name = "halcyon",
     priority = 1000,
-    config = function()
-      require("halcyon").setup()
-      vim.cmd("colorscheme halcyon")
-    end,
-  },
-
-  {
-    "Shatur/neovim-ayu",
-    cond = g.colorscheme == "ayu",
-    lazy = false,
-    name = "ayu",
-    priority = 1000,
-    opts = function() return require("plugins.colors.ayu") end,
-    config = function(_, opts)
-      require("ayu").setup(opts)
-      vim.cmd("colorscheme ayu")
-    end,
+    config = function() vim.cmd("colorscheme halcyon") end,
   },
 
   -- transparent ui
