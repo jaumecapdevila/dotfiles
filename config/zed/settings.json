@@ -27,11 +27,11 @@
     "syntax": {
       "constant": {
         "font_style": "normal",
-        "font_weight": 600
+        "font_weight": 400
       },
       "keyword": {
-        "font_style": "italic",
-        "font_weight": 600
+        "font_style": "normal",
+        "font_weight": 400
       }
     }
   },
