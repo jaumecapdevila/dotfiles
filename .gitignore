@@ -1,10 +1,6 @@
 # Karabiner
 config/karabiner/automatic_backups
 
-# Fish
-.config/shell/fish/fish_variables
-.config/shell/fish/functions/fzf_key_bindings.fish
-
 # Compiled zsh
 config/shell/zsh/**/**.zwc
 config/shell/zsh/**/**.zwc.old
@@ -12,7 +8,3 @@ config/shell/zsh/.zim
 
 # Private Stuff
 /**/**/private-*
-
-# Tmux
-config/tmux/plugins/
-config/tmux/resurrect/

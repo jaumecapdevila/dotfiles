@@ -21,6 +21,7 @@
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/shell/prompt/starship.toml
     ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.config/zed/themes: config/zed/themes
     ~/.gitattributes: config/git/.gitattributes
     ~/.gitconfig: config/git/.gitconfig
     ~/.gitignore_global: config/git/.gitignore_global

@@ -38,6 +38,8 @@ export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
 
+export PIPENV_VERBOSITY=-1
+
 GPG_TTY=$(tty)
 export GPG_TTY
 

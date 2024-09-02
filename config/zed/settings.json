@@ -24,19 +24,6 @@
   "cursor_blink": true,
   "ensure_final_newline_on_save": true,
   "experimental.theme_overrides": {
-    "border.variant": "#ffcc66",
-    "elevated_surface.background": "#171c28",
-    "ghost_element.hover": "#2f3b54",
-    "ghost_element.selected": "#2f3b54",
-    "editor.subheader.background": "#2f3b54",
-    "error.background": "#e454541b",
-    "error.border": "#e454541b",
-    "warning.background": "#ff942f1b",
-    "warning.border": "#ff942f1b",
-    "info.background": "#00b7e420",
-    "info.border": "#00b7e420",
-    "hint.background": "#17a2a220",
-    "hint.border": "#00b7e420",
     "syntax": {
       "constant": {
         "font_style": "normal",
@@ -55,6 +42,9 @@
       "enabled": false
     }
   },
+  "tabs": {
+    "file_icons": true
+  },
   "indent_guides": {
     "background_coloring": "indent_aware",
     "coloring": "disabled"
@@ -67,7 +57,7 @@
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
     "button": false,
-    "dock": "right"
+    "dock": "left"
   },
   "relative_line_numbers": true,
   "remove_trailing_whitespace_on_save": true,
@@ -85,7 +75,7 @@
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "Halcyon",
+  "theme": "VSCode Ayu Mirage",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false

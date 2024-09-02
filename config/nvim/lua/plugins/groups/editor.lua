@@ -1,14 +1,18 @@
-local g = vim.g
 local u = require("utils")
 local k = require("config.keymaps")
 
 return {
   -- colorscheme
   {
-    "tjdevries/colorbuddy.nvim",
+    "Shatur/neovim-ayu",
+    name = "ayu",
     lazy = false,
     priority = 1000,
-    config = function() vim.cmd("colorscheme halcyon") end,
+    opts = function() return require("plugins.colors.ayu") end,
+    config = function(_, opts)
+      require("ayu").setup(opts)
+      vim.cmd("colorscheme ayu")
+    end,
   },
 
   -- transparent ui

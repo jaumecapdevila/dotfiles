@@ -67,10 +67,10 @@ symbol = "󰚩 "
 
 [python]
 disabled = false
-format = "[$virtualenv]($style)"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 python_binary = "python3"
 style = "bold yellow"
-symbol = "󱔎"
+symbol = "󱔎 "
 
 [cmd_duration]
 format = '[$duration]($style) '
