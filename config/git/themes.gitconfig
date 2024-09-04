@@ -2,6 +2,6 @@
     dark = true
     syntax-theme = Halcyon
 
-[delta "Ayu Mirage"]
+[delta "Ayu"]
     dark = true
-    syntax-theme = Ayu Mirage
+    syntax-theme = Ayu

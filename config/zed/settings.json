@@ -1,11 +1,16 @@
 {
   "assistant": {
-    "button": false,
-    "version": "1"
+    "button": true,
+    "default_model": {
+      "model": "gpt-4o",
+      "provider": "copilot_chat"
+    },
+    "dock": "right",
+    "version": "2"
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Operator Mono",
+  "buffer_font_family": "PragmataPro Mono",
   "buffer_font_features": {
     "liga": false
   },
@@ -24,14 +29,15 @@
   "cursor_blink": true,
   "ensure_final_newline_on_save": true,
   "experimental.theme_overrides": {
+    "border": "",
     "syntax": {
       "constant": {
         "font_style": "normal",
-        "font_weight": 400
+        "font_weight": 600
       },
       "keyword": {
-        "font_style": "normal",
-        "font_weight": 400
+        "font_style": "italic",
+        "font_weight": 600
       }
     }
   },
@@ -41,9 +47,6 @@
     "inline_blame": {
       "enabled": false
     }
-  },
-  "tabs": {
-    "file_icons": true
   },
   "indent_guides": {
     "background_coloring": "indent_aware",
@@ -70,12 +73,15 @@
     "show_nav_history_buttons": false
   },
   "tab_size": 2,
+  "tabs": {
+    "file_icons": true
+  },
   "terminal": {
     "font_family": "PragmataProMono Nerd Font",
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "VSCode Ayu Mirage",
+  "theme": "VSCode Ayu Mirage Bordered",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
