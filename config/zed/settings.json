@@ -10,7 +10,7 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "PragmataPro Mono",
+  "buffer_font_family": "Operator Mono",
   "buffer_font_features": {
     "liga": false
   },
@@ -28,19 +28,6 @@
   },
   "cursor_blink": true,
   "ensure_final_newline_on_save": true,
-  "experimental.theme_overrides": {
-    "border": "",
-    "syntax": {
-      "constant": {
-        "font_style": "normal",
-        "font_weight": 600
-      },
-      "keyword": {
-        "font_style": "italic",
-        "font_weight": 600
-      }
-    }
-  },
   "format_on_save": "on",
   "git": {
     "git_gutter": "tracked_files",
@@ -81,12 +68,12 @@
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "VSCode Ayu Mirage Bordered",
+  "theme": "VSCode Halcyon",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
   },
   "ui_font_size": 17,
   "vertical_scroll_margin": 0,
-  "vim_mode": true
+  "vim_mode": false
 }

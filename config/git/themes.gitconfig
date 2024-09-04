@@ -1,7 +1,3 @@
 [delta "halcyon"]
     dark = true
     syntax-theme = Halcyon
-
-[delta "Ayu"]
-    dark = true
-    syntax-theme = Ayu

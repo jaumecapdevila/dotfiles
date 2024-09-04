@@ -9,7 +9,7 @@ local apps = {
   g = "GitHub Desktop", -- Git Client
   n = "Bear", -- Notes Taking
   m = "Microsoft Outlook", -- Mail Client
-  t = "iTerm", -- Terminal
+  t = "Warp", -- Terminal
   ["1"] = "1Password", -- Password Manager
 }
 

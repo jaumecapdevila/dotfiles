@@ -21,12 +21,10 @@ zstyle ':omz:plugins:nvm' lazy yes
 plugins=(
   alias-tips
   fzf
-  fzf-tab
   git
   nvm
   starship
   zoxide
-  zsh-syntax-highlighting
 )
 
 # Load Oh My Zsh
@@ -37,10 +35,3 @@ source "$DOTFILES/config/shell/alias.sh"
 source "$DOTFILES/config/shell/funcs.sh"
 source "$DOTFILES/config/shell/bindings.sh"
 
-# Load custom hooks
-autoload -U add-zsh-hook
-add-zsh-hook chpwd cwd_iterm_tab_color
-cwd_iterm_tab_color
-
-# iTerm2 shell integration
-# [ -e "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
