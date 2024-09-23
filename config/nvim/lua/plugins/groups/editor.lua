@@ -5,12 +5,11 @@ return {
   -- colorscheme
   {
     "Shatur/neovim-ayu",
-    enabled = false,
     name = "ayu",
     opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
       require("ayu").setup(opts)
-      vim.cmd("colorscheme ayu")
+      -- vim.cmd("colorscheme ayu")
     end,
   },
 
