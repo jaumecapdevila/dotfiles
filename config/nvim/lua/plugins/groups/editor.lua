@@ -5,14 +5,20 @@ return {
   -- colorscheme
   {
     "Shatur/neovim-ayu",
+    enabled = false,
     name = "ayu",
-    lazy = false,
-    priority = 1000,
     opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
       require("ayu").setup(opts)
       vim.cmd("colorscheme ayu")
     end,
+  },
+
+  {
+    "tjdevries/colorbuddy.nvim",
+    lazy = false,
+    priority = 1000,
+    init = function() vim.cmd("colorscheme halcyon") end,
   },
 
   -- transparent ui

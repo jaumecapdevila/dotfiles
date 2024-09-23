@@ -14,6 +14,10 @@ alias ll='ls -lA'              # List, show almost all files (excludes ./ and ..
 alias lt='ls --tree=5'         # Show tree heirarchy, capped at depth 5 just in case
 alias lg='lgs --gs'            # List and display git status
 
+# Brew
+alias br="brew"
+alias brs="brew services"
+
 # Utils
 alias cl="clear"
 alias lg="lazygit"

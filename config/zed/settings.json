@@ -5,7 +5,7 @@
       "model": "gpt-4o",
       "provider": "copilot_chat"
     },
-    "dock": "right",
+    "dock": "left",
     "version": "2"
   },
   "autosave": "on_focus_change",
@@ -14,6 +14,9 @@
   "buffer_font_features": {
     "liga": false
   },
+  "centered_layout": {
+    "centered": true
+  },
   "buffer_font_size": 17,
   "buffer_font_weight": 300,
   "calls": {
@@ -21,7 +24,8 @@
     "share_on_join": false
   },
   "chat_panel": {
-    "button": false
+    "button": false,
+    "dock": "left"
   },
   "collaboration_panel": {
     "button": false
@@ -41,13 +45,14 @@
   },
   "linked_edits": true,
   "notification_panel": {
-    "button": false
+    "button": false,
+    "dock": "left"
   },
   "project_panel": {
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
     "button": false,
-    "dock": "left"
+    "dock": "right"
   },
   "relative_line_numbers": true,
   "remove_trailing_whitespace_on_save": true,
@@ -57,6 +62,7 @@
   },
   "show_wrap_guides": false,
   "tab_bar": {
+    "show": false,
     "show_nav_history_buttons": false
   },
   "tab_size": 2,
@@ -64,16 +70,18 @@
     "file_icons": true
   },
   "terminal": {
+    "dock": "bottom",
     "font_family": "PragmataProMono Nerd Font",
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "VSCode Halcyon",
+  "theme": "VSCode Ayu Mirage Bordered",
   "toolbar": {
+    "selections_menu": false,
     "breadcrumbs": false,
     "quick_actions": false
   },
   "ui_font_size": 17,
   "vertical_scroll_margin": 0,
-  "vim_mode": false
+  "vim_mode": true
 }

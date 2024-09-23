@@ -15,7 +15,7 @@ chardev: "#bae67e" # Green
 
 # Access Modes
 write: "#d699b6" # Pink
-read: "#c3a6ff" # Purple
+read: "#c3a6ff" # Magenta
 exec: "#5ccfe6" # Cyan
 no_access: "#ef6b73" # Red
 
@@ -32,7 +32,7 @@ file_small: "#bae67e" # Green
 # Random
 report: "#bae67e" # Green
 user: "#5ccfe6" # Cyan
-tree: "#c3a6ff" # Purple
+tree: "#c3a6ff" # Magenta
 empty: "#6679a4" # Comment
 error: "#ef6b73" # Red
 normal: "#a2aabc" # Foreground

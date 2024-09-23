@@ -2,11 +2,11 @@ accent:
   left: "#c3a6ff"
   right: "#5ccfe6"
 background: "#171c28"
-details: darker
-foreground: "#a2aabc"
+details: lighter
+foreground: "#8695b7"
 terminal_colors:
   bright:
-    black: "#171c28"
+    black: "#2f3b54"
     blue: "#5ccfe6"
     cyan: "#5ccfe6"
     green: "#bae67e"
@@ -15,11 +15,11 @@ terminal_colors:
     white: "#d7dce2"
     yellow: "#ffd580"
   normal:
-    black: "#8695b7"
+    black: "#171c28"
     blue: "#5ccfe6"
     cyan: "#5ccfe6"
     green: "#bae67e"
     magenta: "#c3a6ff"
-    red: "#f07078"
-    white: "#d7dce2"
+    red: "#ef6b73"
+    white: "#a2aabc"
     yellow: "#ffd580"
