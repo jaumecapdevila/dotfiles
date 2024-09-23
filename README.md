@@ -10,11 +10,6 @@ I've used these awesome dotfiles (and many others) for inspiration and guidance 
 - https://github.com/joshmedeski/dotfiles
 - https://github.com/felixkratz/dotfiles/
 
-## Prefered themes
-
-- https://github.com/atom/one-dark-syntax
-- https://github.com/simurai/one-dark-vivid-syntax
-
 ## License
 
 The MIT License (MIT). Please see [License](LICENSE) for more information.
