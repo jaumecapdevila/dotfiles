@@ -12,16 +12,16 @@
   "base_keymap": "VSCode",
   "buffer_font_family": "Operator Mono",
   "buffer_font_features": {
-    "liga": false
+    "liga": true
   },
-  "centered_layout": {
-    "centered": true
-  },
-  "buffer_font_size": 17,
+  "buffer_font_size": 18,
   "buffer_font_weight": 300,
   "calls": {
     "mute_on_join": true,
     "share_on_join": false
+  },
+  "centered_layout": {
+    "centered": true
   },
   "chat_panel": {
     "button": false,
@@ -31,7 +31,12 @@
     "button": false
   },
   "cursor_blink": true,
+  "cursor_shape": "bar",
   "ensure_final_newline_on_save": true,
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
   "format_on_save": "on",
   "git": {
     "git_gutter": "tracked_files",
@@ -43,31 +48,68 @@
     "background_coloring": "indent_aware",
     "coloring": "disabled"
   },
+  "inlay_hints": {
+    "enabled": false,
+    "show_background": false
+  },
+  "languages": {
+    "Python": {
+      "format_on_save": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "language_servers": ["pyright", "ruff"]
+    },
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_other_hints": true,
+        "show_parameter_hints": false,
+        "show_type_hints": true
+      }
+    }
+  },
   "linked_edits": true,
   "notification_panel": {
     "button": false,
     "dock": "left"
   },
+  "outline_panel": {
+    "dock": "right"
+  },
   "project_panel": {
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
     "button": false,
-    "dock": "right"
+    "dock": "right",
+    "folder_icons": true,
+    "indent_size": 20
   },
   "relative_line_numbers": true,
   "remove_trailing_whitespace_on_save": true,
   "scroll_beyond_last_line": "off",
   "scrollbar": {
-    "show": "auto"
+    "show": "never"
   },
   "show_wrap_guides": false,
   "tab_bar": {
-    "show": false,
+    "show": true,
     "show_nav_history_buttons": false
   },
   "tab_size": 2,
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
+    "git_status": false
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   },
   "terminal": {
     "dock": "bottom",
@@ -77,11 +119,13 @@
   },
   "theme": "VSCode Halcyon",
   "toolbar": {
-    "selections_menu": false,
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
+    "selections_menu": false
   },
   "ui_font_size": 17,
+  "ui_font_family": "Operator Mono",
+  "ui_font_weight": 400,
   "vertical_scroll_margin": 0,
-  "vim_mode": true
+  "vim_mode": false
 }
