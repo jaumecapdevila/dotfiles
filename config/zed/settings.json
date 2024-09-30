@@ -14,7 +14,7 @@
   "buffer_font_features": {
     "liga": true
   },
-  "buffer_font_size": 18,
+  "buffer_font_size": 17,
   "buffer_font_weight": 300,
   "calls": {
     "mute_on_join": true,
@@ -117,7 +117,7 @@
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "VSCode Halcyon",
+  "theme": "VSCode One Dark",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,

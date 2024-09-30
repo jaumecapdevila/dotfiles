@@ -4,20 +4,13 @@ local k = require("config.keymaps")
 return {
   -- colorscheme
   {
-    "Shatur/neovim-ayu",
-    name = "ayu",
-    opts = function() return require("plugins.colors.ayu") end,
+    "navarasu/onedark.nvim",
+    name = "onedark",
+    opts = function() return require("plugins.colors.onedark") end,
     config = function(_, opts)
-      require("ayu").setup(opts)
-      -- vim.cmd("colorscheme ayu")
+      require("onedark").setup(opts)
+      vim.cmd("colorscheme onedark")
     end,
-  },
-
-  {
-    "tjdevries/colorbuddy.nvim",
-    lazy = false,
-    priority = 1000,
-    init = function() vim.cmd("colorscheme halcyon") end,
   },
 
   -- transparent ui
