@@ -24,14 +24,14 @@ gui:
       - "#568af2"
       - bold
     inactiveBorderColor:
-      - "#4f5666"
+      - "#546178"
     selectedLineBgColor:
-      - "#3a3f4b" # set to `default` to have no background colour
+      - "#343e4f" # set to `default` to have no background colour
     searchingActiveBorderColor:
-      - "#ffcc66"
+      - "#f0a45d"
       - bold
     defaultFgColor:
-      - "#abb2bf"
+      - "#a5b0c5"
 
 customCommands:
   - key: "f"

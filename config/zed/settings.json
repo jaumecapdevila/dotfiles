@@ -12,7 +12,7 @@
   "base_keymap": "VSCode",
   "buffer_font_family": "Operator Mono",
   "buffer_font_features": {
-    "liga": true
+    "liga": false
   },
   "buffer_font_size": 17,
   "buffer_font_weight": 300,
@@ -68,7 +68,7 @@
     },
     "TypeScript": {
       "inlay_hints": {
-        "enabled": true,
+        "enabled": false,
         "show_other_hints": true,
         "show_parameter_hints": false,
         "show_type_hints": true
@@ -117,7 +117,7 @@
     "font_size": 17,
     "font_weight": 400
   },
-  "theme": "VSCode One Dark",
+  "theme": "One Dark Theme",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,

@@ -1,45 +1,46 @@
+# colors ref: https://github.com/navarasu/onedark.nvim/blob/master/lua/onedark/palette.lua
 # Main Colors
-unrecognized_file: "#ffae57" # Orange
-recognized_file: "#a2aabc" # Foreground
-executable_file: "#bae67e" # Green
-dir: "#5ccfe6" # Blue
+unrecognized_file: "#d99a5e" # Orange
+recognized_file: "#a5b0c5" # Foreground
+executable_file: "#97ca72" # Green
+dir: "#5ab0f6" # Blue
 
 # Link
-dead_link: "#ef6b73" # Red
-link: "#5ccfe6" # Cyan
+dead_link: "#ef5f6b" # Red
+link: "#4dbdcb" # Cyan
 
 # Special Files
-socket: "#bae67e" # Green
-blockdev: "#bae67e" # Green
-chardev: "#bae67e" # Green
+socket: "#97ca72" # Green
+blockdev: "#97ca72" # Green
+chardev: "#97ca72" # Green
 
 # Access Modes
-write: "#d699b6" # Pink
-read: "#c3a6ff" # Magenta
-exec: "#5ccfe6" # Cyan
-no_access: "#ef6b73" # Red
+write: "#97ca72" # Green
+read: "#ca72e4" # Magenta
+exec: "#4dbdcb" # Cyan
+no_access: "#ef5f6b" # Red
 
 # Age
-hour_old: "#a2aabc" # Foreground
-day_old: "#6679a4" # Comment
-no_modifier: "#a2aabc" # Foreground
+hour_old: "#a5b0c5" # Foreground
+day_old: "#546178" # Comment
+no_modifier: "#a5b0c5" # Foreground
 
 # File Size
-file_large: "#ef6b73" # Red
-file_medium: "#ffae57" # Orange
-file_small: "#bae67e" # Green
+file_large: "#ef5f6b" # Red
+file_medium: "#d99a5e" # Orange
+file_small: "#97ca72" # Green
 
 # Random
-report: "#bae67e" # Green
-user: "#5ccfe6" # Cyan
-tree: "#c3a6ff" # Magenta
-empty: "#6679a4" # Comment
-error: "#ef6b73" # Red
-normal: "#a2aabc" # Foreground
+report: "#97ca72" # Green
+user: "#4dbdcb" # Cyan
+tree: "#ca72e4" # Magenta
+empty: "#546178" # Comment
+error: "#ef5f6b" # Red
+normal: "#a5b0c5" # Foreground
 
 # Git
-addition: "#5ccfe6" # Cyan
-modification: "#dbbc7f" # Yellow
-deletion: "#ef6b73" # Red
-untracked: "#ffae57" # Orange
-unchanged: "#bae67e" # Green
+addition: "#4dbdcb" # Cyan
+modification: "#ebc275" # Yellow
+deletion: "#ef5f6b" # Red
+untracked: "#d99a5e" # Orange
+unchanged: "#97ca72" # Green
