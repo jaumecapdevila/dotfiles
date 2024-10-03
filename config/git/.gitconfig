@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = onedark
+  features = onedeep
 
 [diff]
 	colorMoved = default

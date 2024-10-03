@@ -1,7 +1,11 @@
+accent:
+  left: "#4fa6ed"
+  right: "#bf68d9"
 background: "#1f2329"
-accent: "#568af2"
-foreground: "#a0a8b7"
+cursor: "#528BFF"
 details: darker
+foreground: "#a0a8b7"
+name: "One Darker"
 terminal_colors:
   normal:
     black: "#0e1013"

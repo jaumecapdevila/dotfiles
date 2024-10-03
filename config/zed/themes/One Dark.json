@@ -11,7 +11,7 @@
         "accents": [],
         "border": "#181a1f",
         "border.variant": "#181a1f",
-        "border.focused": "#568af2",
+        "border.focused": "#528bff",
         "border.selected": "#181a1f",
         "border.transparent": "#181a1f",
         "border.disabled": "#181a1f",
@@ -224,7 +224,7 @@
             "font_weight": null
           },
           "operator": {
-            "color": "#d19a66",
+            "color": "#2bbac5",
             "background_color": null,
             "font_style": null,
             "font_weight": null
@@ -260,7 +260,7 @@
             "font_weight": null
           },
           "punctuation.special": {
-            "color": "#bbbbbb",
+            "color": "#ef596f",
             "background_color": null,
             "font_style": null,
             "font_weight": null
