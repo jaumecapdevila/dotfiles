@@ -1,6 +1,5 @@
-accent:
-  left: "#c3a6ff"
-  right: "#5ccfe6"
+name: "Halcyon"
+accent: "#ffcc66"
 background: "#171c28"
 details: lighter
 foreground: "#8695b7"

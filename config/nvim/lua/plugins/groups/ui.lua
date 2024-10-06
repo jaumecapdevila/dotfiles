@@ -25,6 +25,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    enabled = false,
     init = function() u.map(k.nvim_tree) end,
     opts = function() return require("plugins.config.nvim-tree") end,
     config = function(_, opts)

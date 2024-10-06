@@ -9,7 +9,7 @@ return {
     opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
       require("ayu").setup(opts)
-      -- vim.cmd("colorscheme ayu")
+      vim.cmd("colorscheme ayu")
     end,
   },
 
@@ -17,6 +17,7 @@ return {
     "tjdevries/colorbuddy.nvim",
     lazy = false,
     priority = 1000,
+    enabled = false,
     init = function() vim.cmd("colorscheme halcyon") end,
   },
 

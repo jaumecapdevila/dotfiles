@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = halcyon
+  features = Halcyon
 
 [diff]
 	colorMoved = default

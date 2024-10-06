@@ -1,5 +1,5 @@
 local c = require("ayu.colors")
-c.generate(true) -- Pass `true` to enable mirage
+c.generate(false) -- Pass `true` to enable mirage
 
 local h = {
   Func = { fg = c.func, bold = true },
