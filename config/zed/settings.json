@@ -10,9 +10,9 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "PragmataPro Mono Liga",
+  "buffer_font_family": "Operator Mono",
   "buffer_font_features": {
-    "liga": true
+    "liga": false
   },
   "buffer_font_size": 18,
   "buffer_font_weight": 300,
@@ -115,17 +115,17 @@
     "dock": "bottom",
     "font_family": "PragmataProMono Nerd Font",
     "font_size": 18,
-    "font_weight": 400
+    "font_weight": 300
   },
-  "theme": "VSCode Ayu Mirage Bordered",
+  "theme": "VSCode Ayu Mirage",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
     "selections_menu": false
   },
   "ui_font_size": 18,
-  "ui_font_family": "PragmataPro",
+  "ui_font_family": "Operator Mono",
   "ui_font_weight": 700,
   "vertical_scroll_margin": 0,
-  "vim_mode": false
+  "vim_mode": true
 }

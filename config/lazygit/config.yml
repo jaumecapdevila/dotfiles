@@ -21,17 +21,17 @@ gui:
   windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#c3a6ff"
+      - "#ffd580"
       - bold
     inactiveBorderColor:
-      - "#6679a4"
+      - "#515C69"
     selectedLineBgColor:
-      - "#2f3b54" # set to `default` to have no background colour
+      - "#283543" # set to `default` to have no background colour
     searchingActiveBorderColor:
-      - "#ffcc66"
+      - "#ffd580"
       - bold
     defaultFgColor:
-      - "#a2aabc"
+      - "#cccac2"
 
 customCommands:
   - key: "f"

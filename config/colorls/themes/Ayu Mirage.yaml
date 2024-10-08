@@ -1,45 +1,45 @@
 # Main Colors
-unrecognized_file: "#ffae57" # Orange
-recognized_file: "#a2aabc" # Foreground
-executable_file: "#bae67e" # Green
-dir: "#5ccfe6" # Blue
+unrecognized_file: "#FA8D3E" # Orange
+recognized_file: "#cccac2" # Foreground
+executable_file: "#d5ff80" # Green
+dir: "#73d0ff" # Blue
 
 # Link
-dead_link: "#ef6b73" # Red
-link: "#5ccfe6" # Cyan
+dead_link: "#f28779" # Red
+link: "#95e6cb" # Cyan
 
 # Special Files
-socket: "#bae67e" # Green
-blockdev: "#bae67e" # Green
-chardev: "#bae67e" # Green
+socket: "#d5ff80" # Green
+blockdev: "#d5ff80" # Green
+chardev: "#d5ff80" # Green
 
 # Access Modes
 write: "#d699b6" # Pink
-read: "#c3a6ff" # Magenta
-exec: "#5ccfe6" # Cyan
-no_access: "#ef6b73" # Red
+read: "#dfbfff" # Magenta
+exec: "#95e6cb" # Cyan
+no_access: "#f28779" # Red
 
 # Age
-hour_old: "#a2aabc" # Foreground
-day_old: "#6679a4" # Comment
-no_modifier: "#a2aabc" # Foreground
+hour_old: "#cccac2" # Foreground
+day_old: "#6C7A8B" # Comment
+no_modifier: "#cccac2" # Foreground
 
 # File Size
-file_large: "#ef6b73" # Red
-file_medium: "#ffae57" # Orange
-file_small: "#bae67e" # Green
+file_large: "#f28779" # Red
+file_medium: "#FA8D3E" # Orange
+file_small: "#d5ff80" # Green
 
 # Random
-report: "#bae67e" # Green
-user: "#5ccfe6" # Cyan
-tree: "#c3a6ff" # Magenta
-empty: "#6679a4" # Comment
-error: "#ef6b73" # Red
-normal: "#a2aabc" # Foreground
+report: "#d5ff80" # Green
+user: "#95e6cb" # Cyan
+tree: "#dfbfff" # Magenta
+empty: "#6C7A8B" # Comment
+error: "#f28779" # Red
+normal: "#cccac2" # Foreground
 
 # Git
-addition: "#5ccfe6" # Cyan
-modification: "#dbbc7f" # Yellow
-deletion: "#ef6b73" # Red
-untracked: "#ffae57" # Orange
-unchanged: "#bae67e" # Green
+addition: "#95e6cb" # Cyan
+modification: "#facc6e" # Yellow
+deletion: "#f28779" # Red
+untracked: "#FA8D3E" # Orange
+unchanged: "#d5ff80" # Green

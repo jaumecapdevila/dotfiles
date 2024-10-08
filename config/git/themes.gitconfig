@@ -1,11 +1,11 @@
-[delta "Halcyon"]
+[delta "halcyon"]
     dark = true
     syntax-theme = Halcyon
 
-[delta "Ayu Mirage"]
+[delta "ayu-mirage"]
     dark = true
-    syntax-theme = Ayu Mirage
+    syntax-theme = "Ayu Mirage"
 
-[delta "Ayu Dark"]
+[delta "ayu-dark"]
     dark = true
-    syntax-theme = Ayu Dark
+    syntax-theme = "Ayu Dark"

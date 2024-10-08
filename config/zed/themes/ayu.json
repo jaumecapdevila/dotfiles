@@ -10,8 +10,8 @@
                 "background.appearance": "opaque",
                 "accents": [],
                 "border": "#1f2430",
-                "border.variant": "#facc6e",
-                "border.focused": "#ffcc66b3",
+                "border.variant": "#707a8c45",
+                "border.focused": "#1f2430",
                 "border.selected": "#1f2430",
                 "border.transparent": "#1f2430",
                 "border.disabled": "#1f2430",
@@ -29,16 +29,16 @@
                 "ghost_element.active": null,
                 "ghost_element.selected": "#63759926",
                 "ghost_element.disabled": null,
-                "text": "#707a8c",
+                "text": "#cccac2",
                 "text.muted": "#707a8c",
                 "text.placeholder": null,
                 "text.disabled": null,
-                "text.accent": null,
+                "text.accent": "#facc6e",
                 "icon": null,
                 "icon.muted": null,
                 "icon.disabled": null,
                 "icon.placeholder": null,
-                "icon.accent": null,
+                "icon.accent": "#facc6e",
                 "status_bar.background": "#1f2430",
                 "title_bar.background": "#1f2430",
                 "title_bar.inactive_background": null,
@@ -157,13 +157,13 @@
                         "font_weight": null
                     },
                     "comment": {
-                        "color": "#b8cfe680",
+                        "color": "#6C7A8B",
                         "background_color": null,
                         "font_style": "italic",
                         "font_weight": null
                     },
                     "comment.doc": {
-                        "color": "#b8cfe680",
+                        "color": "#6C7A8B",
                         "background_color": null,
                         "font_style": "italic",
                         "font_weight": null
@@ -202,12 +202,12 @@
                         "color": "#ffd173",
                         "background_color": null,
                         "font_style": null,
-                        "font_weight": null
+                        "font_weight": 700
                     },
                     "keyword": {
                         "color": "#ffad66",
                         "background_color": null,
-                        "font_style": null,
+                        "font_style": "italic",
                         "font_weight": null
                     },
                     "label": {
@@ -259,7 +259,7 @@
                         "font_weight": null
                     },
                     "punctuation.delimiter": {
-                        "color": "#cccac2b3",
+                        "color": "#ffdfb3",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -271,7 +271,7 @@
                         "font_weight": null
                     },
                     "punctuation.special": {
-                        "color": "#cccac2",
+                        "color": "#ffd173",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -322,7 +322,7 @@
                         "color": "#73d0ff",
                         "background_color": null,
                         "font_style": null,
-                        "font_weight": null
+                        "font_weight": 700
                     },
                     "type": {
                         "color": "#5ccfe6",
@@ -371,16 +371,16 @@
                 "ghost_element.active": null,
                 "ghost_element.selected": "#63759926",
                 "ghost_element.disabled": null,
-                "text": "#707a8c",
+                "text": "#cccac2",
                 "text.muted": "#707a8c",
                 "text.placeholder": null,
                 "text.disabled": null,
-                "text.accent": null,
+                "text.accent": "#facc6e",
                 "icon": null,
                 "icon.muted": null,
                 "icon.disabled": null,
                 "icon.placeholder": null,
-                "icon.accent": null,
+                "icon.accent": "#facc6e",
                 "status_bar.background": "#1f2430",
                 "title_bar.background": "#1f2430",
                 "title_bar.inactive_background": null,
@@ -499,13 +499,13 @@
                         "font_weight": null
                     },
                     "comment": {
-                        "color": "#b8cfe680",
+                        "color": "#6C7A8B",
                         "background_color": null,
                         "font_style": "italic",
                         "font_weight": null
                     },
                     "comment.doc": {
-                        "color": "#b8cfe680",
+                        "color": "#6C7A8B",
                         "background_color": null,
                         "font_style": "italic",
                         "font_weight": null
@@ -544,12 +544,12 @@
                         "color": "#ffd173",
                         "background_color": null,
                         "font_style": null,
-                        "font_weight": null
+                        "font_weight": 700
                     },
                     "keyword": {
                         "color": "#ffad66",
                         "background_color": null,
-                        "font_style": null,
+                        "font_style": "italic",
                         "font_weight": null
                     },
                     "label": {
@@ -601,7 +601,7 @@
                         "font_weight": null
                     },
                     "punctuation.delimiter": {
-                        "color": "#cccac2b3",
+                        "color": "#ffdfb3",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -613,7 +613,7 @@
                         "font_weight": null
                     },
                     "punctuation.special": {
-                        "color": "#cccac2",
+                        "color": "#ffd173",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -664,7 +664,7 @@
                         "color": "#73d0ff",
                         "background_color": null,
                         "font_style": null,
-                        "font_weight": null
+                        "font_weight": 700
                     },
                     "type": {
                         "color": "#5ccfe6",
