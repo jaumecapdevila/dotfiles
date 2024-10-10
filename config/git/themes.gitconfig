@@ -1,11 +1,8 @@
-[delta "halcyon"]
-    dark = true
-    syntax-theme = Halcyon
+[delta "onedark"]
+	commit-decoration-style = box ul
+	dark = true
+	hunk-header-decoration-style = box ul
+	hunk-header-file-style = bold
+	hunk-header-style = file line-number syntax
+    syntax-theme = One Deep
 
-[delta "ayu-mirage"]
-    dark = true
-    syntax-theme = "Ayu Mirage"
-
-[delta "ayu-dark"]
-    dark = true
-    syntax-theme = "Ayu Dark"

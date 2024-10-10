@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = ayu-mirage
+  features = onedark
 
 [diff]
 	colorMoved = default

@@ -1,0 +1,25 @@
+accent: "#528BFF"
+background: "#1f2329"
+cursor: "#528BFF"
+details: darker
+foreground: "#a0a8b7"
+name: "One Darker"
+terminal_colors:
+  normal:
+    black: "#0e1013"
+    red: "#e55561"
+    green: "#8ebd6b"
+    yellow: "#e2b86b"
+    blue: "#4fa6ed"
+    magenta: "#bf68d9"
+    cyan: "#48b0bd"
+    white: "#a0a8b7"
+  bright:
+    black: "#535965"
+    red: "#e55561"
+    green: "#8ebd6b"
+    yellow: "#e2b86b"
+    blue: "#4fa6ed"
+    magenta: "#bf68d9"
+    cyan: "#48b0bd"
+    white: "#a0a8b7"

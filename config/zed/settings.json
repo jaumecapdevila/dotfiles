@@ -14,7 +14,7 @@
   "buffer_font_features": {
     "liga": false
   },
-  "buffer_font_size": 18,
+  "buffer_font_size": 17,
   "buffer_font_weight": 300,
   "calls": {
     "mute_on_join": true,
@@ -68,7 +68,7 @@
     },
     "TypeScript": {
       "inlay_hints": {
-        "enabled": true,
+        "enabled": false,
         "show_other_hints": true,
         "show_parameter_hints": false,
         "show_type_hints": true
@@ -89,6 +89,9 @@
     "button": false,
     "dock": "right",
     "folder_icons": true,
+    "scrollbar": {
+      "show": "never"
+    },
     "indent_size": 20
   },
   "relative_line_numbers": true,
@@ -117,15 +120,31 @@
     "font_size": 18,
     "font_weight": 300
   },
+<<<<<<< HEAD
   "theme": "VSCode Ayu Mirage",
+||||||| a9117da
+  "theme": "VSCode Halcyon",
+=======
+  "theme": "One Dark Theme",
+>>>>>>> feature/one-dark-theme
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
     "selections_menu": false
   },
+<<<<<<< HEAD
   "ui_font_size": 18,
   "ui_font_family": "Operator Mono",
   "ui_font_weight": 700,
+||||||| a9117da
+  "ui_font_size": 17,
+  "ui_font_family": "Operator Mono",
+  "ui_font_weight": 400,
+=======
+  "ui_font_size": 17,
+  "ui_font_family": "PragmataPro",
+  "ui_font_weight": 700,
+>>>>>>> feature/one-dark-theme
   "vertical_scroll_margin": 0,
   "vim_mode": true
 }

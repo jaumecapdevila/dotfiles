@@ -1,0 +1,25 @@
+accent: "#528BFF"
+background: "#1a212e"
+cursor: "#528BFF"
+details: darker
+foreground: "#93a4c3"
+name: "One Deep"
+terminal_colors:
+  normal:
+    black: "#0c0e15"
+    red: "#f65866"
+    green: "#8bcd5b"
+    yellow: "#efbd5d"
+    blue: "#41a7fc"
+    magenta: "#c75ae8"
+    cyan: "#34bfd0"
+    white: "#93a4c3"
+  bright:
+    black: "#455574"
+    red: "#f65866"
+    green: "#8bcd5b"
+    yellow: "#efbd5d"
+    blue: "#41a7fc"
+    magenta: "#c75ae8"
+    cyan: "#34bfd0"
+    white: "#93a4c3"
