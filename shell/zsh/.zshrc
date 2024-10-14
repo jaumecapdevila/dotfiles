@@ -11,7 +11,7 @@ setopt HIST_NO_STORE
 setopt +o nomatch
 
 # Load config
-source "$DOTFILES/config/shell/exports.sh"
+source "$DOTFILES/shell/exports.sh"
 
 # disable automatic updates entirely
 zstyle ':omz:update' mode disabled
@@ -19,20 +19,26 @@ zstyle ':omz:update' mode disabled
 zstyle ':omz:plugins:nvm' lazy yes
 
 plugins=(
-  alias-tips
   fzf
+  fzf-tab
   git
   nvm
   starship
+  you-should-use
   zoxide
+  zsh-syntax-highlighting
 )
 
 # Load Oh My Zsh
 source "$ZSH/oh-my-zsh.sh"
 
 # Load custom alias and bindings
-source "$DOTFILES/config/shell/alias.sh"
-source "$DOTFILES/config/shell/funcs.sh"
-source "$DOTFILES/config/shell/bindings.sh"
+source "$DOTFILES/shell/alias.sh"
+source "$DOTFILES/shell/funcs.sh"
+source "$DOTFILES/shell/bindings.sh"
 
+# Load custom hooks
+autoload -U add-zsh-hook
+add-zsh-hook chpwd cwd_iterm_tab_color
+cwd_iterm_tab_color
 

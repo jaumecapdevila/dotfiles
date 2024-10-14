@@ -5,12 +5,11 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
 local apps = {
   b = "Arc", -- Browser
   v = "Visual Studio Code", -- Code Editor
-  z = "Zed", -- Secondary Code Editor
   f = "Finder", -- File Explorer
   g = "GitHub Desktop", -- Git Client
   n = "Bear", -- Notes Taking
   m = "Microsoft Outlook", -- Mail Client
-  t = "Warp", -- Terminal
+  t = "iTerm", -- Terminal
   ["1"] = "1Password", -- Password Manager
 }
 

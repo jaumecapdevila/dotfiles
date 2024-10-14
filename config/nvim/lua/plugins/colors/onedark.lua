@@ -1,10 +1,10 @@
 return {
   -- Main options --
-  style = "deep",                  -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  style = "deep", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   transparent = vim.g.transparent, -- Show/hide background
-  term_colors = true,              -- Change terminal color as per the selected theme style
-  ending_tildes = false,           -- Show the end-of-buffer tildes. By default they are hidden
-  cmp_itemkind_reverse = false,    -- reverse item kind highlights in cmp menu
+  term_colors = true, -- Change terminal color as per the selected theme style
+  ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+  cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
   -- Change code style ---
   -- Options are italic, bold, underline, none
@@ -23,10 +23,11 @@ return {
   },
   highlights = {
     -- Syntax
-    ["@variable.parameter"] = { fg = '$fg' },
-    ["@variable.member"] = { fg = '$orange' },
-    ["@punctuation.special"] = { fg = '$light_grey' },
-    ["@tag.delimiter"] = { fg = '$light_grey' },
+    ["@variable"] = { fg = "$fg" },
+    ["@variable.parameter"] = { fg = "$fg" },
+    ["@variable.member"] = { fg = "$orange" },
+    ["@punctuation.special"] = { fg = "$light_grey" },
+    ["@tag.delimiter"] = { fg = "$light_grey" },
 
     -- Telescope
     TelescopeBorder = { fg = "$accent" },
@@ -38,8 +39,8 @@ return {
 
   -- Plugins Config --
   diagnostics = {
-    darker = false,     -- darker colors for diagnostic
-    undercurl = true,   -- use undercurl instead of underline for diagnostics
+    darker = false, -- darker colors for diagnostic
+    undercurl = true, -- use undercurl instead of underline for diagnostics
     background = false, -- use background color for virtual text
   },
 }

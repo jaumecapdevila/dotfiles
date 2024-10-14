@@ -11,8 +11,8 @@ if [ -n "$FILTER" ]; then
   SCRIPTS=$(echo "$SCRIPTS" | grep "$FILTER")
 fi
 
-select SCRIPT in $SCRIPTS; do
-  "$SCRIPTS_DIR/$SCRIPT"
-  break;
-done
+SCRIPT=$(echo "$SCRIPTS" | fzf)
 
+if [ -n "$SCRIPT" ]; then
+  "$SCRIPTS_DIR/$SCRIPT"
+fi
