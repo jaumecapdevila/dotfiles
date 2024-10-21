@@ -26,6 +26,7 @@ plugins=(
   starship
   you-should-use
   zoxide
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 

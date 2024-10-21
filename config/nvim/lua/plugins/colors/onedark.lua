@@ -23,8 +23,7 @@ return {
   },
   highlights = {
     -- Syntax
-    ["@variable"] = { fg = "$fg" },
-    ["@variable.parameter"] = { fg = "$fg" },
+    ["@variable"] = { fg = "$red" },
     ["@variable.member"] = { fg = "$orange" },
     ["@punctuation.special"] = { fg = "$light_grey" },
     ["@tag.delimiter"] = { fg = "$light_grey" },
