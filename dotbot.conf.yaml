@@ -20,13 +20,12 @@
     ~/.config/karabiner: config/karabiner
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/prompt/starship.toml
-    ~/.config/zed/settings.json: config/zed/settings.json
-    ~/.config/zed/themes: config/zed/themes
+    ~/.config/zed/settings.json: editors/Zed/settings.json
+    ~/.config/zed/themes: editors/Zed/themes
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
     ~/.hammerspoon: mac/Hammerspoon
-    ~/.warp: mac/Warp
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml

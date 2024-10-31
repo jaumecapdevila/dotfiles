@@ -4,12 +4,12 @@ local k = require("config.keymaps")
 return {
   -- colorscheme
   {
-    "navarasu/onedark.nvim",
-    name = "onedark",
-    opts = function() return require("plugins.colors.onedark") end,
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
+    opts = function() return require("plugins.colors.tokyo") end,
     config = function(_, opts)
-      require("onedark").setup(opts)
-      vim.cmd("colorscheme onedark")
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
     end,
   },
 

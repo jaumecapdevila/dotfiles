@@ -39,6 +39,7 @@ alias ys="yarn serve"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
+alias sublime="cd ~/Library/Application Support/Sublime Text/Packages/"
 
 # Github
 alias ai="gh copilot"

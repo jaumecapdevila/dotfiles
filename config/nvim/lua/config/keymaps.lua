@@ -162,11 +162,12 @@ M.lspconfig = {
 
 M.nvim_tree = {
   n = {
-    -- toggle
-    ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-
-    -- focus
-    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
+    ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Toggle explorer" },
+    ["<leader>fe"] = {
+      "<cmd>NvimTreeFindFileToggle<CR>",
+      "Toggle file explorer",
+    },
+    ["<leader>re"] = { "<cmd>NvimTreeRefresh<CR>", "Refresh file explorer" },
   },
 }
 

@@ -45,6 +45,7 @@
     }
   },
   "indent_guides": {
+    "enabled": true,
     "background_coloring": "indent_aware",
     "coloring": "disabled"
   },
@@ -81,7 +82,10 @@
     "dock": "left"
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
+    "indent_guides": {
+      "show": "never"
+    }
   },
   "project_panel": {
     "auto_fold_dirs": true,
@@ -89,6 +93,9 @@
     "button": false,
     "dock": "right",
     "folder_icons": true,
+    "indent_guides": {
+      "show": "never"
+    },
     "scrollbar": {
       "show": "never"
     },
@@ -116,8 +123,8 @@
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "PragmataProMono Nerd Font",
-    "font_size": 18,
+    "font_family": "OperatorMono Nerd Font",
+    "font_size": 17,
     "font_weight": 300
   },
   "theme": "Atom One Dark",
@@ -126,6 +133,7 @@
     "quick_actions": false,
     "selections_menu": false
   },
+  "ui_font_family": "Operator Mono",
   "ui_font_size": 17,
   "ui_font_weight": 400,
   "vertical_scroll_margin": 0,
