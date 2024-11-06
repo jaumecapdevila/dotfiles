@@ -28,7 +28,9 @@ export FZF_CTRL_R_OPTS=" \
 --pointer='󰳟' \
 --prompt='󰈲 '"
 
+# plugins
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1abc9c,bg=#292e42,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 
