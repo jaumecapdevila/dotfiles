@@ -123,7 +123,7 @@
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "OperatorMono Nerd Font",
+    "font_family": "PragmataProMono Nerd Font",
     "font_size": 17,
     "font_weight": 300
   },
@@ -135,7 +135,7 @@
   },
   "ui_font_family": "Operator Mono",
   "ui_font_size": 17,
-  "ui_font_weight": 400,
+  "ui_font_weight": 600,
   "vertical_scroll_margin": 0,
-  "vim_mode": false
+  "vim_mode": true
 }
