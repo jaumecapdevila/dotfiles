@@ -1,7 +1,7 @@
 # Main Colors
 unrecognized_file: "#e0af68" # Yellow
 recognized_file: "#a9b1d6" # Text
-executable_file: "#9ece6a" # Green
+executable_file: "#73daca" # Green
 dir: "#7aa2f7" # Blue
 
 # Link
@@ -9,12 +9,12 @@ dead_link: "#f7768e" # Red
 link: "#7dcfff" # Cyan
 
 # Special Files
-socket: "#9ece6a" # Green
-blockdev: "#9ece6a" # Green
-chardev: "#9ece6a" # Green
+socket: "#73daca" # Green
+blockdev: "#73daca" # Green
+chardev: "#73daca" # Green
 
 # Access Modes
-write: "#9ece6a" # Green
+write: "#73daca" # Green
 read: "#bb9af7" # Magenta
 exec: "#7dcfff" # Cyan
 no_access: "#f7768e" # Red
@@ -27,10 +27,10 @@ no_modifier: "#a9b1d6" # Text
 # File Size
 file_large: "#f7768e" # Red
 file_medium: "#e0af68" # Yellow
-file_small: "#9ece6a" # Green
+file_small: "#73daca" # Green
 
 # Random
-report: "#9ece6a" # Green
+report: "#73daca" # Green
 user: "#7dcfff" # Cyan
 tree: "#bb9af7" # Magenta
 empty: "#565f89" # Gray
@@ -42,4 +42,4 @@ addition: "#7dcfff" # Cyan
 modification: "#e0af68" # Yellow
 deletion: "#f7768e" # Red
 untracked: "#e0af68" # Yellow
-unchanged: "#9ece6a" # Green
+unchanged: "#73daca" # Green

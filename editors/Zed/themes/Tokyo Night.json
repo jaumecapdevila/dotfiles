@@ -150,7 +150,7 @@
                 "players": [],
                 "syntax": {
                     "attribute": {
-                        "color": "#bb9af7",
+                        "color": "#89ddff",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -180,7 +180,7 @@
                         "font_weight": null
                     },
                     "constructor": {
-                        "color": "#f7768e",
+                        "color": "#bb9af7",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -210,7 +210,7 @@
                         "font_weight": null
                     },
                     "label": {
-                        "color": "#c0caf5",
+                        "color": "#7aa2f7",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -294,25 +294,25 @@
                         "font_weight": null
                     },
                     "string.regex": {
-                        "color": "#9ece6a",
+                        "color": "#b4f9f8",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
                     },
                     "string.special": {
-                        "color": "#9ece6a",
+                        "color": "#2ac3de",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
                     },
                     "string.special.symbol": {
-                        "color": "#9ece6a",
+                        "color": "#bb9af7",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
                     },
                     "tag": {
-                        "color": "#f7768e",
+                        "color": "#7aa2f7",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
@@ -324,13 +324,13 @@
                         "font_weight": null
                     },
                     "title": {
-                        "color": "#c0caf5",
+                        "color": "#7aa2f7",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
                     },
                     "type": {
-                        "color": "#c0caf5",
+                        "color": "#2ac3de",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
