@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = tokyo-storm
+  features = tokyo-night
 
 [diff]
 	colorMoved = default
