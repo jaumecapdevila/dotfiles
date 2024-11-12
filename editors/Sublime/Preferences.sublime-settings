@@ -1,0 +1,52 @@
+{
+	// Draw divider lines between sections of the UI when using the Adaptive theme
+	"adaptive_dividers": false,
+	// Valid values are "smooth", "phase", "blink" and "solid". Previous
+	"caret_style": "smooth",
+	"color_scheme": "Packages/Theme - City Lights/City-Lights.tmTheme",
+	// Set to false to turn off the indentation guides.
+	"draw_indent_guides": false,
+	// Allows tabs to scroll left and right, instead of simply shrinking
+	"enable_tab_scrolling": false,
+	// Set to true to ensure the last line of the file ends in a newline
+	"ensure_newline_at_eof_on_save": true,
+	// Options: "rounded", "square"
+	"file_tab_style": "rounded",
+	// Fold buttons are the triangles shown in the gutter to fold regions of text
+	"fold_buttons": false,
+	"font_face": "Operator Mono Book",
+	"font_size": 17,
+	// Hides the new tab button
+	"hide_new_tab_button": true,
+	// Hides the buttons for scrolling tabs left/right
+	"hide_tab_scrolling_buttons": true,
+	// If enabled, will highlight any line with a caret
+	"highlight_line": false,
+	// Makes tabs with modified files more visible
+	"highlight_modified_tabs": false,
+	"ignored_packages": [],
+	// File indexing parses all files in the sidebar
+	"index_files": true,
+	// Additional spacing at the bottom of each line, in pixels
+	"line_padding_bottom": 4,
+	// Additional spacing at the top of each line, in pixels
+	"line_padding_top": 4,
+	// relative_line_numbers will draw each line number as the distance from
+	// the current line. Useful in conjunction with Vintage.
+	"relative_line_numbers": true,
+	"scroll_past_end": false,
+	// May be a boolean, or a string of the path the shell to invoke.
+	"shell_environment": "/opt/homebrew/bin/zsh",
+	// Display file encoding in the status bar
+	"show_encoding": true,
+	// Display indentation in the status bar
+	"show_indentation": true,
+	// Display line endings in the status bar
+	"show_line_endings": true,
+	// Display the toggle sidebar button in the status bar
+	"show_sidebar_button": false,
+	// Hides the tab close button when false
+	"show_tab_close_buttons": false,
+	"theme": "Adaptive.sublime-theme",
+	"wrap_width": 80
+}

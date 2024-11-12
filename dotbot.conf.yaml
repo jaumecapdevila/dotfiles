@@ -29,6 +29,8 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+    ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings: editors/Sublime/Preferences.sublime-settings
+    ~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings: editors/Sublime/Package Control.sublime-settings
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
