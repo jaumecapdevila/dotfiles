@@ -1,3 +1,11 @@
+[delta "solarized"]
+    commit-decoration-style = box ul
+    dark = true
+    hunk-header-decoration-style = box ul
+    hunk-header-file-style = bold
+    hunk-header-style = file line-number syntax
+    syntax-theme = Solarized (dark)
+
 [delta "tokyo-night"]
     commit-decoration-style = box ul
     dark = true

@@ -1,5 +1,4 @@
 {
-  "active_pane_modi": {},
   "assistant": {
     "button": true,
     "default_model": {
@@ -15,6 +14,10 @@
   "buffer_font_features": {
     "liga": false
   },
+  "active_pane_modifiers": {
+    "border_size": 1,
+    "inactive_opacity": 0.5
+  },
   "buffer_font_size": 17,
   "buffer_font_weight": 300,
   "calls": {
@@ -29,7 +32,8 @@
     "dock": "left"
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
+    "dock": "bottom"
   },
   "cursor_blink": true,
   "cursor_shape": "bar",
@@ -93,7 +97,7 @@
   "linked_edits": true,
   "notification_panel": {
     "button": false,
-    "dock": "left"
+    "dock": "right"
   },
   "outline_panel": {
     "dock": "right",
@@ -105,7 +109,7 @@
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
     "button": false,
-    "dock": "right",
+    "dock": "left",
     "folder_icons": true,
     "indent_guides": {
       "show": "never"
@@ -138,11 +142,11 @@
   },
   "terminal": {
     "dock": "bottom",
-    "font_family": "PragmataProMono Nerd Font",
+    "font_family": "OperatorMono Nerd Font",
     "font_size": 17,
     "font_weight": 300
   },
-  "theme": "Tokyo Night Storm",
+  "theme": "NeoSolarized Dark",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
@@ -152,5 +156,5 @@
   "ui_font_size": 17,
   "ui_font_weight": 400,
   "vertical_scroll_margin": 0,
-  "vim_mode": false
+  "vim_mode": true
 }

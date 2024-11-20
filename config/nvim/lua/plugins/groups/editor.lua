@@ -2,10 +2,19 @@ local u = require("utils")
 local k = require("config.keymaps")
 
 return {
-  -- colorscheme
+  -- colorschemes
+  {
+    "Tsuzat/NeoSolarized.nvim",
+    opts = function() return require("plugins.colors.solarized") end,
+    config = function(_, opts)
+      require("NeoSolarized").setup(opts)
+      vim.cmd("colorscheme NeoSolarized")
+    end,
+  },
   {
     "folke/tokyonight.nvim",
     name = "tokyonight",
+    enabled = false,
     opts = function() return require("plugins.colors.tokyo") end,
     config = function(_, opts)
       require("tokyonight").setup(opts)

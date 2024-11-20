@@ -3,7 +3,9 @@
 	"adaptive_dividers": false,
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
-	"color_scheme": "Packages/Theme - City Lights/City-Lights.tmTheme",
+	"color_scheme": "Solarized (dark).sublime-color-scheme",
+	// Draws text centered in the window rather than left aligned
+	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
 	"draw_indent_guides": false,
 	// Allows tabs to scroll left and right, instead of simply shrinking
@@ -14,6 +16,18 @@
 	"file_tab_style": "rounded",
 	// Fold buttons are the triangles shown in the gutter to fold regions of text
 	"fold_buttons": false,
+	// folder_exclude_patterns and file_exclude_patterns control which files are listed in folders on the sidebar
+	"folder_exclude_patterns": [
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".Trash",
+		".Trash-*",
+		"node_modules",
+		"coverage",
+		"dist"
+	],
 	"font_face": "Operator Mono Book",
 	"font_size": 17,
 	// Hides the new tab button
@@ -24,9 +38,10 @@
 	"highlight_line": false,
 	// Makes tabs with modified files more visible
 	"highlight_modified_tabs": false,
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 	// File indexing parses all files in the sidebar
-	"index_files": true,
+	"index_files": false,
 	// Additional spacing at the bottom of each line, in pixels
 	"line_padding_bottom": 4,
 	// Additional spacing at the top of each line, in pixels
@@ -47,6 +62,8 @@
 	"show_sidebar_button": false,
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
-	"theme": "Adaptive.sublime-theme",
-	"wrap_width": 80
+	"theme": "Solarized (dark).sublime-theme",
+	// When Vintage is enabled, choose if files are opened in command or insert mode by default
+	"vintage_start_in_command_mode": true,
+	"wrap_width": 80,
 }

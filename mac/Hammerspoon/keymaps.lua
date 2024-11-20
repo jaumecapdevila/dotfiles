@@ -3,14 +3,15 @@ local hyper = { "cmd", "alt", "ctrl", "shift" }
 
 ------------------------------- APP LAUNCH/TOGGLE ------------------------------
 local apps = {
-  b = "Arc", -- Browser
+  ["1"] = "1Password", -- Password Manager
+  b = "Google Chrome", -- Browser
   e = "Visual Studio Code", -- Code Editor
   f = "Finder", -- File Explorer
   g = "GitHub Desktop", -- Git Client
-  n = "Bear", -- Notes Taking
   m = "Microsoft Outlook", -- Mail Client
+  n = "Bear", -- Notes Taking
   t = "iTerm", -- Terminal
-  ["1"] = "1Password", -- Password Manager
+  x = "Sublime Text", -- Text Editor
 }
 
 local LaunchOrToggle = function(key, app_name, app_filename)

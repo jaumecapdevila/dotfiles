@@ -11,7 +11,7 @@ local options = {
   view = {
     adaptive_size = false,
     width = 50,
-    side = "right",
+    side = "left",
   },
   git = {
     enable = false,
@@ -37,7 +37,7 @@ local options = {
       show = {
         file = true,
         folder = true,
-        folder_arrow = false,
+        folder_arrow = true,
         git = false,
       },
 

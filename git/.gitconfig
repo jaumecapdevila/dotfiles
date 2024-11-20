@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = tokyo-night
+  features = solarized
 
 [diff]
 	colorMoved = default
