@@ -23,5 +23,9 @@
 	],
 	"in_process_packages":
 	[
+		"EditorConfig",
+		"Emmet",
+		"LSP-css",
+		"LSP-typescript",
 	],
 }

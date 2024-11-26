@@ -39,6 +39,10 @@
 	// Makes tabs with modified files more visible
 	"highlight_modified_tabs": false,
 	"ignored_packages": [
+		"EditorConfig",
+		"Emmet",
+		"LSP-css",
+		"LSP-typescript",
 	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,

@@ -14,7 +14,16 @@ return {
     undercurl = true, -- true/false; for global undercurl
   },
   -- Add specific hightlight groups
-  on_highlights = function(highlights, colors)
-    -- highlights.Include.fg = colors.red -- Using `red` foreground for Includes
+  on_highlights = function(hl, c)
+    -- General
+    hl.Keyword = { fg = c.violet, italic = true }
+    hl.TSKeyword = { fg = c.violet, italic = true }
+    hl.Function = { fg = c.blue, bold = true }
+    hl.TSFunction = { fg = c.blue, bold = true }
+    -- Telescope
+    hl.TelescopeMatching                        = { fg = c.purple, bold = true }
+    hl.TelescopeBorder                          = { fg = c.violet, bg = c.none }
+    hl.TelescopePromptBorder                    = { fg = c.purple }
+    hl.TelescopePromptPrefix                    = { fg = c.purple }
   end,
 }

@@ -11,16 +11,6 @@ return {
       vim.cmd("colorscheme NeoSolarized")
     end,
   },
-  {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
-    enabled = false,
-    opts = function() return require("plugins.colors.tokyo") end,
-    config = function(_, opts)
-      require("tokyonight").setup(opts)
-      vim.cmd("colorscheme tokyonight")
-    end,
-  },
 
   -- transparent ui
   {

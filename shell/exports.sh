@@ -30,7 +30,7 @@ export FZF_CTRL_R_OPTS=" \
 
 # plugins
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1abc9c,bg=#292e42,bold"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#95a0a0,bg=#163540,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 
