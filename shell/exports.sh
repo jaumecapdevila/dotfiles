@@ -15,18 +15,34 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-export FZF_DEFAULT_OPTS=" \
---reverse \
---no-info \
---pointer='󰳟' \
---prompt='󰈲 ' \
---ansi \
---border none \
---color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic'"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --no-info \
+  --ansi \
+	--prompt='󰈲 ' \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#163540 \
+  --color=bg:#00212b \
+  --color=border:#4689cc \
+  --color=fg:#ece8d6 \
+  --color=gutter:#00212b \
+  --color=header:#ae8a2c \
+  --color=hl+:#519e97 \
+  --color=hl:#ae8a2c \
+  --color=info:#869395 \
+  --color=marker:#c24380 \
+  --color=pointer:#c24380 \
+  --color=prompt:#519e97 \
+  --color=query:#ece8d6:regular \
+  --color=scrollbar:#4689cc \
+  --color=separator:#6c70be \
+  --color=spinner:#c24380 \
+"
 
 export FZF_CTRL_R_OPTS=" \
---pointer='󰳟' \
---prompt='󰈲 '"
+	--prompt='󰈲 ' \
+"
 
 # plugins
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
