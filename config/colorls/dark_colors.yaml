@@ -1,3 +1,12 @@
+#  ██████╗ ██████╗ ██╗      ██████╗ ██████╗ ██╗     ███████╗
+# ██╔════╝██╔═══██╗██║     ██╔═══██╗██╔══██╗██║     ██╔════╝
+# ██║     ██║   ██║██║     ██║   ██║██████╔╝██║     ███████╗
+# ██║     ██║   ██║██║     ██║   ██║██╔══██╗██║     ╚════██║
+# ╚██████╗╚██████╔╝███████╗╚██████╔╝██║  ██║███████╗███████║
+#  ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+# A Ruby gem that beautifies the terminal's ls command, with color and font-awesome icons.
+# Repo: https://github.com/athityakumar/colorls
+
 # Main Colors
 unrecognized_file: "#ae8a2c" # Yellow
 recognized_file: "#869395" # Text

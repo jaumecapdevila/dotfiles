@@ -13,7 +13,7 @@
 	// Set to true to ensure the last line of the file ends in a newline
 	"ensure_newline_at_eof_on_save": true,
 	// Options: "rounded", "square"
-	"file_tab_style": "rounded",
+	"file_tab_style": "square",
 	// Fold buttons are the triangles shown in the gutter to fold regions of text
 	"fold_buttons": false,
 	// folder_exclude_patterns and file_exclude_patterns control which files are listed in folders on the sidebar
@@ -42,7 +42,6 @@
 		"EditorConfig",
 		"Emmet",
 		"LSP-css",
-		"LSP-typescript",
 	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,
@@ -67,7 +66,9 @@
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
 	"theme": "Solarized (dark).sublime-theme",
+	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
+	/*"vintage_use_clipboard": true,*/
 	"wrap_width": 80,
 }

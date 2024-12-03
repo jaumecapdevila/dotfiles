@@ -1,4 +1,3 @@
-
 # ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗
 # ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
 # ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
@@ -6,83 +5,94 @@
 # ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║
 # ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝
 # The minimal, blazing-fast, and infinitely customizable prompt
-# https://starship.rs
+# Repo: https://starship.rs
 
-# get editor completions based on the config schema
+# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# inserts blank line between shell prompts
+# Inserts blank line between shell prompts
 add_newline = true
 command_timeout = 3000
 
-# configure the format of the prompt
+# Configure the left prompt
 format = """
 $username\
 $directory\
 $git_branch\
+$character
+"""
+
+# Display language versions on the right prompt
+right_format = """
 $lua\
 $nodejs\
 $python\
-$cmd_duration\
-$line_break\
-$character"""
+"""
+
+palette = "solarized"
+
+[palettes.solarized]
+aqua = '#2aa198'
+black = "#0d2a34"
+blue = '#268bd2'
+green = '#859900'
+orange = '#cb4b16'
+purple = '#d33682'
+violet = '#6c71c4'
+white = '#ece8d6'
+yellow = '#b58900'
 
 [username]
-style_user = 'white bold'
-style_root = 'black bold'
-format = '[$user]($style) '
-disabled = true
 show_always = true
-aliases = { "capdevil" = "jimmy" }
+style_user = "bg:purple fg:black"
+style_root = "bg:purple fg:black"
+format = '[](fg:purple)[󰀉 $user ]($style)[](bg:black fg:purple)'
+disabled = false
 
 [directory]
-format = "[󰉋 $path]($style) "
-home_symbol = "~"
-read_only = " 󰌾"
-read_only_style = "bold red"
-style = "bold blue"
-truncate_to_repo = true
-truncation_length = 2
+format = "[](bg:blue fg:black)[ 󰉋 $path ]($style)[](bg:black fg:blue)"
+style = "bg:blue fg:black"
+truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-disabled = false
-format = "[$symbol$branch]($style) "
-style = "bold purple"
-symbol = "󰘬 "
-truncation_length = 20
-truncation_symbol = "…"
-
-[lua]
-disabled = false
-format = "[$symbol($version )]($style)"
-style = "bold blue"
-symbol = "󰽢 "
-
-[nodejs]
-disabled = false
-format = "[$symbol($version )]($style)"
-style = "bold green"
-symbol = "󰚩 "
-
-[python]
-disabled = false
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-python_binary = "python3"
-style = "bold yellow"
-symbol = "󱔎 "
-
-[cmd_duration]
-format = '[$duration]($style) '
-min_time = 2000
-style = "bold yellow"
-
-[line_break]
-disabled = true
+format = "[](bg:aqua fg:black)[ $symbol $branch ]($style)[](bg:black fg:aqua)"
+style = "bg:aqua fg:black"
+symbol = ""
 
 [character]
-disabled = true
-success_symbol = "[](green) "
-error_symbol = "[](red) "
-vimcmd_symbol = "[](green) "
+success_symbol = '[](bg:violet fg:black)[](bg: black fg:violet) '
+error_symbol = '[](bg:orange fg:black)[](bg:black fg:red) '
+format = "[$symbol]($style)"
 
+# Languages
+
+[golang]
+style = "bg:overlay fg:aqua"
+format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+disabled = false
+symbol = " "
+
+[nodejs]
+style = "bg:overlay fg:aqua"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = "󰚩 "
+
+[rust]
+style = "bg:overlay fg:aqua"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = "󱘗 "
+
+[python]
+style = "bg:overlay fg:aqua"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = ' '
+
+[conda]
+style = "bg:overlay fg:aqua"
+format = "[$symbol$environment]($style) "
+disabled = false
+symbol = '🅒 '

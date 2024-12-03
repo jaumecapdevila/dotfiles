@@ -2,11 +2,14 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"BracketHighlighter",
 		"ColorHints",
 		"EditorConfig",
 		"Emmet",
+		"Git",
 		"LSP",
 		"LSP-css",
+		"LSP-eslint",
 		"LSP-json",
 		"LSP-typescript",
 		"MarkdownEditing",
@@ -18,13 +21,12 @@
 		"SublimeLinter",
 		"SyncedSideBar",
 		"Terminal",
-		"Theme - City Lights",
+		"TOML",
 	],
 	"in_process_packages":
 	[
 		"EditorConfig",
 		"Emmet",
 		"LSP-css",
-		"LSP-typescript",
 	],
 }

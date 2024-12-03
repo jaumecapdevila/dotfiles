@@ -1,6 +1,12 @@
-# Default settings for amethyst
+#  █████╗ ███╗   ███╗███████╗████████╗██╗  ██╗██╗   ██╗███████╗████████╗
+# ██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██║  ██║╚██╗ ██╔╝██╔════╝╚══██╔══╝
+# ███████║██╔████╔██║█████╗     ██║   ███████║ ╚████╔╝ ███████╗   ██║
+# ██╔══██║██║╚██╔╝██║██╔══╝     ██║   ██╔══██║  ╚██╔╝  ╚════██║   ██║
+# ██║  ██║██║ ╚═╝ ██║███████╗   ██║   ██║  ██║   ██║   ███████║   ██║
+# ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝
+# Automatic tiling window manager for macOS à la xmonad
 # Repo: `https://github.com/ianyh/Amethyst`
-#
+
 # Note due to issue 1419 (https://github.com/ianyh/Amethyst/issues/1419) some
 # config values may conflict and not work if they are the same as the default
 # values for amathyst. You can see these values on github at
