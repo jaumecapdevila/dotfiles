@@ -1240,6 +1240,8 @@
 				<key>Red Component</key>
 				<real>0.14117647058823529</real>
 			</dict>
+			<key>Background Image Location</key>
+			<string>/Users/capdevil/.dotfiles/mac/iTerm/wallpapers/deadpool.jpg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -1557,7 +1559,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Use Transparency</key>
-			<true/>
+			<false/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -2339,7 +2341,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneColor</key>
-	<string>#c24380</string>
+	<string>#d33682</string>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
 	<key>StatusBarPosition</key>
