@@ -16,7 +16,9 @@ command_timeout = 3000
 
 # Configure the left prompt
 format = """
-$username\
+$os\
+$shell\
+$time\
 $directory\
 $git_branch\
 $character
@@ -49,6 +51,30 @@ style_root = "bg:violet fg:base"
 format = '[](fg:violet)[󰀉 $user ]($style)[](bg:none fg:violet)'
 disabled = false
 
+[os]
+disabled = false
+format = "[ $symbol ]($style)[](bg:none fg:yellow)"
+style = "bg:yellow fg:base"
+
+[os.symbols]
+Macos = '󰀵'
+
+[shell]
+disabled = false
+fish_indicator = '󰈺 '
+powershell_indicator = '󰨊 '
+zsh_indicator = 'zsh 󱓞'
+unknown_indicator = 'mystery shell'
+format = '[](bg:violet fg:base)[ $indicator ]($style)[](bg:none fg:violet)'
+style = 'bg:violet fg:base'
+
+[time]
+disabled = false
+format = '[](bg:white fg:base)[ 󱑁 $time ]($style)[](bg:none fg:white)'
+style = 'bg:white fg:base'
+time_format = '%T'
+time_range = '10:00:00-14:00:00'
+
 [directory]
 format = "[](bg:blue fg:base)[ 󰉋 $path ]($style)[](bg:none fg:blue)"
 style = "bg:blue fg:base"
@@ -59,10 +85,11 @@ truncation_symbol = "…/"
 format = "[](bg:aqua fg:base)[ $symbol $branch ]($style)[](bg:none fg:aqua)"
 style = "bg:aqua fg:base"
 symbol = ""
+truncation_length = 20
 
 [character]
 success_symbol = ''
-error_symbol = '[](bg:orange fg:base)[](bg:base fg:red)'
+error_symbol = '[](bg:orange fg:base)[ 󰈸 bum ](bg:orange fg:base)[](bg:none fg:red)'
 format = "[$symbol]($style) "
 
 # Languages
