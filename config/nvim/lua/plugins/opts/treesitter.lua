@@ -1,4 +1,4 @@
-local options = {
+return {
   ensure_installed = {
     "astro",
     "bash",
@@ -21,10 +21,13 @@ local options = {
 
   highlight = {
     enable = true,
-    use_languagetree = true,
   },
 
+  -- enable indentation
   indent = { enable = true },
-}
 
-return options
+  -- enable autotagging (w/ nvim-ts-autotag plugin)
+  autotag = {
+    enable = true,
+  },
+}

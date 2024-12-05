@@ -3,6 +3,7 @@
 	"adaptive_dividers": false,
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
+	"close_windows_when_empty": true,
 	"color_scheme": "Solarized (dark).sublime-color-scheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
@@ -65,10 +66,11 @@
 	"show_sidebar_button": false,
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
+	"tab_size": 2,
 	"theme": "Solarized (dark).sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
 	/*"vintage_use_clipboard": true,*/
-	"wrap_width": 80,
+	"wrap_width": 80
 }

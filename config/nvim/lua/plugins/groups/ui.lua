@@ -1,19 +1,16 @@
-local u = require("utils")
-local k = require("config.keymaps")
-
 return {
-  -- file icons
+  -- File icons
   {
     "nvim-tree/nvim-web-devicons",
     config = function(_, opts) require("nvim-web-devicons").setup(opts) end,
   },
 
-  -- custom start screen
+  -- Custom start screen
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
     enabled = true,
-    opts = function() return require("plugins.config.dashboard") end,
+    opts = function() return require("plugins.opts.dashboard") end,
     config = function(_, dashboard)
       require("alpha").setup(dashboard.opts)
       -- Disable folding on alpha buffer
@@ -21,15 +18,12 @@ return {
     end,
   },
 
-  -- file explorer
+  -- Transparent ui
   {
-    "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    init = function() u.map(k.nvim_tree) end,
-    opts = function() return require("plugins.config.explorer") end,
-    config = function(_, opts)
-      require("nvim-tree").setup(opts)
-      vim.g.nvimtree_side = opts.view.side
-    end,
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+    cond = vim.g.transparent,
+    opts = require("plugins.opts.transparent"),
+    config = function(_, opts) require("transparent").setup(opts) end,
   },
 }

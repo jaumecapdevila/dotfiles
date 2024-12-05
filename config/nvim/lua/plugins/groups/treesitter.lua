@@ -1,15 +1,11 @@
 return {
-  {
     "nvim-treesitter/nvim-treesitter",
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
-    opts = function() return require("plugins.config.treesitter") end,
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "windwp/nvim-ts-autotag",
+    },
+    lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
+    opts = require("plugins.opts.treesitter"),
     config = function(_, opts) require("nvim-treesitter.configs").setup(opts) end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-context",
-    event = "BufReadPre",
-    enabled = false,
-    opts = { mode = "cursor" },
-  },
-}
+  }

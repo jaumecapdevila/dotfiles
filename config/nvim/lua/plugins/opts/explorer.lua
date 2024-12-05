@@ -1,4 +1,4 @@
-local options = {
+return {
   disable_netrw = true,
   hijack_netrw = true,
   hijack_cursor = true,
@@ -67,5 +67,3 @@ local options = {
     },
   },
 }
-
-return options

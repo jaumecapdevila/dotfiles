@@ -103,7 +103,7 @@ symbol = " "
 [nodejs]
 style = "bg:overlay fg:aqua"
 format = "[$symbol$version]($style) "
-disabled = false
+disabled = true
 symbol = "󰚩 "
 
 [rust]

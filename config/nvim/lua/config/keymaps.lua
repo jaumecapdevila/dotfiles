@@ -1,271 +1,69 @@
--- n, v, i, t = mode names
+local g = vim.g
+local keymap = vim.keymap
 
-local M = {}
+-- Change leader key to space
+g.mapleader = " "
+g.maplocalleader = " "
 
-local u = require("utils")
+-- Go to  beginning and end
+keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Beginning of line" })
+keymap.set("i", "<C-e>", "<End>", { desc = "End of line" })
 
-M.general = {
-  i = {
-    -- go to  beginning and end
-    ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
-    ["<C-e>"] = { "<End>", "End of line" },
+-- Navigate within insert mode
+keymap.set("i", "<C-h>", "<Left>", { desc = "Move left" })
+keymap.set("i", "<C-l>", "<Right>", { desc = "Move right" })
+keymap.set("i", "<C-j>", "<Down>", { desc = "Move down" })
+keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
 
-    -- navigate within insert mode
-    ["<C-h>"] = { "<Left>", "Move left" },
-    ["<C-l>"] = { "<Right>", "Move right" },
-    ["<C-j>"] = { "<Down>", "Move down" },
-    ["<C-k>"] = { "<Up>", "Move up" },
-  },
+keymap.set("n", "<Esc>", "<cmd>noh<cr><esc>", { desc = "Clear highlights" })
 
-  n = {
-    ["<Esc>"] = { "<cmd>noh<cr><esc>", "Clear highlights" },
+-- Switch between windows
+keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window left" })
+keymap.set("n", "<C-l>", "<C-w>l", { desc = "Window right" })
+keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window down" })
+keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window up" })
 
-    -- switch between windows
-    ["<C-h>"] = { "<C-w>h", "Window left" },
-    ["<C-l>"] = { "<C-w>l", "Window right" },
-    ["<C-j>"] = { "<C-w>j", "Window down" },
-    ["<C-k>"] = { "<C-w>k", "Window up" },
+-- Window management
+keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window" })
+keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window" })
+keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
+keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
+keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
+keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
+keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
-    -- window management
-    ["<leader>ww"] = { "<C-W>p", "Other window" },
-    ["<leader>wd"] = { "<C-W>c", "Delete window" },
-    ["<leader>w-"] = { "<C-W>s", "Split window below" },
-    ["<leader>w|"] = { "<C-W>v", "Split window right" },
-    ["<leader>-"] = { "<C-W>s", "Split window below" },
-    ["<leader>|"] = { "<C-W>v", "Split window right" },
-    ["<C-Up>"] = { "<cmd>resize +2<cr>", "Increase window height" },
-    ["<C-Down>"] = { "<cmd>resize -2<cr>", "Decrease window height" },
-    ["<C-Left>"] = { "<cmd>vertical resize -2<cr>", "Decrease window width" },
-    ["<C-Right>"] = { "<cmd>vertical resize +2<cr>", "Increase window width" },
+-- Buffer managenent
+keymap.set("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Next buffer" })
+keymap.set("n", "<leader>bp", "<cmd>bp<cr>", { desc = "Previous buffer" })
+keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
+keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", { desc = "Close other buffers" })
 
-    -- buffer managenent
-    ["<leader>bo"] = { "<cmd> %bd | e# <CR>", "Close other buffers" },
-    ["<leader>bd"] = { "<cmd> bd <CR>", "Delete buffer" },
-    ["<leader>bn"] = { "<cmd> bn <CR>", "Next buffer" },
-    ["<leader>bp"] = { "<cmd> bp <CR>", "Prev buffer" },
+-- Save
+keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 
-    -- save
-    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
+-- Copy all
+keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
 
-    -- Copy all
-    ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
+-- Line numbers
+keymap.set("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "Toggle line numbers" })
+keymap.set("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "Toggle relative line numbers" })
 
-    -- line numbers
-    ["<leader>n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
-    ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
+-- Utils
+keymap.set("n", "<leader>wf", "<cmd>enew<cr>", { desc = "New file" })
+keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp info" })
 
-    -- utils
-    ["<leader>wf"] = { "<cmd>enew<cr>", "New file" },
-    ["<leader>qq"] = { "<cmd>qa<cr>", "Quit all" },
-    ["<leader>cl"] = { "<cmd>LspInfo<cr>", "Lsp info" },
+-- Terminal
+keymap.set("n", "<C-t>", ":Term<CR>", { desc = "Open terminal" })
 
-    -- diagnostic
-    ["<leader>cd"] = { vim.diagnostic.open_float, "Line diagnostics" },
-    ["]d"] = { u.diagnostic_goto(true), "Next Diagnostic" },
-    ["[d"] = { u.diagnostic_goto(false), "Prev Diagnostic" },
-    ["]e"] = { u.diagnostic_goto(true, "ERROR"), "Next Error" },
-    ["[e"] = { u.diagnostic_goto(false, "ERROR"), "Prev Error" },
-    ["]w"] = { u.diagnostic_goto(true, "WARNING"), "Next Warning" },
-    ["[w"] = { u.diagnostic_goto(false, "WARNING"), "Prev Warning" },
-
-    -- terminal
-    ["<C-t>"] = { ":Term<CR>", "Open terminal" },
-  },
-
-  t = {
-    ["<Esc>"] = { "<c-\\><c-n>", "Enter Normal Mode" },
-    ["<C-h>"] = { "<cmd>wincmd h<cr>", "Go to left window" },
-    ["<C-j>"] = { "<cmd>wincmd j<cr>", "Go to lower window" },
-    ["<C-k>"] = { "<cmd>wincmd k<cr>", "Go to upper window" },
-    ["<C-l>"] = { "<cmd>wincmd l<cr>", "Go to right window" },
-    ["<C-/>"] = { "<cmd>close<cr>", "Hide Terminal" },
-    ["<c-_>"] = { "<cmd>close<cr>", "which_key_ignore" },
-  },
-}
-
-M.comment = {
-  -- toggle comment in both modes
-  n = {
-    ["<leader>/"] = {
-      function() require("Comment.api").toggle.linewise.current() end,
-      "Toggle comment",
-    },
-  },
-
-  v = {
-    ["<leader>/"] = {
-      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-      "Toggle comment",
-    },
-  },
-}
-
-M.lspconfig = {
-  -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
-  n = {
-    ["gd"] = {
-      "<CMD>Glance definitions<CR>",
-      "Glance definitions",
-    },
-
-    ["gr"] = {
-      "<CMD>Glance references<CR>",
-      "Glance references",
-    },
-
-    ["gi"] = {
-      "<CMD>Glance implementations<CR>",
-      "Glance implementations",
-    },
-
-    ["<leader>D"] = {
-      "<CMD>Glance type_definitions<CR>",
-      "Glance implementations",
-    },
-
-    ["<leader>ca"] = {
-      function() vim.lsp.buf.code_action() end,
-      "LSP code action",
-    },
-
-    ["<leader>rn"] = {
-      function() vim.lsp.buf.rename() end,
-      "LSP rename",
-    },
-
-    ["gD"] = {
-      function() vim.lsp.buf.declaration() end,
-      "LSP declaration",
-    },
-
-    ["K"] = {
-      function() vim.lsp.buf.hover() end,
-      "LSP hover",
-    },
-
-    ["<leader>ls"] = {
-      function() vim.lsp.buf.signature_help() end,
-      "LSP signature help",
-    },
-
-    ["<leader>q"] = {
-      function() vim.diagnostic.setloclist() end,
-      "Diagnostic setloclist",
-    },
-
-    ["<leader>fm"] = {
-      function() vim.lsp.buf.format({ async = true }) end,
-      "LSP formatting",
-    },
-  },
-}
-
-M.nvim_tree = {
-  n = {
-    ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Toggle explorer" },
-    ["<leader>fe"] = {
-      "<cmd>NvimTreeFindFileToggle<CR>",
-      "Toggle file explorer",
-    },
-    ["<leader>re"] = { "<cmd>NvimTreeRefresh<CR>", "Refresh file explorer" },
-  },
-}
-
-M.telescope = {
-  n = {
-    -- find
-    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
-    ["<leader>fa"] = {
-      "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
-      "Find all",
-    },
-    ["<leader>fg"] = { "<cmd> Telescope diagnostics <CR>", "List Diagnostics" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
-    ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
-    ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
-    ["<leader>fz"] = {
-      "<cmd> Telescope current_buffer_fuzzy_find <CR>",
-      "Find in current buffer",
-    },
-
-    -- file browser
-    ["<leader>fr"] = { "<cmd> Telescope file_browser <CR>", "File Browser" },
-
-    -- lsp
-    ["<leader>fs"] = {
-      "<cmd> Telescope lsp_document_symbols <CR>",
-      "Document Symbols",
-    },
-
-    -- git
-    ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
-    ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
-
-    ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
-  },
-}
-
-M.whichkey = {
-  n = {
-    ["<leader>wK"] = {
-      function() vim.cmd("WhichKey") end,
-      "Which-key all keymaps",
-    },
-    ["<leader>wk"] = {
-      function()
-        local input = vim.fn.input("WhichKey: ")
-        vim.cmd("WhichKey " .. input)
-      end,
-      "Which-key query lookup",
-    },
-  },
-}
-
-M.gitsigns = {
-  n = {
-    -- Navigation through hunks
-    ["]c"] = {
-      function()
-        if vim.wo.diff then return "]c" end
-        vim.schedule(function() require("gitsigns").next_hunk() end)
-        return "<Ignore>"
-      end,
-      "Jump to next hunk",
-      opts = { expr = true },
-    },
-
-    ["[c"] = {
-      function()
-        if vim.wo.diff then return "[c" end
-        vim.schedule(function() require("gitsigns").prev_hunk() end)
-        return "<Ignore>"
-      end,
-      "Jump to prev hunk",
-      opts = { expr = true },
-    },
-
-    -- Actions
-    ["<leader>rh"] = {
-      function() require("gitsigns").reset_hunk() end,
-      "Reset hunk",
-    },
-
-    ["<leader>ph"] = {
-      function() require("gitsigns").preview_hunk() end,
-      "Preview hunk",
-    },
-
-    ["<leader>gb"] = {
-      function() package.loaded.gitsigns.blame_line() end,
-      "Blame line",
-    },
-
-    ["<leader>td"] = {
-      function() require("gitsigns").toggle_deleted() end,
-      "Toggle deleted",
-    },
-  },
-}
-
-return M
+-- Terminal navigation
+keymap.set("t", "<Esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
+keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
+keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
+keymap.set("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
+keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
+keymap.set("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+keymap.set("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })

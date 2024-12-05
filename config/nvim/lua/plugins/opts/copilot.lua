@@ -1,4 +1,4 @@
-local options = {
+return {
   panel = {
     enabled = true,
     auto_refresh = false,
@@ -22,5 +22,3 @@ local options = {
   },
   copilot_node_command = "node", -- Node.js version must be > 16.x
 }
-
-return options

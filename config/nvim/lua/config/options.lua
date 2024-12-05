@@ -2,17 +2,13 @@ local g = vim.g
 local o = vim.o
 local opt = vim.opt
 
-g.mapleader = " "
-g.maplocalleader = " "
--- g.dotfiles_path = vim.fn.expand("~/.dotfiles")
-
 -------------------------------------- options ------------------------------------------
 opt.clipboard = "unnamedplus" -- sync with system clipboard
 opt.cursorline = true -- enable or disable line highlighting
 
 -- Theming
 o.background = "dark"
-g.transparent = true
+g.transparent = false
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

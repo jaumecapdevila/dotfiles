@@ -1,4 +1,4 @@
-local options = {
+return {
   defaults = {
     entry_prefix = "  ",
     prompt_prefix = " 󰳟  ",
@@ -21,5 +21,3 @@ local options = {
 
   extensions_list = { "fzf", "file_browser" },
 }
-
-return options

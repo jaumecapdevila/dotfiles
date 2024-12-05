@@ -1,5 +1,13 @@
 return {
-  -- load luasnips + cmp related in insert mode only
+  -- Easily add, remove and change surroundings
+  {
+    "echasnovski/mini.surround",
+    event = "VeryLazy",
+    opts = require("plugins.opts.surround"),
+    config = function(_, opts) require("mini.surround").setup(opts) end,
+  },
+
+  -- Load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -16,7 +24,7 @@ return {
         end,
       },
 
-      -- autopairing of (){}[] etc
+      -- Autopairing of (){}[] etc
       {
         "windwp/nvim-autopairs",
         opts = {
@@ -35,7 +43,7 @@ return {
         end,
       },
 
-      -- cmp sources plugins
+      -- Cmp sources plugins
       {
         "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-nvim-lua",
@@ -44,21 +52,14 @@ return {
         "onsails/lspkind.nvim", -- vs-code like pictograms
       },
     },
-    opts = function() return require("plugins.config.cmp") end,
+    opts = function() return require("plugins.opts.cmp") end,
     config = function(_, opts) require("cmp").setup(opts) end,
   },
 
-  -- Github Copilot
+  -- AI assistant
   {
     "zbirenbaum/copilot.lua",
-    opts = function() return require("plugins.config.copilot") end,
+    opts = require("plugins.opts.copilot"),
     config = function(_, opts) require("copilot").setup(opts) end,
-  },
-
-  -- autoclose tags in html, jsx only
-  {
-    "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
-    config = function() require("nvim-ts-autotag").setup() end,
   },
 }

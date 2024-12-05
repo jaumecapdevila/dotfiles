@@ -16,14 +16,15 @@ return {
   -- Add specific hightlight groups
   on_highlights = function(hl, c)
     -- General
+    hl["@variable"] = { fg = c.blue }
     hl.Keyword = { fg = c.violet, italic = true }
     hl.TSKeyword = { fg = c.violet, italic = true }
     hl.Function = { fg = c.blue, bold = true }
     hl.TSFunction = { fg = c.blue, bold = true }
     -- Telescope
-    hl.TelescopeMatching                        = { fg = c.purple, bold = true }
-    hl.TelescopeBorder                          = { fg = c.violet, bg = c.none }
-    hl.TelescopePromptBorder                    = { fg = c.purple }
-    hl.TelescopePromptPrefix                    = { fg = c.purple }
+    hl.TelescopeMatching = { fg = c.purple, bold = true }
+    hl.TelescopeBorder = { fg = c.violet, bg = c.none }
+    hl.TelescopePromptBorder = { fg = c.purple }
+    hl.TelescopePromptPrefix = { fg = c.purple }
   end,
 }

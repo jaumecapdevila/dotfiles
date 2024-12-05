@@ -1,4 +1,4 @@
-local options = {
+return {
   formatters_by_ft = {
     astro = { "prettier" },
     javascript = { "prettier" },
@@ -20,5 +20,3 @@ local options = {
     timeout_ms = 1000,
   },
 }
-
-return options
