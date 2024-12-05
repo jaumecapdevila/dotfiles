@@ -1,5 +1,6 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+local luasnip = require("luasnip")
 
 return {
   completion = {
@@ -7,7 +8,7 @@ return {
   },
 
   snippet = { -- configure how nvim-cmp interacts with snippet engine
-    expand = function(args) require("luasnip").lsp_expand(args.body) end,
+    expand = function(args) luasnip.lsp_expand(args.body) end,
   },
 
   mapping = cmp.mapping.preset.insert({
