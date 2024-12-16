@@ -8,7 +8,7 @@
 # Repo: https://starship.rs
 
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 # Inserts blank line between shell prompts
 add_newline = true
@@ -17,11 +17,15 @@ command_timeout = 3000
 # Configure the left prompt
 format = """
 $os\
+[](bg:violet fg:yellow)\
 $shell\
+[](bg:white fg:violet)\
 $time\
+[](bg:blue fg:white)\
 $directory\
+[](bg:aqua fg:blue)\
 $git_branch\
-$character
+[](bg:none fg:aqua) \
 """
 
 # Display language versions on the right prompt
@@ -34,69 +38,55 @@ $python\
 palette = "solarized"
 
 [palettes.solarized]
-aqua = '#2aa198'
-base = "#0d2a34"
-blue = '#268bd2'
-green = '#859900'
-orange = '#cb4b16'
-purple = '#d33682'
-violet = '#6c71c4'
-white = '#ece8d6'
-yellow = '#b58900'
-
-[username]
-show_always = true
-style_user = "bg:violet fg:base"
-style_root = "bg:violet fg:base"
-format = '[](fg:violet)[󰀉 $user ]($style)[](bg:none fg:violet)'
-disabled = false
+aqua = "#2aa198"
+base = "#002b36"
+blue = "#268bd2"
+green = "#859900"
+orange = "#cb4b16"
+purple = "#d33682"
+violet = "#6c71c4"
+white = "#ece8d6"
+yellow = "#b58900"
 
 [os]
 disabled = false
-format = "[ $symbol ]($style)[](bg:none fg:yellow)"
+format = "[ $symbol ]($style)"
 style = "bg:yellow fg:base"
 
 [os.symbols]
-Macos = '󰀵'
+Macos = "󰀵"
 
 [shell]
 disabled = false
-fish_indicator = '󰈺 '
-powershell_indicator = '󰨊 '
-zsh_indicator = 'zsh 󱓞'
-unknown_indicator = 'mystery shell'
-format = '[](bg:violet fg:base)[ $indicator ]($style)[](bg:none fg:violet)'
-style = 'bg:violet fg:base'
+fish_indicator = "󰈺 "
+powershell_indicator = "󰨊 "
+zsh_indicator = "zsh 󱓞"
+unknown_indicator = "mystery shell"
+format = "[ $indicator ]($style)"
+style = "bg:violet fg:base"
 
 [time]
 disabled = false
-format = '[](bg:white fg:base)[ 󱑁 $time ]($style)[](bg:none fg:white)'
-style = 'bg:white fg:base'
-time_format = '%T'
-time_range = '10:00:00-14:00:00'
+format = "[ 󱑁 $time ]($style)"
+style = "bg:white fg:base"
 
 [directory]
-format = "[](bg:blue fg:base)[ 󰉋 $path ]($style)[](bg:none fg:blue)"
+format = "[ 󰉋 $path ]($style)"
 style = "bg:blue fg:base"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-format = "[](bg:aqua fg:base)[ $symbol $branch ]($style)[](bg:none fg:aqua)"
+format = "[ $symbol $branch ]($style)"
 style = "bg:aqua fg:base"
 symbol = ""
 truncation_length = 20
-
-[character]
-success_symbol = ''
-error_symbol = '[](bg:orange fg:base)[ 󰈸 bum ](bg:orange fg:base)[](bg:none fg:red)'
-format = "[$symbol]($style) "
 
 # Languages
 
 [golang]
 style = "bg:overlay fg:aqua"
-format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+format = "[$symbol$version]($style) "
 disabled = false
 symbol = " "
 
@@ -116,10 +106,10 @@ symbol = "󱘗 "
 style = "bg:overlay fg:aqua"
 format = "[$symbol$version]($style) "
 disabled = false
-symbol = ' '
+symbol = " "
 
 [conda]
 style = "bg:overlay fg:aqua"
 format = "[$symbol$environment]($style) "
 disabled = false
-symbol = '🅒 '
+symbol = "🅒 "
