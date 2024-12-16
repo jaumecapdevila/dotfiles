@@ -12,6 +12,7 @@
 		"LSP-eslint",
 		"LSP-json",
 		"LSP-lua",
+		"LSP-rust-analyzer",
 		"LSP-typescript",
 		"MarkdownEditing",
 		"MarkdownPreview",

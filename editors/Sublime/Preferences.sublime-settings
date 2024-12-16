@@ -72,5 +72,5 @@
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
 	/*"vintage_use_clipboard": true,*/
-	"wrap_width": 80
+	"wrap_width": 80,
 }
