@@ -21,10 +21,27 @@ return {
       vim.g.nvimtree_side = opts.view.side
     end,
     keys = {
-      { "<leader>e",  "<cmd>NvimTreeToggle<CR>",         "Toggle explorer" },
-      { "<leader>fe", "<cmd>NvimTreeFindFileToggle<CR>", "Toggle file explorer", },
-      { "<leader>re", "<cmd>NvimTreeRefresh<CR>",        "Refresh file explorer" },
-    }
+      { "<leader>e", "<cmd>NvimTreeToggle<CR>", "Toggle explorer" },
+      {
+        "<leader>fe",
+        "<cmd>NvimTreeFindFileToggle<CR>",
+        "Toggle file explorer",
+      },
+      {
+        "<leader>re",
+        "<cmd>NvimTreeRefresh<CR>",
+        "Refresh file explorer",
+      },
+    },
+  },
+
+  -- Statusline
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    event = "VeryLazy",
+    opts = require("plugins.opts.lualine"),
+    config = function(_, opts) require("lualine").setup(opts) end,
   },
 
   -- Fuzzy finder
@@ -32,7 +49,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     opts = require("plugins.opts.telescope"),
@@ -47,17 +64,19 @@ return {
     end,
     keys = {
       -- find
-      { "<leader>ff", "<cmd> Telescope find_files <CR>",  "Find files" },
-      { "<leader>fa",
+      { "<leader>ff", "<cmd> Telescope find_files <CR>", "Find files" },
+      {
+        "<leader>fa",
         "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
         "Find all",
       },
       { "<leader>fg", "<cmd> Telescope diagnostics <CR>", "List Diagnostics" },
-      { "<leader>fw", "<cmd> Telescope live_grep <CR>",   "Live grep" },
-      { "<leader>fb", "<cmd> Telescope buffers <CR>",     "Find buffers" },
-      { "<leader>fh", "<cmd> Telescope help_tags <CR>",   "Help page" },
-      { "<leader>fo", "<cmd> Telescope oldfiles <CR>",    "Find oldfiles" },
-      { "<leader>fz",
+      { "<leader>fw", "<cmd> Telescope live_grep <CR>", "Live grep" },
+      { "<leader>fb", "<cmd> Telescope buffers <CR>", "Find buffers" },
+      { "<leader>fh", "<cmd> Telescope help_tags <CR>", "Help page" },
+      { "<leader>fo", "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+      {
+        "<leader>fz",
         "<cmd> Telescope current_buffer_fuzzy_find <CR>",
         "Find in current buffer",
       },
@@ -66,17 +85,22 @@ return {
       { "<leader>fr", "<cmd> Telescope file_browser <CR>", "File Browser" },
 
       -- lsp
-      { "<leader>fs",
+      {
+        "<leader>fs",
         "<cmd> Telescope lsp_document_symbols <CR>",
         "Document Symbols",
       },
 
       -- git
-      { "<leader>cm", "<cmd> Telescope git_commits <CR>",  "Git commits" },
-      { "<leader>gt", "<cmd> Telescope git_status <CR>",   "Git status" },
+      { "<leader>cm", "<cmd> Telescope git_commits <CR>", "Git commits" },
+      { "<leader>gt", "<cmd> Telescope git_status <CR>", "Git status" },
 
-      { "<leader>ma", "<cmd> Telescope marks <CR>",        "telescope bookmarks" },
-    }
+      {
+        "<leader>ma",
+        "<cmd> Telescope marks <CR>",
+        "telescope bookmarks",
+      },
+    },
   },
 
   -- Keymaps cheatsheet
@@ -160,9 +184,17 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
     keys = {
-      { "]t", function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
-      { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
-    }
+      {
+        "]t",
+        function() require("todo-comments").jump_next() end,
+        desc = "Next todo comment",
+      },
+      {
+        "[t",
+        function() require("todo-comments").jump_prev() end,
+        desc = "Previous todo comment",
+      },
+    },
   },
 
   -- Hihglight colors
@@ -170,5 +202,5 @@ return {
     "NvChad/nvim-colorizer.lua",
     event = { "BufReadPre", "BufNewFile" },
     config = true,
-  }
+  },
 }

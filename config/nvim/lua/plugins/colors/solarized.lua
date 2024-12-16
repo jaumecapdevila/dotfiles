@@ -21,6 +21,7 @@ return {
     hl.TSKeyword = { fg = c.violet, italic = true }
     hl.Function = { fg = c.blue, bold = true }
     hl.TSFunction = { fg = c.blue, bold = true }
+
     -- Telescope
     hl.TelescopeMatching = { fg = c.purple, bold = true }
     hl.TelescopeBorder = { fg = c.violet, bg = c.none }
