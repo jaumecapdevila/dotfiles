@@ -40,7 +40,7 @@ opt.showcmd = false
 -- disable nvim intro
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
-opt.signcolumn = "yes"
+opt.signcolumn = "yes:2"
 opt.splitbelow = true
 opt.splitright = true
 opt.termguicolors = true

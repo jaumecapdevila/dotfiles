@@ -29,9 +29,18 @@ return {
     CurSearch = { fg = "base", bg = "leaf", inherit = false },
     Search = { fg = "text", bg = "leaf", blend = 20, inherit = false },
 
+    -- Colorful gutter
+    CursorLineNr = { fg = "text", bg = "surface", bold = true },
+    LineNr = { fg = "muted", bg = "surface" },
+    SignColumn = { bg = "surface" },
+    GitSignsAdd = { fg = "foam", bg = "surface" },
+    GitSignsChange = { fg = "rose", bg = "surface" },
+    GitSignsDelete = { fg = "love", bg = "surface" },
+
     -- Transparent telescope
-    TelescopeBorder = { fg = "highlight_high", bg = "none" },
+    TelescopeBorder = { fg = "rose", bg = "none" },
     TelescopeNormal = { bg = "none" },
+    TelescopePromptBorder = { fg = "rose", bg = "none" },
     TelescopePromptNormal = { bg = "base" },
     TelescopeResultsNormal = { fg = "subtle", bg = "none" },
     TelescopeSelection = { fg = "text", bg = "base" },
