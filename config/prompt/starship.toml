@@ -16,16 +16,14 @@ command_timeout = 3000
 
 # Configure the left prompt
 format = """
-$os\
-[](bg:violet fg:yellow)\
 $shell\
-[](bg:white fg:violet)\
+[](bg:rose fg:iris)\
 $time\
-[](bg:blue fg:white)\
+[](bg:pine fg:rose)\
 $directory\
-[](bg:aqua fg:blue)\
+[](bg:foam fg:pine)\
 $git_branch\
-[](bg:none fg:aqua) \
+[](bg:none fg:foam) \
 """
 
 # Display language versions on the right prompt
@@ -35,81 +33,81 @@ $nodejs\
 $python\
 """
 
-palette = "solarized"
+palette = "moon"
 
-[palettes.solarized]
-aqua = "#2aa198"
-base = "#002b36"
-blue = "#268bd2"
-green = "#859900"
-orange = "#cb4b16"
-purple = "#d33682"
-violet = "#6c71c4"
-white = "#ece8d6"
-yellow = "#b58900"
+[palettes.main]
+base = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
-[os]
-disabled = false
-format = "[ $symbol ]($style)"
-style = "bg:yellow fg:base"
-
-[os.symbols]
-Macos = "󰀵"
+[palettes.moon]
+base = '#222134'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ea9a97'
+pine = '#3e8fb0'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
 [shell]
 disabled = false
 fish_indicator = "󰈺 "
 powershell_indicator = "󰨊 "
-zsh_indicator = "zsh 󱓞"
+zsh_indicator = "󱓞 zsh"
 unknown_indicator = "mystery shell"
 format = "[ $indicator ]($style)"
-style = "bg:violet fg:base"
+style = "bg:iris fg:base"
 
 [time]
 disabled = false
 format = "[ 󱑁 $time ]($style)"
-style = "bg:white fg:base"
+style = "bg:rose fg:base"
+time_format = '%R'
 
 [directory]
 format = "[ 󰉋 $path ]($style)"
-style = "bg:blue fg:base"
+style = "bg:pine fg:base"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
 format = "[ $symbol $branch ]($style)"
-style = "bg:aqua fg:base"
+style = "bg:foam fg:base"
 symbol = ""
 truncation_length = 20
 
 # Languages
 
 [golang]
-style = "bg:overlay fg:aqua"
+style = "bg:overlay fg:foam"
 format = "[$symbol$version]($style) "
 disabled = false
 symbol = " "
 
 [nodejs]
-style = "bg:overlay fg:aqua"
+style = "bg:overlay fg:foam"
 format = "[$symbol$version]($style) "
 disabled = true
 symbol = "󰚩 "
 
 [rust]
-style = "bg:overlay fg:aqua"
+style = "bg:overlay fg:foam"
 format = "[$symbol$version]($style) "
 disabled = false
 symbol = "󱘗 "
 
 [python]
-style = "bg:overlay fg:aqua"
+style = "bg:overlay fg:foam"
 format = "[$symbol$version]($style) "
 disabled = false
 symbol = " "
 
 [conda]
-style = "bg:overlay fg:aqua"
+style = "bg:overlay fg:foam"
 format = "[$symbol$environment]($style) "
 disabled = false
 symbol = "🅒 "

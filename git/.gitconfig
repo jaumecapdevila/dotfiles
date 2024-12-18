@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true
-  features = solarized
+  features = rose
 
 [diff]
 	colorMoved = default

@@ -21,23 +21,12 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --ansi \
 	--prompt='󰈲 ' \
   --layout=reverse \
-  --border=none
-  --color=bg+:#163540 \
-  --color=bg:#00212b \
-  --color=border:#4689cc \
-  --color=fg:#ece8d6 \
-  --color=gutter:#00212b \
-  --color=header:#ae8a2c \
-  --color=hl+:#519e97 \
-  --color=hl:#ae8a2c \
-  --color=info:#869395 \
-  --color=marker:#c24380 \
-  --color=pointer:#c24380 \
-  --color=prompt:#519e97 \
-  --color=query:#ece8d6:regular \
-  --color=scrollbar:#4689cc \
-  --color=separator:#6c70be \
-  --color=spinner:#c24380 \
+  --border=none \
+  --color=fg:#908caa,bg:#232136,hl:#ea9a97 \
+	--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97 \
+	--color=border:#44415a,header:#3e8fb0,gutter:#232136 \
+	--color=spinner:#f6c177,info:#9ccfd8 \
+	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 "
 
 export FZF_CTRL_R_OPTS=" \
@@ -46,7 +35,7 @@ export FZF_CTRL_R_OPTS=" \
 
 # plugins
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#95a0a0,bg=#163540,bold"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#e0def4,bg=#393552,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 

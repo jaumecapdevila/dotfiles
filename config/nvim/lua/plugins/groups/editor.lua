@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "Tsuzat/NeoSolarized.nvim",
-    name = "NeoSolarized",
+    "rose-pine/neovim",
+    name = "rose-pine",
     priority = 1000,
-    opts = require("plugins.colors.solarized"),
+    opts = require("plugins.colors.rose"),
     config = function(_, opts)
-      require("NeoSolarized").setup(opts)
-      vim.cmd("colorscheme NeoSolarized")
+      require("rose-pine").setup(opts)
+      vim.cmd("colorscheme rose-pine")
     end,
   },
 

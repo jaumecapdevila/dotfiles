@@ -4,7 +4,7 @@
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Solarized (dark).sublime-color-scheme",
+	"color_scheme": "Rosé Pine Moon.sublime-color-scheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
@@ -67,7 +67,7 @@
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
 	"tab_size": 2,
-	"theme": "Solarized (dark).sublime-theme",
+	"theme": "Rosé Pine Moon.sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
