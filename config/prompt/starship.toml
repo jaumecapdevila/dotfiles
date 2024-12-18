@@ -14,100 +14,93 @@
 add_newline = true
 command_timeout = 3000
 
-# Configure the left prompt
+# Prompt format
 format = """
-$shell\
-[](bg:rose fg:iris)\
-$time\
-[](bg:pine fg:rose)\
+$username\
 $directory\
-[](bg:foam fg:pine)\
 $git_branch\
-[](bg:none fg:foam) \
-"""
-
-# Display language versions on the right prompt
-right_format = """
 $lua\
 $nodejs\
 $python\
-"""
+$cmd_duration\
+$line_break\
+$character"""
 
 palette = "moon"
 
 [palettes.main]
-base = '#26233a'
 love = '#eb6f92'
 gold = '#f6c177'
 rose = '#ebbcba'
 pine = '#31748f'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
+text  = '#e0def4'
 
 [palettes.moon]
-base = '#222134'
 love = '#eb6f92'
 gold = '#f6c177'
 rose = '#ea9a97'
 pine = '#3e8fb0'
 foam = '#9ccfd8'
 iris = '#c4a7e7'
+text = '#e0def4'
 
-[shell]
-disabled = false
-fish_indicator = "󰈺 "
-powershell_indicator = "󰨊 "
-zsh_indicator = "󱓞 zsh"
-unknown_indicator = "mystery shell"
-format = "[ $indicator ]($style)"
-style = "bg:iris fg:base"
-
-[time]
-disabled = false
-format = "[ 󱑁 $time ]($style)"
-style = "bg:rose fg:base"
-time_format = '%R'
+[username]
+style_user = 'text bold'
+style_root = 'love bold'
+format = '[$user]($style) '
+disabled = true
+show_always = true
+aliases = { "capdevil" = "jimmy" }
 
 [directory]
-format = "[ 󰉋 $path ]($style)"
-style = "bg:pine fg:base"
-truncation_length = 3
+format = "[󰉋 $path]($style) "
+home_symbol = "~"
+read_only = " 󰌾"
+read_only_style = "bold love"
+style = "bold pine"
+truncate_to_repo = true
+truncation_length = 2
 truncation_symbol = "…/"
 
 [git_branch]
-format = "[ $symbol $branch ]($style)"
-style = "bg:foam fg:base"
-symbol = ""
-truncation_length = 20
-
-# Languages
-
-[golang]
-style = "bg:overlay fg:foam"
-format = "[$symbol$version]($style) "
 disabled = false
-symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold iris"
+symbol = "󰘬 "
+truncation_length = 20
+truncation_symbol = "…"
+
+[lua]
+disabled = false
+format = "[$symbol($version )]($style)"
+style = "bold foam"
+symbol = "󰽢 "
 
 [nodejs]
-style = "bg:overlay fg:foam"
-format = "[$symbol$version]($style) "
-disabled = true
+disabled = false
+format = "[$symbol($version )]($style)"
+style = "bold foam"
 symbol = "󰚩 "
 
-[rust]
-style = "bg:overlay fg:foam"
-format = "[$symbol$version]($style) "
-disabled = false
-symbol = "󱘗 "
-
 [python]
-style = "bg:overlay fg:foam"
-format = "[$symbol$version]($style) "
 disabled = false
-symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+python_binary = "python3"
+style = "bold gold"
+symbol = "󱔎 "
 
-[conda]
-style = "bg:overlay fg:foam"
-format = "[$symbol$environment]($style) "
-disabled = false
-symbol = "🅒 "
+[cmd_duration]
+format = '[$duration]($style) '
+min_time = 2000
+style = "bold gold"
+
+[line_break]
+disabled = true
+
+[character]
+disabled = true
+success_symbol = "[](iris) "
+error_symbol = "[](love) "
+vimcmd_symbol = "[](iris) "

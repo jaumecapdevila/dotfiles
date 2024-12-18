@@ -30,16 +30,41 @@ keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
 keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
 keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
-keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+keymap.set(
+  "n",
+  "<C-Up>",
+  "<cmd>resize +2<cr>",
+  { desc = "Increase window height" }
+)
+keymap.set(
+  "n",
+  "<C-Down>",
+  "<cmd>resize -2<cr>",
+  { desc = "Decrease window height" }
+)
+keymap.set(
+  "n",
+  "<C-Left>",
+  "<cmd>vertical resize -2<cr>",
+  { desc = "Decrease window width" }
+)
+keymap.set(
+  "n",
+  "<C-Right>",
+  "<cmd>vertical resize +2<cr>",
+  { desc = "Increase window width" }
+)
 
 -- Buffer managenent
 keymap.set("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Next buffer" })
 keymap.set("n", "<leader>bp", "<cmd>bp<cr>", { desc = "Previous buffer" })
 keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
-keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", { desc = "Close other buffers" })
+keymap.set(
+  "n",
+  "<leader>bo",
+  "<cmd>%bd|e#<cr>",
+  { desc = "Close other buffers" }
+)
 
 -- Save
 keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
@@ -48,8 +73,18 @@ keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
 
 -- Line numbers
-keymap.set("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "Toggle line numbers" })
-keymap.set("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "Toggle relative line numbers" })
+keymap.set(
+  "n",
+  "<leader>n",
+  "<cmd>set nu!<CR>",
+  { desc = "Toggle line numbers" }
+)
+keymap.set(
+  "n",
+  "<leader>rn",
+  "<cmd>set rnu!<CR>",
+  { desc = "Toggle relative line numbers" }
+)
 
 -- Utils
 keymap.set("n", "<leader>wf", "<cmd>enew<cr>", { desc = "New file" })
@@ -58,12 +93,10 @@ keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp info" })
 
 -- Terminal
 keymap.set("n", "<C-t>", ":Term<CR>", { desc = "Open terminal" })
+keymap.set("t", "<Esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 
 -- Terminal navigation
-keymap.set("t", "<Esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })
 keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to lower window" })
 keymap.set("t", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to upper window" })
 keymap.set("t", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to right window" })
-keymap.set("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
-keymap.set("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })
