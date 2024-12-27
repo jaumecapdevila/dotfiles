@@ -6,8 +6,8 @@ return {
     "WinSeparator",
     "VertSplit",
   },
-  exclude_groups = {
-    "CursorLine",
-    "CursorLineNr",
-  },
+  -- exclude_groups = {
+  --   "CursorLine",
+  --   "CursorLineNr",
+  -- },
 }

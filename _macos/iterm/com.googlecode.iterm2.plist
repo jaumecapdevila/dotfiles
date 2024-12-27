@@ -1563,7 +1563,7 @@
 				<real>0.14117647058823529</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/capdevil/.dotfiles/mac/iTerm/wallpapers/deadpool.jpg</string>
+			<string>/Users/capdevil/.dotfiles/mac/iTerm/wallpapers/japanese-01.jpeg</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -1606,15 +1606,15 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.14999999999999999</real>
+			<real>0.0</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
-			<real>16</real>
+			<real>0.10000000000000001</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2565,7 +2565,7 @@
 			<key>Title Components</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.23999999999999999</real>
+			<real>0.0</real>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -2688,7 +2688,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneColor</key>
-	<string>#d33682</string>
+	<string>#eb6f92</string>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
 	<key>StatusBarPosition</key>

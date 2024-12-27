@@ -38,10 +38,11 @@ return {
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
+    cond = vim.g.showstatus,
+    config = function(_, opts) require("lualine").setup(opts) end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     opts = require("plugins.opts.lualine"),
-    config = function(_, opts) require("lualine").setup(opts) end,
   },
 
   -- Fuzzy finder

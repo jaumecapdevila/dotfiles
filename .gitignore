@@ -1,5 +1,5 @@
 # Karabiner
-config/karabiner/automatic_backups
+_macos/karabiner/automatic_backups
 
 # Compiled zsh
 config/shell/zsh/**/**.zwc

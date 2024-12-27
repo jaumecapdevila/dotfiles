@@ -27,10 +27,12 @@
 		".Trash-*",
 		"node_modules",
 		"coverage",
-		"dist"
+		"dist",
+		"venv"
 	],
 	"font_face": "Operator Mono Book",
 	"font_size": 17,
+	"font_options": [],
 	// Hides the new tab button
 	"hide_new_tab_button": true,
 	// Hides the buttons for scrolling tabs left/right

@@ -50,10 +50,10 @@ autocmd("BufEnter", {
 -- Restore cursor on VimLeave or VimSuspend
 -- block, hor{N}, ver{N}, blinkon{N}, blinkoff{N}                                                    │
 -- check https://neovim.io/doc/user/options.html#'guicursor'
-autocmd({ "VimLeave", "VimSuspend" }, {
-  group = augroup("restore_cursor", { clear = true }),
-  command = "set guicursor=a:ver50-blinkon100",
-})
+-- autocmd({ "VimLeave", "VimSuspend" }, {
+--   group = augroup("restore_cursor", { clear = true }),
+--   command = "set guicursor=a:ver50-blinkon100",
+-- })
 
 -----------------------------------------------------------
 -- Filetype settings
@@ -94,14 +94,13 @@ autocmd("Filetype", {
 
 -- Creates a custom command :Term when entering the command-line mode :
 -- window  horizontal  down --> :botright   split
--- window  horizontal  down --> :botright   split
 autocmd("CmdlineEnter", {
   command = "command! Term :botright split term://$SHELL",
 })
 
 -- Enter insert mode when switching to terminal
 autocmd("TermOpen", {
-  command = "setlocal listchars= nonumber norelativenumber nocursorline",
+  command = "setlocal listchars= signcolumn=no nonumber norelativenumber nocursorline",
 })
 
 autocmd("TermOpen", {

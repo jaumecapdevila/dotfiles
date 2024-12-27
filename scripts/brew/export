@@ -2,5 +2,5 @@
 
 set -euo pipefail
 
-brew bundle dump --file="$DOTFILES/config/brew/Brewfile" --force
+brew bundle dump --file="$DOTFILES/_macos/Brewfile" --force
 echo 'Brew apps exported!'

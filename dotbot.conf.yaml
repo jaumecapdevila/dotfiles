@@ -18,9 +18,10 @@
     ~/.config/colorls: config/colorls
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
-    ~/.config/karabiner: config/karabiner
+    ~/.config/ghostty: config/ghostty
+    ~/.config/karabiner: _macos/karabiner
     ~/.config/nvim: config/nvim
-    ~/.config/starship.toml: config/prompt/starship.toml
+    ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/yazi: config/yazi
     ~/.config/zed/settings.json: editors/Zed/settings.json
     ~/.gitattributes: git/.gitattributes
@@ -29,8 +30,8 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
-    ~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings: editors/Sublime/Package Control.sublime-settings
-    ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings: editors/Sublime/Preferences.sublime-settings
+    ~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings: editors/subl/Package Control.sublime-settings
+    ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings: editors/subl/Preferences.sublime-settings
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
