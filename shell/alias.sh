@@ -18,6 +18,10 @@ alias lg='lgs --gs'            # List and display git status
 alias br="brew"
 alias brs="brew services"
 
+# Tmux
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+
 # Utils
 alias cl="clear"
 alias lg="lazygit"
