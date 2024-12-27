@@ -10,7 +10,7 @@ font-style-italic = "Italic"
 font-thicken = false
 
 macos-titlebar-style = transparent
-macos-option-as-alt = true
+macos-option-as-alt = left
 mouse-hide-while-typing = true
 cursor-style = block
 clipboard-read = "allow"

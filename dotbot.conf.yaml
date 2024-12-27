@@ -27,6 +27,7 @@
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
+    ~/.tmux.conf: config/tmux/tmux.conf
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
