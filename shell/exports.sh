@@ -10,27 +10,23 @@ export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export WARP_THEMES_DIR="$HOME/.warp/themes"
 
-
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --highlight-line \
-  --no-info \
-  --ansi \
-	--prompt='󰈲 ' \
-  --layout=reverse \
-  --border=none \
-  --color=fg:#908caa,bg:#232136,hl:#ea9a97 \
-	--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97 \
-	--color=border:#44415a,header:#3e8fb0,gutter:#232136 \
-	--color=spinner:#f6c177,info:#9ccfd8 \
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
-"
+	--ansi \
+	--border rounded \
+	--color='16,bg+:-1,gutter:-1,prompt:5,pointer:5,marker:6,border:4,label:4,header:italic' \
+	--marker=' ' \
+	--no-info \
+	--no-separator \
+	--reverse"
 
+export FZF_TMUX_OPTS="-p 55%,60%"
 export FZF_CTRL_R_OPTS=" \
-	--prompt='󰈲 ' \
+	--border-label=' history ' \
+	--prompt=' ' \
 "
 
 # plugins

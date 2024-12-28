@@ -30,19 +30,19 @@ gui:
   windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#eb6f92"
+      - "#c792ea"
       - "bold"
     inactiveBorderColor:
-      - "#ea9a97"
+      - "#82aaff"
     searchingActiveBorderColor:
-      - "#f6c177"
+      - "#ffeb95"
       - "bold"
     optionsTextColor:
-      - "#e0def4"
+      - "#637777"
     selectedLineBgColor:
-      - "#44415a"
+      - "#1d3b53"
     defaultFgColor:
-      - "#6e6a86"
+      - "#d6deeb"
 
 customCommands:
   - key: "f"

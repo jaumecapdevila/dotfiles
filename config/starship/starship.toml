@@ -26,40 +26,12 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = "main"
-
-[palettes.main]
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ebbcba'
-pine = '#31748f'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
-text  = '#e0def4'
-
-[palettes.moon]
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ea9a97'
-pine = '#3e8fb0'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
-text = '#e0def4'
-
-[username]
-style_user = 'text bold'
-style_root = 'love bold'
-format = '[$user]($style) '
-disabled = true
-show_always = true
-aliases = { "capdevil" = "jimmy" }
-
 [directory]
 format = "[󰉋 $path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
-read_only_style = "bold love"
-style = "bold pine"
+read_only_style = "bold red"
+style = "bold blue"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = "…/"
@@ -67,7 +39,7 @@ truncation_symbol = "…/"
 [git_branch]
 disabled = false
 format = "[$symbol$branch]($style) "
-style = "bold iris"
+style = "bold cyan"
 symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
@@ -75,32 +47,32 @@ truncation_symbol = "…"
 [lua]
 disabled = false
 format = "[$symbol($version )]($style)"
-style = "bold foam"
+style = "bold blue"
 symbol = "󰽢 "
 
 [nodejs]
 disabled = false
 format = "[$symbol($version )]($style)"
-style = "bold foam"
+style = "bold green"
 symbol = "󰚩 "
 
 [python]
 disabled = false
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 python_binary = "python3"
-style = "bold gold"
+style = "bold yellow"
 symbol = "󱔎 "
 
 [cmd_duration]
 format = '[$duration]($style) '
 min_time = 2000
-style = "bold gold"
+style = "bold yellow"
 
 [line_break]
 disabled = true
 
 [character]
 disabled = true
-success_symbol = "[](iris) "
-error_symbol = "[](love) "
-vimcmd_symbol = "[](iris) "
+success_symbol = "[](cyan) "
+error_symbol = "[](red) "
+vimcmd_symbol = "[](green) "
