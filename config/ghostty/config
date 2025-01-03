@@ -1,5 +1,8 @@
 term = xterm-256color
-theme = Night Owl
+theme = rose-pine
+
+copy-on-select = clipboard
+shell-integration-features = cursor,sudo,no-title
 
 cursor-style = block
 cursor-style-blink = true

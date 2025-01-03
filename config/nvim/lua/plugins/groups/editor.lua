@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "oxfist/night-owl.nvim",
-    name = "night-owl",
+    "rose-pine/neovim",
+    name = "rose-pine",
     priority = 1000,
-    opts = require("plugins.colors.night-owl"),
+    opts = require("plugins.colors.rose"),
     config = function(_, opts)
-      require("night-owl").setup(opts)
-      vim.cmd("colorscheme night-owl")
+      require("rose-pine").setup(opts)
+      vim.cmd("colorscheme rose-pine")
     end,
   },
 

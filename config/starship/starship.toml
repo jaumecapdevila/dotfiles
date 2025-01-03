@@ -16,7 +16,6 @@ command_timeout = 3000
 
 # Prompt format
 format = """
-$username\
 $directory\
 $git_branch\
 $lua\

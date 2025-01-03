@@ -1,7 +1,7 @@
-[delta "owlish"]
+[delta "rose"]
     commit-decoration-style = box ul
     dark = true
     hunk-header-decoration-style = box ul
     hunk-header-file-style = bold
     hunk-header-style = file line-number syntax
-    syntax-theme = Night Owlish
+    syntax-theme = Rose Pine

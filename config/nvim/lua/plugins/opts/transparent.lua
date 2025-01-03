@@ -2,12 +2,9 @@ return {
   extra_groups = {
     "NormalFloat",
     "NvimTreeNormal",
+    "VertSplit",
     "WhichKeyFloat",
     "WinSeparator",
-    "VertSplit",
   },
-  -- exclude_groups = {
-  --   "CursorLine",
-  --   "CursorLineNr",
-  -- },
+  exclude_groups = {},
 }

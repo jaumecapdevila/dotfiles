@@ -8,8 +8,8 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export WARP_THEMES_DIR="$HOME/.warp/themes"
 
+# plugins
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
@@ -21,15 +21,18 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--marker=' ' \
 	--no-info \
 	--no-separator \
-	--reverse"
+	--prompt=' ' \
+	--border-label=' 👀 Fuzzy ' \
+	--border-label-pos=2 \
+	--reverse \
+"
 
 export FZF_TMUX_OPTS="-p 55%,60%"
 export FZF_CTRL_R_OPTS=" \
-	--border-label=' history ' \
-	--prompt=' ' \
+	--border-label=' 🧠 History ' \
+	--prompt=' ' \
 "
 
-# plugins
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#e0def4,bg=#393552,bold"
 
@@ -41,6 +44,7 @@ export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
 
+# languages
 export PIPENV_VERBOSITY=-1
 
 GPG_TTY=$(tty)
