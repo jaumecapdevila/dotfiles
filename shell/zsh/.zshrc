@@ -40,9 +40,3 @@ source "$DOTFILES/modules/fzf-git/fzf-git.sh"
 source "$DOTFILES/shell/alias.sh"
 source "$DOTFILES/shell/funcs.sh"
 source "$DOTFILES/shell/bindings.sh"
-
-# Load custom hooks
-autoload -U add-zsh-hook
-add-zsh-hook chpwd cwd_iterm_tab_color
-cwd_iterm_tab_color
-

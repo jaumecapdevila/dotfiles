@@ -1,8 +1,17 @@
-term = xterm-256color
-theme = rose-pine
+#
+#  ██████╗ ██╗  ██╗ ██████╗ ███████╗████████╗████████╗██╗   ██╗
+# ██╔════╝ ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
+# ██║  ███╗███████║██║   ██║███████╗   ██║      ██║    ╚████╔╝
+# ██║   ██║██╔══██║██║   ██║╚════██║   ██║      ██║     ╚██╔╝
+# ╚██████╔╝██║  ██║╚██████╔╝███████║   ██║      ██║      ██║
+#  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝      ╚═╝
+#
+# Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
+# https://ghostty.org/docs/config/reference
 
-copy-on-select = clipboard
-shell-integration-features = cursor,sudo,no-title
+term = xterm-256color
+theme = Nightfly
+title = "Ghostty"
 
 cursor-style = block
 cursor-style-blink = true
@@ -15,36 +24,16 @@ font-style-bold-italic = "Bold Italic"
 font-style-italic = "Italic"
 font-thicken = false
 
+macos-non-native-fullscreen = true
 macos-option-as-alt = left
+macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
-mouse-hide-while-typing = true
 
-clipboard-read = "allow"
-
-window-decoration = true
 window-new-tab-position = end
-window-padding-balance = false
+window-padding-balance = true
 window-padding-x = 16
 window-padding-y = 10
 
-background-opacity = 0.7
+background-opacity = 0.9
 background-blur-radius = 20
 
-keybind = clear
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
-keybind = super+shift+t=new_tab
-keybind = super+shift+h=previous_tab
-keybind = super+shift+l=next_tab
-keybind = super+shift+comma=move_tab:-1
-keybind = super+shift+period=move_tab:1
-keybind = super+shift+c=copy_to_clipboard
-keybind = super+shift+v=paste_from_clipboard
-keybind = super+shift+enter=new_split:auto
-keybind = super+shift+i=inspector:toggle
-keybind = super+shift+m=toggle_split_zoom
-keybind = super+shift+r=reload_config
-keybind = super+shift+s=write_screen_file:open
-keybind = super+shift+w=close_surface

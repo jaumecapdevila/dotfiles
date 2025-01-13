@@ -38,6 +38,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#e0def4,bg=#393552,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 
+# brewing
 export HOMEBREW_AUTO_UPDATE_SECS=604800 # 1 week
 export HOMEBREW_NO_ANALYTICS=true
 export HOMEBREW_PREFIX="/opt/homebrew"
@@ -50,24 +51,15 @@ export PIPENV_VERBOSITY=-1
 GPG_TTY=$(tty)
 export GPG_TTY
 
-# ------------------------------------------------------------------------------
-# Path - The higher it is, the more priority it has
-# ------------------------------------------------------------------------------
+# path - the higher it is, the more priority it has
 export path=(
-	"$DOTFILES/bin"
+	$DOTFILES/bin
 	"$GEM_HOME/bin"
 	"$GOPATH/bin"
 	"$HOME/.cargo/bin"
-	"$HOME/.magento-cloud/bin"
-	"$HOME/.orbstack/bin"
-	"$JAVA_HOME/bin"
-	"/opt/homebrew/opt/ruby/bin"
-	"/opt/homebrew/opt/python@3.9/libexec/bin"
-	"/opt/homebrew/bin"
-	"/opt/homebrew/sbin"
-	"/usr/local/bin"
-	"/bin"
-	"/usr/bin"
-	"/usr/sbin"
-	"/sbin"
+	$HOMEBREW_PREFIX/opt/ruby/bin
+	$HOMEBREW_PREFIX/bin
+	$HOMEBREW_PREFIX/sbin
+	$HOME/.magento-cloud/bin
+	$path
 )

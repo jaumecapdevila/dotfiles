@@ -15,11 +15,11 @@
     ~/.bashrc: shell/bash/.bashrc
     ~/.config/amethyst: config/amethyst
     ~/.config/bat: config/bat
-    ~/.config/colorls: config/colorls
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
     ~/.config/karabiner: _macos/karabiner
+    ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/yazi: config/yazi

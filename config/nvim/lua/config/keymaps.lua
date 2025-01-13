@@ -5,88 +5,25 @@ local keymap = vim.keymap
 g.mapleader = " "
 g.maplocalleader = " "
 
--- Go to  beginning and end
-keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Beginning of line" })
-keymap.set("i", "<C-e>", "<End>", { desc = "End of line" })
-
--- Navigate within insert mode
-keymap.set("i", "<C-h>", "<Left>", { desc = "Move left" })
-keymap.set("i", "<C-l>", "<Right>", { desc = "Move right" })
-keymap.set("i", "<C-j>", "<Down>", { desc = "Move down" })
-keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
-
-keymap.set("n", "<Esc>", "<cmd>noh<cr><esc>", { desc = "Clear highlights" })
-
--- Switch between windows
-keymap.set("n", "<C-h>", "<C-w>h", { desc = "Window left" })
-keymap.set("n", "<C-l>", "<C-w>l", { desc = "Window right" })
-keymap.set("n", "<C-j>", "<C-w>j", { desc = "Window down" })
-keymap.set("n", "<C-k>", "<C-w>k", { desc = "Window up" })
+-- increment/decrement numbers
+keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- Window management
-keymap.set("n", "<leader>ww", "<C-W>p", { desc = "Other window" })
-keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window" })
-keymap.set("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
-keymap.set("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
-keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
-keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
-keymap.set(
-  "n",
-  "<C-Up>",
-  "<cmd>resize +2<cr>",
-  { desc = "Increase window height" }
-)
-keymap.set(
-  "n",
-  "<C-Down>",
-  "<cmd>resize -2<cr>",
-  { desc = "Decrease window height" }
-)
-keymap.set(
-  "n",
-  "<C-Left>",
-  "<cmd>vertical resize -2<cr>",
-  { desc = "Decrease window width" }
-)
-keymap.set(
-  "n",
-  "<C-Right>",
-  "<cmd>vertical resize +2<cr>",
-  { desc = "Increase window width" }
-)
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- Buffer managenent
 keymap.set("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Next buffer" })
 keymap.set("n", "<leader>bp", "<cmd>bp<cr>", { desc = "Previous buffer" })
 keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
-keymap.set(
-  "n",
-  "<leader>bo",
-  "<cmd>%bd|e#<cr>",
-  { desc = "Close other buffers" }
-)
-
--- Save
-keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
-
--- Copy all
-keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
-
--- Line numbers
-keymap.set(
-  "n",
-  "<leader>n",
-  "<cmd>set nu!<CR>",
-  { desc = "Toggle line numbers" }
-)
-keymap.set(
-  "n",
-  "<leader>rn",
-  "<cmd>set rnu!<CR>",
-  { desc = "Toggle relative line numbers" }
-)
 
 -- Utils
+keymap.set("n", "<Esc>", "<cmd>noh<cr><esc>", { desc = "Clear highlights" })
+keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
+keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", { desc = "Copy whole file" })
 keymap.set("n", "<leader>wf", "<cmd>enew<cr>", { desc = "New file" })
 keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp info" })

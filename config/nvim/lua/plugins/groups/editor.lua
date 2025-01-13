@@ -1,13 +1,17 @@
 return {
   -- Colorscheme
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "bluz71/vim-nightfly-colors",
+    name = "nightfly",
     priority = 1000,
-    opts = require("plugins.colors.rose"),
-    config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
+    init = function()
+      vim.g.nightflyItalics = true
+      vim.g.nightflyCursorColor = true
+      vim.g.nightflyNormalFloat = true
+      vim.g.nightflyTransparent = vim.g.transparent
+    end,
+    config = function()
+      vim.cmd("colorscheme nightfly")
     end,
   },
 
