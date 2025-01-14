@@ -8,8 +8,7 @@ opt.cursorline = true -- enable or disable line highlighting
 
 -- Theming
 o.background = "dark"
-g.transparent = true
-g.showstatus = false
+g.transparent = false
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

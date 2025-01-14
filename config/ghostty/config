@@ -10,7 +10,7 @@
 # https://ghostty.org/docs/config/reference
 
 term = xterm-256color
-theme = Nightfly
+theme = BlulocoDark
 title = "Ghostty"
 
 cursor-style = block
@@ -34,6 +34,6 @@ window-padding-balance = true
 window-padding-x = 16
 window-padding-y = 10
 
-background-opacity = 0.9
+background-opacity = 1.0
 background-blur-radius = 20
 

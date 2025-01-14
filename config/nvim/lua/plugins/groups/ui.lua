@@ -22,7 +22,7 @@ return {
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
-    cond = vim.g.transparent,
+    cond = vim.g.transparent and not vim.g.vscode,
     opts = require("plugins.opts.transparent"),
     config = function(_, opts) require("transparent").setup(opts) end,
   },

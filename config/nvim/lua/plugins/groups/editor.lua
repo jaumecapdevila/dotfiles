@@ -1,17 +1,14 @@
 return {
   -- Colorscheme
   {
-    "bluz71/vim-nightfly-colors",
-    name = "nightfly",
+    "uloco/bluloco.nvim",
+    lazy = false,
     priority = 1000,
-    init = function()
-      vim.g.nightflyItalics = true
-      vim.g.nightflyCursorColor = true
-      vim.g.nightflyNormalFloat = true
-      vim.g.nightflyTransparent = vim.g.transparent
-    end,
-    config = function()
-      vim.cmd("colorscheme nightfly")
+    dependencies = { "rktjmp/lush.nvim" },
+    opts = require("plugins.colors.bluloco"),
+    config = function(_, opts)
+      require("bluloco").setup(opts)
+      vim.cmd("colorscheme bluloco")
     end,
   },
 
@@ -42,7 +39,6 @@ return {
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
-    cond = vim.g.showstatus,
     config = function(_, opts) require("lualine").setup(opts) end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
@@ -180,26 +176,6 @@ return {
   {
     "numToStr/Comment.nvim",
     config = function() require("Comment").setup() end,
-  },
-
-  -- Highlight, list and search todo comments in your projects
-  {
-    "folke/todo-comments.nvim",
-    event = "BufReadPre",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
-    keys = {
-      {
-        "]t",
-        function() require("todo-comments").jump_next() end,
-        desc = "Next todo comment",
-      },
-      {
-        "[t",
-        function() require("todo-comments").jump_prev() end,
-        desc = "Previous todo comment",
-      },
-    },
   },
 
   -- Hihglight colors

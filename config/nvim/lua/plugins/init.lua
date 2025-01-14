@@ -29,6 +29,7 @@ require("lazy").setup({
     { import = "plugins.groups.treesitter" },
     { import = "plugins.groups.ui" },
     { import = "plugins.groups.utils" },
+    { import = "plugins.groups.vscode" },
   },
   install = { colorscheme = { "habamax" } },
   ui = {
