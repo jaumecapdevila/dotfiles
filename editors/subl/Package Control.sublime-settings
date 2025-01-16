@@ -19,7 +19,6 @@
 		"LSP-typescript",
 		"MarkdownEditing",
 		"MarkdownPreview",
-		"Night Owl",
 		"Package Control",
 		"ProjectManager",
 		"RainbowIndent",
@@ -35,5 +34,6 @@
 		"EditorConfig",
 		"Emmet",
 		"LSP-css",
+		"LSP-pyright",
 	],
 }

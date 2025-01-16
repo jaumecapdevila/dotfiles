@@ -6,5 +6,8 @@ config/shell/zsh/**/**.zwc
 config/shell/zsh/**/**.zwc.old
 config/shell/zsh/.zim
 
+# Tmux
+config/tmux/plugins/
+
 # Private Stuff
 /**/**/private-*

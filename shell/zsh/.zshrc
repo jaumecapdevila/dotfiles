@@ -36,7 +36,7 @@ source "$ZSH/oh-my-zsh.sh"
 # Load fzf-git
 source "$DOTFILES/modules/fzf-git/fzf-git.sh"
 
-# Load custom alias and bindings
+# Load custom alias, funcs and key-bindings
 source "$DOTFILES/shell/alias.sh"
 source "$DOTFILES/shell/funcs.sh"
-source "$DOTFILES/shell/bindings.sh"
+source "$DOTFILES/shell/zsh/key-bindings.zsh"

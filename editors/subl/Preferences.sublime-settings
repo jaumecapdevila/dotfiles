@@ -4,7 +4,7 @@
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Night Owl.sublime-color-scheme",
+	"color_scheme": "Packages/User/Tokyo/Tokyo Moon.tmTheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
@@ -14,7 +14,7 @@
 	// Set to true to ensure the last line of the file ends in a newline
 	"ensure_newline_at_eof_on_save": true,
 	// Options: "rounded", "square"
-	"file_tab_style": "rounded",
+	"file_tab_style": "ronded",
 	// Fold buttons are the triangles shown in the gutter to fold regions of text
 	"fold_buttons": false,
 	// folder_exclude_patterns and file_exclude_patterns control which files are listed in folders on the sidebar
@@ -30,7 +30,7 @@
 		"dist",
 		"venv"
 	],
-	"font_face": "Operator Mono Book",
+	"font_face": "Berkeley Mono",
 	"font_size": 17,
 	"font_options": [],
 	// Hides the new tab button
@@ -45,6 +45,7 @@
 		"EditorConfig",
 		"Emmet",
 		"LSP-css",
+		"LSP-pyright",
 	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,

@@ -6,7 +6,6 @@ alias vi="vim"
 alias vim="nvim"
 
 # Files
-# https://github.com/athityakumar/colorls?tab=readme-ov-file#flags
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
@@ -18,7 +17,10 @@ alias br="brew"
 alias brs="brew services"
 
 # Tmux
-alias ts='tmux new-session -s'
+alias tm='tmuxinator'
+alias t='tmux'
+alias ta='tmux attach -t'
+alias tn='tmux new-session -s'
 alias tl='tmux list-sessions'
 
 # Utils

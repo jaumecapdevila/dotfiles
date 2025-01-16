@@ -1,14 +1,13 @@
 return {
   -- Colorscheme
   {
-    "uloco/bluloco.nvim",
-    lazy = false,
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
-    opts = require("plugins.colors.bluloco"),
+    opts = require("plugins.colors.tokyonight"),
     config = function(_, opts)
-      require("bluloco").setup(opts)
-      vim.cmd("colorscheme bluloco")
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
     end,
   },
 
@@ -39,6 +38,7 @@ return {
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
+    enabled = false,
     config = function(_, opts) require("lualine").setup(opts) end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",

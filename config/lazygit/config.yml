@@ -1,21 +1,10 @@
-# ██╗      █████╗ ███████╗██╗   ██╗ ██████╗ ██╗████████╗
-# ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██╔════╝ ██║╚══██╔══╝
-# ██║     ███████║  ███╔╝  ╚████╔╝ ██║  ███╗██║   ██║
-# ██║     ██╔══██║ ███╔╝    ╚██╔╝  ██║   ██║██║   ██║
-# ███████╗██║  ██║███████╗   ██║   ╚██████╔╝██║   ██║
-# ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝   ╚═╝
-# Simple terminal UI for git commands
-# Repo: https://github.com/jesseduffield/lazygit
-
 os:
   editPreset: "nvim"
-
 git:
   paging:
     colorArg: always
     pager: delta --paging=never
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
-
 gui:
   border: "rounded" # one of 'single' | 'double' | 'rounded' | 'hidden'
   commandLogSize: 5
@@ -27,22 +16,22 @@ gui:
   showBottomLine: false
   showFileTree: false
   showListFooter: false # for seeing the '5 of 20' message in list panels
-  windowSize: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
+  screenMode: "full" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#eb6f92"
+      - "#bb9af7"
       - "bold"
     inactiveBorderColor:
-      - "#ea9a97"
+      - "#589ed7"
     searchingActiveBorderColor:
-      - "#f6c177"
+      - "#bb9af7"
       - "bold"
     optionsTextColor:
-      - "#e0def4"
+      - "#82aaff"
     selectedLineBgColor:
-      - "#44415a"
+      - "#2d3f76"
     defaultFgColor:
-      - "#e0def4"
+      - "#c8d3f5"
 
 customCommands:
   - key: "f"

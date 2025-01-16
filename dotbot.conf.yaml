@@ -15,6 +15,7 @@
     ~/.bashrc: shell/bash/.bashrc
     ~/.config/amethyst: config/amethyst
     ~/.config/bat: config/bat
+    ~/.config/tmux: config/tmux
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
@@ -27,12 +28,12 @@
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
-    ~/.tmux.conf: config/tmux/tmux.conf
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
     ~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings: editors/subl/Package Control.sublime-settings
     ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings: editors/subl/Preferences.sublime-settings
+    ~/Library/Application Support/Sublime Text/Packages/User/Tokyo/: config/bat/themes/
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

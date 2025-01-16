@@ -34,7 +34,7 @@
 [delta]
   navigate = true    # use n and N to move between diff sections
   side-by-side = true
-  features = bluloco
+  features = tokyo-moon
 
 [diff]
 	colorMoved = default
