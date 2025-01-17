@@ -8,6 +8,7 @@ config/shell/zsh/.zim
 
 # Tmux
 config/tmux/plugins/
+config/tmux/resurrect/
 
 # Private Stuff
 /**/**/private-*

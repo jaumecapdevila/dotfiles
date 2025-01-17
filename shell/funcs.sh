@@ -1,6 +1,5 @@
-# tat: tmux attach
 function tat {
-  name=$(basename `pwd` | sed -e 's/\.//g')
+  name=$(basename "$(pwd)" | sed -e 's/\.//g')
 
   if tmux ls 2>&1 | grep "$name"; then
     tmux attach -t "$name"
@@ -20,21 +19,16 @@ function yz() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
+    builtin cd -- "$cwd" || return
 	fi
 	rm -f -- "$tmp"
 }
 
-function sesh-sessions() {
-  {
-    exec </dev/tty
-    exec <&1
-    local session
-    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
-    zle reset-prompt > /dev/null 2>&1 || true
-    [[ -z "$session" ]] && return
-    sesh connect $session
-  }
+function tms() {
+  project=$(tmuxinator list -n | tail -n +2 | fzf --height 50% --layout=reverse)
+  if [[ -n "$project" ]]; then
+      tmuxinator start "$project"
+  fi
 }
 
 _fzf_compgen_path() {

@@ -16,22 +16,27 @@ gui:
   showBottomLine: false
   showFileTree: false
   showListFooter: false # for seeing the '5 of 20' message in list panels
-  screenMode: "full" # one of 'normal' | 'half' | 'full' default is 'normal'
+  screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#bb9af7"
-      - "bold"
+      - "#f5e0dc"
+      - bold
     inactiveBorderColor:
-      - "#589ed7"
-    searchingActiveBorderColor:
-      - "#bb9af7"
-      - "bold"
+      - "#a6adc8"
     optionsTextColor:
-      - "#82aaff"
+      - "#89b4fa"
     selectedLineBgColor:
-      - "#2d3f76"
+      - "#313244"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#f5e0dc"
+    unstagedChangesColor:
+      - "#f38ba8"
     defaultFgColor:
-      - "#c8d3f5"
+      - "#cdd6f4"
+    searchingActiveBorderColor:
+      - "#f9e2af"
 
 customCommands:
   - key: "f"

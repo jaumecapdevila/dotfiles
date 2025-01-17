@@ -10,28 +10,28 @@
 # https://ghostty.org/docs/config/reference
 
 term = xterm-256color
-theme = Tokyo Moon
+theme = catppuccin-mocha
 title = "Ghostty"
 
 cursor-style = bar
 cursor-style-blink = true
 
-font-family = "BerkeleyMono Nerd Font"
+font-family = "OperatorMono Nerd Font"
 font-size = 17
-font-style = "Regular"
+font-style = "Book"
 font-style-bold = "Bold"
 font-style-bold-italic = "Bold Italic"
-font-style-italic = "Regular Italic"
+font-style-italic = "Book Italic"
 
 macos-non-native-fullscreen = true
 macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = tabs
+macos-titlebar-style = transparent
 
 window-padding-balance = true
 window-padding-x = 16
 window-padding-y = 10
 
-background-opacity = 1.0
+background-opacity = 0.9
 background-blur-radius = 20
 

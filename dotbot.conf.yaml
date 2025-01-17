@@ -23,17 +23,12 @@
     ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/starship/starship.toml
-    ~/.config/yazi: config/yazi
-    ~/.config/zed/settings.json: editors/Zed/settings.json
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
-    ~/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings: editors/subl/Package Control.sublime-settings
-    ~/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings: editors/subl/Preferences.sublime-settings
-    ~/Library/Application Support/Sublime Text/Packages/User/Tokyo/: config/bat/themes/
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

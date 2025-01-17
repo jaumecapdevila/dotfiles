@@ -14,30 +14,34 @@
 add_newline = true
 command_timeout = 3000
 
-# Prompt format
+# Left prompt
 format = """
 $directory\
+$line_break\
+$character"""
+
+# Right prompt
+right_format="""
+$cmd_duration\
 $git_branch\
 $lua\
 $nodejs\
 $python\
-$cmd_duration\
-$line_break\
-$character"""
+"""
 
 [directory]
-format = "[󰉋 $path]($style) "
+format = "[ $path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
 read_only_style = "bold red"
 style = "bold blue"
 truncate_to_repo = true
 truncation_length = 2
-truncation_symbol = "…/"
+truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = "[$symbol$branch]($style) "
+format = "[$symbol$branch(:$remote_branch)]($style) "
 style = "bold cyan"
 symbol = "󰘬 "
 truncation_length = 20
@@ -71,7 +75,7 @@ style = "bold yellow"
 disabled = true
 
 [character]
-disabled = true
-success_symbol = "[](cyan) "
-error_symbol = "[](red) "
-vimcmd_symbol = "[](green) "
+disabled = false
+success_symbol = "[](purple)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"

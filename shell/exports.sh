@@ -21,8 +21,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--marker=' ' \
 	--no-info \
 	--no-separator \
-	--prompt=' ' \
-	--border-label=' 👀 Fuzzy ' \
+	--prompt=' ' \
+	--pointer=' ' \
+	--border-label=' 👀 Filter' \
 	--border-label-pos=2 \
 	--reverse \
 "
@@ -30,7 +31,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 export FZF_TMUX_OPTS="-p 55%,60%"
 export FZF_CTRL_R_OPTS=" \
 	--border-label=' 🧠 History ' \
-	--prompt=' ' \
+	--prompt=' ' \
 "
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
