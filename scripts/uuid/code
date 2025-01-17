@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-uuid=$(uuidgen | tr '[:upper:]' '[:lower:]')
-echo -n "$uuid" | pbcopy
-echo "$uuid"
-
-osascript -e 'display notification "'"$uuid"'" with title "UUID copied to the clipboard"'

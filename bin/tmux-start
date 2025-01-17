@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+project=$(tmuxinator list -n | tail -n +2 | fzf)
+
+if [[ -n "$project" ]]; then
+  tmuxinator start "$project"
+fi

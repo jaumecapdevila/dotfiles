@@ -23,7 +23,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--no-separator \
 	--prompt=' ' \
 	--pointer=' ' \
-	--border-label=' 👀 Filter' \
+	--border-label='  Filter ' \
 	--border-label-pos=2 \
 	--reverse \
 "

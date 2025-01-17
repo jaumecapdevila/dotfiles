@@ -15,20 +15,22 @@ alias lt='ls --tree'
 # Brew
 alias br="brew"
 alias brs="brew services"
+alias bri="brew install"
+alias brg="brew upgrade"
+alias brx="brew-export"
 
 # Tmux
-alias tm='tmuxinator'
 alias t='tmux'
 alias ta='tmux attach -t'
 alias tn='tmux new-session -s'
 alias tl='tmux list-sessions'
+alias tk='tmux kill-session -t'
+alias tm='tmuxinator'
+alias ts='tmux-start'
 
 # Utils
 alias cl="clear"
 alias lg="lazygit"
-
-# Terraform
-alias tf="terraform"
 
 # Python
 alias py="python3"

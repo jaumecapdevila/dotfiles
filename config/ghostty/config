@@ -9,10 +9,10 @@
 # Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
 # https://ghostty.org/docs/config/reference
 
-term = xterm-256color
-theme = catppuccin-mocha
-title = "Ghostty"
+background-blur-radius = 20
+background-opacity = 0.9
 
+confirm-close-surface=false
 cursor-style = bar
 cursor-style-blink = true
 
@@ -28,10 +28,10 @@ macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
 
+term = xterm-256color
+theme = catppuccin-mocha
+title = "Ghostty"
+
 window-padding-balance = true
 window-padding-x = 16
 window-padding-y = 10
-
-background-opacity = 0.9
-background-blur-radius = 20
-
