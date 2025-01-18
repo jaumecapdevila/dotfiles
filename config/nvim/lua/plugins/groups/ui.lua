@@ -25,4 +25,13 @@ return {
     opts = require("plugins.opts.transparent"),
     config = function(_, opts) require("transparent").setup(opts) end,
   },
+
+  -- Indent guides
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    main = "ibl",
+    opts = function() return require("plugins.opts.indent") end,
+    config = function(_, opts) require("ibl").setup(opts) end,
+  },
 }

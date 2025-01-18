@@ -1,5 +1,17 @@
-[delta "rose"]
+[delta "duskfox"]
 	dark = true
 	hunk-header-file-style = bold
 	hunk-header-style = file line-number syntax
-	syntax-theme = Rose Pine
+	syntax-theme = Duskfox
+
+[delta "terafox"]
+	dark = true
+	hunk-header-file-style = bold
+	hunk-header-style = file line-number syntax
+	syntax-theme = Terafox
+
+[delta "nightfox"]
+	dark = true
+	hunk-header-file-style = bold
+	hunk-header-style = file line-number syntax
+	syntax-theme = Nightfox

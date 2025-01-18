@@ -27,6 +27,7 @@ require("lazy").setup({
     { import = "plugins.groups.git" },
     { import = "plugins.groups.linting" },
     { import = "plugins.groups.lsp" },
+    { import = "plugins.groups.testing" },
     { import = "plugins.groups.treesitter" },
     { import = "plugins.groups.ui" },
     { import = "plugins.groups.utils" },

@@ -27,10 +27,10 @@ font-thicken = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = transparent
+macos-titlebar-style = tabs
 
 term = xterm-256color
-theme = rose-pine-moon
+theme = Nightfox
 title = "Ghostty"
 
 window-padding-balance = true

@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "EdenEast/nightfox.nvim",
+    name = "nightfox",
     priority = 1000,
-    opts = require("plugins.colors.rose"),
+    opts = require("plugins.colors.nightfox"),
     config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
+      require("nightfox").setup(opts)
+      vim.cmd("colorscheme " .. vim.g.fox_style)
     end,
   },
 
@@ -33,6 +33,14 @@ return {
         "Refresh file explorer",
       },
     },
+  },
+
+  -- Bufferline
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+    opts = require("plugins.opts.bufferline"),
+    config = function(_, opts) require("bufferline").setup(opts) end,
   },
 
   -- Statusline
