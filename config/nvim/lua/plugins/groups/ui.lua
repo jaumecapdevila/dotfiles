@@ -9,7 +9,6 @@ return {
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
-    enabled = true,
     opts = function() return require("plugins.opts.dashboard") end,
     config = function(_, dashboard)
       require("alpha").setup(dashboard.opts)

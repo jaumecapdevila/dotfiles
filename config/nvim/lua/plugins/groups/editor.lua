@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "rose-pine/neovim",
+    name = "rose-pine",
     priority = 1000,
-    opts = require("plugins.colors.catppuccin"),
+    opts = require("plugins.colors.rose"),
     config = function(_, opts)
-      require("catppuccin").setup(opts)
-      vim.cmd("colorscheme catppuccin")
+      require("rose-pine").setup(opts)
+      vim.cmd("colorscheme rose-pine")
     end,
   },
 
@@ -38,11 +38,10 @@ return {
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
-    enabled = false,
-    config = function(_, opts) require("lualine").setup(opts) end,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     opts = require("plugins.opts.lualine"),
+    config = function(_, opts) require("lualine").setup(opts) end,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
   -- Fuzzy finder
@@ -124,34 +123,6 @@ return {
         hide_cursor = true,
       })
     end,
-  },
-
-  -- Git integration
-  {
-    "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = require("plugins.opts.gitsigns"),
-    config = function(_, opts) require("gitsigns").setup(opts) end,
-  },
-
-  {
-    "kdheepak/lazygit.nvim",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
-    },
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
-    },
   },
 
   -- Improved buffer delete

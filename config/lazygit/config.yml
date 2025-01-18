@@ -19,24 +19,19 @@ gui:
   screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#f5e0dc"
-      - bold
+      - "#eb6f92"
+      - "bold"
     inactiveBorderColor:
-      - "#a6adc8"
-    optionsTextColor:
-      - "#89b4fa"
-    selectedLineBgColor:
-      - "#313244"
-    cherryPickedCommitBgColor:
-      - "#45475a"
-    cherryPickedCommitFgColor:
-      - "#f5e0dc"
-    unstagedChangesColor:
-      - "#f38ba8"
-    defaultFgColor:
-      - "#cdd6f4"
+      - "#ea9a97"
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#f6c177"
+      - "bold"
+    optionsTextColor:
+      - "#e0def4"
+    selectedLineBgColor:
+      - "#44415a"
+    defaultFgColor:
+      - "#6e6a86"
 
 customCommands:
   - key: "f"
