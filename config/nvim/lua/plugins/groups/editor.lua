@@ -1,11 +1,14 @@
 return {
   -- Colorscheme
   {
-    "tanvirtin/monokai.nvim",
-    name = "monokai",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function() require("plugins.colors.monokai") end,
+    opts = require("plugins.colors.tokyonight"),
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
   },
 
   -- File explorer

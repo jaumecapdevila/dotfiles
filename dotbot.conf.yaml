@@ -15,7 +15,6 @@
     ~/.bashrc: shell/bash/.bashrc
     ~/.config/amethyst: config/amethyst
     ~/.config/bat: config/bat
-    ~/.config/tmux: config/tmux
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
@@ -23,6 +22,8 @@
     ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
     ~/.config/starship.toml: config/starship/starship.toml
+    ~/.config/tmux: config/tmux
+    ~/.config/yazi: config/yazi
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global

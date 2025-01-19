@@ -30,7 +30,7 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = transparent
 
 term = xterm-256color
-theme = Monokai Pro
+theme = Tokyo Moon
 title = "Ghostty"
 
 window-padding-balance = true
