@@ -10,7 +10,7 @@
 # https://ghostty.org/docs/config/reference
 
 background-blur-radius = 20
-background-opacity = 1.0
+background-opacity = 0.9
 
 confirm-close-surface=false
 cursor-style = bar
@@ -27,10 +27,10 @@ font-thicken = true
 macos-non-native-fullscreen = true
 macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
-macos-titlebar-style = tabs
+macos-titlebar-style = transparent
 
 term = xterm-256color
-theme = Nightfox
+theme = Monokai Pro
 title = "Ghostty"
 
 window-padding-balance = true

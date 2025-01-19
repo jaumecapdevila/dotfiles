@@ -1,21 +1,18 @@
 return {
   -- Colorscheme
   {
-    "EdenEast/nightfox.nvim",
-    name = "nightfox",
+    "tanvirtin/monokai.nvim",
+    name = "monokai",
+    lazy = false,
     priority = 1000,
-    opts = require("plugins.colors.nightfox"),
-    config = function(_, opts)
-      require("nightfox").setup(opts)
-      vim.cmd("colorscheme " .. vim.g.fox_style)
-    end,
+    config = function() require("plugins.colors.monokai") end,
   },
 
   -- File explorer
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    opts = require("plugins.opts.explorer"),
+    opts = require("plugins.opts.nvim-tree"),
     config = function(_, opts)
       require("nvim-tree").setup(opts)
       vim.g.nvimtree_side = opts.view.side
@@ -38,15 +35,72 @@ return {
   -- Bufferline
   {
     "akinsho/bufferline.nvim",
-    enabled = false,
+    event = "VeryLazy",
     opts = require("plugins.opts.bufferline"),
-    config = function(_, opts) require("bufferline").setup(opts) end,
+    config = function(_, opts)
+      local bufferline = require("bufferline")
+      opts.options.style_preset = bufferline.style_preset.minimal
+      bufferline.setup(opts)
+    end,
+    keys = {
+      {
+        "<leader>bp",
+        "<Cmd>BufferLineTogglePin<CR>",
+        desc = "Toggle Pin",
+      },
+      {
+        "<leader>bP",
+        "<Cmd>BufferLineGroupClose ungrouped<CR>",
+        desc = "Delete Non-Pinned Buffers",
+      },
+      {
+        "<leader>br",
+        "<Cmd>BufferLineCloseRight<CR>",
+        desc = "Delete Buffers to the Right",
+      },
+      {
+        "<leader>bl",
+        "<Cmd>BufferLineCloseLeft<CR>",
+        desc = "Delete Buffers to the Left",
+      },
+      {
+        "<S-h>",
+        "<cmd>BufferLineCyclePrev<cr>",
+        desc = "Prev Buffer",
+      },
+      {
+        "<S-l>",
+        "<cmd>BufferLineCycleNext<cr>",
+        desc = "Next Buffer",
+      },
+      {
+        "[b",
+        "<cmd>BufferLineCyclePrev<cr>",
+        desc = "Prev Buffer",
+      },
+      {
+        "]b",
+        "<cmd>BufferLineCycleNext<cr>",
+        desc = "Next Buffer",
+      },
+      {
+        "[B",
+        "<cmd>BufferLineMovePrev<cr>",
+        desc = "Move buffer prev",
+      },
+      {
+        "]B",
+        "<cmd>BufferLineMoveNext<cr>",
+        desc = "Move buffer next",
+      },
+    },
   },
 
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
+    cond = vim.g.transparent == false,
     opts = require("plugins.opts.lualine"),
     config = function(_, opts) require("lualine").setup(opts) end,
     dependencies = { "nvim-tree/nvim-web-devicons" },

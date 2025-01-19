@@ -5,6 +5,7 @@ return {
     "VertSplit",
     "WhichKeyFloat",
     "WinSeparator",
+    "Lualine",
   },
   exclude_groups = {},
 }

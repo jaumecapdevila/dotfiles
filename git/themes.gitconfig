@@ -1,17 +1,4 @@
-[delta "duskfox"]
-	dark = true
-	hunk-header-file-style = bold
-	hunk-header-style = file line-number syntax
-	syntax-theme = Duskfox
+[delta "soda"]
+  dark = true
+	syntax-theme = "Monokai Soda"
 
-[delta "terafox"]
-	dark = true
-	hunk-header-file-style = bold
-	hunk-header-style = file line-number syntax
-	syntax-theme = Terafox
-
-[delta "nightfox"]
-	dark = true
-	hunk-header-file-style = bold
-	hunk-header-style = file line-number syntax
-	syntax-theme = Nightfox
