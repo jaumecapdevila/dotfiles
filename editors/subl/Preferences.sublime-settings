@@ -4,7 +4,7 @@
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Monokai Pro.sublime-color-scheme",
+	"color_scheme": "Solarized (dark).sublime-color-scheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
@@ -41,7 +41,8 @@
 	"highlight_line": false,
 	// Makes tabs with modified files more visible
 	"highlight_modified_tabs": false,
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,
 	// Additional spacing at the bottom of each line, in pixels
@@ -65,24 +66,10 @@
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
 	"tab_size": 2,
-	"theme": "Monokai Pro.sublime-theme",
+	"theme": "Solarized (dark).sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
 	/*"vintage_use_clipboard": true,*/
 	"wrap_width": 80,
-	// makes the background of the sidebar and main screen the same color
-	"monokai_pro_minimal": true,
-	// styles the app title bar in matching monokai pro colors
-	"monokai_pro_style_title_bar": true,
-	// sets the padding between rows in the sidebar
-	"monokai_pro_sidebar_row_padding": 4,
-	// overrides the standard font size of the sidebar
-	"monokai_pro_sidebar_font_size": 15,
-	// overrides the standard font size of the labels
-	"monokai_pro_label_font_size": 15,
-	// makes the scrollbar more of an indicator, useful if you never grab it anyway
-	"monokai_pro_small_scrollbar": true,
-	// overrides the font face of the sidebar, file tabs and button labels
-	"monokai_pro_ui_font_face": "Operator Mono Bold",
 }

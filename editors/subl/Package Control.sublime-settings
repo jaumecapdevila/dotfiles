@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"A File Icon",
 		"BracketHighlighter",
 		"ColorHints",
 		"EditorConfig",
@@ -18,14 +19,14 @@
 		"LSP-typescript",
 		"MarkdownEditing",
 		"MarkdownPreview",
+		"Moonlight",
 		"Package Control",
 		"ProjectManager",
 		"RainbowIndent",
 		"SideBarTools",
-		"SpaceDuck Color Scheme",
+		"Solarized Color Scheme",
 		"SublimeLinter",
 		"SyncedSideBar",
-		"Theme - Monokai Pro",
 		"TOML",
 	],
 	"in_process_packages":

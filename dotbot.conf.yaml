@@ -17,6 +17,7 @@
     ~/.config/bat: config/bat
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
+    ~/.config/zellij: config/zellij
     ~/.config/ghostty: config/ghostty
     ~/.config/karabiner: _macos/karabiner
     ~/.config/lsd: config/lsd

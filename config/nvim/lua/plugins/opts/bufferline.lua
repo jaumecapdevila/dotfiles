@@ -6,9 +6,9 @@ return {
     always_show_bufferline = false,
     offsets = {
       {
-        text = " Explorer",
+        text = "EXPLORER",
         filetype = "NvimTree",
-        highlight = "PanelHeading",
+        highlight = "NvimTreeNormal",
         text_align = "left",
         separator = false,
       },

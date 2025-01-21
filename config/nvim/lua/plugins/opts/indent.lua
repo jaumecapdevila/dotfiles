@@ -22,5 +22,8 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 return {
-  indent = { highlight = highlight },
+  indent = {
+    char = "┊",
+    highlight = highlight
+  },
 }

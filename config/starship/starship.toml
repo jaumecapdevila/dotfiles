@@ -5,7 +5,7 @@
 # ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║
 # ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝
 # The minimal, blazing-fast, and infinitely customizable prompt
-# Repo: https://starship.rs
+# https://starship.rs
 
 # Get editor completions based on the config schema
 "$schema" = "https://starship.rs/config-schema.json"

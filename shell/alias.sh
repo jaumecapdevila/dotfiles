@@ -28,6 +28,10 @@ alias tk='tmux kill-session -t'
 alias tm='tmuxinator'
 alias ts='tmux-start'
 
+# Zellij
+alias z='zellij'
+alias zw='zellij -l welcome'
+
 # Utils
 alias cl="clear"
 alias lg="lazygit"
