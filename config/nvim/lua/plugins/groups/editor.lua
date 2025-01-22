@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "folke/tokyonight.nvim",
+    "Tsuzat/NeoSolarized.nvim",
     lazy = false,
     priority = 1000,
-    opts = require("plugins.colors.tokyonight"),
+    opts = require("plugins.colors.neosolarized"),
     config = function(_, opts)
-      require("tokyonight").setup(opts)
-      vim.cmd("colorscheme tokyonight")
+      require("NeoSolarized").setup(opts)
+      vim.cmd("colorscheme NeoSolarized")
     end,
   },
 

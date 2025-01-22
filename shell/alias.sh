@@ -30,6 +30,7 @@ alias ts='tmux-start'
 
 # Zellij
 alias z='zellij'
+alias zs='zellij-start'
 alias zw='zellij -l welcome'
 
 # Utils

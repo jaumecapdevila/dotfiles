@@ -46,6 +46,10 @@ export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
 export HOMEBREW_REPOSITORY="/opt/homebrew"
 
+# zellij
+export ZELLIJ_AUTO_ATTACH=true
+export ZELLIJ_AUTO_EXIT=false
+
 # languages
 export PIPENV_VERBOSITY=-1
 

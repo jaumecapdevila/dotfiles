@@ -6,13 +6,13 @@ permission:
   exec: dark_magenta
   exec-sticky: dark_yellow
   no-access: grey
-  octal: dark_grey
+  octal: dark_blue
   acl: cyan
-  context: dark_grey
+  context: dark_blue
 date:
   hour-old: white
   day-old: dark_cyan
-  older: dark_grey
+  older: dark_blue
 size:
   none: grey
   small: dark_cyan
@@ -27,7 +27,7 @@ links:
 tree-edge: grey
 git-status:
   default: grey
-  unmodified: dark_grey
+  unmodified: dark_blue
   ignored: grey
   new-in-index: dark_cyan
   new-in-workdir: dark_cyan

@@ -1,41 +1,28 @@
-[delta "tokyo-moon"]
-  minus-style                   = syntax "#3a273a"
-  minus-non-emph-style          = syntax "#3a273a"
-  minus-emph-style              = syntax "#6b2e43"
-  minus-empty-line-marker-style = syntax "#3a273a"
-  line-numbers-minus-style      = "#e26a75"
-  plus-style                    = syntax "#273849"
-  plus-non-emph-style           = syntax "#273849"
-  plus-emph-style               = syntax "#305f6f"
-  plus-empty-line-marker-style  = syntax "#273849"
-  line-numbers-plus-style       = "#b8db87"
-  line-numbers-zero-style       = "#3b4261"
-  syntax-theme                  = "Tokyo Moon"
-
-[delta "tokyo-storm"]
-  minus-style                   = syntax "#3f2d3d"
-  minus-non-emph-style          = syntax "#3f2d3d"
-  minus-emph-style              = syntax "#763842"
-  minus-empty-line-marker-style = syntax "#3f2d3d"
-  line-numbers-minus-style      = "#914c54"
-  plus-style                    = syntax "#283b4d"
-  plus-non-emph-style           = syntax "#283b4d"
-  plus-emph-style               = syntax "#316172"
-  plus-empty-line-marker-style  = syntax "#283b4d"
-  line-numbers-plus-style       = "#449dab"
-  line-numbers-zero-style       = "#3b4261"
-  syntax-theme                  = "Tokyo Storm"
-
-[delta "tokyo-night"]
-  minus-style                   = syntax "#37222c"
-  minus-non-emph-style          = syntax "#37222c"
-  minus-emph-style              = syntax "#713137"
-  minus-empty-line-marker-style = syntax "#37222c"
-  line-numbers-minus-style      = "#914c54"
-  plus-style                    = syntax "#20303b"
-  plus-non-emph-style           = syntax "#20303b"
-  plus-emph-style               = syntax "#2c5a66"
-  plus-empty-line-marker-style  = syntax "#20303b"
-  line-numbers-plus-style       = "#449dab"
-  line-numbers-zero-style       = "#3b4261"
-  syntax-theme                  = "Tokyo Night"
+[delta "solarized"]
+    commit-decoration-style ="#6c71c4" ul
+    dark = true
+    file-added-label = [+]
+    file-copied-label = [==]
+    file-decoration-style = "#6c71c4" box ul
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [->]
+    file-style = "#cb4b16" ul bold
+    hunk-header-decoration-style = omit
+    hunk-header-file-style = "#cb4b16" ul bold
+    hunk-header-line-number-style = "#b58900" bold
+    hunk-header-style = line-number syntax bold italic
+    line-numbers = true
+    line-numbers-left-format = "{nm:>1}|"
+    line-numbers-left-style = "#6c71c4"
+    line-numbers-minus-style = "#dc322f" bold
+    line-numbers-plus-style = "#859900" bold
+    line-numbers-right-format = "{np:>1}|"
+    line-numbers-right-style = "#6c71c4"
+    line-numbers-zero-style = "#657b83" italic
+    side-by-side = true
+    syntax-theme = Solarized (dark)
+    true-color = always
+    wrap-max-lines = unlimited
+    wrap-right-percent = 1
+    zero-style = syntax

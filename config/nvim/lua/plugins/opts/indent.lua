@@ -26,4 +26,5 @@ return {
     char = "┊",
     highlight = highlight
   },
+  scope = { enabled = false },
 }

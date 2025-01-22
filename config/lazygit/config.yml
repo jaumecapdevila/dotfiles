@@ -19,17 +19,15 @@ gui:
   screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "magenta"
+      - "#6c71c4"
       - "bold"
     inactiveBorderColor:
-      - "blue"
+      - "#268bd2"
     searchingActiveBorderColor:
-      - "yellow"
+      - "#b58900"
       - "bold"
     selectedLineBgColor:
-      - "magenta"
-  authorColors:
-    "*": magenta
+      - "#073642"
 
 customCommands:
   - key: "f"
