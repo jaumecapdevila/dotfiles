@@ -1,38 +1,27 @@
-user: dark_red
-group: dark_yellow
+user: 125
+group: 136
 permission:
-  read: dark_cyan
-  write: dark_magenta
-  exec: dark_magenta
-  exec-sticky: dark_yellow
-  no-access: grey
-  octal: dark_blue
-  acl: cyan
-  context: dark_blue
+  read: 166
+  write: 64
+  exec: 160
+  exec-sticky: 125
+  no-access: 245
+  octal: 37
+  acl: 37
+  context: 245
 date:
-  hour-old: white
-  day-old: dark_cyan
-  older: dark_blue
+  hour-old: 64
+  day-old: 136
+  older: 240
 size:
-  none: grey
-  small: dark_cyan
-  medium: cyan
-  large: magenta
+  none: 160
+  small: 61
+  medium: 37
+  large: 33
 inode:
-  valid: cyan
-  invalid: grey
+  valid: 64
+  invalid: 160
 links:
-  valid: white
-  invalid: grey
-tree-edge: grey
-git-status:
-  default: grey
-  unmodified: dark_blue
-  ignored: grey
-  new-in-index: dark_cyan
-  new-in-workdir: dark_cyan
-  typechange: dark_yellow
-  deleted: dark_red
-  renamed: dark_cyan
-  modified: dark_magenta
-  conflicted: dark_red
+  valid: 61
+  invalid: 240
+tree-edge: 245

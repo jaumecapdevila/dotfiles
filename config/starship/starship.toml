@@ -17,32 +17,34 @@ command_timeout = 3000
 # Left prompt
 format = """
 $directory\
+[](bg:cyan fg:blue)\
+$git_branch\
+[ ](fg:cyan)\
 $line_break\
 $character"""
 
 # Right prompt
 right_format="""
 $cmd_duration\
-$git_branch\
 $lua\
 $nodejs\
 $python\
 """
 
 [directory]
-format = "[ $path]($style) "
+format = "[  $path ]($style)"
 home_symbol = "~"
 read_only = " 󰌾"
-read_only_style = "bold red"
-style = "bold blue"
+read_only_style = "bg:red fg:black"
+style = "bg:blue fg:black"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "bold cyan"
+format = "[ $symbol$branch(:$remote_branch) ]($style)"
+style = "bg:cyan fg:black"
 symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
@@ -50,32 +52,32 @@ truncation_symbol = "…"
 [lua]
 disabled = false
 format = "[$symbol($version )]($style)"
-style = "bold blue"
+style = "blue"
 symbol = "󰽢 "
 
 [nodejs]
 disabled = false
 format = "[$symbol($version )]($style)"
-style = "bold green"
+style = "green"
 symbol = "󰚩 "
 
 [python]
 disabled = false
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 python_binary = "python3"
-style = "bold yellow"
+style = "yellow"
 symbol = "󱔎 "
 
 [cmd_duration]
 format = '[$duration]($style) '
 min_time = 2000
-style = "bold yellow"
+style = "yellow"
 
 [line_break]
 disabled = true
 
 [character]
-disabled = false
+disabled = true
 success_symbol = "[](purple)"
 error_symbol = "[](red)"
 vimcmd_symbol = "[](green)"

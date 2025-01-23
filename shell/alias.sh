@@ -19,17 +19,9 @@ alias bri="brew install"
 alias brg="brew upgrade"
 alias brx="brew-export"
 
-# Tmux
-alias t='tmux'
-alias ta='tmux attach -t'
-alias tn='tmux new-session -s'
-alias tl='tmux list-sessions'
-alias tk='tmux kill-session -t'
-alias tm='tmuxinator'
-alias ts='tmux-start'
-
 # Zellij
 alias z='zellij'
+alias zl='zellij list-sessions'
 alias zs='zellij-start'
 alias zw='zellij -l welcome'
 
