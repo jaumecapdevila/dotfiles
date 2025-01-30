@@ -14,59 +14,61 @@
 add_newline = true
 command_timeout = 3000
 
-# Left prompt
 format = """
 $directory\
-[](bg:cyan fg:blue)\
-$git_branch\
-[ ](fg:cyan)\
 $line_break\
 $character"""
 
-# Right prompt
-right_format="""
+right_format = """
 $cmd_duration\
+$git_branch\
 $lua\
 $nodejs\
 $python\
-"""
+$time"""
 
 [directory]
-format = "[  $path ]($style)"
+format = "[ $path]($style) "
 home_symbol = "~"
 read_only = " 󰌾"
-read_only_style = "bg:red fg:black"
-style = "bg:blue fg:black"
+read_only_style = "red bold"
+style = "blue bold"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = "[ $symbol$branch(:$remote_branch) ]($style)"
-style = "bg:cyan fg:black"
+format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "cyan bold"
 symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
 
 [lua]
 disabled = false
-format = "[$symbol($version )]($style)"
-style = "blue"
+format = "[$symbol($version)]($style) "
+style = "blue bold"
 symbol = "󰽢 "
 
 [nodejs]
 disabled = false
-format = "[$symbol($version )]($style)"
-style = "green"
+format = "[$symbol($version)]($style) "
+style = "green bold"
 symbol = "󰚩 "
 
 [python]
 disabled = false
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 python_binary = "python3"
 style = "yellow"
 symbol = "󱔎 "
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "white bold"
+format = '[$time]($style) '
 
 [cmd_duration]
 format = '[$duration]($style) '
@@ -77,7 +79,7 @@ style = "yellow"
 disabled = true
 
 [character]
-disabled = true
+disabled = false
 success_symbol = "[](purple)"
 error_symbol = "[](red)"
 vimcmd_symbol = "[](green)"

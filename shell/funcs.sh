@@ -18,7 +18,7 @@ function yz() {
 }
 
 # tat: tmux attach
-function zat {
+function tat {
   name=$(basename `pwd` | sed -e 's/\.//g')
 
   if tmux ls 2>&1 | grep "$name"; then
@@ -28,4 +28,9 @@ function zat {
   else
     tmux new-session -s "$name"
   fi
+}
+
+function za() {
+  local session_name=${1:-${PWD:t}}
+  zellij attach "$session_name" || zellij -s "$session_name"
 }
