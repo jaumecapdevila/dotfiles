@@ -31,7 +31,7 @@
 [delta]
   navigate = true    # use n and N to move between diff sections
   side-by-side = true
-  syntax-theme = Solarized (dark)
+  syntax-theme = Rose Pine
 
 [diff]
 	colorMoved = default

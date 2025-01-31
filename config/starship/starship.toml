@@ -24,8 +24,7 @@ $cmd_duration\
 $git_branch\
 $lua\
 $nodejs\
-$python\
-$time"""
+$python"""
 
 [directory]
 format = "[ $path]($style) "
@@ -63,12 +62,6 @@ format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 python_binary = "python3"
 style = "yellow"
 symbol = "󱔎 "
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "white bold"
-format = '[$time]($style) '
 
 [cmd_duration]
 format = '[$duration]($style) '
