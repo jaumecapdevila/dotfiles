@@ -1,0 +1,15 @@
+themes {
+  bluloco {
+		bg "#282c34"
+		fg "#abb2bf"
+		red "#ff6480"
+		green "#3fc56b"
+		blue "#3691ff"
+		yellow "#f9c859"
+		magenta "#7a82da"
+		orange "#ff936a"
+		cyan "#10b1fe"
+		black "#42444d"
+		white "#cdd3e0"
+	}
+}

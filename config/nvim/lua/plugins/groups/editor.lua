@@ -1,13 +1,14 @@
 return {
   -- Colorscheme
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "uloco/bluloco.nvim",
+    name = "bluloco",
     priority = 1000,
-    opts = require("plugins.colors.rose-pine"),
+    dependencies = { 'rktjmp/lush.nvim' },
+    opts = require("plugins.colors.bluloco"),
     config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
+      require("bluloco").setup(opts)
+      vim.cmd("colorscheme bluloco")
     end,
   },
 
