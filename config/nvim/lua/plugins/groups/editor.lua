@@ -1,13 +1,14 @@
 return {
   -- Colorscheme
   {
-    "marko-cerovac/material.nvim",
+    "Shatur/neovim-ayu",
+    name = "ayu",
     lazy = false,
     priority = 1000,
-    opts = require("plugins.colors.material"),
+    opts = function() return require("plugins.colors.ayu") end,
     config = function(_, opts)
-      require("material").setup(opts)
-      vim.cmd("colorscheme material")
+      require("ayu").setup(opts)
+      vim.cmd("colorscheme ayu")
     end,
   },
 
