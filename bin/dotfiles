@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+CONFIG="dotbot.conf.yaml"
+DOTBOT_DIR="modules/dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+HOMEDIR="$HOME/.dotfiles"
+
+cd "${HOMEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+"${HOMEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${HOMEDIR}" -c "${CONFIG}"
+

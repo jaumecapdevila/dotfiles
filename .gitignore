@@ -1,0 +1,14 @@
+# Karabiner
+_macos/karabiner/automatic_backups
+
+# Compiled zsh
+config/shell/zsh/**/**.zwc
+config/shell/zsh/**/**.zwc.old
+config/shell/zsh/.zim
+
+# Tmux
+config/tmux/plugins/
+config/tmux/resurrect/
+
+# Private Stuff
+/**/**/private-*

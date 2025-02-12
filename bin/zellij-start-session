@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+ZJ_SESSIONS=$(zellij list-sessions)
+NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
+
+if [ "${NO_SESSIONS}" -eq 1 ]; then
+    echo "No sessions found..."
+    exit 0
+fi
+
+SELECTED_SESSION=$(echo "${ZJ_SESSIONS}" | fzf --border-label=' ⚡Zellij Sessions ' --height 40% | awk '{print $1}')
+
+if [ -z "${SELECTED_SESSION}" ]; then
+    echo "No session selected..."
+    exit 0
+fi
+
+zellij attach "${SELECTED_SESSION}"
+

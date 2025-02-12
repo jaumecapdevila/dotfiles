@@ -1,0 +1,34 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- clean: ["~"]
+
+- create:
+    - ~/.z
+    - ~/.hushlogin
+
+- link:
+    ~/.bash_profile: shell/bash/.bash_profile
+    ~/.bashrc: shell/bash/.bashrc
+    ~/.config/amethyst: config/amethyst
+    ~/.config/bat: config/bat
+    ~/.config/gh-dash: config/gh-dash
+    ~/.config/gh: config/gh
+    ~/.config/ghostty: config/ghostty
+    ~/.config/karabiner: _macos/karabiner
+    ~/.config/lsd: config/lsd
+    ~/.config/nvim: config/nvim
+    ~/.config/starship.toml: config/starship/starship.toml
+    ~/.config/zellij: config/zellij
+    ~/.gitattributes: git/.gitattributes
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.zshenv: shell/zsh/.zshenv
+    ~/.zshrc: shell/zsh/.zshrc
+    ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

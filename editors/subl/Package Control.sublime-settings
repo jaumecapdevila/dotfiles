@@ -1,0 +1,33 @@
+{
+	"installed_packages":
+	[
+		"A File Icon",
+		"ColorHints",
+		"EditorConfig",
+		"Emmet",
+		"Git",
+		"GitHub Desktop",
+		"GitHubTools",
+		"LSP",
+		"LSP-css",
+		"LSP-eslint",
+		"LSP-json",
+		"LSP-lua",
+		"LSP-pyright",
+		"LSP-rust-analyzer",
+		"LSP-typescript",
+		"MarkdownEditing",
+		"MarkdownPreview",
+		"Package Control",
+		"ProjectManager",
+		"RainbowIndent",
+		"SideBarTools",
+		"SublimeLinter",
+		"SyncedSideBar",
+		"Theme - Monokai Pro",
+		"TOML",
+	],
+	"in_process_packages":
+	[
+	],
+}

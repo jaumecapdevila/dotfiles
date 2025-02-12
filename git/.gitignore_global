@@ -1,0 +1,33 @@
+# IntelliJ IDEA
+.idea
+*.iml
+*.iws
+.idea-compl
+*.sc
+
+# PHP Storm
+.phpstorm_helpers/
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Mac
+.DS_Store
+
+# Cache
+.php_cs.cache
+.phpunit.result.cache
+
+# Vscode
+.vscode
+
+# Other
+.credentials
+
+# Vim swap files
+.*.sw?
+
+# Node
+node_modules
+npm-debug.log
