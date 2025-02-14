@@ -2,13 +2,13 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"ayu",
 		"ColorHints",
 		"EditorConfig",
 		"Emmet",
 		"Git",
 		"GitHub Desktop",
 		"GitHubTools",
-		"Halcyon Theme",
 		"LSP",
 		"LSP-css",
 		"LSP-eslint",

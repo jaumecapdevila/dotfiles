@@ -45,6 +45,6 @@ source "$DOTFILES/shell/funcs.sh"
 source "$DOTFILES/shell/zsh/key-bindings.zsh"
 
 # Load custom hooks
-autoload -U add-zsh-hook
-add-zsh-hook chpwd cwd_iterm_tab_color
-cwd_iterm_tab_color
+# autoload -U add-zsh-hook
+# add-zsh-hook chpwd cwd_iterm_tab_color
+# cwd_iterm_tab_color

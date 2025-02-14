@@ -4,7 +4,7 @@
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Halcyon Theme/halcyon.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
@@ -30,7 +30,7 @@
 		"dist",
 		"venv"
 	],
-	"font_face": "Operator Mono Book",
+	"font_face": "PragmataPro Mono",
 	"font_size": 17,
 	"font_options": [],
 	// Hides the new tab button
@@ -65,10 +65,13 @@
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
 	"tab_size": 2,
-	"theme": "Adaptive.sublime-theme",
+	"theme": "ayu-mirage.sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
 	/*"vintage_use_clipboard": true,*/
 	"wrap_width": 80,
+	"ui_native_titlebar": false, // use native titlebars on macOs
+	"ui_separator": false, // separators between panels
+	"ui_wide_scrollbars": true, // wider scrollbars
 }

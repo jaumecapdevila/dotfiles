@@ -1,14 +1,13 @@
 return {
   -- Colorscheme
   {
-    "Shatur/neovim-ayu",
-    name = "ayu",
-    lazy = false,
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     priority = 1000,
-    opts = function() return require("plugins.colors.ayu") end,
+    opts = require("plugins.colors.tokyonight"),
     config = function(_, opts)
-      require("ayu").setup(opts)
-      vim.cmd("colorscheme ayu")
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
     end,
   },
 
@@ -41,6 +40,7 @@ return {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     opts = require("plugins.opts.bufferline"),
+    cond = vim.g.simplified_ui == false,
     config = function(_, opts)
       local bufferline = require("bufferline")
       opts.options.style_preset = bufferline.style_preset.minimal
@@ -105,10 +105,10 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     cond = vim.g.simplified_ui == false,
-    config = function(_, opts) 
+    config = function()
       require("lualine").setup({
         options = {
-          theme = require("material.lualine"),
+          theme = "ayu",
           section_separators = { left = "", right = "" },
           component_separators = { left = "", right = "" },
           disabled_filetypes = { "dashboard", "startify", "packer" },

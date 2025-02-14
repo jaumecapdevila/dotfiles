@@ -16,18 +16,18 @@ gui:
   showBottomLine: false
   showFileTree: false
   showListFooter: false # for seeing the '5 of 20' message in list panels
-  screenMode: "full" # one of 'normal' | 'half' | 'full' default is 'normal'
+  screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "#bea7f9"
+      - "#ff9e64"
       - "bold"
     inactiveBorderColor:
-      - "#7bcce2"
+      - "#29a4bd"
     searchingActiveBorderColor:
-      - "#f8d68b"
+      - "#ff9e64"
       - "bold"
     selectedLineBgColor:
-      - "#313a51"
+      - "#2e3c64"
 
 customCommands:
   - key: "f"
