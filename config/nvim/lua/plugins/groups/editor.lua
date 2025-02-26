@@ -1,13 +1,13 @@
 return {
   -- Colorscheme
   {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
+    "Tsuzat/NeoSolarized.nvim",
+    lazy = false,
     priority = 1000,
-    opts = require("plugins.colors.tokyonight"),
+    opts = require("plugins.colors.neosolarized"),
     config = function(_, opts)
-      require("tokyonight").setup(opts)
-      vim.cmd("colorscheme tokyonight")
+      require("NeoSolarized").setup(opts)
+      vim.cmd("colorscheme NeoSolarized")
     end,
   },
 
@@ -108,7 +108,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          theme = "ayu",
+          theme = "auto",
           section_separators = { left = "", right = "" },
           component_separators = { left = "", right = "" },
           disabled_filetypes = { "dashboard", "startify", "packer" },

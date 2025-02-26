@@ -14,80 +14,52 @@
 add_newline = true
 command_timeout = 3000
 
-format = """
+format = """\
 $directory\
+[](fg:blue bg:cyan)\
 $git_branch\
 $git_status\
-$lua\
-$nodejs\
-$python\
+[](fg:cyan bg:yellow)\
 $cmd_duration\
-$line_break\
-$character"""
+[ ](fg:yellow)\
+"""
 
 [directory]
-format = "[ $path]($style) "
+format = "[  $path ]($style)"
 home_symbol = "~"
 read_only = " 󰌾"
-read_only_style = "red bold"
-style = "blue bold"
+read_only_style = "fg:red bg:blue"
+style = "fg:black bg:blue"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "purple bold"
+format = "[ $symbol$branch(:$remote_branch) ]($style)"
+style = "fg:black bg:cyan"
 symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
 
 [git_status]
-format = '[$all_status]($style)'
-style = "bright-black bold"
-conflicted = ' ${count} '
-up_to_date = '󰘽 '
-untracked = '󰋗 ${count} '
 ahead = ' ${count}'
-diverged = ' ${ahead_count}  ${behind_count}'
 behind = ' behind=${count}'
-stashed = ' ${count} '
-modified = '󰛿 ${count} '
-staged = '󰐗 ${count} '
-renamed = '󱍸 ${count} '
+conflicted = ' ${count} '
 deleted = '󰍶 ${count} '
-disabled = true
-
-[lua]
 disabled = false
-format = "[$symbol($version)]($style) "
-style = "blue bold"
-symbol = "󰽢 "
+diverged = ' ${ahead_count}  ${behind_count}'
+format = '[$all_status]($style)'
+modified = '󰛿 ${count} '
+renamed = '󱍸 ${count} '
+staged = '󰐗 ${count} '
+stashed = ' ${count} '
+style = "fg:black bg:cyan"
+untracked = '󰋗 ${count} '
+up_to_date = '󰘽 '
 
-[nodejs]
-disabled = false
-format = "[$symbol($version)]($style) "
-style = "green bold"
-symbol = "󰚩 "
-
-[python]
-disabled = false
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
-python_binary = "python3"
-style = "yellow"
-symbol = "󱔎 "
 
 [cmd_duration]
-format = '[$duration]($style) '
+format = '[  $duration ]($style)'
 min_time = 2000
-style = "yellow"
-
-[line_break]
-disabled = true
-
-[character]
-disabled = false
-success_symbol = "[](purple)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
+style = "fg:black bg:yellow"

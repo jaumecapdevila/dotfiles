@@ -2,7 +2,6 @@
 	"installed_packages":
 	[
 		"A File Icon",
-		"ayu",
 		"ColorHints",
 		"EditorConfig",
 		"Emmet",
@@ -23,9 +22,9 @@
 		"ProjectManager",
 		"RainbowIndent",
 		"SideBarTools",
+		"Solarized Color Scheme",
 		"SublimeLinter",
 		"SyncedSideBar",
-		"Theme - Monokai Pro",
 		"TOML",
 	],
 	"in_process_packages":

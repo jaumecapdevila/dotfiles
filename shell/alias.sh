@@ -54,3 +54,10 @@ alias ais="gh copilot suggest"
 alias gpnv="git push --no-verify"
 alias gj="gitmoji"
 alias gjc="gitmoji --commit"
+
+# Magento
+alias mc="magento-cloud"
+alias mce="magento-cloud environment"
+alias mcd="magento-cloud deploy"
+alias mcr="magento-cloud redeploy"
+alias mcs="magento-cloud ssh"

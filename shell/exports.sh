@@ -35,7 +35,7 @@ export FZF_CTRL_R_OPTS=" \
 "
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#8cd7ca,bg=#424765,bold"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1ebcc5,bg=#073642,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 
@@ -64,6 +64,8 @@ export path=(
 	"$HOME/.cargo/bin"
 	"$HOMEBREW_PREFIX"/opt/ruby/bin
 	"$HOMEBREW_PREFIX"/opt/python@3.13/libexec/bin
+	"$HOMEBREW_PREFIX"/opt/php@8.3/bin
+	"$HOMEBREW_PREFIX"/opt/php@8.3/sbin
 	"$HOMEBREW_PREFIX"/bin
 	"$HOMEBREW_PREFIX"/sbin
 	"$HOME"/.magento-cloud/bin
