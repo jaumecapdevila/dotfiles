@@ -1,13 +1,21 @@
 return {
-  -- Colorscheme
+  -- Colorschemes
   {
     "Tsuzat/NeoSolarized.nvim",
-    lazy = false,
-    priority = 1000,
     opts = require("plugins.colors.neosolarized"),
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
-      vim.cmd("colorscheme NeoSolarized")
+      -- vim.cmd("colorscheme NeoSolarized")
+    end,
+  },
+
+  {
+    "alexmozaidze/palenight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("palenight").setup({ italic = true })
+      vim.cmd("colorscheme palenight")
     end,
   },
 
@@ -104,7 +112,8 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-    cond = vim.g.simplified_ui == false,
+    -- cond = vim.g.simplified_ui == false,
+    cond = false,
     config = function()
       require("lualine").setup({
         options = {

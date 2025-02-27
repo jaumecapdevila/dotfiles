@@ -8,8 +8,8 @@ opt.cursorline = true -- enable or disable line highlighting
 
 -- Ui stuff
 o.background = "dark"
-g.transparent = true
-g.simplified_ui = true
+g.transparent = false
+g.simplified_ui = false
 
 -- Material theme
 g.material_style = "palenight"

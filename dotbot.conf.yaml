@@ -21,7 +21,7 @@
     ~/.config/karabiner: _macos/karabiner
     ~/.config/lsd: config/lsd
     ~/.config/nvim: config/nvim
-    ~/.config/starship.toml: config/starship/powerline.toml
+    ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/zellij: config/zellij
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig

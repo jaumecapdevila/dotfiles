@@ -1,3 +1,6 @@
+[include]
+  path = ~/.dotfiles/git/themes.gitconfig
+
 [alias]
   g = "git"
   undo = "reset --soft HEAD^"
@@ -30,7 +33,7 @@
 
 [delta]
   navigate = true    # use n and N to move between diff sections
-  syntax-theme = "Solarized (dark)"
+  features = "pastelnight"
 
 [diff]
 	colorMoved = default

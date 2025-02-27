@@ -31,7 +31,7 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPre", "BufNewFile" },
     main = "ibl",
-    cond = vim.simplified_ui == false,
+    cond = vim.g.simplified_ui == false,
     opts = function() return require("plugins.opts.indent") end,
     config = function(_, opts) require("ibl").setup(opts) end,
   },

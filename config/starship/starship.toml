@@ -16,14 +16,18 @@ command_timeout = 3000
 
 format = """
 $directory\
+$line_break\
+$character\
+"""
+
+right_format = """
+$cmd_duration\
 $git_branch\
 $git_status\
 $lua\
 $nodejs\
 $python\
-$cmd_duration\
-$line_break\
-$character"""
+"""
 
 [directory]
 format = "[ $path]($style) "
@@ -84,7 +88,7 @@ min_time = 2000
 style = "yellow"
 
 [line_break]
-disabled = false
+disabled = true
 
 [character]
 disabled = false
