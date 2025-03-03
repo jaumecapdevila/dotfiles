@@ -23,7 +23,6 @@ $character\
 right_format = """
 $cmd_duration\
 $git_branch\
-$git_status\
 $lua\
 $nodejs\
 $python\
@@ -40,28 +39,11 @@ truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
-disabled = false
 format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "purple bold"
+style = "cyan bold"
 symbol = "󰘬 "
 truncation_length = 20
 truncation_symbol = "…"
-
-[git_status]
-format = '[$all_status]($style)'
-style = "bright-black bold"
-conflicted = ' ${count} '
-up_to_date = '󰘽 '
-untracked = '󰋗 ${count} '
-ahead = ' ${count}'
-diverged = ' ${ahead_count}  ${behind_count}'
-behind = ' behind=${count}'
-stashed = ' ${count} '
-modified = '󰛿 ${count} '
-staged = '󰐗 ${count} '
-renamed = '󱍸 ${count} '
-deleted = '󰍶 ${count} '
-disabled = true
 
 [lua]
 disabled = false

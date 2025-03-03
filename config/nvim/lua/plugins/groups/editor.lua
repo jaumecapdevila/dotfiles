@@ -2,20 +2,12 @@ return {
   -- Colorschemes
   {
     "Tsuzat/NeoSolarized.nvim",
+    lazy = false,
+    priority = 1000,
     opts = require("plugins.colors.neosolarized"),
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
-      -- vim.cmd("colorscheme NeoSolarized")
-    end,
-  },
-
-  {
-    "alexmozaidze/palenight.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("palenight").setup({ italic = true })
-      vim.cmd("colorscheme palenight")
+      vim.cmd("colorscheme NeoSolarized")
     end,
   },
 

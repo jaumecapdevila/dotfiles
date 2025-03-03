@@ -8,7 +8,7 @@
 # https://starship.rs
 
 # Get editor completions based on the config schema
-"$schema" = "https://starship.rs/config-schema.json"
+'$schema' = 'https://starship.rs/config-schema.json'
 
 # Inserts blank line between shell prompts
 add_newline = true
@@ -19,28 +19,32 @@ $directory\
 [](fg:blue bg:cyan)\
 $git_branch\
 $git_status\
-[](fg:cyan bg:yellow)\
+[](fg:cyan bg:green)\
+$lua\
+$nodejs\
+$python\
+[](fg:green bg:yellow)\
 $cmd_duration\
 [ ](fg:yellow)\
 """
 
 [directory]
-format = "[  $path ]($style)"
-home_symbol = "~"
-read_only = " 󰌾"
-read_only_style = "fg:red bg:blue"
-style = "fg:black bg:blue"
+format = '[  $path ]($style)'
+home_symbol = '~'
+read_only = ' 󰌾'
+read_only_style = 'fg:red bg:blue'
+style = 'fg:black bg:blue'
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = "[ $symbol$branch(:$remote_branch) ]($style)"
-style = "fg:black bg:cyan"
-symbol = "󰘬 "
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+style = 'fg:black bg:cyan'
+symbol = '󰘬 '
 truncation_length = 20
-truncation_symbol = "…"
+truncation_symbol = '…'
 
 [git_status]
 ahead = ' ${count}'
@@ -54,12 +58,30 @@ modified = '󰛿 ${count} '
 renamed = '󱍸 ${count} '
 staged = '󰐗 ${count} '
 stashed = ' ${count} '
-style = "fg:black bg:cyan"
+style = 'fg:black bg:cyan'
 untracked = '󰋗 ${count} '
 up_to_date = '󰘽 '
 
+[lua]
+disabled = false
+format = '[ $symbol($version) ]($style)'
+style = 'fg:black bg:green'
+symbol = '󰽢 '
+
+[nodejs]
+disabled = false
+format = '[ $symbol($version) ]($style)'
+style = 'fg:black bg:green'
+symbol = '󰚩 '
+
+[python]
+disabled = false
+format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
+python_binary = 'python3'
+style = 'fg:black bg:green'
+symbol = '󱔎 '
 
 [cmd_duration]
 format = '[  $duration ]($style)'
 min_time = 2000
-style = "fg:black bg:yellow"
+style = 'fg:black bg:yellow'

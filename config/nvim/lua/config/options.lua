@@ -11,9 +11,6 @@ o.background = "dark"
 g.transparent = false
 g.simplified_ui = false
 
--- Material theme
-g.material_style = "palenight"
-
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs
 opt.shiftwidth = 2
