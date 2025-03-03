@@ -51,3 +51,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[branch "main"]
+  remote = origin
+  merge = refs/heads/main

@@ -7,7 +7,6 @@ $git_state\
 $git_status\
 $cmd_duration\
 $line_break\
-$python\
 $character"""
 
 [directory]
@@ -28,15 +27,20 @@ truncation_length = 20
 truncation_symbol = "…"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](bright-cyan) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+ahead = ' ${count}'
+behind = ' behind=${count}'
+conflicted = ' ${count} '
+deleted = '󰍶 ${count} '
+disabled = false
+diverged = ' ${ahead_count}  ${behind_count}'
+format = '[$all_status]($style)'
+modified = '󰛿 ${count} '
+renamed = '󱍸 ${count} '
+staged = '󰐗 ${count} '
+stashed = ' ${count} '
+style = 'cyan'
+untracked = '󰋗 ${count} '
+up_to_date = '󰘽 '
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
@@ -45,7 +49,3 @@ style = "bright-black"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "yellow"
-
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
