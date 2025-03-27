@@ -8,7 +8,7 @@
 # https://starship.rs
 
 # Get editor completions based on the config schema
-"$schema" = "https://starship.rs/config-schema.json"
+'$schema' = 'https://starship.rs/config-schema.json'
 
 # Inserts blank line between shell prompts
 add_newline = true
@@ -16,57 +16,52 @@ command_timeout = 3000
 
 format = """
 $directory\
-$line_break\
-$character\
-"""
-
-right_format = """
-$cmd_duration\
 $git_branch\
-$lua\
-$nodejs\
+$git_status\
 $python\
-"""
+$cmd_duration\
+$line_break\
+$character"""
 
 [directory]
-format = "[ $path]($style) "
-home_symbol = "~"
-read_only = " 󰌾"
-read_only_style = "red bold"
+format = "[ $path]($style) "
 style = "blue bold"
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
 
 [git_branch]
-format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "cyan bold"
-symbol = "󰘬 "
+disabled = false
+format = '[$symbol$branch(:$remote_branch)]($style) '
+style = 'cyan'
+symbol = " " 
 truncation_length = 20
-truncation_symbol = "…"
+truncation_symbol = '…'
 
-[lua]
+[git_status]
+ahead = ' ${count}'
+behind = ' behind=${count}'
+conflicted = ' ${count} '
+deleted = '󰍶 ${count} '
 disabled = false
-format = "[$symbol($version)]($style) "
-style = "blue bold"
-symbol = "󰽢 "
-
-[nodejs]
-disabled = false
-format = "[$symbol($version)]($style) "
-style = "green bold"
-symbol = "󰚩 "
+diverged = ' ${ahead_count}  ${behind_count}'
+format = '[$all_status]($style)'
+modified = '󰛿 ${count} '
+renamed = '󱍸 ${count} '
+staged = '󰐗 ${count} '
+stashed = ' ${count} '
+style = 'cyan'
+untracked = '󰋗 ${count} '
+up_to_date = ' '
 
 [python]
-disabled = false
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
-python_binary = "python3"
+python_binary = 'python3'
 style = "yellow"
-symbol = "󱔎 "
+symbol = '󱔎 '
 
 [cmd_duration]
-format = '[$duration]($style) '
-min_time = 2000
+format = "[$duration]($style) "
 style = "yellow"
 
 [line_break]
@@ -74,6 +69,6 @@ disabled = true
 
 [character]
 disabled = false
-success_symbol = "[](purple)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
+success_symbol = "[](purple)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"

@@ -13,9 +13,12 @@ return {
     undercurl = false, -- true/false; for global undercurl
   },
   -- Add specific hightlight groups
-  on_highlights = function(hl, c) 
+  on_highlights = function(hl, c)
+    -- Syntax
     hl.Keyword.fg = c.violet
     hl.Function.fg = c.blue
+    -- Plugins
     hl.TelescopeBorder.fg = c.blue
-  end, 
+    hl.NvimTreeFolderIcon.fg = c.orange
+  end,
 }

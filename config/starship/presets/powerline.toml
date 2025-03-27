@@ -19,17 +19,17 @@ $directory\
 [](fg:blue bg:cyan)\
 $git_branch\
 $git_status\
-[](fg:cyan bg:green)\
+[](fg:cyan bg:bright-purple)\
 $lua\
 $nodejs\
 $python\
-[](fg:green bg:yellow)\
+[](fg:bright-purple bg:yellow)\
 $cmd_duration\
 [ ](fg:yellow)\
 """
 
 [directory]
-format = '[  $path ]($style)'
+format = '[  $path ]($style)'
 home_symbol = '~'
 read_only = ' 󰌾'
 read_only_style = 'fg:red bg:blue'
@@ -60,25 +60,25 @@ staged = '󰐗 ${count} '
 stashed = ' ${count} '
 style = 'fg:black bg:cyan'
 untracked = '󰋗 ${count} '
-up_to_date = '󰘽 '
+up_to_date = ' '
 
 [lua]
 disabled = false
 format = '[ $symbol($version) ]($style)'
-style = 'fg:black bg:green'
+style = 'fg:black bg:bright-purple'
 symbol = '󰽢 '
 
 [nodejs]
 disabled = false
 format = '[ $symbol($version) ]($style)'
-style = 'fg:black bg:green'
+style = 'fg:black bg:bright-purple'
 symbol = '󰚩 '
 
 [python]
 disabled = false
 format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
 python_binary = 'python3'
-style = 'fg:black bg:green'
+style = 'fg:black bg:bright-purple'
 symbol = '󱔎 '
 
 [cmd_duration]

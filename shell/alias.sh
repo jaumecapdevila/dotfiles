@@ -51,6 +51,7 @@ alias ai="gh copilot"
 alias ais="gh copilot suggest"
 
 # Git
+alias glda="git log --diff-filter=A"
 alias gpnv="git push --no-verify"
 alias gj="gitmoji"
 alias gjc="gitmoji --commit"

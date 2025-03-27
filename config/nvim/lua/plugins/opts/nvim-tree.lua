@@ -21,7 +21,7 @@ return {
     indent_markers = { enable = false },
     icons = {
       show = {
-        folder_arrow = false,
+        folder_arrow = true,
       },
       glyphs = {
         default = "󰈚",

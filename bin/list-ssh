@@ -1,0 +1,11 @@
+# Show all SSH processes
+ps aux | grep ssh
+
+# List established SSH connections
+netstat -tn | grep ssh
+
+# Alternative with ss command
+ss -o state established '( dport = :ssh or sport = :ssh )'
+
+# Using lsof to show SSH connections
+lsof -i TCP:22
