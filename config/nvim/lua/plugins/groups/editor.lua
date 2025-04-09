@@ -11,14 +11,6 @@ return {
     end,
   },
 
-  {
-    "alexmozaidze/palenight.nvim",
-    config = function()
-      require("palenight").setup({ italic = false })
-      -- vim.cmd("colorscheme palenight")
-    end,
-  },
-
   -- File explorer
   {
     "nvim-tree/nvim-tree.lua",

@@ -41,7 +41,8 @@
 	"highlight_line": false,
 	// Makes tabs with modified files more visible
 	"highlight_modified_tabs": false,
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,
 	// Additional spacing at the bottom of each line, in pixels

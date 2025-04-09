@@ -34,7 +34,7 @@ truncation_symbol = '…/'
 disabled = false
 format = '[$symbol$branch(:$remote_branch)]($style) '
 style = 'cyan'
-symbol = " " 
+symbol = " "
 truncation_length = 20
 truncation_symbol = '…'
 
@@ -69,6 +69,6 @@ disabled = true
 
 [character]
 disabled = false
-success_symbol = "[](purple)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
+success_symbol = "[](purple) "
+error_symbol = "[](red) "
+vimcmd_symbol = "[](green) "
