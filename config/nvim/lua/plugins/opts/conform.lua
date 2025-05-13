@@ -1,4 +1,5 @@
 return {
+  -- Define your formatters
   formatters_by_ft = {
     astro = { "prettier" },
     javascript = { "prettier" },
@@ -15,8 +16,12 @@ return {
     lua = { "stylua" },
     python = { "isort", "black" },
   },
-  format_on_save = {
-    lsp_fallback = true,
-    timeout_ms = 1000,
+
+  -- Set default options
+  default_format_opts = {
+    lsp_format = "fallback",
   },
+
+  -- Set up format-on-save
+  format_on_save = { timeout_ms = 500 },
 }

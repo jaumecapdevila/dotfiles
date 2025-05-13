@@ -31,8 +31,8 @@
 		"venv"
 	],
 	"font_face": "Operator Mono Book",
-	"font_size": 17,
 	"font_options": [],
+	"font_size": 17,
 	// Hides the new tab button
 	"hide_new_tab_button": true,
 	// Hides the buttons for scrolling tabs left/right
@@ -65,11 +65,11 @@
 	"show_sidebar_button": false,
 	// Hides the tab close button when false
 	"show_tab_close_buttons": false,
+	/*"vintage_use_clipboard": true,*/
+	"sidebar_on_right": true,
 	"tab_size": 2,
 	"theme": "Solarized (dark).sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
-	/*"vintage_use_clipboard": true,*/
-	"wrap_width": 80,
 }

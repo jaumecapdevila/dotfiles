@@ -6,5 +6,5 @@
 -- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 -- Minimalistic and efficient custom Neovim config
 
-require("config")
+require("configs")
 require("plugins")

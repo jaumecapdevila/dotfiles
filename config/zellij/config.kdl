@@ -238,7 +238,7 @@ load_plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+// minimalistic true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL

@@ -33,7 +33,7 @@
 
 [delta]
   navigate = true    # use n and N to move between diff sections
-  features = "solarized"
+  features = "pastelnight"
 
 [diff]
 	colorMoved = default

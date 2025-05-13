@@ -9,7 +9,7 @@ opt.cursorline = true -- enable or disable line highlighting
 -- Ui stuff
 o.background = "dark"
 g.transparent = false
-g.simplified_ui = true
+g.minimalistic = true
 
 -- Indenting
 opt.expandtab = true -- use spaces instead of tabs

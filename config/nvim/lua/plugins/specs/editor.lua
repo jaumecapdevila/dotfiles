@@ -1,10 +1,10 @@
 return {
-  -- Colorschemes
+  -- Colorscheme
   {
     "Tsuzat/NeoSolarized.nvim",
     lazy = false,
     priority = 1000,
-    opts = require("plugins.colors.neosolarized"),
+    opts = require("plugins.opts.neosolarized"),
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
       vim.cmd("colorscheme NeoSolarized")
@@ -35,77 +35,11 @@ return {
     },
   },
 
-  -- Bufferline
-  {
-    "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    opts = require("plugins.opts.bufferline"),
-    cond = vim.g.simplified_ui == false,
-    config = function(_, opts)
-      local bufferline = require("bufferline")
-      opts.options.style_preset = bufferline.style_preset.minimal
-      bufferline.setup(opts)
-    end,
-    keys = {
-      {
-        "<leader>bp",
-        "<Cmd>BufferLineTogglePin<CR>",
-        desc = "Toggle Pin",
-      },
-      {
-        "<leader>bP",
-        "<Cmd>BufferLineGroupClose ungrouped<CR>",
-        desc = "Delete Non-Pinned Buffers",
-      },
-      {
-        "<leader>br",
-        "<Cmd>BufferLineCloseRight<CR>",
-        desc = "Delete Buffers to the Right",
-      },
-      {
-        "<leader>bl",
-        "<Cmd>BufferLineCloseLeft<CR>",
-        desc = "Delete Buffers to the Left",
-      },
-      {
-        "<S-h>",
-        "<cmd>BufferLineCyclePrev<cr>",
-        desc = "Prev Buffer",
-      },
-      {
-        "<S-l>",
-        "<cmd>BufferLineCycleNext<cr>",
-        desc = "Next Buffer",
-      },
-      {
-        "[b",
-        "<cmd>BufferLineCyclePrev<cr>",
-        desc = "Prev Buffer",
-      },
-      {
-        "]b",
-        "<cmd>BufferLineCycleNext<cr>",
-        desc = "Next Buffer",
-      },
-      {
-        "[B",
-        "<cmd>BufferLineMovePrev<cr>",
-        desc = "Move buffer prev",
-      },
-      {
-        "]B",
-        "<cmd>BufferLineMoveNext<cr>",
-        desc = "Move buffer next",
-      },
-    },
-  },
-
   -- Statusline
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
-    -- cond = vim.g.simplified_ui == false,
-    cond = false,
+    cond = vim.g.minimalistic == false,
     config = function()
       require("lualine").setup({
         options = {

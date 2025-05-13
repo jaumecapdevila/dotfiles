@@ -2214,7 +2214,7 @@
 				<real>0.14117647058823529</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -2764,7 +2764,7 @@
 			<key>Use Underline Color (Light)</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.05</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -2845,7 +2845,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneColor</key>
-	<string>#268bd2</string>
+	<string>#7e57c2</string>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
 	<key>StatusBarPosition</key>

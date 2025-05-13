@@ -22,7 +22,7 @@ gui:
       - "#6c71c4"
       - "bold"
     inactiveBorderColor:
-      - "#268bd2"
+      - "#2AA198"
     searchingActiveBorderColor:
       - "#b58900"
       - "bold"
