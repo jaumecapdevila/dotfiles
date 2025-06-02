@@ -59,6 +59,8 @@ return {
   -- AI assistant
   {
     "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "BufReadPost",
     opts = require("plugins.opts.copilot"),
     config = function(_, opts) require("copilot").setup(opts) end,
   },

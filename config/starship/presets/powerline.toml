@@ -10,9 +10,9 @@
 # Get editor completions based on the config schema
 '$schema' = 'https://starship.rs/config-schema.json'
 
-# Inserts blank line between shell prompts
 add_newline = true
 command_timeout = 3000
+palette = 'solarized'
 
 format = """\
 $directory\
@@ -28,12 +28,16 @@ $cmd_duration\
 [ ](fg:yellow)\
 """
 
+[palettes.solarized]
+# base = '#001217'
+base = '#002b36'
+
 [directory]
 format = '[  $path ]($style)'
 home_symbol = '~'
 read_only = ' 󰌾'
 read_only_style = 'fg:red bg:blue'
-style = 'fg:black bg:blue'
+style = 'fg:base bg:blue'
 truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = '…/'
@@ -41,7 +45,7 @@ truncation_symbol = '…/'
 [git_branch]
 disabled = false
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
-style = 'fg:black bg:cyan'
+style = 'fg:base bg:cyan'
 symbol = '󰘬 '
 truncation_length = 20
 truncation_symbol = '…'
@@ -58,30 +62,30 @@ modified = '󰛿 ${count} '
 renamed = '󱍸 ${count} '
 staged = '󰐗 ${count} '
 stashed = ' ${count} '
-style = 'fg:black bg:cyan'
+style = 'fg:base bg:cyan'
 untracked = '󰋗 ${count} '
 up_to_date = ' '
 
 [lua]
 disabled = false
 format = '[ $symbol($version) ]($style)'
-style = 'fg:black bg:bright-purple'
+style = 'fg:base bg:bright-purple'
 symbol = '󰽢 '
 
 [nodejs]
 disabled = false
 format = '[ $symbol($version) ]($style)'
-style = 'fg:black bg:bright-purple'
+style = 'fg:base bg:bright-purple'
 symbol = '󰚩 '
 
 [python]
 disabled = false
 format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
 python_binary = 'python3'
-style = 'fg:black bg:bright-purple'
+style = 'fg:base bg:bright-purple'
 symbol = '󱔎 '
 
 [cmd_duration]
 format = '[  $duration ]($style)'
 min_time = 2000
-style = 'fg:black bg:yellow'
+style = 'fg:base bg:yellow'

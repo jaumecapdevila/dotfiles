@@ -56,6 +56,9 @@ alias gpnv="git push --no-verify"
 alias gj="gitmoji"
 alias gjc="gitmoji --commit"
 
+# Npm
+alias lnl="list-npm-links"
+
 # Magento
 alias mc="magento-cloud"
 alias mce="magento-cloud environment"

@@ -17,7 +17,7 @@ return {
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-    ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
+    ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   }),
 
@@ -25,9 +25,9 @@ return {
   sources = {
     { name = "nvim_lsp" },
     { name = "nvim_lua" }, -- neovim Lua API
-    { name = "luasnip" },  -- snippets
-    { name = "buffer" },   -- text within current buffer
-    { name = "path" },     -- file system paths
+    { name = "luasnip" }, -- snippets
+    { name = "buffer" }, -- text within current buffer
+    { name = "path" }, -- file system paths
   },
 
   -- configure lspkind for vs-code like pictograms in completion menu

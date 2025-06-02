@@ -19,9 +19,10 @@ return {
     root_folder_label = false,
     highlight_git = true,
     indent_markers = { enable = false },
+    indent_width = 2,
     icons = {
       show = {
-        folder_arrow = true,
+        folder_arrow = false,
       },
       glyphs = {
         default = "󰈚",

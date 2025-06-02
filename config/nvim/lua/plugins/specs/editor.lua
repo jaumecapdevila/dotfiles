@@ -128,6 +128,7 @@ return {
   -- Smooth scrolling
   {
     "karb94/neoscroll.nvim",
+    enabled = not vim.g.minimalistic,
     config = function()
       require("neoscroll").setup({
         hide_cursor = true,
