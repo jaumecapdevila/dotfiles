@@ -1,13 +1,14 @@
 return {
   -- Colorscheme
   {
-    "Tsuzat/NeoSolarized.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
-    opts = require("plugins.opts.neosolarized"),
+    opts = require("plugins.opts.catppuccin"),
     config = function(_, opts)
-      require("NeoSolarized").setup(opts)
-      vim.cmd("colorscheme NeoSolarized")
+      require("catppuccin").setup(opts)
+      vim.cmd("colorscheme catppuccin")
     end,
   },
 
