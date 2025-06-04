@@ -12,67 +12,35 @@
 
 add_newline = true
 command_timeout = 3000
-palette = 'solarized'
 
 format = """
+$cmd_duration\
 $directory\
 $git_branch\
-$git_status\
-$python\
-$cmd_duration\
-$line_break\
-$character"""
-
-[palettes.solarized]
-base = '#001217'
-# base = '#002b36'
+$character\
+"""
 
 [directory]
-format = "[ $path]($style) "
+format = "[$path]($style) "
 style = "blue bold"
 truncate_to_repo = true
 truncation_length = 2
-truncation_symbol = '…/'
+truncation_symbol = ''
 
 [git_branch]
 disabled = false
 format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'cyan'
+style = 'cyan bold'
 symbol = " "
 truncation_length = 20
 truncation_symbol = '…'
-
-[git_status]
-ahead = ' ${count}'
-behind = ' behind=${count}'
-conflicted = ' ${count} '
-deleted = '󰍶 ${count} '
-disabled = false
-diverged = ' ${ahead_count}  ${behind_count}'
-format = '[$all_status]($style)'
-modified = '󰛿 ${count} '
-renamed = '󱍸 ${count} '
-staged = '󰐗 ${count} '
-stashed = ' ${count} '
-style = 'cyan'
-untracked = '󰋗 ${count} '
-up_to_date = ' '
-
-[python]
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
-python_binary = 'python3'
-style = "yellow"
-symbol = '󱔎 '
 
 [cmd_duration]
 format = "[$duration]($style) "
 style = "yellow"
 
-[line_break]
-disabled = true
-
 [character]
 disabled = false
-success_symbol = "[](purple) "
-error_symbol = "[](red) "
-vimcmd_symbol = "[](green) "
+success_symbol = "[](purple)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"
