@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Get the staged changes to ensure we have something to commit.
+DIFF=$(git diff --staged)
+
+# If there are no staged changes, exit the script.
+if [ -z "$DIFF" ]; then
+  echo "No staged changes to commit."
+  exit 1
+fi
+
+# Generate a commit message using GitHub Copilot.
+# We pipe the staged diff directly to gh copilot suggest and provide a prompt.
+# Asking for a "conventional commit" provides a structured and widely-used format.
+COMMIT_MSG=$(git diff --staged | gh copilot suggest "Write a conventional commit message for the following diff. The message should have a subject line and an optional body describing the changes in more detail.")
+
+# If Copilot fails to generate a message, exit gracefully.
+if [ -z "$COMMIT_MSG" ]; then
+  echo "Copilot could not generate a commit message. Please commit manually."
+  exit 1
+fi
+
+# Commit the changes with the generated message.
+# The -m flag is used to provide the commit message directly.
+git commit -m "$COMMIT_MSG"
+
+echo "✅ Changes committed with the following message:"
+echo "----------------------------------------"
+echo "$COMMIT_MSG"
+echo "----------------------------------------"
+
