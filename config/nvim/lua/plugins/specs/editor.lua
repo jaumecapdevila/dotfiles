@@ -1,14 +1,14 @@
 return {
   -- Colorscheme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     lazy = false,
     priority = 1000,
-    opts = require("plugins.opts.catppuccin"),
+    opts = require("plugins.opts.tokyonight"),
     config = function(_, opts)
-      require("catppuccin").setup(opts)
-      vim.cmd("colorscheme catppuccin")
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
     end,
   },
 

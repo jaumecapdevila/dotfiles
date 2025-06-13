@@ -8,7 +8,7 @@ opt.cursorline = true -- enable or disable line highlighting
 
 -- Ui stuff
 o.background = "dark"
-g.transparent = false
+g.transparent = true
 g.minimalistic = true
 
 -- Indenting
