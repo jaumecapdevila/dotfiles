@@ -19,12 +19,11 @@ alias bri="brew install"
 alias brg="brew upgrade"
 alias brx="brew-export"
 
-# Zellij
-alias z='zellij'
-alias zl='zellij list-sessions'
-alias zs='zellij-start-session'
-alias zw='zellij -l welcome'
-alias zy='zellij-edit-layout'
+# Tmux
+alias tcl='tmux-cleanup'
+alias th='tmux-here'
+alias ts='tmux-session'
+alias tsw='tmux-switch'
 
 # Utils
 alias cl="clear"

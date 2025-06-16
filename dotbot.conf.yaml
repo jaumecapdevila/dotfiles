@@ -28,6 +28,7 @@
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/Library/Application Support/lazygit/config.yml: config/lazygit/config.yml
+    ~/Library/Application Support/Sublime Text/Packages/User/Tokyo Night: config/bat/themes
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

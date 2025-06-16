@@ -25,7 +25,27 @@ function cwd_iterm_tab_color () {
     random.seed('blue'  + os.getcwd()); print((\"\\033]6;1;bg;blue;brightness;\"  + str((random.randint(0,255)+255)/2)) + \"\\a\", end='');"
 }
 
-function za() {
-  local session_name=${1:-${PWD:t}}
-  zellij attach "$session_name" || zellij -s "$session_name"
+# Quick session creation
+tn() {
+    if [ -z "$1" ]; then
+        tmux new-session
+    else
+        tmux new-session -s "$1"
+    fi
 }
+
+# Attach or create session
+ta() {
+    if [ -z "$1" ]; then
+        tmux attach
+    else
+        tmux attach -t "$1" || tmux new-session -s "$1"
+    fi
+}
+
+# Switch session with fzf
+# ts() {
+#     local session
+#     session=$(tmux list-sessions -F "#{session_name}" | fzf --height 40% --reverse)
+#     tmux switch-client -t "$session"
+# }

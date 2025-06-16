@@ -2,10 +2,10 @@
 	"installed_packages":
 	[
 		"A File Icon",
-		"Catppuccin color schemes",
 		"ColorHints",
 		"EditorConfig",
 		"Emmet",
+		"FileDiffs",
 		"Git",
 		"GitHub Desktop",
 		"GitHubTools",
@@ -21,9 +21,7 @@
 		"Package Control",
 		"ProjectManager",
 		"RainbowIndent",
-		"Selenized Color Scheme",
 		"SideBarTools",
-		"Solarized Color Scheme",
 		"SublimeLinter",
 		"SyncedSideBar",
 		"TOML",

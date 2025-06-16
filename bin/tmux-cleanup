@@ -1,0 +1,11 @@
+#!/bin/bash
+# tmux-cleanup.sh
+
+# Kill all detached sessions
+# tmux list-sessions | grep -v attached | cut -d: -f1 | xargs -I {} tmux kill-session -t {}
+
+# Or interactively select sessions to kill
+tmux list-sessions -F "#{session_name}: #{?session_attached,attached,detached}" | \
+    fzf --multi --border-label=" 🔥 Session Killer (TAB to select multiple)" | \
+    cut -d: -f1 | \
+    xargs -I {} tmux kill-session -t {}

@@ -23,7 +23,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--no-separator \
 	--prompt=' ' \
 	--pointer=' ' \
-	--border-label='  Filter ' \
+	--border-label=' 🔭 Search ' \
 	--border-label-pos=2 \
 	--reverse \
 "
@@ -35,7 +35,7 @@ export FZF_CTRL_R_OPTS=" \
 "
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cdd6f4,bg=#45475a,bold"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#b4f9f8,bg=#414868,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 

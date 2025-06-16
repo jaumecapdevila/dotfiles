@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the current directory name as session name
+session_name=$(basename "$PWD" | tr '.' '_')
+
+# Check if we're already in a tmux session
+if [ -n "$TMUX" ]; then
+    echo "Already in a tmux session. Detach first (Ctrl+b d) or create a new window instead."
+    exit 1
+fi
+
+# Check if session already exists
+if tmux has-session -t "$session_name" 2>/dev/null; then
+    echo "Session '$session_name' already exists. Attaching..."
+    tmux attach-session -t "$session_name"
+else
+    echo "Creating new session '$session_name'..."
+    tmux new-session -s "$session_name"
+fi

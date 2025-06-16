@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get current session
+current_session=$(tmux display-message -p '#S')
+
+# Select session with fzf
+selected_session=$(tmux list-sessions -F "#{session_name}" | \
+    grep -v "^$current_session$" | \
+    fzf --height 40% --reverse --border-label=" 🔄 Switch to session ")
+
+# Switch to selected session
+if [ -n "$selected_session" ]; then
+    tmux switch-client -t $selected_session
+fi
