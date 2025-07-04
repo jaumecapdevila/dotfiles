@@ -12,35 +12,82 @@
 
 add_newline = true
 command_timeout = 3000
+palette = 'night'
 
-format = """
-$cmd_duration\
+format = """\
 $directory\
+[](fg:blue bg:cyan)\
 $git_branch\
-$character\
+$git_status\
+[](fg:cyan bg:bright-purple)\
+$lua\
+$nodejs\
+$python\
+[](fg:bright-purple bg:yellow)\
+$cmd_duration\
+[ ](fg:yellow)\
 """
 
+[palettes.moon]
+base = '#222334'
+
+[palettes.night]
+base = '#1a1a25'
+
 [directory]
-format = "[$path]($style) "
-style = "blue bold"
+format = '[  $path ]($style)'
+home_symbol = '~'
+read_only = ' 󰌾'
+read_only_style = 'fg:red bg:blue'
+style = 'fg:base bg:blue'
 truncate_to_repo = true
 truncation_length = 2
-truncation_symbol = ''
+truncation_symbol = '…/'
 
 [git_branch]
 disabled = false
-format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'cyan bold'
-symbol = " "
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+style = 'fg:base bg:cyan'
+symbol = '󰘬 '
 truncation_length = 20
 truncation_symbol = '…'
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
-
-[character]
+[git_status]
+ahead = ' ${count}'
+behind = ' behind=${count}'
+conflicted = ' ${count} '
+deleted = '󰍶 ${count} '
 disabled = false
-success_symbol = "[](purple)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
+diverged = ' ${ahead_count}  ${behind_count}'
+format = '[$all_status]($style)'
+modified = '󰛿 ${count} '
+renamed = '󱍸 ${count} '
+staged = '󰐗 ${count} '
+stashed = ' ${count} '
+style = 'fg:base bg:cyan'
+untracked = '󰋗 ${count} '
+up_to_date = ' '
+
+[lua]
+disabled = false
+format = '[ $symbol($version) ]($style)'
+style = 'fg:base bg:bright-purple'
+symbol = '󰽢 '
+
+[nodejs]
+disabled = false
+format = '[ $symbol($version) ]($style)'
+style = 'fg:base bg:bright-purple'
+symbol = '󰚩 '
+
+[python]
+disabled = false
+format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
+python_binary = 'python3'
+style = 'fg:base bg:bright-purple'
+symbol = '󱔎 '
+
+[cmd_duration]
+format = '[  $duration ]($style)'
+min_time = 2000
+style = 'fg:base bg:yellow'

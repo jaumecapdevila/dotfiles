@@ -22,8 +22,9 @@ alias brx="brew-export"
 # Tmux
 alias tcl='tmux-cleanup'
 alias th='tmux-here'
-alias ts='tmux-session'
-alias tsw='tmux-switch'
+alias tls='tmux list-sessions'
+alias tns='tmux-session'
+alias ts='tmux-switch'
 
 # Utils
 alias cl="clear"

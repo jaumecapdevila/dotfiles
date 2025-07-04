@@ -20,7 +20,7 @@
     ~/.config/ghostty: config/ghostty
     ~/.config/karabiner: _macos/karabiner
     ~/.config/nvim: config/nvim
-    ~/.config/starship: config/starship
+    ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/tmux: config/tmux
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig

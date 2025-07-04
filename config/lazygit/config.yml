@@ -28,7 +28,6 @@ gui:
       - "bold"
     selectedLineBgColor:
       - "#283457"
-
 customCommands:
   - key: "f"
     command: "git difftool -y {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}"
@@ -38,12 +37,12 @@ customCommands:
     context: "files"
     command: "gitmoji -c"
     loadingText: "Loading gitmoji"
-    subprocess: true
+    output: terminal
   - key: "z"
     command: "~/.dotfiles/bin/gc"
     context: "files"
     loadingText: "Commitizen prompt"
-    subprocess: true
+    output: terminal
   - key: "<c-p>"
     context: "global"
     loadingText: "pushing"
