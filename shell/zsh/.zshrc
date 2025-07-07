@@ -33,18 +33,12 @@ plugins=(
 # Load Oh My Zsh
 source "$ZSH/oh-my-zsh.sh"
 
-# Load fzf-git
-source "$DOTFILES/modules/fzf-git/fzf-git.sh"
-
-# Start zellij
-# eval "$(zellij setup --generate-auto-start zsh)"
-
 # Load custom alias, funcs and key-bindings
 source "$DOTFILES/shell/alias.sh"
 source "$DOTFILES/shell/funcs.sh"
 source "$DOTFILES/shell/zsh/key-bindings.zsh"
 
 # Load custom hooks
-autoload -U add-zsh-hook
-add-zsh-hook chpwd cwd_iterm_tab_color
-cwd_iterm_tab_color
+# autoload -U add-zsh-hook
+# add-zsh-hook chpwd cwd_iterm_tab_color
+# cwd_iterm_tab_color
