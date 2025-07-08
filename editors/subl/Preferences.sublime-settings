@@ -4,7 +4,7 @@
 	// Valid values are "smooth", "phase", "blink" and "solid". Previous
 	"caret_style": "smooth",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Tokyo Night/Tokyo Night.tmTheme",
+	"color_scheme": "Packages/Enki Theme/scheme/Enki-Tokyo-Night.tmTheme",
 	// Draws text centered in the window rather than left aligned
 	"draw_centered": false,
 	// Set to false to turn off the indentation guides.
@@ -68,8 +68,17 @@
 	/*"vintage_use_clipboard": true,*/
 	"sidebar_on_right": true,
 	"tab_size": 2,
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Enki-Theme.sublime-theme",
 	"trim_trailing_white_space_on_save": "all",
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
+	// Enki theme
+	/*"enki_theme_accent_fuschia": true,*/
+	"enki_theme_compact_sidebar": true,
+	"enki_theme_panel_separator": true,
+	"enki_theme_small_statusbar": true,
+	"enki_theme_small_tab": true,
+	"enki_theme_tabs_autowidth": true,
+	"enki_theme_tree_headings": false,
+	"enki_theme_accent_red": true,
 }
