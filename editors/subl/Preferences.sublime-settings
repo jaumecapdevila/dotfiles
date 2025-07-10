@@ -30,7 +30,7 @@
 		"dist",
 		"venv"
 	],
-	"font_face": "Operator Mono Book",
+	"font_face": "Dank Mono",
 	"font_options": [],
 	"font_size": 17,
 	// Hides the new tab button
@@ -42,6 +42,8 @@
 	// Makes tabs with modified files more visible
 	"highlight_modified_tabs": false,
 	"ignored_packages": [
+		"LSP-pyright",
+		"SideBarTools",
 	],
 	// File indexing parses all files in the sidebar
 	"index_files": false,
@@ -73,12 +75,11 @@
 	// When Vintage is enabled, choose if files are opened in command or insert mode by default
 	"vintage_start_in_command_mode": true,
 	// Enki theme
-	/*"enki_theme_accent_fuschia": true,*/
+	"enki_theme_accent_fuschia": true,
 	"enki_theme_compact_sidebar": true,
 	"enki_theme_panel_separator": true,
 	"enki_theme_small_statusbar": true,
 	"enki_theme_small_tab": true,
 	"enki_theme_tabs_autowidth": true,
 	"enki_theme_tree_headings": false,
-	"enki_theme_accent_red": true,
 }
