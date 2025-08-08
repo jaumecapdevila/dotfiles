@@ -1,0 +1,74 @@
+[alias]
+  g = "git"
+  undo = "reset --soft HEAD^"
+
+[user]
+	name = Jaume Capdevila
+	email = capdevil@adobe.com
+
+[init]
+	defaultBranch = main
+
+[fetch]
+  prune = true
+
+[push]
+  autoSetupRemote = true
+
+[pull]
+  rebase = false
+
+[core]
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes
+  editor = nvim
+  pager = "delta"
+  ignorecase = false
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+  features = "pastelnight"
+  keep-plus-minus-markers = true
+  light = false
+  line-numbers = false
+  line-numbers-left-format = "{nm:>4}"
+  line-numbers-right-format = "{np:>4}"
+  navigate = true
+  side-by-side = false
+
+[delta "pastelnight"]
+  minus-style                   = syntax "#ff8484"
+  minus-non-emph-style          = syntax "#ff8484"
+  minus-emph-style              = syntax "#fe4c4c"
+  minus-empty-line-marker-style = syntax "#ff8484"
+  line-numbers-minus-style      = "#dd4040"
+  plus-style                    = syntax "#9effb9"
+  plus-non-emph-style           = syntax "#9effb9"
+  plus-emph-style               = syntax "#65ff91"
+  plus-empty-line-marker-style  = syntax "#9effb9"
+  line-numbers-plus-style       = "#58de7e"
+  line-numbers-zero-style       = "#b9bac0"
+  syntax-theme = "Palenight"
+
+[diff]
+	colorMoved = default
+
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+
+[mergetool]
+  prompt = false
+  path = nvim
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[branch "main"]
+  remote = origin
+  merge = refs/heads/main

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+HOMEBREW_BUNDLE_FILE_PATH="$DOTFILES/_macos/Brewfile"
+
+brew bundle install --file="$HOMEBREW_BUNDLE_FILE_PATH"
+brew bundle cleanup --file="$HOMEBREW_BUNDLE_FILE_PATH" --force
+
+echo 'Dependencies installed from Brewfile!'

@@ -1,0 +1,21 @@
+{
+  "name": "lib",
+  "dependencies": {
+    "@anthropic-ai/claude-code": {
+      "version": "1.0.44",
+      "overridden": false
+    },
+    "@google/gemini-cli": {
+      "version": "0.1.4",
+      "overridden": false
+    },
+    "corepack": {
+      "version": "0.31.0",
+      "overridden": false
+    },
+    "npm": {
+      "version": "10.9.2",
+      "overridden": false
+    }
+  }
+}

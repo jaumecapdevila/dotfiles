@@ -1,0 +1,15 @@
+themes {
+    palenight {
+        fg "#bfc7d5"
+        bg "#292d3e"
+        black "#292d3e"
+        red "#ff5874"
+        green "#c3e88d"
+        yellow "#ffcb6b"
+        blue "#82aaff"
+        magenta "#c792ea"
+        cyan "#89ddff"
+        white "#bec5d4"
+        orange "#f78c6c"
+    }
+}

@@ -1,0 +1,91 @@
+# ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗
+# ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
+# ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
+# ╚════██║   ██║   ██╔══██║██╔══██╗╚════██║██╔══██║██║██╔═══╝
+# ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║
+# ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝
+# The minimal, blazing-fast, and infinitely customizable prompt
+# https://starship.rs
+
+# Get editor completions based on the config schema
+'$schema' = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 3000
+
+format = """
+$character\
+[](fg:prev_bg bg:blue)\
+$directory\
+[](fg:prev_bg bg:yellow)\
+$git_branch\
+$git_status\
+[](fg:prev_bg bg:cyan)\
+$golang\
+$nodejs\
+$rust\
+$python\
+[ ](fg:prev_bg)\
+"""
+
+[character]
+format='$symbol'
+success_symbol = "[ INSERT ](bold fg:black bg:purple)"
+error_symbol = "[ INSERT ](bold fg:black bg:red)"
+vimcmd_symbol = "[ VIM ](bold fg:black bg:green)"
+
+[directory]
+style = "fg:black bg:blue"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = ""
+
+[git_branch]
+disabled = false
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+style = 'fg:black bg:yellow'
+symbol = " "
+truncation_length = 20
+truncation_symbol = '…'
+
+[git_status]
+ahead = ' ${count}'
+behind = ' behind=${count}'
+conflicted = ' ${count} '
+deleted = '󰍶 ${count} '
+disabled = false
+diverged = ' ${ahead_count}  ${behind_count}'
+format = '[$all_status]($style)'
+modified = '󰛿 ${count} '
+renamed = '󱍸 ${count} '
+staged = '󰐗 ${count} '
+stashed = ' ${count} '
+style = 'fg:black bg:yellow'
+untracked = '󰋗 ${count} '
+up_to_date = ' '
+
+[nodejs]
+symbol = ""
+style = "fg:black bg:cyan"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:black bg:cyan"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "fg:black bg:cyan"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
+python_binary = 'python3'
+style = "fg:black bg:cyan"
+symbol = '󱔎 '
+
+[docker_context]
+symbol = " "
+style = "fg:black bg:green"
+format = '[ $symbol $context ]($style)'
