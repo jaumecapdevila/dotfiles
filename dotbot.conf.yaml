@@ -18,11 +18,11 @@
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
+    ~/.config/btop: config/btop
     ~/.config/karabiner: _macos/karabiner
     ~/.config/zellij: config/zellij
     ~/.config/nvim: config/nvim
     ~/.config/zed/settings.json: config/zed/settings.json
-    ~/.config/zed/themes: config/zed/themes
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/tmux: config/tmux
     ~/.gitattributes: git/.gitattributes

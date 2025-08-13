@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# A simple bash script to blend two hex colors using an alpha value.
+#
+# Usage:
+# ./blend_color.sh <fg_color> <bg_color> <alpha>
+#
+# Example:
+# ./blend_color.sh "#FF0000" "#0000FF" 0.5
+# Output: #7F007F
+
+# --- Argument Validation ---
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <fg_color_hex> <bg_color_hex> <alpha>"
+    echo "Example: $0 \"#FF0000\" \"#0000FF\" 0.5"
+    exit 1
+fi
+
+# --- Assign Arguments ---
+fg_hex=$1
+bg_hex=$2
+alpha=$3
+
+# --- Helper function to convert a hex color component to decimal ---
+hex_to_dec() {
+    printf "%d" "0x$1"
+}
+
+# --- Helper function to blend a single color channel ---
+# We use 'bc' for floating-point arithmetic.
+blend_channel() {
+    local fg_ch=$1
+    local bg_ch=$2
+    local blended
+
+    # Formula: (alpha * fg) + ((1 - alpha) * bg)
+    blended=$(echo "scale=10; ($alpha * $fg_ch) + ((1 - $alpha) * $bg_ch)" | bc)
+
+    # Round to the nearest whole number (emulates Lua's math.floor(n + 0.5))
+    printf "%.0f" "$blended"
+}
+
+# --- Main Logic ---
+
+# Remove '#' prefix from hex codes if it exists
+fg_hex=${fg_hex#\#}
+bg_hex=${bg_hex#\#}
+
+# 1. Convert hex colors to RGB decimal values
+fg_r=$(hex_to_dec "${fg_hex:0:2}")
+fg_g=$(hex_to_dec "${fg_hex:2:2}")
+fg_b=$(hex_to_dec "${fg_hex:4:2}")
+
+bg_r=$(hex_to_dec "${bg_hex:0:2}")
+bg_g=$(hex_to_dec "${bg_hex:2:2}")
+bg_b=$(hex_to_dec "${bg_hex:4:2}")
+
+# 2. Blend each RGB channel
+new_r=$(blend_channel "$fg_r" "$bg_r")
+new_g=$(blend_channel "$fg_g" "$bg_g")
+new_b=$(blend_channel "$fg_b" "$bg_b")
+
+# 3. Format the new RGB values back into a hex string
+printf "#%02X%02X%02X\n" "$new_r" "$new_g" "$new_b"

@@ -19,5 +19,5 @@ return {
     },
   },
 
-  extensions_list = { "fzf", "file_browser" },
+  extensions_list = { "fzf", "file_browser", "notify" },
 }

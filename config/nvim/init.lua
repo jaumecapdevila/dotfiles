@@ -9,6 +9,7 @@ local g = vim.g
 
 g.mapleader = " "
 g.maplocalleader = " "
+g.tokyo = "storm"
 g.transparent = true
 
 require("options")

@@ -8,9 +8,9 @@ return {
     update_root = false,
   },
   view = {
-    width = 50,
     preserve_window_proportions = true,
     side = "left",
+    width = 33,
   },
   git = {
     enable = false,

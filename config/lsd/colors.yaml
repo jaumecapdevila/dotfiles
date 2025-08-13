@@ -10,8 +10,8 @@ permission:
   acl: cyan
   context: dark_grey
 date:
-  hour-old: magenta
-  day-old: dark_magenta
+  hour-old: cyan
+  day-old: dark_cyan
   older: dark_blue
 size:
   none: grey

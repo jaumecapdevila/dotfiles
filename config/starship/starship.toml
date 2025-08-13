@@ -55,7 +55,7 @@ modified = '󰛿 ${count} '
 renamed = '󱍸 ${count} '
 staged = '󰐗 ${count} '
 stashed = ' ${count} '
-style = 'bright-cyan'
+style = 'cyan bold'
 untracked = '󰋗 ${count} '
 up_to_date = ' '
 

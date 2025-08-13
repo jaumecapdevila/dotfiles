@@ -29,7 +29,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "pastelnight"
+  features = "tokyo-storm"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false
@@ -38,19 +38,33 @@
   navigate = true
   side-by-side = false
 
-[delta "pastelnight"]
-  minus-style                   = syntax "#ff8484"
-  minus-non-emph-style          = syntax "#ff8484"
-  minus-emph-style              = syntax "#fe4c4c"
-  minus-empty-line-marker-style = syntax "#ff8484"
-  line-numbers-minus-style      = "#dd4040"
-  plus-style                    = syntax "#9effb9"
-  plus-non-emph-style           = syntax "#9effb9"
-  plus-emph-style               = syntax "#65ff91"
-  plus-empty-line-marker-style  = syntax "#9effb9"
-  line-numbers-plus-style       = "#58de7e"
-  line-numbers-zero-style       = "#b9bac0"
-  syntax-theme = "Palenight"
+[delta "tokyo-night"]
+  minus-style                   = syntax "#37222c"
+  minus-non-emph-style          = syntax "#37222c"
+  minus-emph-style              = syntax "#713137"
+  minus-empty-line-marker-style = syntax "#37222c"
+  line-numbers-minus-style      = "#914c54"
+  plus-style                    = syntax "#20303b"
+  plus-non-emph-style           = syntax "#20303b"
+  plus-emph-style               = syntax "#2c5a66"
+  plus-empty-line-marker-style  = syntax "#20303b"
+  line-numbers-plus-style       = "#449dab"
+  line-numbers-zero-style       = "#3b4261"
+  syntax-theme = "Tokyo Night"
+
+[delta "tokyo-storm"]
+  minus-style                   = syntax "#3f2d3d"
+  minus-non-emph-style          = syntax "#3f2d3d"
+  minus-emph-style              = syntax "#763842"
+  minus-empty-line-marker-style = syntax "#3f2d3d"
+  line-numbers-minus-style      = "#914c54"
+  plus-style                    = syntax "#283b4d"
+  plus-non-emph-style           = syntax "#283b4d"
+  plus-emph-style               = syntax "#316172"
+  plus-empty-line-marker-style  = syntax "#283b4d"
+  line-numbers-plus-style       = "#449dab"
+  line-numbers-zero-style       = "#3b4261"
+  syntax-theme = "Tokyo Storm"
 
 [diff]
 	colorMoved = default

@@ -17,7 +17,7 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "nvim-telescope/telescope-file-browser.nvim" },
     },
     opts = require("configs.telescope"),
@@ -32,17 +32,17 @@ return {
     end,
     keys = {
       -- find
-      { "<leader>ff", "<cmd> Telescope find_files <CR>",  "Find files" },
+      { "<leader>ff", "<cmd> Telescope find_files <CR>", "Find files" },
       {
         "<leader>fa",
         "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
         "Find all",
       },
       { "<leader>fg", "<cmd> Telescope diagnostics <CR>", "List Diagnostics" },
-      { "<leader>fw", "<cmd> Telescope live_grep <CR>",   "Live grep" },
-      { "<leader>fb", "<cmd> Telescope buffers <CR>",     "Find buffers" },
-      { "<leader>fh", "<cmd> Telescope help_tags <CR>",   "Help page" },
-      { "<leader>fo", "<cmd> Telescope oldfiles <CR>",    "Find oldfiles" },
+      { "<leader>fw", "<cmd> Telescope live_grep <CR>", "Live grep" },
+      { "<leader>fb", "<cmd> Telescope buffers <CR>", "Find buffers" },
+      { "<leader>fh", "<cmd> Telescope help_tags <CR>", "Help page" },
+      { "<leader>fo", "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
       {
         "<leader>fz",
         "<cmd> Telescope current_buffer_fuzzy_find <CR>",
@@ -52,6 +52,9 @@ return {
       -- file browser
       { "<leader>fr", "<cmd> Telescope file_browser <CR>", "File Browser" },
 
+      -- notifications
+      { "<leader>fn", "<cmd> Telescope notify <CR>", "Notifications" },
+
       -- lsp
       {
         "<leader>fs",
@@ -60,8 +63,8 @@ return {
       },
 
       -- git
-      { "<leader>cm", "<cmd> Telescope git_commits <CR>",  "Git commits" },
-      { "<leader>gt", "<cmd> Telescope git_status <CR>",   "Git status" },
+      { "<leader>cm", "<cmd> Telescope git_commits <CR>", "Git commits" },
+      { "<leader>gt", "<cmd> Telescope git_status <CR>", "Git status" },
 
       {
         "<leader>ma",
@@ -120,5 +123,28 @@ return {
     "NvChad/nvim-colorizer.lua",
     event = { "BufReadPre", "BufNewFile" },
     config = true,
+  },
+
+  -- Better markdown
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    ft = { "markdown", "quarto" },
+    opts = require("configs.markdown"),
+    config = function(_, opts) require("render-markdown").setup(opts) end,
+  },
+
+  -- Better notifications
+  {
+    "rcarriga/nvim-notify",
+    event = "VeryLazy",
+    opts = require("configs.notify"),
+    config = function(_, opts)
+      require("notify").setup(opts)
+      vim.notify = require("notify")
+    end,
   },
 }

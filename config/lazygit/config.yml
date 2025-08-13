@@ -19,15 +19,15 @@ gui:
   screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "magenta"
+      - "red"
       - bold
     inactiveBorderColor:
-      - "blue"
+      - "cyan"
     searchingActiveBorderColor:
       - "yellow"
       - "bold"
     selectedLineBgColor:
-      - "#44415a"
+      - black
 customCommands:
   - key: "f"
     command: "git difftool -y {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}"

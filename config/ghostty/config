@@ -11,11 +11,11 @@
 
 adjust-cell-height = "20%"
 background-blur = false
-background-opacity = 0.9
+background-opacity = 0.8
 cursor-style = block
 cursor-style-blink = true
 font-family = "OperatorMono Nerd Font"
-font-size = 19
+font-size = 17
 font-style = "Book"
 font-style-bold = "Bold"
 font-style-bold-italic = "Bold Italic"
@@ -25,8 +25,8 @@ macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = "hidden"
 macos-window-shadow = false
-split-divider-color = "#7e57c2"
-theme = "Palenight"
+split-divider-color = "#7aa2f7"
+theme = "Tokyo Storm"
 window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8
