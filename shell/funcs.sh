@@ -29,3 +29,7 @@ function za() {
   local session_name=${1:-${PWD:t}}
   zellij attach "$session_name" || zellij -s "$session_name"
 }
+
+function change-mood() {
+  "$DOTFILES/bin/mood" && source "$DOTFILES/shell/exports.sh"
+}

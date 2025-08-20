@@ -15,16 +15,16 @@
     ~/.bashrc: shell/bash/.bashrc
     ~/.config/amethyst: config/amethyst
     ~/.config/bat: config/bat
+    ~/.config/btop: config/btop
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
-    ~/.config/btop: config/btop
     ~/.config/karabiner: _macos/karabiner
-    ~/.config/zellij: config/zellij
     ~/.config/nvim: config/nvim
-    ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.config/opencode: config/opencode
     ~/.config/starship.toml: config/starship/starship.toml
-    ~/.config/tmux: config/tmux
+    ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.config/zellij: config/zellij
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+WALLPAPERS_DIR="$DOTFILES/wallpapers"
+
+
+if [[ ! -d "$WALLPAPERS_DIR" ]]; then
+  echo "❌ Wallpapers directory not found: $WALLPAPERS_DIR" >&2
+  exit 1
+fi
+
+
+available_wallpapers=$(find "$WALLPAPERS_DIR" -type f -name "*.jpg" -o -name "*.png" | sed 's|^.*/||')
+
+if [[ -z "$available_wallpapers" ]]; then
+  echo "❌ No wallpapers found in: $WALLPAPERS_DIR" >&2
+  exit 1
+fi
+
+selected_wallpaper=$(echo "$available_wallpapers" | fzf --height 40% --reverse --no-preview)
+
+if [[ -z "$selected_wallpaper" ]]; then
+  exit 0
+fi
+
+wallpaper_path="$WALLPAPERS_DIR/$selected_wallpaper"
+
+osascript -e "tell application \"System Events\" to set picture of every desktop to POSIX file \"$wallpaper_path\""

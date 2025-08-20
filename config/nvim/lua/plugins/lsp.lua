@@ -129,6 +129,13 @@ return {
             require("telescope.builtin").lsp_type_definitions,
             "[G]oto [T]ype Definition"
           )
+
+          -- Smart rename using LSP
+          map(
+            "rn",
+            vim.lsp.buf.rename,
+            "Smart Rename"
+          )
         end,
       })
 

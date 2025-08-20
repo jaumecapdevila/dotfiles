@@ -9,8 +9,8 @@ local g = vim.g
 
 g.mapleader = " "
 g.maplocalleader = " "
-g.tokyo = "storm"
 g.transparent = true
+g.mood = vim.env.MOOD or "mocha"
 
 require("options")
 require("autocmds")

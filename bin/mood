@@ -1,0 +1,152 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Check if script is being sourced or executed
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  SCRIPT_EXECUTED=true
+else
+  SCRIPT_EXECUTED=false
+fi
+
+check_deps() {
+  local missing_deps=()
+  
+  command -v fzf >/dev/null 2>&1 || missing_deps+=("fzf")
+  command -v jq >/dev/null 2>&1 || missing_deps+=("jq")
+  command -v osascript >/dev/null 2>&1 || missing_deps+=("osascript")
+  command -v zellij >/dev/null 2>&1 || missing_deps+=("zellij")
+  
+  if [[ ${#missing_deps[@]} -gt 0 ]]; then
+    echo "❌ Missing required dependencies: ${missing_deps[*]}" >&2
+    exit 1
+  fi
+}
+
+declare -A GHOSTTY_THEMES=(
+  [main]="Rose Pine"
+  [moon]="Rose Pine Moon"
+  [mocha]="Catppuccin Mocha"
+  [frappe]="Catppuccin Frappe"
+)
+
+declare -A ZELLIJ_THEMES=(
+  [main]="rose_pine_main"
+  [moon]="rose_pine_moon"
+  [mocha]="catppuccin_mocha"
+  [frappe]="catppuccin_frappe"
+)
+
+declare -A DELTA_FEATURES=(
+  [main]="rose-pine-main"
+  [moon]="rose-pine-moon"
+  [mocha]="catppuccin-mocha"
+  [frappe]="catppuccin-frappe"
+)
+
+declare -A VSCODE_THEMES=(
+  [main]="Rosé Pine"
+  [moon]="Rosé Pine Moon"
+  [mocha]="Catppuccin Mocha"
+  [frappe]="Catppuccin Frappé"
+)
+
+set_ghostty_mood() {
+  local mood="$1"
+  local ghostty_theme="${GHOSTTY_THEMES[$mood]:-${GHOSTTY_THEMES[main]}}"
+  local config_file="$DOTFILES/config/ghostty/config"
+  
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Ghostty config file not found: $config_file" >&2
+    return 1
+  fi
+  
+  sed -i '' "s/^theme *=.*\"/theme=\"$ghostty_theme\"/" "$config_file"
+  osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
+  echo "✓ Updated Ghostty theme to: $ghostty_theme"
+}
+
+set_zellij_mood() {
+  local mood="$1"
+  local zellij_theme="${ZELLIJ_THEMES[$mood]:-${ZELLIJ_THEMES[main]}}"
+  local config_file="$DOTFILES/config/zellij/config.kdl"
+  
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Zellij config file not found: $config_file" >&2
+    return 1
+  fi
+  
+  sed -i '' "s/^theme \".*\"/theme \"$zellij_theme\"/" "$config_file"
+  zellij kill-all-sessions --yes &> /dev/null || true
+  echo "✓ Updated Zellij theme to: $zellij_theme"
+}
+
+set_delta_mood() {
+  local mood="$1"
+  local delta_features="${DELTA_FEATURES[$mood]:-${DELTA_FEATURES[main]}}"
+  local config_file="$DOTFILES/git/.gitconfig"
+  
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Git config file not found: $config_file" >&2
+    return 1
+  fi
+  
+  sed -i '' "s/^  features = .*/  features = \"$delta_features\"/" "$config_file"
+  echo "✓ Updated Delta features to: $delta_features"
+}
+
+set_vscode_mood() {
+  local mood="$1"
+  local vscode_theme="${VSCODE_THEMES[$mood]:-${VSCODE_THEMES[main]}}"
+  local vscode_settings="$HOME/Library/Application Support/Code/User/settings.json"
+  
+  if [[ ! -f "$vscode_settings" ]]; then
+    echo "❌ VS Code settings file not found: $vscode_settings" >&2
+    return 1
+  fi
+  
+  jq --arg theme "$vscode_theme" '.["workbench.colorTheme"] = $theme' "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
+  echo "✓ Updated VS Code theme to: $vscode_theme"
+}
+
+check_deps
+
+if [[ -z "$DOTFILES" ]]; then
+  echo "❌ DOTFILES environment variable is not set" >&2
+  exit 1
+fi
+
+available_moods=("main" "moon" "mocha" "frappe")
+selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)
+
+if [[ -z "$selected_mood" ]]; then
+  echo "No mood selected, exiting."
+  exit 1
+fi
+
+echo "🎨 Applying $selected_mood mood..."
+
+exports_file="$DOTFILES/shell/exports.sh"
+
+if [[ ! -f "$exports_file" ]]; then
+  echo "❌ Exports file not found: $exports_file" >&2
+  exit 1
+fi
+
+sed -i '' "s/^export MOOD=.*/export MOOD=\"$selected_mood\"/" "$exports_file"
+
+# Export to current shell if sourced
+if [[ "$SCRIPT_EXECUTED" == false ]]; then
+  export MOOD="$selected_mood"
+  echo "✓ Updated MOOD to: $selected_mood (exported to current shell)"
+else
+  echo "✓ Updated MOOD to: $selected_mood (saved to $exports_file)"
+  echo "💡 To update your current shell, run: source \"$exports_file\" or restart your terminal"
+fi
+
+set_ghostty_mood "$selected_mood"
+set_zellij_mood "$selected_mood"
+set_delta_mood "$selected_mood"
+set_vscode_mood "$selected_mood"
+
+echo "🎉 Successfully applied $selected_mood mood to all applications!"

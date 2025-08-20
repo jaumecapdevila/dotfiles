@@ -40,7 +40,7 @@
       "enabled": false
     }
   },
-  "icon_theme": "Colored Zed Icons Theme Dark",
+  "icon_theme": "Warm Charmed Icons",
   "indent_guides": {
     "active_line_width": 3,
     "background_coloring": "disabled",
@@ -107,8 +107,8 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Cosmos",
-    "light": "Tokyo Night Light",
+    "dark": "Rosé Pine Moon",
+    "light": "Rosé Pine Dawn",
     "mode": "system"
   },
   "toolbar": {
@@ -121,16 +121,15 @@
   "ui_font_size": 17,
   "vim_mode": true,
   "experimental.theme_overrides": {
+    "editor.gutter.background": "#2a273f",
+    // "editor.gutter.background": "#1f1d2e",
+    "editor.line_number": "#6e6a86",
+    "editor.active_line_number": "#eb6f92",
+    "panel.indent_guide_active": "#eb6f92",
     "syntax": {
-      "attribute": {
-        "font_style": "italic"
-      },
-      "keyword": {
-        "font_style": "italic"
-      },
-      "function": {
-        "font_weight": 900
-      }
+      "attribute": { "font_style": "italic" },
+      "keyword": { "font_style": "italic" },
+      "function": { "font_weight": 900 }
     }
   }
 }
