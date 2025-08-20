@@ -1,5 +1,5 @@
 themes {
-  catppuccin-frappe {
+  catppuccin_frappe {
     bg "#626880" // Surface2
     fg "#c6d0f5" // Text
     red "#e78284"
@@ -13,7 +13,7 @@ themes {
     white "#c6d0f5" // Text
   }
 
-  catppuccin-mocha {
+  catppuccin_mocha {
     bg "#585b70" // Surface2
     fg "#cdd6f4" // Text
     red "#f38ba8"

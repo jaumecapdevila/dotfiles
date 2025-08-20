@@ -30,6 +30,13 @@ declare -A GHOSTTY_THEMES=(
   [frappe]="Catppuccin Frappe"
 )
 
+declare -A LSD_THEMES=(
+  [main]="rose-pine"
+  [moon]="rose-pine"
+  [mocha]="mocha"
+  [frappe]="frappe"
+)
+
 declare -A ZELLIJ_THEMES=(
   [main]="rose_pine_main"
   [moon]="rose_pine_moon"
@@ -64,6 +71,24 @@ set_ghostty_mood() {
   sed -i '' "s/^theme *=.*\"/theme=\"$ghostty_theme\"/" "$config_file"
   osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
   echo "✓ Updated Ghostty theme to: $ghostty_theme"
+}
+
+set_lsd_mood() {
+  local mood="$1"
+  local lsd_theme="${LSD_THEMES[$mood]:-${LSD_THEMES[main]}}"
+
+  local lsd_colors_file="$DOTFILES/config/lsd/colors.yaml"
+  local theme_file="$DOTFILES/config/lsd/mods/${lsd_theme}.yaml"
+
+  if [[ ! -f "$theme_file" ]]; then
+    echo "❌ LSD theme file not found: $theme_file" >&2
+    return 1
+  fi
+
+  rm -f "$lsd_colors_file"
+  ln -s "$theme_file" "$lsd_colors_file"
+  
+  echo "✓ Updated LSD theme to: $lsd_theme"
 }
 
 set_zellij_mood() {
@@ -144,9 +169,10 @@ else
   echo "💡 To update your current shell, run: source \"$exports_file\" or restart your terminal"
 fi
 
-set_ghostty_mood "$selected_mood"
-set_zellij_mood "$selected_mood"
 set_delta_mood "$selected_mood"
+set_ghostty_mood "$selected_mood"
+set_lsd_mood "$selected_mood"
 set_vscode_mood "$selected_mood"
+set_zellij_mood "$selected_mood"
 
 echo "🎉 Successfully applied $selected_mood mood to all applications!"
