@@ -29,6 +29,12 @@ declare -A GHOSTTY_THEMES=(
   [night]="Tokyo Night"
 )
 
+declare -A BAT_THEMES=(
+  [moon]="Tokyo Moon"
+  [storm]="Tokyo Storm"
+  [night]="Tokyo Night"
+)
+
 declare -A ZELLIJ_THEMES=(
   [moon]="tokyo_moon"
   [storm]="tokyo_storm"
@@ -36,7 +42,7 @@ declare -A ZELLIJ_THEMES=(
 )
 
 declare -A DELTA_FEATURES=(
-  [moon]="toyo-moon"
+  [moon]="tokyo-moon"
   [storm]="tokyo-storm"
   [night]="tokyo-night"
 )
@@ -45,6 +51,12 @@ declare -A VSCODE_THEMES=(
   [moon]="Moonlight II Italic"
   [storm]="Tokyo Night Storm"
   [night]="Tokyo Night"
+)
+
+declare -A WALLPAPERS=(
+  [moon]="Wallpaper 13.jpg"
+  [storm]="Wallpaper 06.jpg"
+  [night]="Wallpaper 10.jpg"
 )
 
 set_ghostty_mood() {
@@ -60,6 +72,21 @@ set_ghostty_mood() {
   sed -i '' "s/^theme *=.*\"/theme=\"$ghostty_theme\"/" "$config_file"
   osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
   echo "✓ Updated Ghostty theme to: $ghostty_theme"
+}
+
+set_bat_mood() {
+  local mood="$1"
+  local bat_theme="${BAT_THEMES[$mood]:-${BAT_THEMES[night]}}"
+  local config_file="$DOTFILES/config/bat/config"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Bat config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^--theme=.*\"/--theme=\"$bat_theme\"/" "$config_file"
+  osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
+  echo "✓ Updated Bat theme to: $bat_theme"
 }
 
 set_zellij_mood() {
@@ -107,6 +134,20 @@ set_vscode_mood() {
   echo "✓ Updated VS Code theme to: $vscode_theme"
 }
 
+set_mood_wallpaper() {
+  local mood="$1"
+  local mod_wallpaper="${WALLPAPERS[$mood]:-${WALLPAPERS[night]}}"
+  local wallpaper_file="$DOTFILES/wallpapers/$mod_wallpaper"
+
+  if [[ ! -f "$wallpaper_file" ]]; then
+    echo "❌ Wallpaper file not found: $wallpaper_file" >&2
+    return 1
+  fi
+
+  osascript -e "tell application \"System Events\" to set picture of every desktop to \"$wallpaper_file\""
+  echo "✓ Updated Wallpaper"
+}
+
 check_deps
 
 if [[ -z "$DOTFILES" ]]; then
@@ -149,7 +190,9 @@ fi
 
 set_delta_mood "$selected_mood"
 set_ghostty_mood "$selected_mood"
+set_bat_mood "$selected_mood"
 set_vscode_mood "$selected_mood"
 set_zellij_mood "$selected_mood"
+set_mood_wallpaper "$selected_mood"
 
 echo "🎉 Successfully applied $selected_mood mood to all applications!"
