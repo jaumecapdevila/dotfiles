@@ -9,8 +9,11 @@ local g = vim.g
 
 g.mapleader = " "
 g.maplocalleader = " "
+
+-- Global options
 g.transparent = true
-g.mood = vim.env.MOOD or "mocha"
+g.indents = false
+g.mood = vim.env.MOOD or "rose-pine"
 
 require("options")
 require("autocmds")

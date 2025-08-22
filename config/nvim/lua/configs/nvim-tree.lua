@@ -18,7 +18,7 @@ return {
   renderer = {
     root_folder_label = false,
     highlight_git = true,
-    indent_markers = { enable = true },
-    icons = { show = { folder_arrow = true } },
+    indent_markers = { enable = vim.g.indents },
+    icons = { show = { folder_arrow = false } },
   },
 }

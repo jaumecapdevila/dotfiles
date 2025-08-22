@@ -10,7 +10,7 @@
 # https://ghostty.org/docs/config/reference
 
 adjust-cell-height = "20%"
-background-blur = true
+background-blur = false
 background-opacity = 0.8
 cursor-style = block
 cursor-style-blink = true
@@ -26,7 +26,7 @@ macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = "hidden"
 macos-window-shadow = false
 split-divider-color = "#c4a7e7"
-theme="Catppuccin Frappe"
+theme="Tokyo Night"
 window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8

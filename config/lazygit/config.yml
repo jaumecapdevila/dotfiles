@@ -19,10 +19,10 @@ gui:
   screenMode: "normal" # one of 'normal' | 'half' | 'full' default is 'normal'
   theme:
     activeBorderColor:
-      - "red"
+      - "magenta"
       - bold
     inactiveBorderColor:
-      - "cyan"
+      - "blue"
     searchingActiveBorderColor:
       - "yellow"
       - "bold"

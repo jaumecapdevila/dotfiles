@@ -31,6 +31,7 @@ alias zls='zellij list-sessions'
 # Utils
 alias cl="clear"
 alias lg="lazygit"
+alias oc="opencode"
 
 # Python
 alias py="python3"

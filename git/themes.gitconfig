@@ -1,87 +1,41 @@
-[delta "rose-pine-main"]
-  minus-style                   = syntax "#382434"
-  minus-non-emph-style          = syntax "#382434"
-  minus-emph-style              = syntax "#783F56"
-  minus-empty-line-marker-style = syntax "#382434"
-  line-numbers-minus-style      = "#eb6f92"
-  plus-style                    = syntax "#2D333F"
-  plus-non-emph-style           = syntax "#2D333F"
-  plus-emph-style               = syntax "#546A75"
-  plus-empty-line-marker-style  = syntax "#2D333F"
-  line-numbers-plus-style       = "#9ccfd8"
-  line-numbers-zero-style       = "#6e6a86"
-  syntax-theme = "Rose Pine"
+[delta "tokyo-night"]
+  minus-style                   = syntax "#37222c"
+  minus-non-emph-style          = syntax "#37222c"
+  minus-emph-style              = syntax "#713137"
+  minus-empty-line-marker-style = syntax "#37222c"
+  line-numbers-minus-style      = "#914c54"
+  plus-style                    = syntax "#20303b"
+  plus-non-emph-style           = syntax "#20303b"
+  plus-emph-style               = syntax "#2c5a66"
+  plus-empty-line-marker-style  = syntax "#20303b"
+  line-numbers-plus-style       = "#449dab"
+  line-numbers-zero-style       = "#3b4261"
+	syntax-theme = 								"Tokyo Night"
 
-[delta "rose-pine-moon"]
-  minus-style                   = syntax "#412D44"
-  minus-non-emph-style          = syntax "#412D44"
-  minus-emph-style              = syntax "#7D445F"
-  minus-empty-line-marker-style = syntax "#412D44"
-  line-numbers-minus-style      = "#eb6f92"
-  plus-style                    = syntax "#353B4E"
-  plus-non-emph-style           = syntax "#353B4E"
-  plus-emph-style               = syntax "#596F7F"
-  plus-empty-line-marker-style  = syntax "#353B4E"
-  line-numbers-plus-style       = "#9ccfd8"
-  line-numbers-zero-style       = "#6e6a86"
-  syntax-theme = "Rose Pine Moon"
+[delta "tokyo-storm"]
+  minus-style                   = syntax "#3f2d3d"
+  minus-non-emph-style          = syntax "#3f2d3d"
+  minus-emph-style              = syntax "#763842"
+  minus-empty-line-marker-style = syntax "#3f2d3d"
+  line-numbers-minus-style      = "#914c54"
+  plus-style                    = syntax "#283b4d"
+  plus-non-emph-style           = syntax "#283b4d"
+  plus-emph-style               = syntax "#316172"
+  plus-empty-line-marker-style  = syntax "#283b4d"
+  line-numbers-plus-style       = "#449dab"
+  line-numbers-zero-style       = "#3b4261"
+	syntax-theme = 								"Tokyo Storm"
 
-[delta "catppuccin-frappe"]
-	blame-palette = "#303446 #292c3c #232634 #414559 #51576d"
-	commit-decoration-style = "#737994" bold box ul
-	dark = true
-	file-decoration-style = "#737994"
-	file-style = "#c6d0f5"
-	hunk-header-decoration-style = "#737994" box ul
-	hunk-header-file-style = bold
-	hunk-header-line-number-style = bold "#a5adce"
-	hunk-header-style = file line-number syntax
-	line-numbers-left-style = "#737994"
-	line-numbers-minus-style = bold "#e78284"
-	line-numbers-plus-style = bold "#a6d189"
-	line-numbers-right-style = "#737994"
-	line-numbers-zero-style = "#737994"
-	# 25% red 75% base
-	minus-emph-style = bold syntax "#5e4855"
-	# 10% red 90% base
-	minus-style = syntax "#433c4c"
-	# 25% green 75% base
-	plus-emph-style = bold syntax "#4e5b56"
-	# 10% green 90% base
-	plus-style = syntax "#3c444d"
-	map-styles = \
-		bold purple => syntax "#574f6e", \
-		bold blue => syntax "#475270", \
-		bold cyan => syntax "#4a5b6b", \
-		bold yellow => syntax "#5d5958"
-	syntax-theme = "Catppuccin Frappe"
-
-[delta "catppuccin-mocha"]
-	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
-	commit-decoration-style = "#6c7086" bold box ul
-	dark = true
-	file-decoration-style = "#6c7086"
-	file-style = "#cdd6f4"
-	hunk-header-decoration-style = "#6c7086" box ul
-	hunk-header-file-style = bold
-	hunk-header-line-number-style = bold "#a6adc8"
-	hunk-header-style = file line-number syntax
-	line-numbers-left-style = "#6c7086"
-	line-numbers-minus-style = bold "#f38ba8"
-	line-numbers-plus-style = bold "#a6e3a1"
-	line-numbers-right-style = "#6c7086"
-	line-numbers-zero-style = "#6c7086"
-	# 25% red 75% base
-	minus-emph-style = bold syntax "#53394c"
-	# 10% red 90% base
-	minus-style = syntax "#34293a"
-	# 25% green 75% base
-	plus-emph-style = bold syntax "#404f4a"
-	# 10% green 90% base
-	plus-style = syntax "#2c3239"
-	map-styles = \
-		bold purple => syntax "#494060", \
-		bold blue => syntax "#384361", \
-		bold cyan => syntax "#384d5d", \
-		bold yellow => syntax "#544f4e"
-	syntax-theme = "Catppuccin Mocha"
+[delta "tokyo-moon"]
+  minus-style                   = syntax "#3a273a"
+  minus-non-emph-style          = syntax "#3a273a"
+  minus-emph-style              = syntax "#6b2e43"
+  minus-empty-line-marker-style = syntax "#3a273a"
+  line-numbers-minus-style      = "#e26a75"
+  plus-style                    = syntax "#273849"
+  plus-non-emph-style           = syntax "#273849"
+  plus-emph-style               = syntax "#305f6f"
+  plus-empty-line-marker-style  = syntax "#273849"
+  line-numbers-plus-style       = "#b8db87"
+  line-numbers-zero-style       = "#3b4261"
+	syntax-theme = 								"Tokyo Moon"
