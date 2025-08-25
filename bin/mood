@@ -85,7 +85,6 @@ set_bat_mood() {
   fi
 
   sed -i '' "s/^--theme=.*\"/--theme=\"$bat_theme\"/" "$config_file"
-  osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
   echo "✓ Updated Bat theme to: $bat_theme"
 }
 
@@ -144,7 +143,9 @@ set_mood_wallpaper() {
     return 1
   fi
 
-  osascript -e "tell application \"System Events\" to set picture of every desktop to \"$wallpaper_file\""
+  echo "Updating Wallpaper to: $wallpaper_file"
+
+  osascript "$DOTFILES/wallpapers/set-wallpaper.scpt" "$wallpaper_file" 2>/dev/null || true
   echo "✓ Updated Wallpaper"
 }
 
