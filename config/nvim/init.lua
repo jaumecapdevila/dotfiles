@@ -11,9 +11,9 @@ g.mapleader = " "
 g.maplocalleader = " "
 
 -- Global options
-g.transparent = true
+g.transparent = false
 g.indents = false
-g.mood = vim.env.MOOD or "rose-pine"
+g.mood = vim.env.MOOD or "moon"
 
 require("options")
 require("autocmds")

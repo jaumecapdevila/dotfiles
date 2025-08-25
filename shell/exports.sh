@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="night"
+export MOOD="moon"
 
 # plugins
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"

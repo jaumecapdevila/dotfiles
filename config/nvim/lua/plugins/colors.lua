@@ -1,5 +1,3 @@
-local mood = vim.g.mood
-
 return {
   "folke/tokyonight.nvim",
   name = "tokyonight",
