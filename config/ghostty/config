@@ -9,9 +9,9 @@
 # Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
 # https://ghostty.org/docs/config/reference
 
-adjust-cell-height = "15%"
-# background-blur = true
-# background-opacity = 0.8
+adjust-cell-height = "20%"
+background-blur = true
+background-opacity = 0.85
 cursor-style = block
 cursor-style-blink = true
 font-family = "OperatorMono Nerd Font"
@@ -21,12 +21,13 @@ font-style-bold = "Bold"
 font-style-bold-italic = "Bold Italic"
 font-style-italic = "Book Italic"
 font-thicken = true
+font-thicken-strength = 100
 macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = "hidden"
 macos-window-shadow = false
 split-divider-color = "#c4a7e7"
-theme="Tokyo Moon"
+theme="Rose Pine Moon"
 window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8

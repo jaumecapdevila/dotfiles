@@ -33,3 +33,9 @@ function za() {
 function change-mood() {
   "$DOTFILES/bin/mood" && source "$DOTFILES/shell/exports.sh"
 }
+
+function toggle-transparency() {
+  local current_value="${TRANSPARENCY:-off}"
+  "$DOTFILES/bin/transparency" $([[ "$current_value" == "off" ]] && echo "on" || echo "off")
+  source "$DOTFILES/shell/exports.sh"
+}

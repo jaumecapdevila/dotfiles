@@ -26,4 +26,4 @@ fi
 
 wallpaper_path="$WALLPAPERS_DIR/$selected_wallpaper"
 
-osascript -e "tell application \"System Events\" to set picture of every desktop to POSIX file \"$wallpaper_path\""
+osascript "$DOTFILES/wallpapers/set-wallpaper.scpt" "$wallpaper_path" 2>/dev/null || true

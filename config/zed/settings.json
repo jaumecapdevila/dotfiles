@@ -1,5 +1,6 @@
 {
   "agent": {
+    "default_profile": "write",
     "button": true,
     "default_model": {
       "model": "claude-sonnet-4",
@@ -21,7 +22,10 @@
   "confirm_quit": true,
   "context_servers": {
     "Context7": {
-      "args": ["-y", "@upstash/context7-mcp"],
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
       "command": "npx",
       "source": "custom"
     }
@@ -40,7 +44,7 @@
       "enabled": false
     }
   },
-  "icon_theme": "Warm Charmed Icons",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "indent_guides": {
     "active_line_width": 3,
     "background_coloring": "disabled",
@@ -119,17 +123,35 @@
     "selections_menu": true
   },
   "ui_font_size": 17,
+  "ui_font_weight": 340,
+  "agent_font_size": 17,
   "vim_mode": true,
+  "terminal": {
+    "font_family": "OperatorMono Nerd Font",
+    "font_weight": 340
+  },
   "experimental.theme_overrides": {
     "editor.gutter.background": "#2a273f",
-    // "editor.gutter.background": "#1f1d2e",
     "editor.line_number": "#6e6a86",
     "editor.active_line_number": "#eb6f92",
     "panel.indent_guide_active": "#eb6f92",
     "syntax": {
-      "attribute": { "font_style": "italic" },
-      "keyword": { "font_style": "italic" },
-      "function": { "font_weight": 900 }
+      "attribute": {
+        "font_style": "italic"
+      },
+      "function": {
+        "font_weight": 900
+      },
+      "keyword": {
+        "font_style": "italic"
+      },
+      "property": {
+        "color": "#9ccfd8",
+        "font_style": "italic"
+      },
+      "selector": {
+        "color": "#9ccfd8"
+      }
     }
   }
 }

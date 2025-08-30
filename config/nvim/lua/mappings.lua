@@ -35,8 +35,9 @@ keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp info" })
 
 -- Terminal
-keymap.set("n", "<C-t>", ":Term<CR>", { desc = "Open terminal" })
+keymap.set("n", "<leader>t", ":Term<CR>", { desc = "Open terminal" })
 keymap.set("t", "<Esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
+keymap.set("t", "<C-/>", "<cmd>close<cr>", { desc = "Close Terminal" })
 
 -- Terminal navigation
 keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to left window" })

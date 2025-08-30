@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Check if script is being sourced or executed
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  SCRIPT_EXECUTED=true
+else
+  SCRIPT_EXECUTED=false
+fi
+
+check_deps() {
+  local missing_deps=()
+
+  command -v fzf >/dev/null 2>&1 || missing_deps+=("fzf")
+  command -v osascript >/dev/null 2>&1 || missing_deps+=("osascript")
+
+  if [[ ${#missing_deps[@]} -gt 0 ]]; then
+    echo "❌ Missing required dependencies: ${missing_deps[*]}" >&2
+    exit 1
+  fi
+}
+
+declare -A GHOSTTY_OPACITY=(
+  [on]="0.85"
+  [off]="1.0"
+)
+
+set_ghostty_opacity() {
+  local transparency_mode="$1"
+  local opacity="${GHOSTTY_OPACITY[$transparency_mode]:-${GHOSTTY_OPACITY[off]}}"
+  local config_file="$DOTFILES/config/ghostty/config"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Ghostty config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^background-opacity = .*/background-opacity = $opacity/" "$config_file"
+  osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
+  echo "✓ Updated Ghostty transparency to: $transparency_mode ($opacity)"
+}
+
+check_deps
+
+if [[ -z "$DOTFILES" ]]; then
+  echo "❌ DOTFILES environment variable is not set" >&2
+  exit 1
+fi
+
+available_options=(
+  "on"
+  "off"
+)
+
+selected_option=""
+
+if [[ -n "$1" ]]; then
+  for option in "${available_options[@]}"; do
+    if [[ "$1" == "$option" ]]; then
+      selected_option="$1"
+      break
+    fi
+  done
+  if [[ -z "$selected_option" ]]; then
+    echo "❌ Invalid option: $1. Available options are: ${available_options[*]}" >&2
+    exit 1
+  fi
+else
+  selected_option=$(printf "%s\n" "${available_options[@]}" | fzf --border-label="Select transparency 🫧" --height 20%)
+fi
+
+if [[ -z "$selected_option" ]]; then
+  echo "No option selected, exiting."
+  exit 0
+fi
+
+echo "🫧 Applying $selected_option transparency..."
+
+exports_file="$DOTFILES/shell/exports.sh"
+
+if [[ ! -f "$exports_file" ]]; then
+  echo "❌ Exports file not found: $exports_file" >&2
+  exit 1
+fi
+
+if grep -q "^export TRANSPARENCY=" "$exports_file"; then
+  sed -i '' "s/^export TRANSPARENCY=.*/export TRANSPARENCY=\"$selected_option\"/" "$exports_file"
+else
+  echo "" >> "$exports_file"
+  echo "export TRANSPARENCY=\"$selected_option\"" >> "$exports_file"
+fi
+
+# Export to current shell if sourced
+if [[ "$SCRIPT_EXECUTED" == false ]]; then
+  export TRANSPARENCY="$selected_option"
+else
+  echo "💡 To update your current shell, run: source \"$exports_file\" or restart your terminal"
+fi
+
+set_ghostty_opacity "$selected_option"
+
+echo "🎉 Successfully set transparency to $selected_option!"

@@ -24,39 +24,43 @@ check_deps() {
 }
 
 declare -A GHOSTTY_THEMES=(
-  [moon]="Tokyo Moon"
-  [storm]="Tokyo Storm"
-  [night]="Tokyo Night"
+  [main]="Rose Pine"
+  [moon]="Rose Pine Moon"
 )
 
 declare -A BAT_THEMES=(
-  [moon]="Tokyo Moon"
-  [storm]="Tokyo Storm"
-  [night]="Tokyo Night"
+  [main]="Rose Pine"
+  [moon]="Rose Pine Moon"
+)
+
+declare -A BTOP_THEMES=(
+  [main]="rose-pine"
+  [moon]="rose-pine-moon"
 )
 
 declare -A ZELLIJ_THEMES=(
-  [moon]="tokyo_moon"
-  [storm]="tokyo_storm"
-  [night]="tokyo_night"
+  [main]="rose_pine_main"
+  [moon]="rose_pine_moon"
 )
 
 declare -A DELTA_FEATURES=(
-  [moon]="tokyo-moon"
-  [storm]="tokyo-storm"
-  [night]="tokyo-night"
+  [main]="rose-pine-main"
+  [moon]="rose-pine-moon"
 )
 
 declare -A VSCODE_THEMES=(
-  [moon]="Moonlight II Italic"
-  [storm]="Tokyo Night Storm"
-  [night]="Tokyo Night"
+  [main]="Rosé Pine"
+  [moon]="Rosé Pine Moon"
+)
+
+declare -A ZED_THEMES=(
+  [main]="Rosé Pine"
+  [moon]="Rosé Pine Moon"
 )
 
 declare -A WALLPAPERS=(
-  [moon]="Wallpaper 13.jpg"
-  [storm]="Wallpaper 06.jpg"
-  [night]="Wallpaper 10.jpg"
+  [main]="Wallpaper 06.jpg"
+  [moon]="Wallpaper 06.jpg"
 )
 
 set_ghostty_mood() {
@@ -76,7 +80,7 @@ set_ghostty_mood() {
 
 set_bat_mood() {
   local mood="$1"
-  local bat_theme="${BAT_THEMES[$mood]:-${BAT_THEMES[night]}}"
+  local bat_theme="${BAT_THEMES[$mood]:-${BAT_THEMES[main]}}"
   local config_file="$DOTFILES/config/bat/config"
 
   if [[ ! -f "$config_file" ]]; then
@@ -88,9 +92,23 @@ set_bat_mood() {
   echo "✓ Updated Bat theme to: $bat_theme"
 }
 
+set_btop_mood() {
+  local mood="$1"
+  local btop_theme="${BTOP_THEMES[$mood]:-${BTOP_THEMES[main]}}"
+  local config_file="$DOTFILES/config/btop/btop.conf"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Btop config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^color_theme = .*/color_theme = \"$btop_theme\"/" "$config_file"
+  echo "✓ Updated Btop theme to: $btop_theme"
+}
+
 set_zellij_mood() {
   local mood="$1"
-  local zellij_theme="${ZELLIJ_THEMES[$mood]:-${ZELLIJ_THEMES[night]}}"
+  local zellij_theme="${ZELLIJ_THEMES[$mood]:-${ZELLIJ_THEMES[main]}}"
   local config_file="$DOTFILES/config/zellij/config.kdl"
 
   if [[ ! -f "$config_file" ]]; then
@@ -105,7 +123,7 @@ set_zellij_mood() {
 
 set_delta_mood() {
   local mood="$1"
-  local delta_features="${DELTA_FEATURES[$mood]:-${DELTA_FEATURES[night]}}"
+  local delta_features="${DELTA_FEATURES[$mood]:-${DELTA_FEATURES[main]}}"
   local config_file="$DOTFILES/git/.gitconfig"
 
   if [[ ! -f "$config_file" ]]; then
@@ -133,6 +151,58 @@ set_vscode_mood() {
   echo "✓ Updated VS Code theme to: $vscode_theme"
 }
 
+set_zed_mood() {
+  local mood="$1"
+  local zed_theme="${ZED_THEMES[$mood]:-${ZED_THEMES[main]}}"
+  local zed_settings="$DOTFILES/config/zed/settings.json"
+  local theme_overrides="{}"
+
+  case "$mood" in
+    main)
+      theme_overrides='{
+        "editor.gutter.background": "#1f1d2e",
+        "editor.line_number": "#6e6a86",
+        "editor.active_line_number": "#eb6f92",
+        "panel.indent_guide_active": "#eb6f92",
+        "syntax": {
+          "attribute": { "font_style": "italic" },
+          "keyword": { "font_style": "italic" },
+          "function": { "font_weight": 900 },
+          "property": { "color": "#9ccfd8", "font_style": "italic" },
+          "selector": { "color": "#9ccfd8" }
+        }
+      }'
+      ;;
+    moon)
+      theme_overrides='{
+        "editor.gutter.background": "#2a273f",
+        "editor.line_number": "#6e6a86",
+        "editor.active_line_number": "#eb6f92",
+        "panel.indent_guide_active": "#eb6f92",
+        "syntax": {
+          "attribute": { "font_style": "italic" },
+          "function": { "font_weight": 900 },
+          "keyword": { "font_style": "italic" },
+          "property": { "color": "#9ccfd8", "font_style": "italic" },
+          "selector": { "color": "#9ccfd8" }
+        }
+      }'
+      ;;
+  esac
+
+  if [[ ! -f "$zed_settings" ]]; then
+    echo "❌ Zed settings file not found: $zed_settings" >&2
+    return 1
+  fi
+
+  echo "Updating Zed theme to: $zed_theme"
+
+  jq --arg theme "$zed_theme" '.theme.dark = $theme' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
+  jq --argjson overrides "$theme_overrides" '."experimental.theme_overrides" = $overrides' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
+
+  echo "✓ Updated Zed theme to: $zed_theme"
+}
+
 set_mood_wallpaper() {
   local mood="$1"
   local mod_wallpaper="${WALLPAPERS[$mood]:-${WALLPAPERS[night]}}"
@@ -156,11 +226,7 @@ if [[ -z "$DOTFILES" ]]; then
   exit 1
 fi
 
-available_moods=(
-  "moon" \
-  "storm" \
-  "night" \
-)
+available_moods=("main" "moon")
 
 selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)
 
@@ -183,17 +249,17 @@ sed -i '' "s/^export MOOD=.*/export MOOD=\"$selected_mood\"/" "$exports_file"
 # Export to current shell if sourced
 if [[ "$SCRIPT_EXECUTED" == false ]]; then
   export MOOD="$selected_mood"
-  echo "✓ Updated MOOD to: $selected_mood (exported to current shell)"
 else
-  echo "✓ Updated MOOD to: $selected_mood (saved to $exports_file)"
   echo "💡 To update your current shell, run: source \"$exports_file\" or restart your terminal"
 fi
 
+set_bat_mood "$selected_mood"
+set_btop_mood "$selected_mood"
 set_delta_mood "$selected_mood"
 set_ghostty_mood "$selected_mood"
-set_bat_mood "$selected_mood"
-set_vscode_mood "$selected_mood"
-set_zellij_mood "$selected_mood"
 set_mood_wallpaper "$selected_mood"
+set_vscode_mood "$selected_mood"
+set_zed_mood "$selected_mood"
+set_zellij_mood "$selected_mood"
 
 echo "🎉 Successfully applied $selected_mood mood to all applications!"

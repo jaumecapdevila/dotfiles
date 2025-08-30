@@ -1,0 +1,39 @@
+[
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "j k": "vim::NormalBefore"
+        }
+    },
+
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space w": "workspace::Save"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space e": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space f f": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space f b": "tab_switcher::Toggle"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space t": "terminal_panel::ToggleFocus"
+        }
+    }
+]

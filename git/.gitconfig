@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "tokyo-moon"
+  features = "rose-pine-moon"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false

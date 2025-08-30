@@ -19,11 +19,11 @@
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty
-    ~/.config/karabiner: _macos/karabiner
     ~/.config/nvim: config/nvim
     ~/.config/opencode: config/opencode
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.config/zed/keymap.json: config/zed/keymap.json
     ~/.config/zellij: config/zellij
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig
