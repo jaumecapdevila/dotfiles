@@ -26,14 +26,16 @@ check_deps() {
 FALLBACK_MOOD="Rose Pine"
 
 declare -A ACCENT_COLORS=(
-  [Flexoki]="#d0a215"
-  [Rose Pine Moon]="#eb6f92"
-  [Rose Pine]="#eb6f92"
-  [Solarized Dark]="#cb4b16"
+  [Flexoki]="#ce5d97"
+  [Kanagawa]="#7e9cd8"
+  [Rose Pine Moon]="#c4a7e7"
+  [Rose Pine]="#c4a7e7"
+  [Solarized Dark]="#6c71c4"
 )
 
 declare -A GHOSTTY_THEMES=(
   [Flexoki]="Flexoki"
+  [Kanagawa]="Kanagawa"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -41,6 +43,7 @@ declare -A GHOSTTY_THEMES=(
 
 declare -A BAT_THEMES=(
   [Flexoki]="ansi"
+  [Kanagawa]="Kanagawa"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -48,6 +51,7 @@ declare -A BAT_THEMES=(
 
 declare -A ZELLIJ_THEMES=(
   [Flexoki]="flexoki"
+  [Kanagawa]="kanagawa"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
   [Solarized Dark]="solarized_dark"
@@ -55,6 +59,7 @@ declare -A ZELLIJ_THEMES=(
 
 declare -A LSD_THEMES=(
   [Flexoki]="adaptive"
+  [Kanagawa]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
   [Solarized Dark]="solarized_dark"
@@ -62,6 +67,7 @@ declare -A LSD_THEMES=(
 
 declare -A DELTA_FEATURES=(
   [Flexoki]="flexoki"
+  [Kanagawa]="kanagawa"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
   [Solarized Dark]="solarized-dark"
@@ -69,6 +75,7 @@ declare -A DELTA_FEATURES=(
 
 declare -A VSCODE_THEMES=(
   [Flexoki]="Flexoki Dark"
+  [Kanagawa]="Kanagawa Wave"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
@@ -76,6 +83,7 @@ declare -A VSCODE_THEMES=(
 
 declare -A ZED_THEMES=(
   [Flexoki]="Flexoki Dark"
+  [Kanagawa]="Kanagawa Wave"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
@@ -83,6 +91,7 @@ declare -A ZED_THEMES=(
 
 declare -A WALLPAPERS=(
   [Flexoki]="Wallpaper 07.jpg"
+  [Kanagawa]="Wallpaper 10.jpg"
   [Rose Pine Moon]="Wallpaper 06.jpg"
   [Rose Pine]="Wallpaper 06.jpg"
   [Solarized Dark]="Wallpaper 08.jpg"
@@ -91,6 +100,7 @@ declare -A WALLPAPERS=(
 set_ghostty_mood() {
   local mood="$1"
   local ghostty_theme="${GHOSTTY_THEMES[$mood]:-${GHOSTTY_THEMES[$FALLBACK_MOOD]}}"
+  local accent_color="${ACCENT_COLORS[$mood]:-${ACCENT_COLORS[$FALLBACK_MOOD]}}"
   local config_file="$DOTFILES/config/ghostty/config"
 
   if [[ ! -f "$config_file" ]]; then
@@ -98,7 +108,8 @@ set_ghostty_mood() {
     return 1
   fi
 
-  sed -i '' "s/^theme *=.*\"/theme=\"$ghostty_theme\"/" "$config_file"
+  sed -i '' "s/^theme *=.*\"/theme = \"$ghostty_theme\"/" "$config_file"
+  sed -i '' "s/^split-divider-color *=.*\"/split-divider-color = \"$accent_color\"/" "$config_file"
   osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
   echo "✓ Updated Ghostty theme to: $ghostty_theme"
 }
@@ -173,6 +184,9 @@ set_zed_mood() {
   case "$mood" in
     "Flexoki")
       override_file="$overrides_dir/flexoki.json"
+      ;;
+    "Kanagawa")
+      override_file="$overrides_dir/kanagawa.json"
       ;;
     "Rose Pine")
       override_file="$overrides_dir/rose-pine.json"
@@ -251,6 +265,7 @@ fi
 
 available_moods=(
   "Flexoki"
+  "Kanagawa"
   "Rose Pine Moon"
   "Rose Pine"
   "Solarized Dark"

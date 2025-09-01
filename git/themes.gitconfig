@@ -12,6 +12,20 @@
   line-numbers-zero-style       = "#6F6E69"
   syntax-theme = "ansi"
 
+[delta "kanagawa"]
+  minus-style                   = syntax "#38242C"
+  minus-non-emph-style          = syntax "#38242C"
+  minus-emph-style              = syntax "#692E34"
+  minus-empty-line-marker-style = syntax "#38242C"
+  line-numbers-minus-style      = "#c34043"
+  plus-style                    = syntax "#2C3132"
+  plus-non-emph-style           = syntax "#2C3132"
+  plus-emph-style               = syntax "#465446"
+  plus-empty-line-marker-style  = syntax "#2C3132"
+  line-numbers-plus-style       = "#76946a"
+  line-numbers-zero-style       = "#727169"
+  syntax-theme                  = "Kanagawa"
+
 [delta "rose-pine-main"]
   minus-style                   = syntax "#382434"
   minus-non-emph-style          = syntax "#382434"

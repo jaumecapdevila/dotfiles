@@ -1,9 +1,10 @@
 {
     "border": "#073642",
     "border.variant": "#268bd2",
+    "predictive": "#657b83",
     "syntax": {
         "attribute": { "font_style": "italic" },
-        "function": { "font_weight": 900 },
+        "function": { "font_style": "italic", "font_weight": 900 },
         "keyword": { "font_style": "italic" }
     }
 }

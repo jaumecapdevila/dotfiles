@@ -5,7 +5,7 @@
     "panel.indent_guide_active": "#eb6f92",
     "syntax": {
         "attribute": { "font_style": "italic" },
-        "function": { "font_weight": 900 },
+        "function": { "font_style": "italic", "font_weight": 900 },
         "keyword": { "font_style": "italic" },
         "property": { "color": "#9ccfd8", "font_style": "italic" },
         "selector": { "color": "#9ccfd8" }

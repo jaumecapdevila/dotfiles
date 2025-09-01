@@ -6,6 +6,7 @@ return {
     "MsgArea",
   },
   exclude_groups = {
+    "CursorLine",
     "NormalFloat",
     "TelescopeNormal",
     "WhichKeyFloat",

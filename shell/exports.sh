@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Flexoki"
+export MOOD="Kanagawa"
 export TRANSPARENCY="on"
 
 # plugins
@@ -29,7 +29,25 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--prompt='  ' \
 "
 
-if [[ "$MOOD" == "Rose Pine" ]]; then
+if [[ "$MOOD" == "Flexoki" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
+		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
+		--color=border:#4385be,header:#CECDC3,gutter:#100F0F
+		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
+		--color=pointer:#AD8301,marker:#4385be,prompt:#AD8301
+	"
+elif [[ "$MOOD" == "Kanagawa" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#dcd7ba,bg:#1f1f28,hl:#FF9E3B
+		--color=fg+:#dcd7ba,bg+:#2d4f67,hl+:#FF9E3B
+		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
+		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
+		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
+	"
+elif [[ "$MOOD" == "Rose Pine" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 		--color=fg:#908caa,bg:#191724,hl:#ebbcba \
@@ -46,15 +64,6 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 		--color=border:#44415a,header:#3e8fb0,gutter:#232136 \
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
-	"
-elif [[ "$MOOD" == "Flexoki" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
-		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
-		--color=border:#AF3029,header:#CECDC3,gutter:#100F0F
-		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
-		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
 	"
 elif [[ "$MOOD" == "Solarized Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"

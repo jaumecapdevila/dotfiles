@@ -1,0 +1,13 @@
+{
+    "border.variant": "#7e9cd8",
+    "editor.active_line_number": "#7e9cd8",
+    "editor.gutter.background": "#2A2A37",
+    "editor.line_number": "#54546D",
+    "panel.background": "#1F1F28",
+    "panel.indent_guide_active": "#7e9cd8",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}

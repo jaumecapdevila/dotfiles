@@ -22,23 +22,23 @@ return {
     end,
   },
   {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    opts = require("configs.kanagawa"),
+    cond = vim.g.mood == "Kanagawa",
+    config = function(_, opts)
+      require("kanagawa").setup(opts)
+      vim.cmd("colorscheme kanagawa")
+    end,
+  },
+  {
     "kepano/flexoki-neovim",
     name = "flexoki",
     lazy = false,
     priority = 1000,
     cond = vim.g.mood == "Flexoki",
     config = function()
-      vim.api.nvim_set_hl(
-        0,
-        "NotifyBackground",
-        { fg = "#CECDC3", bg = "#100F0F" }
-      )
-      vim.api.nvim_set_hl(
-        0,
-        "TelescopeBorder",
-        { fg = "#4385be", bg = "#282726" }
-      )
-      vim.api.nvim_set_hl(0, "TelescopeNormal", { link = "NormalFloat" })
+      require("configs.flexoki")
       vim.cmd("colorscheme flexoki")
     end,
   },
