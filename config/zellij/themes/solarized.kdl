@@ -1,5 +1,5 @@
 themes {
-  solarized {
+  solarized_dark {
 		bg "#002b36"
 		fg "#839496"
 		red "#dc322f"

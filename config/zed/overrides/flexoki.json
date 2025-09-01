@@ -1,0 +1,8 @@
+{
+    "border.variant": "#4385be",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "function": { "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}

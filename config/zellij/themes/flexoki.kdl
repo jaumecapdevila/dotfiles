@@ -1,5 +1,5 @@
 themes {
-  flexoki {
+  flexoki_dark {
 		bg "#100F0F"
 		fg "#CECDC3"
 		red "#D14D41"

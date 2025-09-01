@@ -15,7 +15,7 @@ return {
     "Tsuzat/NeoSolarized.nvim",
     lazy = false,
     opts = require("configs.neosolarized"),
-    cond = vim.g.mood == "Solarized",
+    cond = vim.g.mood == "Solarized Dark",
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
       vim.cmd("colorscheme NeoSolarized")
@@ -28,22 +28,18 @@ return {
     priority = 1000,
     cond = vim.g.mood == "Flexoki",
     config = function()
+      vim.api.nvim_set_hl(
+        0,
+        "NotifyBackground",
+        { fg = "#CECDC3", bg = "#100F0F" }
+      )
+      vim.api.nvim_set_hl(
+        0,
+        "TelescopeBorder",
+        { fg = "#4385be", bg = "#282726" }
+      )
+      vim.api.nvim_set_hl(0, "TelescopeNormal", { link = "NormalFloat" })
       vim.cmd("colorscheme flexoki")
     end,
   },
-  {
-    "srcery-colors/srcery-vim",
-    name = "srcery",
-    lazy = false,
-    cond = vim.g.mood == "Srcery",
-    init = function()
-      vim.g.srcery_bold = 1
-      vim.g.srcery_italic = 1
-      vim.g.srcery_italic_types = 1
-      vim.g.srcery_bg_passthrough = vim.g.transparent and 1 or 0
-    end,
-    config = function()
-      vim.cmd("colorscheme srcery")
-    end,
-  }
 }

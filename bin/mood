@@ -23,68 +23,67 @@ check_deps() {
   fi
 }
 
+declare -A ACCENT_COLORS=(
+  [Flexoki]="#d0a215"
+  [Rose Pine Moon]="#eb6f92"
+  [Rose Pine]="#eb6f92"
+  [Solarized Dark]="#cb4b16"
+)
+
 declare -A GHOSTTY_THEMES=(
   [Flexoki]="Flexoki"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
-  [Solarized]="Solarized"
-  [Srcery]="Srcery"
+  [Solarized Dark]="Solarized Dark"
 )
 
 declare -A BAT_THEMES=(
   [Flexoki]="ansi"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
-  [Solarized]="Solarized"
-  [Srcery]="Srcery"
+  [Solarized Dark]="Solarized Dark"
 )
 
 declare -A ZELLIJ_THEMES=(
   [Flexoki]="flexoki"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
-  [Solarized]="solarized"
-  [Srcery]="srcery"
+  [Solarized Dark]="solarized_dark"
 )
 
 declare -A LSD_THEMES=(
   [Flexoki]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
-  [Solarized]="solarized"
-  [Srcery]="adaptive"
+  [Solarized Dark]="solarized_dark"
 )
 
 declare -A DELTA_FEATURES=(
   [Flexoki]="flexoki"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
-  [Solarized]="solarized-dark"
-  [Srcery]="srcery"
+  [Solarized Dark]="solarized-dark"
 )
 
 declare -A VSCODE_THEMES=(
   [Flexoki]="Flexoki Dark"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
-  [Solarized]="Solarized Dark"
-  [Srcery]="Srcery"
+  [Solarized Dark]="Solarized Dark"
 )
 
 declare -A ZED_THEMES=(
   [Flexoki]="Flexoki Dark"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
-  [Solarized]="Solarized Dark"
-  [Srcery]="Srcery"
+  [Solarized Dark]="Solarized Dark"
 )
 
 declare -A WALLPAPERS=(
-  [Flexoki]="Wallpaper 08.jpg"
+  [Flexoki]="Wallpaper 07.jpg"
   [Rose Pine Moon]="Wallpaper 06.jpg"
   [Rose Pine]="Wallpaper 06.jpg"
-  [Solarized]="Wallpaper 09.jpg"
-  [Srcery]="Wallpaper 07.png"
+  [Solarized Dark]="Wallpaper 08.jpg"
 )
 
 set_ghostty_mood() {
@@ -147,6 +146,7 @@ set_delta_mood() {
 
 set_vscode_mood() {
   local mood="$1"
+  local accent_color="${ACCENT_COLORS[$mood]:-${ACCENT_COLORS[night]}}"
   local vscode_theme="${VSCODE_THEMES[$mood]:-${VSCODE_THEMES[night]}}"
   local vscode_settings="$HOME/Library/Application Support/Code/User/settings.json"
 
@@ -155,8 +155,7 @@ set_vscode_mood() {
     return 1
   fi
 
-  echo "Updating VS Code theme to: $vscode_theme"
-
+  jq --arg accent "$accent_color" '.["material-icon-theme.folders.color"] = $accent' "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
   jq --arg theme "$vscode_theme" '.["workbench.colorTheme"] = $theme' "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
   echo "✓ Updated VS Code theme to: $vscode_theme"
 }
@@ -165,58 +164,27 @@ set_zed_mood() {
   local mood="$1"
   local zed_theme="${ZED_THEMES[$mood]:-${ZED_THEMES[main]}}"
   local zed_settings="$DOTFILES/config/zed/settings.json"
+  local overrides_dir="$DOTFILES/config/zed/overrides"
   local theme_overrides="{}"
-
-  # Common syntax overrides
-  local common_syntax='"attribute": { "font_style": "italic" }, "function": { "font_weight": 900 }, "keyword": { "font_style": "italic" }'
-
-  # Rose Pine specific syntax overrides
-  local rose_pine_syntax='"property": { "color": "#9ccfd8", "font_style": "italic" }, "selector": { "color": "#9ccfd8" }'
-  local rose_pine_colors='"editor.line_number": "#6e6a86", "editor.active_line_number": "#eb6f92", "panel.indent_guide_active": "#eb6f92"'
+  local override_file=""
 
   case "$mood" in
+    "Flexoki")
+      override_file="$overrides_dir/flexoki.json"
+      ;;
     "Rose Pine")
-      theme_overrides="{
-        \"editor.gutter.background\": \"#1f1d2e\",
-        $rose_pine_colors,
-        \"syntax\": {
-          $common_syntax,
-          $rose_pine_syntax
-        }
-      }"
+      override_file="$overrides_dir/rose-pine.json"
       ;;
     "Rose Pine Moon")
-      theme_overrides="{
-        \"editor.gutter.background\": \"#2a273f\",
-        $rose_pine_colors,
-        \"syntax\": {
-          $common_syntax,
-          $rose_pine_syntax
-        }
-      }"
+      override_file="$overrides_dir/rose-pine-moon.json"
       ;;
-    "Flexoki")
-        theme_overrides="{
-          \"syntax\": {
-            $common_syntax
-          }
-        }"
-        ;;
-    "Solarized")
-        theme_overrides="{
-          \"border\": \"#073642\",
-          \"syntax\": {
-            $common_syntax
-          }
-        }"
-        ;;
-    "Srcery")
-        theme_overrides="{
-          \"syntax\": {
-            $common_syntax
-          }
-        }"
-        ;;
+    "Solarized Dark")
+      override_file="$overrides_dir/solarized.json"
+      ;;
+    *)
+      echo "❌ Unknown mood: $mood" >&2
+      return 1
+      ;;
   esac
 
   if [[ ! -f "$zed_settings" ]]; then
@@ -224,11 +192,16 @@ set_zed_mood() {
     return 1
   fi
 
-  echo "Updating Zed theme to: $zed_theme"
+  if [[ ! -f "$override_file" ]]; then
+    echo "❌ Zed override file not found: $override_file" >&2
+    return 1
+  fi
+
+  # Read theme overrides from JSON file
+  theme_overrides=$(cat "$override_file")
 
   jq --arg theme "$zed_theme" '.theme.dark = $theme' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
   jq --argjson overrides "$theme_overrides" '."experimental.theme_overrides" = $overrides' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
-
   echo "✓ Updated Zed theme to: $zed_theme"
 }
 
@@ -263,8 +236,6 @@ set_mood_wallpaper() {
     return 1
   fi
 
-  echo "Updating Wallpaper to: $wallpaper_file"
-
   osascript "$DOTFILES/wallpapers/set-wallpaper.scpt" "$wallpaper_file" 2>/dev/null || true
   echo "✓ Updated Wallpaper"
 }
@@ -280,8 +251,7 @@ available_moods=(
   "Flexoki"
   "Rose Pine Moon"
   "Rose Pine"
-  "Solarized"
-  "Srcery"
+  "Solarized Dark"
 )
 
 selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)

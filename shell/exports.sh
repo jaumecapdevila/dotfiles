@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Srcery"
+export MOOD="Flexoki"
 export TRANSPARENCY="on"
 
 # plugins
@@ -47,15 +47,6 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
-elif [[ "$MOOD" == "Srcery" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6C6C6C,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#fce8c3,bg:#1c1b19,hl:#ff5c8f
-		--color=fg+:#fce8c3,bg+:#918175,hl+:#ff5c8f
-		--color=border:#2c78bf,header:#ff5c8f,gutter:#1c1b19
-		--color=spinner:#0aaeb3,info:#0aaeb3,separator:#918175
-		--color=pointer:#fbb829,marker:#2c78bf,prompt:#fbb829
-	"
 elif [[ "$MOOD" == "Flexoki" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -65,7 +56,7 @@ elif [[ "$MOOD" == "Flexoki" ]]; then
 		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
 		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
 	"
-elif [[ "$MOOD" == "Solarized" ]]; then
+elif [[ "$MOOD" == "Solarized Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#839496,bg:#002b36,hl:#6c71c4

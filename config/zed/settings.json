@@ -111,7 +111,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Srcery",
+    "dark": "Flexoki Dark",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -131,6 +131,7 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
+    "border.variant": "#4385be",
     "syntax": {
       "attribute": {
         "font_style": "italic"

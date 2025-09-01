@@ -1,15 +1,15 @@
 [delta "flexoki"]
-  minus-style                   = syntax "#412D44"
-  minus-non-emph-style          = syntax "#412D44"
-  minus-emph-style              = syntax "#7D445F"
-  minus-empty-line-marker-style = syntax "#412D44"
-  line-numbers-minus-style      = "#eb6f92"
-  plus-style                    = syntax "#353B4E"
-  plus-non-emph-style           = syntax "#353B4E"
-  plus-emph-style               = syntax "#596F7F"
-  plus-empty-line-marker-style  = syntax "#353B4E"
-  line-numbers-plus-style       = "#9ccfd8"
-  line-numbers-zero-style       = "#6e6a86"
+  minus-style                   = syntax "#2D1816"
+  minus-non-emph-style          = syntax "#2D1816"
+  minus-emph-style              = syntax "#672B26"
+  minus-empty-line-marker-style = syntax "#2D1816"
+  line-numbers-minus-style      = "#d14d41"
+  plus-style                    = syntax "#162625"
+  plus-non-emph-style           = syntax "#162625"
+  plus-emph-style               = syntax "#235450"
+  plus-empty-line-marker-style  = syntax "#162625"
+  line-numbers-plus-style       = "#3aa99f"
+  line-numbers-zero-style       = "#6F6E69"
   syntax-theme = "ansi"
 
 [delta "rose-pine-main"]
@@ -40,7 +40,7 @@
   line-numbers-zero-style       = "#6e6a86"
   syntax-theme                  = "Rose Pine Moon"
 
-[delta "solarized"]
+[delta "solarized-dark"]
   minus-style                   = syntax "#AD461B"
   minus-non-emph-style          = syntax "#AD461B"
   minus-emph-style              = syntax "#713137"
@@ -53,18 +53,3 @@
   line-numbers-plus-style       = "#449dab"
   line-numbers-zero-style       = "#3b4261"
   syntax-theme                  = "Solarized Dark"
-
-[delta "srcery"]
-  minus-style                   = syntax "#412D44"
-  minus-non-emph-style          = syntax "#412D44"
-  minus-emph-style              = syntax "#7D445F"
-  minus-empty-line-marker-style = syntax "#412D44"
-  line-numbers-minus-style      = "#eb6f92"
-  plus-style                    = syntax "#353B4E"
-  plus-non-emph-style           = syntax "#353B4E"
-  plus-emph-style               = syntax "#596F7F"
-  plus-empty-line-marker-style  = syntax "#353B4E"
-  line-numbers-plus-style       = "#9ccfd8"
-  line-numbers-zero-style       = "#6e6a86"
-  syntax-theme                  = "Srcery"
-
