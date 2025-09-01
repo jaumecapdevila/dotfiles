@@ -22,7 +22,10 @@
   "confirm_quit": true,
   "context_servers": {
     "Context7": {
-      "args": ["-y", "@upstash/context7-mcp"],
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
       "command": "npx",
       "source": "custom"
     }
