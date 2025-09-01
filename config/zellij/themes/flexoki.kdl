@@ -1,0 +1,15 @@
+themes {
+  flexoki {
+		bg "#100F0F"
+		fg "#CECDC3"
+		red "#D14D41"
+		green "#879A39"
+		blue "#4385BE"
+		yellow "#D0A215"
+		magenta "#CE5D97"
+		orange "#DA702C"
+		cyan "#3AA99F"
+		black "#100F0F"
+		white "#cecdc3"
+	}
+}

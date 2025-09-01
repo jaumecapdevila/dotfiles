@@ -24,43 +24,52 @@ check_deps() {
 }
 
 declare -A GHOSTTY_THEMES=(
-  [main]="Rose Pine"
-  [moon]="Rose Pine Moon"
+  [Flexoki]="Flexoki"
+  [Rose Pine Moon]="Rose Pine Moon"
+  [Rose Pine]="Rose Pine"
+  [Srcery]="Srcery"
 )
 
 declare -A BAT_THEMES=(
-  [main]="Rose Pine"
-  [moon]="Rose Pine Moon"
-)
-
-declare -A BTOP_THEMES=(
-  [main]="rose-pine"
-  [moon]="rose-pine-moon"
+  [Flexoki]="ansi"
+  [Rose Pine Moon]="Rose Pine Moon"
+  [Rose Pine]="Rose Pine"
+  [Srcery]="Srcery"
 )
 
 declare -A ZELLIJ_THEMES=(
-  [main]="rose_pine_main"
-  [moon]="rose_pine_moon"
+  [Flexoki]="flexoki"
+  [Rose Pine Moon]="rose_pine_moon"
+  [Rose Pine]="rose_pine_main"
+  [Srcery]="srcery"
 )
 
 declare -A DELTA_FEATURES=(
-  [main]="rose-pine-main"
-  [moon]="rose-pine-moon"
+  [Flexoki]="flexoki"
+  [Rose Pine Moon]="rose-pine-moon"
+  [Rose Pine]="rose-pine-main"
+  [Srcery]="srcery"
 )
 
 declare -A VSCODE_THEMES=(
-  [main]="Rosé Pine"
-  [moon]="Rosé Pine Moon"
+  [Flexoki]="Flexoki Dark"
+  [Rose Pine Moon]="Rosé Pine Moon"
+  [Rose Pine]="Rosé Pine"
+  [Srcery]="Srcery"
 )
 
 declare -A ZED_THEMES=(
-  [main]="Rosé Pine"
-  [moon]="Rosé Pine Moon"
+  [Flexoki]="Flexoki Dark"
+  [Rose Pine Moon]="Rosé Pine Moon"
+  [Rose Pine]="Rosé Pine"
+  [Srcery]="Srcery"
 )
 
 declare -A WALLPAPERS=(
-  [main]="Wallpaper 06.jpg"
-  [moon]="Wallpaper 06.jpg"
+  [Flexoki]="Wallpaper 08.jpg"
+  [Rose Pine Moon]="Wallpaper 06.jpg"
+  [Rose Pine]="Wallpaper 06.jpg"
+  [Srcery]="Wallpaper 07.png"
 )
 
 set_ghostty_mood() {
@@ -90,20 +99,6 @@ set_bat_mood() {
 
   sed -i '' "s/^--theme=.*\"/--theme=\"$bat_theme\"/" "$config_file"
   echo "✓ Updated Bat theme to: $bat_theme"
-}
-
-set_btop_mood() {
-  local mood="$1"
-  local btop_theme="${BTOP_THEMES[$mood]:-${BTOP_THEMES[main]}}"
-  local config_file="$DOTFILES/config/btop/btop.conf"
-
-  if [[ ! -f "$config_file" ]]; then
-    echo "❌ Btop config file not found: $config_file" >&2
-    return 1
-  fi
-
-  sed -i '' "s/^color_theme = .*/color_theme = \"$btop_theme\"/" "$config_file"
-  echo "✓ Updated Btop theme to: $btop_theme"
 }
 
 set_zellij_mood() {
@@ -158,7 +153,7 @@ set_zed_mood() {
   local theme_overrides="{}"
 
   case "$mood" in
-    main)
+    "Rose Pine")
       theme_overrides='{
         "editor.gutter.background": "#1f1d2e",
         "editor.line_number": "#6e6a86",
@@ -173,7 +168,7 @@ set_zed_mood() {
         }
       }'
       ;;
-    moon)
+    "Rose Pine Moon")
       theme_overrides='{
         "editor.gutter.background": "#2a273f",
         "editor.line_number": "#6e6a86",
@@ -188,6 +183,25 @@ set_zed_mood() {
         }
       }'
       ;;
+    "Flexoki")
+        theme_overrides='{
+          "syntax": {
+            "attribute": { "font_style": "italic" },
+            "function": { "font_weight": 900 },
+            "keyword": { "font_style": "italic" }
+          }
+        }'
+        ;;
+    "Srcery")
+        theme_overrides='{
+          "border": "#1c1b19",
+          "syntax": {
+            "attribute": { "font_style": "italic" },
+            "function": { "font_weight": 900 },
+            "keyword": { "font_style": "italic" }
+          }
+        }'
+        ;;
   esac
 
   if [[ ! -f "$zed_settings" ]]; then
@@ -226,7 +240,12 @@ if [[ -z "$DOTFILES" ]]; then
   exit 1
 fi
 
-available_moods=("main" "moon")
+available_moods=(
+  "Flexoki"
+  "Rose Pine Moon"
+  "Rose Pine"
+  "Srcery"
+)
 
 selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)
 
@@ -254,7 +273,6 @@ else
 fi
 
 set_bat_mood "$selected_mood"
-set_btop_mood "$selected_mood"
 set_delta_mood "$selected_mood"
 set_ghostty_mood "$selected_mood"
 set_mood_wallpaper "$selected_mood"

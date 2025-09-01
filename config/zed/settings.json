@@ -22,10 +22,7 @@
   "confirm_quit": true,
   "context_servers": {
     "Context7": {
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ],
+      "args": ["-y", "@upstash/context7-mcp"],
       "command": "npx",
       "source": "custom"
     }
@@ -111,7 +108,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Rosé Pine Moon",
+    "dark": "Srcery",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -131,10 +128,6 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "editor.gutter.background": "#2a273f",
-    "editor.line_number": "#6e6a86",
-    "editor.active_line_number": "#eb6f92",
-    "panel.indent_guide_active": "#eb6f92",
     "syntax": {
       "attribute": {
         "font_style": "italic"
@@ -144,13 +137,6 @@
       },
       "keyword": {
         "font_style": "italic"
-      },
-      "property": {
-        "color": "#9ccfd8",
-        "font_style": "italic"
-      },
-      "selector": {
-        "color": "#9ccfd8"
       }
     }
   }

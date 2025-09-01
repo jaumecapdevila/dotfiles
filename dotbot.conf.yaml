@@ -15,7 +15,6 @@
     ~/.bashrc: shell/bash/.bashrc
     ~/.config/amethyst: config/amethyst
     ~/.config/bat: config/bat
-    ~/.config/btop: config/btop
     ~/.config/gh-dash: config/gh-dash
     ~/.config/gh: config/gh
     ~/.config/ghostty: config/ghostty

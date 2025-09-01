@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="moon"
+export MOOD="Srcery"
 export TRANSPARENCY="on"
 
 # plugins
@@ -29,7 +29,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--prompt='  ' \
 "
 
-if [[ "$MOOD" == "main" ]]; then
+if [[ "$MOOD" == "Rose Pine" ]]; then
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 		--color=fg:#908caa,bg:#191724,hl:#ebbcba \
 		--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba \
@@ -37,13 +37,29 @@ if [[ "$MOOD" == "main" ]]; then
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
-elif [[ "$MOOD" == "moon" ]]; then
+elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 		--color=fg:#908caa,bg:#232136,hl:#ea9a97 \
 		--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97 \
 		--color=border:#44415a,header:#3e8fb0,gutter:#232136 \
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
+	"
+elif [[ "$MOOD" == "Srcery" ]]; then
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
+		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
+		--color=border:#AF3029,header:#CECDC3,gutter:#100F0F
+		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
+		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
+	"
+elif [[ "$MOOD" == "Flexoki" ]]; then
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
+		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
+		--color=border:#AF3029,header:#CECDC3,gutter:#100F0F
+		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
+		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
 	"
 fi
 
