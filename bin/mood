@@ -27,6 +27,7 @@ declare -A GHOSTTY_THEMES=(
   [Flexoki]="Flexoki"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
+  [Solarized]="Solarized"
   [Srcery]="Srcery"
 )
 
@@ -34,6 +35,7 @@ declare -A BAT_THEMES=(
   [Flexoki]="ansi"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
+  [Solarized]="Solarized"
   [Srcery]="Srcery"
 )
 
@@ -41,6 +43,7 @@ declare -A ZELLIJ_THEMES=(
   [Flexoki]="flexoki"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
+  [Solarized]="solarized"
   [Srcery]="srcery"
 )
 
@@ -48,6 +51,7 @@ declare -A DELTA_FEATURES=(
   [Flexoki]="flexoki"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
+  [Solarized]="solarized-dark"
   [Srcery]="srcery"
 )
 
@@ -55,6 +59,7 @@ declare -A VSCODE_THEMES=(
   [Flexoki]="Flexoki Dark"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
+  [Solarized]="Solarized Dark"
   [Srcery]="Srcery"
 )
 
@@ -62,6 +67,7 @@ declare -A ZED_THEMES=(
   [Flexoki]="Flexoki Dark"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
+  [Solarized]="Solarized Dark"
   [Srcery]="Srcery"
 )
 
@@ -69,6 +75,7 @@ declare -A WALLPAPERS=(
   [Flexoki]="Wallpaper 08.jpg"
   [Rose Pine Moon]="Wallpaper 06.jpg"
   [Rose Pine]="Wallpaper 06.jpg"
+  [Solarized]="Wallpaper 09.jpg"
   [Srcery]="Wallpaper 07.png"
 )
 
@@ -152,55 +159,55 @@ set_zed_mood() {
   local zed_settings="$DOTFILES/config/zed/settings.json"
   local theme_overrides="{}"
 
+  # Common syntax overrides
+  local common_syntax='"attribute": { "font_style": "italic" }, "function": { "font_weight": 900 }, "keyword": { "font_style": "italic" }'
+
+  # Rose Pine specific syntax overrides
+  local rose_pine_syntax='"property": { "color": "#9ccfd8", "font_style": "italic" }, "selector": { "color": "#9ccfd8" }'
+  local rose_pine_colors='"editor.line_number": "#6e6a86", "editor.active_line_number": "#eb6f92", "panel.indent_guide_active": "#eb6f92"'
+
   case "$mood" in
     "Rose Pine")
-      theme_overrides='{
-        "editor.gutter.background": "#1f1d2e",
-        "editor.line_number": "#6e6a86",
-        "editor.active_line_number": "#eb6f92",
-        "panel.indent_guide_active": "#eb6f92",
-        "syntax": {
-          "attribute": { "font_style": "italic" },
-          "keyword": { "font_style": "italic" },
-          "function": { "font_weight": 900 },
-          "property": { "color": "#9ccfd8", "font_style": "italic" },
-          "selector": { "color": "#9ccfd8" }
+      theme_overrides="{
+        \"editor.gutter.background\": \"#1f1d2e\",
+        $rose_pine_colors,
+        \"syntax\": {
+          $common_syntax,
+          $rose_pine_syntax
         }
-      }'
+      }"
       ;;
     "Rose Pine Moon")
-      theme_overrides='{
-        "editor.gutter.background": "#2a273f",
-        "editor.line_number": "#6e6a86",
-        "editor.active_line_number": "#eb6f92",
-        "panel.indent_guide_active": "#eb6f92",
-        "syntax": {
-          "attribute": { "font_style": "italic" },
-          "function": { "font_weight": 900 },
-          "keyword": { "font_style": "italic" },
-          "property": { "color": "#9ccfd8", "font_style": "italic" },
-          "selector": { "color": "#9ccfd8" }
+      theme_overrides="{
+        \"editor.gutter.background\": \"#2a273f\",
+        $rose_pine_colors,
+        \"syntax\": {
+          $common_syntax,
+          $rose_pine_syntax
         }
-      }'
+      }"
       ;;
     "Flexoki")
-        theme_overrides='{
-          "syntax": {
-            "attribute": { "font_style": "italic" },
-            "function": { "font_weight": 900 },
-            "keyword": { "font_style": "italic" }
+        theme_overrides="{
+          \"syntax\": {
+            $common_syntax
           }
-        }'
+        }"
+        ;;
+    "Solarized")
+        theme_overrides="{
+          \"border\": \"#073642\",
+          \"syntax\": {
+            $common_syntax
+          }
+        }"
         ;;
     "Srcery")
-        theme_overrides='{
-          "border": "#1c1b19",
-          "syntax": {
-            "attribute": { "font_style": "italic" },
-            "function": { "font_weight": 900 },
-            "keyword": { "font_style": "italic" }
+        theme_overrides="{
+          \"syntax\": {
+            $common_syntax
           }
-        }'
+        }"
         ;;
   esac
 
@@ -244,6 +251,7 @@ available_moods=(
   "Flexoki"
   "Rose Pine Moon"
   "Rose Pine"
+  "Solarized"
   "Srcery"
 )
 

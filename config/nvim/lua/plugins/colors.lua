@@ -12,6 +12,16 @@ return {
     end,
   },
   {
+    "Tsuzat/NeoSolarized.nvim",
+    lazy = false,
+    opts = require("configs.neosolarized"),
+    cond = vim.g.mood == "Solarized",
+    config = function(_, opts)
+      require("NeoSolarized").setup(opts)
+      vim.cmd("colorscheme NeoSolarized")
+    end,
+  },
+  {
     "kepano/flexoki-neovim",
     name = "flexoki",
     lazy = false,

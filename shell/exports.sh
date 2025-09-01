@@ -30,6 +30,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 
 if [[ "$MOOD" == "Rose Pine" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 		--color=fg:#908caa,bg:#191724,hl:#ebbcba \
 		--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba \
@@ -38,6 +39,7 @@ if [[ "$MOOD" == "Rose Pine" ]]; then
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
 elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 		--color=fg:#908caa,bg:#232136,hl:#ea9a97 \
 		--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97 \
@@ -46,6 +48,16 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
 elif [[ "$MOOD" == "Srcery" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6C6C6C,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#fce8c3,bg:#1c1b19,hl:#ff5c8f
+		--color=fg+:#fce8c3,bg+:#918175,hl+:#ff5c8f
+		--color=border:#2c78bf,header:#ff5c8f,gutter:#1c1b19
+		--color=spinner:#0aaeb3,info:#0aaeb3,separator:#918175
+		--color=pointer:#fbb829,marker:#2c78bf,prompt:#fbb829
+	"
+elif [[ "$MOOD" == "Flexoki" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
 		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
@@ -53,13 +65,14 @@ elif [[ "$MOOD" == "Srcery" ]]; then
 		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
 		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
 	"
-elif [[ "$MOOD" == "Flexoki" ]]; then
+elif [[ "$MOOD" == "Solarized" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
-		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
-		--color=border:#AF3029,header:#CECDC3,gutter:#100F0F
-		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
-		--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301
+  	--color=fg:#839496,bg:#002b36,hl:#6c71c4
+		--color=fg+:#839496,bg+:#073642,hl+:#6c71c4
+		--color=border:#268bd2,header:#6c71c4,gutter:#002b36
+		--color=spinner:#2aa198,info:#2aa198,separator:#073642
+		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
 	"
 fi
 
@@ -70,7 +83,6 @@ export FZF_CTRL_R_OPTS="$FZF_CTRL_R_OPTS \
 export FZF_TMUX_OPTS="-p 55%,60%"
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
 
 export ZOXIDE_CMD_OVERRIDE="cd"
 
