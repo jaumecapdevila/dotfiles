@@ -13,17 +13,17 @@
   syntax-theme                  = "Kanagawa"
 
 [delta "melange"]
-  minus-style                   = syntax "#2D1816"
-  minus-non-emph-style          = syntax "#2D1816"
-  minus-emph-style              = syntax "#672B26"
-  minus-empty-line-marker-style = syntax "#2D1816"
-  line-numbers-minus-style      = "#d14d41"
-  plus-style                    = syntax "#162625"
-  plus-non-emph-style           = syntax "#162625"
-  plus-emph-style               = syntax "#235450"
-  plus-empty-line-marker-style  = syntax "#162625"
-  line-numbers-plus-style       = "#3aa99f"
-  line-numbers-zero-style       = "#6F6E69"
+  minus-style                   = syntax "#3F3331"
+  minus-non-emph-style          = syntax "#3F3331"
+  minus-emph-style              = syntax "#6C4E4E"
+  minus-empty-line-marker-style = syntax "#3F3331"
+  line-numbers-minus-style      = "#BD8183"
+  plus-style                    = syntax "#35362F"
+  plus-non-emph-style           = syntax "#35362F"
+  plus-emph-style               = syntax "#4D594A"
+  plus-empty-line-marker-style  = syntax "#35362F"
+  line-numbers-plus-style       = "#78997A"
+  line-numbers-zero-style       = "#867462"
   syntax-theme = "ansi"
 
 [delta "rose-pine-main"]

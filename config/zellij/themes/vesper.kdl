@@ -1,0 +1,15 @@
+themes {
+  vesper {
+		bg "#101010"
+		fg "#ffffff"
+		red "#f5a191"
+		green "#99ffe4"
+		blue "#aca1cf"
+		yellow "#e6b99d"
+		magenta "#e29eca"
+		orange "#ffc799"
+		cyan "#ea83a5"
+		black "#101010"
+		white "#ffffff"
+	}
+}
