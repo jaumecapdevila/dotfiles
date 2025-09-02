@@ -22,7 +22,10 @@
   "confirm_quit": true,
   "context_servers": {
     "Context7": {
-      "args": ["-y", "@upstash/context7-mcp"],
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
       "command": "npx",
       "source": "custom"
     }
@@ -144,6 +147,18 @@
       },
       "keyword": {
         "font_style": "italic"
+      },
+      "punctuation": {
+        "color": "#9CABCA"
+      },
+      "punctuation.bracket": {
+        "color": "#9CABCA"
+      },
+      "punctuation.list_marker": {
+        "color": "#9CABCA"
+      },
+      "punctuation.special": {
+        "color": "#9CABCA"
       }
     }
   }

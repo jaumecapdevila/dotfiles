@@ -8,6 +8,10 @@
     "syntax": {
         "attribute": { "font_style": "italic" },
         "function": { "font_style": "italic", "font_weight": 900 },
-        "keyword": { "font_style": "italic" }
+        "keyword": { "font_style": "italic" },
+        "punctuation": { "color": "#9CABCA" },
+        "punctuation.bracket": { "color": "#9CABCA" },
+        "punctuation.list_marker": { "color": "#9CABCA" },
+        "punctuation.special": { "color": "#9CABCA" }
     }
 }
