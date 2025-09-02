@@ -26,6 +26,20 @@
   line-numbers-zero-style       = "#727169"
   syntax-theme                  = "Kanagawa"
 
+[delta "melange"]
+  minus-style                   = syntax "#2D1816"
+  minus-non-emph-style          = syntax "#2D1816"
+  minus-emph-style              = syntax "#672B26"
+  minus-empty-line-marker-style = syntax "#2D1816"
+  line-numbers-minus-style      = "#d14d41"
+  plus-style                    = syntax "#162625"
+  plus-non-emph-style           = syntax "#162625"
+  plus-emph-style               = syntax "#235450"
+  plus-empty-line-marker-style  = syntax "#162625"
+  line-numbers-plus-style       = "#3aa99f"
+  line-numbers-zero-style       = "#6F6E69"
+  syntax-theme = "ansi"
+
 [delta "rose-pine-main"]
   minus-style                   = syntax "#382434"
   minus-non-emph-style          = syntax "#382434"

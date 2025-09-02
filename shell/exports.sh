@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Kanagawa"
+export MOOD="Melange"
 export TRANSPARENCY="on"
 
 # plugins
@@ -46,6 +46,15 @@ elif [[ "$MOOD" == "Kanagawa" ]]; then
 		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
 		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
 		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
+	"
+elif [[ "$MOOD" == "Melange" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#867462,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#ECE1D7,bg:#292522,hl:#E49B5D
+		--color=fg+:#ECE1D7,bg+:#403A36,hl+:#E49B5D
+		--color=border:#7F91B2,header:#E49B5D,gutter:#292522
+		--color=spinner:#78997A,info:#78997A,separator:#403A36
+		--color=pointer:#B380B0,marker:#7F91B2,prompt:#B380B0
 	"
 elif [[ "$MOOD" == "Rose Pine" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"

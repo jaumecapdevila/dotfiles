@@ -28,6 +28,7 @@ FALLBACK_MOOD="Rose Pine"
 declare -A ACCENT_COLORS=(
   [Flexoki]="#ce5d97"
   [Kanagawa]="#7e9cd8"
+  [Melange]="#ce5d97"
   [Rose Pine Moon]="#c4a7e7"
   [Rose Pine]="#c4a7e7"
   [Solarized Dark]="#6c71c4"
@@ -36,6 +37,7 @@ declare -A ACCENT_COLORS=(
 declare -A GHOSTTY_THEMES=(
   [Flexoki]="Flexoki"
   [Kanagawa]="Kanagawa"
+  [Melange]="Melange"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -44,6 +46,7 @@ declare -A GHOSTTY_THEMES=(
 declare -A BAT_THEMES=(
   [Flexoki]="ansi"
   [Kanagawa]="Kanagawa"
+  [Melange]="ansi"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -52,6 +55,7 @@ declare -A BAT_THEMES=(
 declare -A ZELLIJ_THEMES=(
   [Flexoki]="flexoki"
   [Kanagawa]="kanagawa"
+  [Melange]="melange"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
   [Solarized Dark]="solarized_dark"
@@ -60,6 +64,7 @@ declare -A ZELLIJ_THEMES=(
 declare -A LSD_THEMES=(
   [Flexoki]="adaptive"
   [Kanagawa]="adaptive"
+  [Melange]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
   [Solarized Dark]="solarized_dark"
@@ -84,6 +89,7 @@ declare -A VSCODE_THEMES=(
 declare -A ZED_THEMES=(
   [Flexoki]="Flexoki Dark"
   [Kanagawa]="Kanagawa Wave"
+  [Melange]="Melange Dark"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
@@ -92,6 +98,7 @@ declare -A ZED_THEMES=(
 declare -A WALLPAPERS=(
   [Flexoki]="Wallpaper 07.jpg"
   [Kanagawa]="Wallpaper 10.jpg"
+  [Melange]="Wallpaper 12.jpg"
   [Rose Pine Moon]="Wallpaper 06.jpg"
   [Rose Pine]="Wallpaper 06.jpg"
   [Solarized Dark]="Wallpaper 08.jpg"
@@ -188,6 +195,9 @@ set_zed_mood() {
     "Kanagawa")
       override_file="$overrides_dir/kanagawa.json"
       ;;
+    "Melange")
+      override_file="$overrides_dir/melange.json"
+      ;;
     "Rose Pine")
       override_file="$overrides_dir/rose-pine.json"
       ;;
@@ -266,6 +276,7 @@ fi
 available_moods=(
   "Flexoki"
   "Kanagawa"
+  "Melange"
   "Rose Pine Moon"
   "Rose Pine"
   "Solarized Dark"

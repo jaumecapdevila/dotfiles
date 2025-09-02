@@ -111,7 +111,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Kanagawa Wave",
+    "dark": "Melange Dark",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -131,12 +131,9 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#7e9cd8",
-    "editor.active_line_number": "#7e9cd8",
-    "editor.gutter.background": "#2A2A37",
-    "editor.line_number": "#54546D",
-    "panel.background": "#1F1F28",
-    "panel.indent_guide_active": "#7e9cd8",
+    "border.variant": "#7F91B2",
+    "editor.active_line_number": "#7F91B2",
+    "panel.indent_guide_active": "#7F91B2",
     "syntax": {
       "attribute": {
         "font_style": "italic"
@@ -147,18 +144,6 @@
       },
       "keyword": {
         "font_style": "italic"
-      },
-      "punctuation": {
-        "color": "#9CABCA"
-      },
-      "punctuation.bracket": {
-        "color": "#9CABCA"
-      },
-      "punctuation.list_marker": {
-        "color": "#9CABCA"
-      },
-      "punctuation.special": {
-        "color": "#9CABCA"
       }
     }
   }
