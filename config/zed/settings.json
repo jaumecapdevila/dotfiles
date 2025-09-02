@@ -1,5 +1,6 @@
 {
   "agent": {
+    "always_allow_tool_actions": true,
     "default_profile": "write",
     "button": true,
     "default_model": {
@@ -111,7 +112,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Melange Dark",
+    "dark": "Vesper",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -131,9 +132,7 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#7F91B2",
-    "editor.active_line_number": "#7F91B2",
-    "panel.indent_guide_active": "#7F91B2",
+    "border.variant": "#99FFE4",
     "syntax": {
       "attribute": {
         "font_style": "italic"

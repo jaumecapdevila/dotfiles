@@ -1,15 +1,5 @@
 return {
   {
-    "kepano/flexoki-neovim",
-    cond = vim.g.mood == "Flexoki",
-    config = function()
-      require("configs.flexoki")
-      vim.cmd("colorscheme flexoki")
-    end,
-    lazy = false,
-    name = "flexoki",
-  },
-  {
     "rebelot/kanagawa.nvim",
     cond = vim.g.mood == "Kanagawa",
     config = function(_, opts)
@@ -50,5 +40,24 @@ return {
     end,
     lazy = false,
     opts = require("configs.neosolarized"),
+  },
+  {
+    "datsfilipe/vesper.nvim",
+    cond = vim.g.mood == "Vesper",
+    config = function(_, opts)
+      local vesper = require("vesper")
+      local colors = require("vesper.colors")
+
+      opts.overrides = {
+        NvimTreeFolderIcon = { fg = colors.greenLight },
+        NvimTreeFolderName = { fg = colors.greenLight },
+        TelescopeBorder = { fg = colors.greenLight },
+      }
+
+      vesper.setup(opts)
+      vim.cmd("colorscheme vesper")
+    end,
+    lazy = false,
+    opts = require("configs.vesper"),
   },
 }

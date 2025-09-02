@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Melange"
+export MOOD="Vesper"
 export TRANSPARENCY="on"
 
 # plugins
@@ -29,16 +29,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--prompt='  ' \
 "
 
-if [[ "$MOOD" == "Flexoki" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
-		--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
-		--color=border:#4385be,header:#CECDC3,gutter:#100F0F
-		--color=spinner:#24837B,info:#24837B,separator:#1C1B1A
-		--color=pointer:#AD8301,marker:#4385be,prompt:#AD8301
-	"
-elif [[ "$MOOD" == "Kanagawa" ]]; then
+if [[ "$MOOD" == "Kanagawa" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#dcd7ba,bg:#1f1f28,hl:#FF9E3B
@@ -82,6 +73,15 @@ elif [[ "$MOOD" == "Solarized Dark" ]]; then
 		--color=border:#268bd2,header:#6c71c4,gutter:#002b36
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
+	"
+elif [[ "$MOOD" == "Vesper" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7e7e7e,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#ffffff,bg:#101010,hl:#ffc799
+		--color=fg+:#ffffff,bg+:#988049,hl+:#ffc799
+		--color=border:#aca1cf,header:#ffc799,gutter:#101010
+		--color=spinner:#90b99f,info:#90b99f,separator:#988049
+		--color=pointer:#99ffe4,marker:#aca1cf,prompt:#99ffe4
 	"
 fi
 
