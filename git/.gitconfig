@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "vesper"
+  features = "solarized-dark"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false

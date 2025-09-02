@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Vesper"
+export MOOD="Solarized Dark"
 export TRANSPARENCY="on"
 
 # plugins

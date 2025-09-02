@@ -1,6 +1,5 @@
 {
-    "border": "#073642",
-    "border.variant": "#268bd2",
+    "border.variant": "#d33682",
     "predictive": "#657b83",
     "syntax": {
         "attribute": { "font_style": "italic" },
