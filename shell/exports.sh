@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Solarized Dark"
+export MOOD="Vesper"
 export TRANSPARENCY="on"
 
 # plugins
@@ -29,23 +29,32 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--prompt='  ' \
 "
 
-if [[ "$MOOD" == "Kanagawa" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
+if [[ "$MOOD" == "Ayu Mirage" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#dcd7ba,bg:#1f1f28,hl:#FF9E3B
-		--color=fg+:#dcd7ba,bg+:#2d4f67,hl+:#FF9E3B
-		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
-		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
-		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
+  	--color=fg:#cbccc6,bg:#1f2430,hl:#ffcc66
+		--color=fg+:#cbccc6,bg+:#33415e,hl+:#ffcc66
+		--color=border:#6dcbfa,header:#ffcc66,gutter:#1f2430
+		--color=spinner:#a6cc70,info:#a6cc70,separator:#33415e
+		--color=pointer:#90e1c6,marker:#6dcbfa,prompt:#90e1c6
 	"
-elif [[ "$MOOD" == "Melange" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#867462,bold"
+elif [[ "$MOOD" == "Gruvbox Dark Hard" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#ECE1D7,bg:#292522,hl:#E49B5D
-		--color=fg+:#ECE1D7,bg+:#403A36,hl+:#E49B5D
-		--color=border:#7F91B2,header:#E49B5D,gutter:#292522
-		--color=spinner:#78997A,info:#78997A,separator:#403A36
-		--color=pointer:#B380B0,marker:#7F91B2,prompt:#B380B0
+  	--color=fg:#ebdbb2,bg:#1d2021,hl:#d79921
+		--color=fg+:#ebdbb2,bg+:#665c54,hl+:#d79921
+		--color=border:#458588,header:#d79921,gutter:#1d2021
+		--color=spinner:#98971a,info:#98971a,separator:#665c54
+		--color=pointer:#b16286,marker:#458588,prompt:#b16286
+	"
+elif [[ "$MOOD" == "Gruvbox Dark Soft" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#ebdbb2,bg:#32302f,hl:#d79921
+		--color=fg+:#ebdbb2,bg+:#665c54,hl+:#d79921
+		--color=border:#458588,header:#d79921,gutter:#32302f
+		--color=spinner:#98971a,info:#98971a,separator:#665c54
+		--color=pointer:#b16286,marker:#458588,prompt:#b16286
 	"
 elif [[ "$MOOD" == "Rose Pine" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
@@ -68,9 +77,9 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 elif [[ "$MOOD" == "Solarized Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#839496,bg:#002b36,hl:#6c71c4
-		--color=fg+:#839496,bg+:#073642,hl+:#6c71c4
-		--color=border:#268bd2,header:#6c71c4,gutter:#002b36
+  	--color=fg:#839496,bg:#002b36,hl:#d33682
+		--color=fg+:#839496,bg+:#073642,hl+:#d33682
+		--color=border:#268bd2,header:#d33682,gutter:#002b36
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
 	"

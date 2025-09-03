@@ -1,11 +1,11 @@
 return {
-  style = "dark",                  -- "dark" or "light"
+  style = "dark", -- "dark" or "light"
   transparent = vim.g.transparent, -- true/false; Enable this to disable setting the background color
-  enable_italics = true,           -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
+  enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
   styles = {
     -- Style to be applied to different syntax groups
     comments = { italic = true },
-    keywords = { italic = true, bold = true },
+    keywords = { italic = true },
     functions = { bold = true },
     variables = {},
     string = { italic = true },

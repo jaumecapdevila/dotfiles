@@ -1,23 +1,24 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
-    cond = vim.g.mood == "Kanagawa",
+    "Shatur/neovim-ayu",
+    cond = vim.g.mood == "Ayu Mirage",
     config = function(_, opts)
-      require("kanagawa").setup(opts)
-      vim.cmd("colorscheme kanagawa")
+      require("ayu").setup(opts)
+      vim.cmd("colorscheme ayu")
     end,
     lazy = false,
-    opts = require("configs.kanagawa"),
+    opts = function() return require("configs.ayu") end,
   },
   {
-    "savq/melange-nvim",
-    cond = vim.g.mood == "Melange",
-    config = function()
-      vim.cmd("colorscheme melange")
-      require("configs.melange")
+    "ellisonleao/gruvbox.nvim",
+    cond = vim.g.mood == "Gruvbox Dark Hard"
+      or vim.g.mood == "Gruvbox Dark Soft",
+    config = function(_, opts)
+      require("gruvbox").setup(opts)
+      vim.cmd("colorscheme gruvbox")
     end,
     lazy = false,
-    name = "Melange",
+    opts = function() return require("configs.gruvbox") end,
   },
   {
     "rose-pine/neovim",
@@ -45,19 +46,10 @@ return {
     "datsfilipe/vesper.nvim",
     cond = vim.g.mood == "Vesper",
     config = function(_, opts)
-      local vesper = require("vesper")
-      local colors = require("vesper.colors")
-
-      opts.overrides = {
-        NvimTreeFolderIcon = { fg = colors.greenLight },
-        NvimTreeFolderName = { fg = colors.greenLight },
-        TelescopeBorder = { fg = colors.greenLight },
-      }
-
-      vesper.setup(opts)
+      require("vesper").setup(opts)
       vim.cmd("colorscheme vesper")
     end,
     lazy = false,
-    opts = require("configs.vesper"),
+    opts = function() return require("configs.vesper") end,
   },
 }

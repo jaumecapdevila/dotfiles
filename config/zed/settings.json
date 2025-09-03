@@ -23,7 +23,10 @@
   "confirm_quit": true,
   "context_servers": {
     "Context7": {
-      "args": ["-y", "@upstash/context7-mcp"],
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
       "command": "npx",
       "source": "custom"
     }
@@ -109,7 +112,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Solarized Dark",
+    "dark": "Vesper",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -129,8 +132,7 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#d33682",
-    "predictive": "#657b83",
+    "border.variant": "#99FFE4",
     "syntax": {
       "attribute": {
         "font_style": "italic"

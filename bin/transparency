@@ -38,7 +38,7 @@ set_ghostty_opacity() {
 
   sed -i '' "s/^background-opacity = .*/background-opacity = $opacity/" "$config_file"
   osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
-  echo "✓ Updated Ghostty transparency to: $transparency_mode ($opacity)"
+  echo "✓ Updated Ghostty transparency"
 }
 
 check_deps

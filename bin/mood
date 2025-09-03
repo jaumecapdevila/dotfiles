@@ -26,17 +26,19 @@ check_deps() {
 FALLBACK_MOOD="Rose Pine"
 
 declare -A ACCENT_COLORS=(
-  [Kanagawa]="#7e9cd8"
-  [Melange]="#7F91B2"
-  [Rose Pine Moon]="#c4a7e7"
-  [Rose Pine]="#c4a7e7"
-  [Solarized Dark]="#6c71c4"
+  [Ayu Mirage]="#FFCC66"
+  [Gruvbox Dark Hard]="#689d6a"
+  [Gruvbox Dark Soft]="#689d6a"
+  [Rose Pine Moon]="##eb6f92"
+  [Rose Pine]="##eb6f92"
+  [Solarized Dark]="#d33682"
   [Vesper]="#99FFE4"
 )
 
 declare -A GHOSTTY_THEMES=(
-  [Kanagawa]="Kanagawa"
-  [Melange]="Melange"
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
+  [Gruvbox Dark Soft]="Gruvbox Dark Soft"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -44,8 +46,9 @@ declare -A GHOSTTY_THEMES=(
 )
 
 declare -A BAT_THEMES=(
-  [Kanagawa]="Kanagawa"
-  [Melange]="ansi"
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
+  [Gruvbox Dark Soft]="Gruvbox Dark Soft"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -53,8 +56,9 @@ declare -A BAT_THEMES=(
 )
 
 declare -A ZELLIJ_THEMES=(
-  [Kanagawa]="kanagawa"
-  [Melange]="melange"
+  [Ayu Mirage]="ayu_mirage"
+  [Gruvbox Dark Hard]="gruvbox_dark_hard"
+  [Gruvbox Dark Soft]="gruvbox_dark_soft"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
   [Solarized Dark]="solarized_dark"
@@ -62,8 +66,9 @@ declare -A ZELLIJ_THEMES=(
 )
 
 declare -A LSD_THEMES=(
-  [Kanagawa]="adaptive"
-  [Melange]="adaptive"
+  [Ayu Mirage]="ayu"
+  [Gruvbox Dark Hard]="adaptive"
+  [Gruvbox Dark Soft]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
   [Solarized Dark]="solarized"
@@ -71,39 +76,42 @@ declare -A LSD_THEMES=(
 )
 
 declare -A DELTA_FEATURES=(
-  [Kanagawa]="kanagawa"
-  [Melange]="melange"
+  [Ayu Mirage]="ayu-mirage"
+  [Gruvbox Dark Hard]="gruvbox-dark-hard"
+  [Gruvbox Dark Soft]="gruvbox-dark-soft"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
   [Solarized Dark]="solarized-dark"
   [Vesper]="vesper"
 )
 
-declare -A VSCODE_THEMES=(
-  [Kanagawa]="Kanagawa Wave"
-  [Melange]="Melange Dark"
+declare -A ZED_THEMES=(
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
   [Vesper]="Vesper"
 )
 
-declare -A ZED_THEMES=(
-  [Kanagawa]="Kanagawa Wave"
-  [Melange]="Melange Dark"
-  [Rose Pine Moon]="Rosé Pine Moon"
-  [Rose Pine]="Rosé Pine"
-  [Solarized Dark]="Solarized Dark"
-  [Vesper]="Vesper"
+declare -A ZED_OVERRIDES=(
+  [Ayu Mirage]="ayu-mirage.json"
+  [Gruvbox Dark Hard]="gruvbox-dark-hard.json"
+  [Gruvbox Dark Soft]="gruvbox-dark-soft.json"
+  [Rose Pine Moon]="rose-pine-moon.json"
+  [Rose Pine]="rose-pine-main.json"
+  [Solarized Dark]="solarized-dark.json"
+  [Vesper]="vesper.json"
 )
 
 declare -A WALLPAPERS=(
-  [Kanagawa]="Wallpaper 08.jpg"
-  [Melange]="Wallpaper 09.jpg"
-  [Rose Pine Moon]="Wallpaper 04.jpg"
-  [Rose Pine]="Wallpaper 05.jpg"
-  [Solarized Dark]="Wallpaper 06.jpg"
-  [Vesper]="Wallpaper 07.jpg"
+  [Ayu Mirage]="Wallpaper 05.jpg"
+  [Gruvbox Dark Hard]="Wallpaper 06.jpg"
+  [Gruvbox Dark Soft]="Wallpaper 07.jpg"
+  [Rose Pine Moon]="Wallpaper 01.jpg"
+  [Rose Pine]="Wallpaper 04.jpg"
+  [Solarized Dark]="Wallpaper 03.jpg"
+  [Vesper]="Wallpaper 08.jpg"
 )
 
 set_ghostty_mood() {
@@ -166,54 +174,14 @@ set_delta_mood() {
   echo "✓ Updated Delta features to: $delta_features"
 }
 
-set_vscode_mood() {
-  local mood="$1"
-  local accent_color="${ACCENT_COLORS[$mood]:-${ACCENT_COLORS[$FALLBACK_MOOD]}}"
-  local vscode_theme="${VSCODE_THEMES[$mood]:-${VSCODE_THEMES[$FALLBACK_MOOD]}}"
-  local vscode_settings="$HOME/Library/Application Support/Code/User/settings.json"
-
-  if [[ ! -f "$vscode_settings" ]]; then
-    echo "❌ VS Code settings file not found: $vscode_settings" >&2
-    return 1
-  fi
-
-  jq --arg accent "$accent_color" '.["material-icon-theme.folders.color"] = $accent' "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
-  jq --arg theme "$vscode_theme" '.["workbench.colorTheme"] = $theme' "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
-  echo "✓ Updated VS Code theme to: $vscode_theme"
-}
-
 set_zed_mood() {
   local mood="$1"
   local zed_theme="${ZED_THEMES[$mood]:-${ZED_THEMES[$FALLBACK_MOOD]}}"
+  local zed_overrides_file="${ZED_OVERRIDES[$mood]:-${ZED_OVERRIDES[$FALLBACK_MOOD]}}"
   local zed_settings="$DOTFILES/config/zed/settings.json"
   local overrides_dir="$DOTFILES/config/zed/overrides"
+  local override_file="$overrides_dir/$zed_overrides_file"
   local theme_overrides="{}"
-  local override_file=""
-
-  case "$mood" in
-    "Kanagawa")
-      override_file="$overrides_dir/kanagawa.json"
-      ;;
-    "Melange")
-      override_file="$overrides_dir/melange.json"
-      ;;
-    "Rose Pine")
-      override_file="$overrides_dir/rose-pine.json"
-      ;;
-    "Rose Pine Moon")
-      override_file="$overrides_dir/rose-pine-moon.json"
-      ;;
-    "Solarized Dark")
-      override_file="$overrides_dir/solarized.json"
-      ;;
-    "Vesper")
-      override_file="$overrides_dir/vesper.json"
-      ;;
-    *)
-      echo "❌ Unknown mood: $mood" >&2
-      return 1
-      ;;
-  esac
 
   if [[ ! -f "$zed_settings" ]]; then
     echo "❌ Zed settings file not found: $zed_settings" >&2
@@ -276,8 +244,9 @@ if [[ -z "$DOTFILES" ]]; then
 fi
 
 available_moods=(
-  "Kanagawa"
-  "Melange"
+  "Ayu Mirage"
+  "Gruvbox Dark Hard"
+  "Gruvbox Dark Soft"
   "Rose Pine Moon"
   "Rose Pine"
   "Solarized Dark"
@@ -314,7 +283,6 @@ set_delta_mood "$selected_mood"
 set_ghostty_mood "$selected_mood"
 set_lsd_mood "$selected_mood"
 set_mood_wallpaper "$selected_mood"
-set_vscode_mood "$selected_mood"
 set_zed_mood "$selected_mood"
 set_zellij_mood "$selected_mood"
 

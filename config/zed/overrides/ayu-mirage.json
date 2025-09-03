@@ -1,0 +1,12 @@
+{
+    "border.variant": "#FFCC66",
+    "editor.active_line_number": "#FFCC66",
+    "panel.background": "#242835",
+    "panel.indent_guide_active": "#FFCC66",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "comment": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}
