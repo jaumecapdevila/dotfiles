@@ -22,7 +22,7 @@ check_deps() {
 }
 
 declare -A GHOSTTY_OPACITY=(
-  [on]="0.9"
+  [on]="0.85"
   [off]="1.0"
 )
 

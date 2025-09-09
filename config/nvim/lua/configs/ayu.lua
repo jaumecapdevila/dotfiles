@@ -1,8 +1,9 @@
+local isMirage = vim.g.mood == "Ayu Mirage"
 local colors = require("ayu.colors")
-colors.generate() -- Pass `true` to enable mirage
+colors.generate(isMirage) -- Pass `true` to enable mirage
 
 return {
-  mirage = true,
+  mirage = isMirage,
   overrides = {
     Constant = { bold = true },
     Function = { bold = true, italic = true },

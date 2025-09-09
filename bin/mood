@@ -26,19 +26,25 @@ check_deps() {
 FALLBACK_MOOD="Rose Pine"
 
 declare -A ACCENT_COLORS=(
+  [Ayu Dark]="#E6B450"
   [Ayu Mirage]="#FFCC66"
-  [Gruvbox Dark Hard]="#689d6a"
-  [Gruvbox Dark Soft]="#689d6a"
-  [Rose Pine Moon]="##eb6f92"
-  [Rose Pine]="##eb6f92"
-  [Solarized Dark]="#d33682"
+  [Everforest Dark]="#83C092"
+  [Gruvbox Dark]="#fe8019"
+  [OneDarkPro Black]="#d55fde"
+  [OneDarkPro]="#d55fde"
+  [Rose Pine Moon]="#eb6f92"
+  [Rose Pine]="#eb6f92"
+  [Solarized Dark]="#cb4b16"
   [Vesper]="#99FFE4"
 )
 
 declare -A GHOSTTY_THEMES=(
+  [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
-  [Gruvbox Dark Soft]="Gruvbox Dark Soft"
+  [Everforest Dark]="Everforest Dark"
+  [Gruvbox Dark]="Gruvbox Dark"
+  [OneDarkPro Black]="OneDarkPro Black"
+  [OneDarkPro]="OneDarkPro"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -46,9 +52,12 @@ declare -A GHOSTTY_THEMES=(
 )
 
 declare -A BAT_THEMES=(
+  [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
-  [Gruvbox Dark Soft]="Gruvbox Dark Soft"
+  [Everforest Dark]="Everforest Dark"
+  [Gruvbox Dark]="Gruvbox Dark"
+  [OneDarkPro Black]="TwoDark"
+  [OneDarkPro]="TwoDark"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
@@ -56,9 +65,12 @@ declare -A BAT_THEMES=(
 )
 
 declare -A ZELLIJ_THEMES=(
+  [Ayu Dark]="ayu_dark"
   [Ayu Mirage]="ayu_mirage"
-  [Gruvbox Dark Hard]="gruvbox_dark_hard"
-  [Gruvbox Dark Soft]="gruvbox_dark_soft"
+  [Everforest Dark]="everforest_dark"
+  [Gruvbox Dark]="gruvbox_dark"
+  [OneDarkPro Black]="one_dark_pro_black"
+  [OneDarkPro]="one_dark_pro"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
   [Solarized Dark]="solarized_dark"
@@ -66,9 +78,12 @@ declare -A ZELLIJ_THEMES=(
 )
 
 declare -A LSD_THEMES=(
+  [Ayu Dark]="ayu"
   [Ayu Mirage]="ayu"
-  [Gruvbox Dark Hard]="adaptive"
-  [Gruvbox Dark Soft]="adaptive"
+  [Everforest Dark]="adaptive"
+  [Gruvbox Dark]="adaptive"
+  [OneDarkPro Black]="adaptive"
+  [OneDarkPro]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
   [Solarized Dark]="solarized"
@@ -76,9 +91,11 @@ declare -A LSD_THEMES=(
 )
 
 declare -A DELTA_FEATURES=(
+  [Ayu Dark]="ayu-dark"
   [Ayu Mirage]="ayu-mirage"
-  [Gruvbox Dark Hard]="gruvbox-dark-hard"
-  [Gruvbox Dark Soft]="gruvbox-dark-soft"
+  [Gruvbox Dark]="gruvbox-dark"
+  [OneDarkPro Black]="one-dark-pro-black"
+  [OneDarkPro]="one-dark-pro"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
   [Solarized Dark]="solarized-dark"
@@ -86,8 +103,12 @@ declare -A DELTA_FEATURES=(
 )
 
 declare -A ZED_THEMES=(
+  [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Gruvbox Dark Hard]="Gruvbox Dark Hard"
+  [Everforest Dark]="Everforest Dark Hard"
+  [Gruvbox Dark]="Gruvbox Dark Hard"
+  [OneDarkPro Black]="One Dark Pro"
+  [OneDarkPro]="One Dark Pro"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
@@ -95,9 +116,12 @@ declare -A ZED_THEMES=(
 )
 
 declare -A ZED_OVERRIDES=(
+  [Ayu Dark]="ayu-dark.json"
   [Ayu Mirage]="ayu-mirage.json"
-  [Gruvbox Dark Hard]="gruvbox-dark-hard.json"
-  [Gruvbox Dark Soft]="gruvbox-dark-soft.json"
+  [Everforest Dark]="everforest-dark.json"
+  [Gruvbox Dark]="gruvbox-dark.json"
+  [OneDarkPro Black]="one-dark-pro-black.json"
+  [OneDarkPro]="one-dark-pro.json"
   [Rose Pine Moon]="rose-pine-moon.json"
   [Rose Pine]="rose-pine-main.json"
   [Solarized Dark]="solarized-dark.json"
@@ -105,9 +129,12 @@ declare -A ZED_OVERRIDES=(
 )
 
 declare -A WALLPAPERS=(
-  [Ayu Mirage]="Wallpaper 05.jpg"
-  [Gruvbox Dark Hard]="Wallpaper 06.jpg"
-  [Gruvbox Dark Soft]="Wallpaper 07.jpg"
+  [Ayu Dark]="Wallpaper 09.jpg"
+  [Ayu Mirage]="Wallpaper 09.jpg"
+  [Everforest Dark]="Wallpaper 07.jpg"
+  [Gruvbox Dark]="Wallpaper 06.jpg"
+  [OneDarkPro Black]="Wallpaper 10.jpg"
+  [OneDarkPro]="Wallpaper 10.jpg"
   [Rose Pine Moon]="Wallpaper 01.jpg"
   [Rose Pine]="Wallpaper 04.jpg"
   [Solarized Dark]="Wallpaper 03.jpg"
@@ -244,9 +271,12 @@ if [[ -z "$DOTFILES" ]]; then
 fi
 
 available_moods=(
+  "Ayu Dark"
   "Ayu Mirage"
-  "Gruvbox Dark Hard"
-  "Gruvbox Dark Soft"
+  "Everforest Dark"
+  "Gruvbox Dark"
+  "OneDarkPro Black"
+  "OneDarkPro"
   "Rose Pine Moon"
   "Rose Pine"
   "Solarized Dark"

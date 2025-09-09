@@ -1,0 +1,20 @@
+{
+    "background": "#0d1016",
+    "border": "#0d1016",
+    "border.focused": "#E6B450",
+    "border.variant": "#E6B450",
+    "editor.active_line_number": "#E6B450",
+    "panel.background": "#0d1016",
+    "panel.indent_guide_active": "#E6B450",
+    "status_bar.background": "#0d1016",
+    "tab.active_background": "#1f2127",
+    "tab.inactive_background": "#0d1016",
+    "tab_bar.background": "#0d1016",
+    "title_bar.background": "#0d1016",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "comment": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}

@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Vesper"
+export MOOD="Everforest Dark"
 export TRANSPARENCY="on"
 
 # plugins
@@ -29,7 +29,16 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 	--prompt='  ' \
 "
 
-if [[ "$MOOD" == "Ayu Mirage" ]]; then
+if [[ "$MOOD" == "Ayu Dark" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#bfbdb6,bg:#0b0e14,hl:#f9af4f
+  	--color=fg+:#bfbdb6,bg+:#253340,hl+:#f9af4f
+		--color=border:#53bdfa,header:#f9af4f,gutter:#0b0e14
+		--color=spinner:#7fd962,info:#7fd962,separator:#253340
+		--color=pointer:#90e1c6,marker:#53bdfa,prompt:#90e1c6
+	"
+elif [[ "$MOOD" == "Ayu Mirage" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#686868,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#cbccc6,bg:#1f2430,hl:#ffcc66
@@ -38,7 +47,16 @@ if [[ "$MOOD" == "Ayu Mirage" ]]; then
 		--color=spinner:#a6cc70,info:#a6cc70,separator:#33415e
 		--color=pointer:#90e1c6,marker:#6dcbfa,prompt:#90e1c6
 	"
-elif [[ "$MOOD" == "Gruvbox Dark Hard" ]]; then
+elif [[ "$MOOD" == "Everforest Dark" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859289,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#D3C6AA,bg:#272E33,hl:#DBBC7F
+		--color=fg+:#D3C6AA,bg+:#374145,hl+:#DBBC7F
+		--color=border:#7FBBB3,header:#DBBC7F,gutter:#272E33
+		--color=spinner:#A7C080,info:#A7C080,separator:#374145
+		--color=pointer:#83C092,marker:#7FBBB3,prompt:#83C092
+	"
+elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#ebdbb2,bg:#1d2021,hl:#d79921
@@ -47,14 +65,23 @@ elif [[ "$MOOD" == "Gruvbox Dark Hard" ]]; then
 		--color=spinner:#98971a,info:#98971a,separator:#665c54
 		--color=pointer:#b16286,marker:#458588,prompt:#b16286
 	"
-elif [[ "$MOOD" == "Gruvbox Dark Soft" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
+elif [[ "$MOOD" == "OneDarkPro Black" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#434852,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#ebdbb2,bg:#32302f,hl:#d79921
-		--color=fg+:#ebdbb2,bg+:#665c54,hl+:#d79921
-		--color=border:#458588,header:#d79921,gutter:#32302f
-		--color=spinner:#98971a,info:#98971a,separator:#665c54
-		--color=pointer:#b16286,marker:#458588,prompt:#b16286
+  	--color=fg:#abb2bf,bg:#000000,hl:#e5c07b
+		--color=fg+:#abb2bf,bg+:#434852,hl+:#e5c07b
+		--color=border:#61afef,header:#e5c07b,gutter:#000000
+		--color=spinner:#89ca78,info:#89ca78,separator:#434852
+		--color=pointer:#2bbac5,marker:#61afef,prompt:#2bbac5
+	"
+elif [[ "$MOOD" == "OneDarkPro" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5c6370,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#abb2bf,bg:#282c34,hl:#e5c07b
+		--color=fg+:#abb2bf,bg+:#5c6370,hl+:#e5c07b
+		--color=border:#61afef,header:#e5c07b,gutter:#282c34
+		--color=spinner:#89ca78,info:#89ca78,separator:#5c6370
+		--color=pointer:#2bbac5,marker:#61afef,prompt:#2bbac5
 	"
 elif [[ "$MOOD" == "Rose Pine" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
@@ -83,14 +110,23 @@ elif [[ "$MOOD" == "Solarized Dark" ]]; then
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
 	"
+elif [[ "$MOOD" == "Solarized Dark" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#839496,bg:#002b36,hl:#d33682
+		--color=fg+:#839496,bg+:#073642,hl+:#d33682
+		--color=border:#268bd2,header:#d33682,gutter:#002b36
+		--color=spinner:#2aa198,info:#2aa198,separator:#073642
+		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
+	"
 elif [[ "$MOOD" == "Vesper" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7e7e7e,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#ffffff,bg:#101010,hl:#ffc799
-		--color=fg+:#ffffff,bg+:#988049,hl+:#ffc799
-		--color=border:#aca1cf,header:#ffc799,gutter:#101010
-		--color=spinner:#90b99f,info:#90b99f,separator:#988049
-		--color=pointer:#99ffe4,marker:#aca1cf,prompt:#99ffe4
+		--color=fg+:#ffffff,bg+:#2a2a2a,hl+:#ffc799
+		--color=border:#99ffe4,header:#ffc799,gutter:#101010
+		--color=spinner:#a0a0a0,info:#a0a0a0,separator:#2a2a2a
+		--color=pointer:#99ffe4,marker:#99ffe4,prompt:#99ffe4
 	"
 fi
 

@@ -1,7 +1,7 @@
 {
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "button": true,
     "default_model": {
       "model": "claude-sonnet-4",
@@ -14,8 +14,8 @@
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
   "buffer_font_family": "OperatorMono Nerd Font",
-  "buffer_font_size": 17,
   "buffer_font_weight": 340,
+  "buffer_font_size": 17,
   "buffer_line_height": "comfortable",
   "collaboration_panel": {
     "button": false
@@ -89,7 +89,7 @@
     "git_status": true,
     "hide_root": false,
     "indent_guides": {
-      "show": "always"
+      "show": "never"
     },
     "indent_size": 20,
     "scrollbar": {
@@ -112,7 +112,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Vesper",
+    "dark": "Everforest Dark Hard",
     "light": "Rosé Pine Dawn",
     "mode": "system"
   },
@@ -132,9 +132,14 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#99FFE4",
+    "border.variant": "#83C092",
+    "editor.active_line_number": "#83C092",
+    "panel.indent_guide_active": "#83C092",
     "syntax": {
       "attribute": {
+        "font_style": "italic"
+      },
+      "comment": {
         "font_style": "italic"
       },
       "function": {

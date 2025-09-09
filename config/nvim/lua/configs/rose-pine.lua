@@ -6,12 +6,12 @@ return {
   enable = {
     terminal = true,
     legacy_highlights = false, -- Improve compatibility for previous versions of Neovim
-    migrations = true,         -- Handle deprecated options automatically
+    migrations = true, -- Handle deprecated options automatically
   },
 
   styles = {
     bold = true,
-    italic = true,
+    italic = false,
     transparency = vim.g.transparent,
   },
 
@@ -22,7 +22,9 @@ return {
     CursorLineNr = { fg = "love" },
 
     -- Syntax
-    String = { italic = true },
+    Keyword = { italic = true },
+    Function = { bold = true },
+    String = { italic = false },
     ["@keyword.import"] = { italic = true },
     ["@keyword.return"] = { italic = true },
 

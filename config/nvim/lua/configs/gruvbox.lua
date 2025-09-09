@@ -17,10 +17,11 @@ return {
   invert_signs = false,
   invert_tabline = false,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = vim.g.mood == "Gruvbox Dark Hard" and "hard" or "soft", -- can be "hard", "soft" or empty string
+  contrast = "hard", -- can be "hard", "soft" or empty string
   dim_inactive = false,
   transparent_mode = vim.g.transparent,
   overrides = {
+    NotifyBackground = { fg = palette.fg1, bg = palette.bg1 },
     NvimTreeFolderIcon = { fg = palette.bright_orange },
     NvimTreeFolderName = { fg = palette.bright_orange },
     TelescopeBorder = { fg = palette.bright_orange },

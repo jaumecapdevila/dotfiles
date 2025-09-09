@@ -11,7 +11,7 @@
 
 adjust-cell-height = "20%"
 background-blur = false
-background-opacity = 0.9
+background-opacity = 0.85
 cursor-style = block
 cursor-style-blink = true
 font-family = "OperatorMono Nerd Font"
@@ -26,8 +26,8 @@ macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = "hidden"
 macos-window-shadow = false
-split-divider-color = "#99FFE4"
-theme = "Vesper"
+split-divider-color = "#83C092"
+theme = "Everforest Dark"
 window-padding-balance = true
 window-padding-x = 8
 window-padding-y = 8

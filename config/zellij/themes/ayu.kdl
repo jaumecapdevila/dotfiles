@@ -1,4 +1,17 @@
 themes {
+  ayu_dark {
+		bg "#191e2a"
+		fg "#cbccc6"
+		red "#ed8274"
+		green "#a6cc70"
+		blue "#6dcbfa"
+		yellow "#DBBC7F"
+		magenta "#cfbafa"
+		orange "#f29e74"
+		cyan "#90e1c6"
+		black "#191e2a"
+		white "#ffffff"
+	}
   ayu_mirage {
 		bg "#191e2a"
 		fg "#cbccc6"

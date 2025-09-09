@@ -1,0 +1,10 @@
+{
+    "border.variant": "#fe8019",
+    "editor.active_line_number": "#fe8019",
+    "panel.indent_guide_active": "#fe8019",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}

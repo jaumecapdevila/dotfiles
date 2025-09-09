@@ -1,7 +1,7 @@
 return {
   {
     "Shatur/neovim-ayu",
-    cond = vim.g.mood == "Ayu Mirage",
+    cond = vim.g.mood == "Ayu Dark" or vim.g.mood == "Ayu Mirage",
     config = function(_, opts)
       require("ayu").setup(opts)
       vim.cmd("colorscheme ayu")
@@ -10,9 +10,34 @@ return {
     opts = function() return require("configs.ayu") end,
   },
   {
+    "neanias/everforest-nvim",
+    cond = vim.g.mood == "Everforest Dark",
+    config = function(_, opts)
+      require("everforest").setup(opts)
+      vim.cmd("colorscheme everforest")
+    end,
+    lazy = false,
+    opts = function() return require("configs.everforest") end,
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+    cond = vim.g.mood == "OneDarkPro" or vim.g.mood == "OneDarkPro Black",
+    config = function(_, opts)
+      require("onedarkpro").setup(opts)
+      local useBlack = vim.g.mood == "OneDarkPro Black"
+
+      if useBlack then
+        vim.cmd("colorscheme onedark_dark")
+      else
+        vim.cmd("colorscheme onedark_vivid")
+      end
+    end,
+    lazy = false,
+    opts = function() return require("configs.onedark") end,
+  },
+  {
     "ellisonleao/gruvbox.nvim",
-    cond = vim.g.mood == "Gruvbox Dark Hard"
-      or vim.g.mood == "Gruvbox Dark Soft",
+    cond = vim.g.mood == "Gruvbox Dark",
     config = function(_, opts)
       require("gruvbox").setup(opts)
       vim.cmd("colorscheme gruvbox")
@@ -40,7 +65,7 @@ return {
       vim.cmd("colorscheme NeoSolarized")
     end,
     lazy = false,
-    opts = require("configs.neosolarized"),
+    opts = require("configs.solarized"),
   },
   {
     "datsfilipe/vesper.nvim",
