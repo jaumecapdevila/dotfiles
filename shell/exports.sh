@@ -8,8 +8,8 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Everforest Dark"
-export TRANSPARENCY="on"
+export MOOD="Vesper"
+export TRANSPARENCY="off"
 
 # plugins
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -47,7 +47,7 @@ elif [[ "$MOOD" == "Ayu Mirage" ]]; then
 		--color=spinner:#a6cc70,info:#a6cc70,separator:#33415e
 		--color=pointer:#90e1c6,marker:#6dcbfa,prompt:#90e1c6
 	"
-elif [[ "$MOOD" == "Everforest Dark" ]]; then
+elif [[ "$MOOD" == "Everforest" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859289,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#D3C6AA,bg:#272E33,hl:#DBBC7F
@@ -56,7 +56,7 @@ elif [[ "$MOOD" == "Everforest Dark" ]]; then
 		--color=spinner:#A7C080,info:#A7C080,separator:#374145
 		--color=pointer:#83C092,marker:#7FBBB3,prompt:#83C092
 	"
-elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
+elif [[ "$MOOD" == "Gruvbox" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#ebdbb2,bg:#1d2021,hl:#d79921
@@ -101,7 +101,7 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
-elif [[ "$MOOD" == "Solarized Dark" ]]; then
+elif [[ "$MOOD" == "Solarized" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#839496,bg:#002b36,hl:#d33682

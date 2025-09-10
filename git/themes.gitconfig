@@ -26,6 +26,20 @@
   line-numbers-zero-style       = "#686868"
   syntax-theme                  = "Ayu Mirage"
 
+[delta "cyberdream"]
+  minus-style                   = syntax "#3E323A"
+  minus-non-emph-style          = syntax "#3E323A"
+  minus-emph-style              = syntax "#7C4E4F"
+  minus-empty-line-marker-style = syntax "#3E323A"
+  line-numbers-minus-style      = "#ed8274"
+  plus-style                    = syntax "#333D3A"
+  plus-non-emph-style           = syntax "#333D3A"
+  plus-emph-style               = syntax "#5C704D"
+  plus-empty-line-marker-style  = syntax "#333D3A"
+  line-numbers-plus-style       = "#a6cc70"
+  line-numbers-zero-style       = "#686868"
+  syntax-theme                  = "Cyberdream"
+
 [delta "everforest-dark"]
   minus-style                   = syntax "#443A3F"
   minus-non-emph-style          = syntax "#443A3F"
@@ -38,7 +52,7 @@
   plus-empty-line-marker-style  = syntax "#354441"
   line-numbers-plus-style       = "#83C092"
   line-numbers-zero-style       = "#859289"
-  syntax-theme                  = "Ayu Mirage"
+  syntax-theme                  = "Everforest Dark"
 
 [delta "gruvbox-dark"]
   minus-style                   = syntax "#372120"

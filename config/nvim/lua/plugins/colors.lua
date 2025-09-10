@@ -11,7 +11,7 @@ return {
   },
   {
     "neanias/everforest-nvim",
-    cond = vim.g.mood == "Everforest Dark",
+    cond = vim.g.mood == "Everforest",
     config = function(_, opts)
       require("everforest").setup(opts)
       vim.cmd("colorscheme everforest")
@@ -37,7 +37,7 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    cond = vim.g.mood == "Gruvbox Dark",
+    cond = vim.g.mood == "Gruvbox",
     config = function(_, opts)
       require("gruvbox").setup(opts)
       vim.cmd("colorscheme gruvbox")
@@ -59,7 +59,7 @@ return {
   },
   {
     "Tsuzat/NeoSolarized.nvim",
-    cond = vim.g.mood == "Solarized Dark",
+    cond = vim.g.mood == "Solarized",
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
       vim.cmd("colorscheme NeoSolarized")

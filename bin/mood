@@ -23,57 +23,57 @@ check_deps() {
   fi
 }
 
-FALLBACK_MOOD="Rose Pine"
+FALLBACK_MOOD="OneDarkPro"
 
 declare -A ACCENT_COLORS=(
   [Ayu Dark]="#E6B450"
   [Ayu Mirage]="#FFCC66"
-  [Everforest Dark]="#83C092"
-  [Gruvbox Dark]="#fe8019"
+  [Everforest]="#83C092"
+  [Gruvbox]="#fe8019"
   [OneDarkPro Black]="#d55fde"
   [OneDarkPro]="#d55fde"
   [Rose Pine Moon]="#eb6f92"
   [Rose Pine]="#eb6f92"
-  [Solarized Dark]="#cb4b16"
+  [Solarized]="#cb4b16"
   [Vesper]="#99FFE4"
 )
 
 declare -A GHOSTTY_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Everforest Dark]="Everforest Dark"
-  [Gruvbox Dark]="Gruvbox Dark"
+  [Everforest]="Everforest"
+  [Gruvbox]="Gruvbox"
   [OneDarkPro Black]="OneDarkPro Black"
   [OneDarkPro]="OneDarkPro"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
-  [Solarized Dark]="Solarized Dark"
+  [Solarized Dark]="Solarized"
   [Vesper]="Vesper"
 )
 
 declare -A BAT_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Everforest Dark]="Everforest Dark"
-  [Gruvbox Dark]="Gruvbox Dark"
+  [Everforest]="Everforest"
+  [Gruvbox]="Gruvbox"
   [OneDarkPro Black]="TwoDark"
   [OneDarkPro]="TwoDark"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
-  [Solarized Dark]="Solarized Dark"
+  [Solarized]="Solarized"
   [Vesper]="ansi"
 )
 
 declare -A ZELLIJ_THEMES=(
   [Ayu Dark]="ayu_dark"
   [Ayu Mirage]="ayu_mirage"
-  [Everforest Dark]="everforest_dark"
-  [Gruvbox Dark]="gruvbox_dark"
+  [Everforest]="everforest"
+  [Gruvbox]="gruvbox"
   [OneDarkPro Black]="one_dark_pro_black"
   [OneDarkPro]="one_dark_pro"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
-  [Solarized Dark]="solarized_dark"
+  [Solarized]="solarized"
   [Vesper]="vesper"
 )
 
@@ -93,51 +93,52 @@ declare -A LSD_THEMES=(
 declare -A DELTA_FEATURES=(
   [Ayu Dark]="ayu-dark"
   [Ayu Mirage]="ayu-mirage"
-  [Gruvbox Dark]="gruvbox-dark"
+  [Everforest]="everforest"
+  [Gruvbox]="gruvbox"
   [OneDarkPro Black]="one-dark-pro-black"
   [OneDarkPro]="one-dark-pro"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
-  [Solarized Dark]="solarized-dark"
+  [Solarized]="solarized"
   [Vesper]="vesper"
 )
 
 declare -A ZED_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Everforest Dark]="Everforest Dark Hard"
-  [Gruvbox Dark]="Gruvbox Dark Hard"
+  [Everforest]="Everforest Dark Hard"
+  [Gruvbox]="Gruvbox Dark Hard"
   [OneDarkPro Black]="One Dark Pro"
   [OneDarkPro]="One Dark Pro"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
-  [Solarized Dark]="Solarized Dark"
+  [Solarized]="Solarized Dark"
   [Vesper]="Vesper"
 )
 
 declare -A ZED_OVERRIDES=(
   [Ayu Dark]="ayu-dark.json"
   [Ayu Mirage]="ayu-mirage.json"
-  [Everforest Dark]="everforest-dark.json"
-  [Gruvbox Dark]="gruvbox-dark.json"
+  [Everforest]="everforest.json"
+  [Gruvbox]="gruvbox.json"
   [OneDarkPro Black]="one-dark-pro-black.json"
   [OneDarkPro]="one-dark-pro.json"
   [Rose Pine Moon]="rose-pine-moon.json"
   [Rose Pine]="rose-pine-main.json"
-  [Solarized Dark]="solarized-dark.json"
+  [Solarized]="solarized.json"
   [Vesper]="vesper.json"
 )
 
 declare -A WALLPAPERS=(
   [Ayu Dark]="Wallpaper 09.jpg"
   [Ayu Mirage]="Wallpaper 09.jpg"
-  [Everforest Dark]="Wallpaper 07.jpg"
-  [Gruvbox Dark]="Wallpaper 06.jpg"
+  [Everforest]="Wallpaper 07.jpg"
+  [Gruvbox]="Wallpaper 06.jpg"
   [OneDarkPro Black]="Wallpaper 10.jpg"
   [OneDarkPro]="Wallpaper 10.jpg"
   [Rose Pine Moon]="Wallpaper 01.jpg"
   [Rose Pine]="Wallpaper 04.jpg"
-  [Solarized Dark]="Wallpaper 03.jpg"
+  [Solarized]="Wallpaper 03.jpg"
   [Vesper]="Wallpaper 08.jpg"
 )
 
@@ -273,13 +274,13 @@ fi
 available_moods=(
   "Ayu Dark"
   "Ayu Mirage"
-  "Everforest Dark"
-  "Gruvbox Dark"
+  "Everforest"
+  "Gruvbox"
   "OneDarkPro Black"
   "OneDarkPro"
   "Rose Pine Moon"
   "Rose Pine"
-  "Solarized Dark"
+  "Solarized"
   "Vesper"
 )
 
