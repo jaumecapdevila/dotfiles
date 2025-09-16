@@ -90,6 +90,32 @@ autocmd("Filetype", {
 })
 
 -----------------------------------------------------------
+-- Diagnostics
+-----------------------------------------------------------
+
+autocmd("CursorHold", {
+  group = augroup("show_line_diagnostics", { clear = true }),
+  callback = function()
+    local opts = {
+      close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+      focusable = false,
+      scope = "cursor",
+    }
+    vim.diagnostic.open_float(nil, opts)
+  end,
+})
+
+autocmd("InsertEnter", {
+  group = augroup("disable_diagnostics_insert_mode", { clear = true }),
+  callback = function() vim.diagnostic.enable(false) end,
+})
+
+autocmd("InsertLeave", {
+  group = augroup("enable_diagnostics_insert_mode", { clear = true }),
+  callback = function() vim.diagnostic.enable(true) end,
+})
+
+-----------------------------------------------------------
 -- Terminal settings
 -----------------------------------------------------------
 

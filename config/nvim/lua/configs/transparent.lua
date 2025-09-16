@@ -4,6 +4,9 @@ return {
     "VertSplit",
     "WinSeparator",
     "MsgArea",
+    "GitSignsAdd",
+    "GitSignsChange",
+    "GitSignsDelete",
   },
   exclude_groups = {
     "CursorLine",

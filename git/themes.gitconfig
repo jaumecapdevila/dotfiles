@@ -26,21 +26,7 @@
   line-numbers-zero-style       = "#686868"
   syntax-theme                  = "Ayu Mirage"
 
-[delta "cyberdream"]
-  minus-style                   = syntax "#3E323A"
-  minus-non-emph-style          = syntax "#3E323A"
-  minus-emph-style              = syntax "#7C4E4F"
-  minus-empty-line-marker-style = syntax "#3E323A"
-  line-numbers-minus-style      = "#ed8274"
-  plus-style                    = syntax "#333D3A"
-  plus-non-emph-style           = syntax "#333D3A"
-  plus-emph-style               = syntax "#5C704D"
-  plus-empty-line-marker-style  = syntax "#333D3A"
-  line-numbers-plus-style       = "#a6cc70"
-  line-numbers-zero-style       = "#686868"
-  syntax-theme                  = "Cyberdream"
-
-[delta "everforest-dark"]
+[delta "everforest-dark-hard"]
   minus-style                   = syntax "#443A3F"
   minus-non-emph-style          = syntax "#443A3F"
   minus-emph-style              = syntax "#7D5256"
@@ -53,6 +39,20 @@
   line-numbers-plus-style       = "#83C092"
   line-numbers-zero-style       = "#859289"
   syntax-theme                  = "Everforest Dark"
+
+[delta "flexoki-dark"]
+  minus-style                   = syntax "#2D1816"
+  minus-non-emph-style          = syntax "#2D1816"
+  minus-emph-style              = syntax "#672B26"
+  minus-empty-line-marker-style = syntax "#2D1816"
+  line-numbers-minus-style      = "#d14d41"
+  plus-style                    = syntax "#222415"
+  plus-non-emph-style           = syntax "#222415"
+  plus-emph-style               = syntax "#464E22"
+  plus-empty-line-marker-style  = syntax "#222415"
+  line-numbers-plus-style       = "#879a39"
+  line-numbers-zero-style       = "#878580"
+  syntax-theme                  = "ansi"
 
 [delta "gruvbox-dark"]
   minus-style                   = syntax "#372120"
@@ -67,6 +67,48 @@
   line-numbers-plus-style       = "#98971a"
   line-numbers-zero-style       = "#a89984"
   syntax-theme                  = "Gruvbox Dark"
+
+[delta "kanagawa-wave"]
+  minus-style                   = syntax "#38242C"
+  minus-non-emph-style          = syntax "#38242C"
+  minus-emph-style              = syntax "#692E34"
+  minus-empty-line-marker-style = syntax "#38242C"
+  line-numbers-minus-style      = "#c34043"
+  plus-style                    = syntax "#2C3132"
+  plus-non-emph-style           = syntax "#2C3132"
+  plus-emph-style               = syntax "#465446"
+  plus-empty-line-marker-style  = syntax "#2C3132"
+  line-numbers-plus-style       = "#76946a"
+  line-numbers-zero-style       = "#727169"
+  syntax-theme                  = "Kanagawa Wave"
+
+[delta "nightfly"]
+  minus-style                   = syntax "#272033"
+  minus-non-emph-style          = syntax "#272033"
+  minus-emph-style              = syntax "#73344A"
+  minus-empty-line-marker-style = syntax "#272033"
+  line-numbers-minus-style      = "#ff5874"
+  plus-style                    = syntax "#19312F"
+  plus-non-emph-style           = syntax "#19312F"
+  plus-emph-style               = syntax "#496840"
+  plus-empty-line-marker-style  = syntax "#19312F"
+  line-numbers-plus-style       = "#a1cd5e"
+  line-numbers-zero-style       = "#7c8f8f"
+  syntax-theme                  = "Night Owlish"
+
+[delta "palenight"]
+  minus-style                   = syntax "#272033"
+  minus-non-emph-style          = syntax "#272033"
+  minus-emph-style              = syntax "#73344A"
+  minus-empty-line-marker-style = syntax "#272033"
+  line-numbers-minus-style      = "#f07178"
+  plus-style                    = syntax "#19312F"
+  plus-non-emph-style           = syntax "#19312F"
+  plus-emph-style               = syntax "#496840"
+  plus-empty-line-marker-style  = syntax "#19312F"
+  line-numbers-plus-style       = "#c3e88d"
+  line-numbers-zero-style       = "#969cc7"
+  syntax-theme                  = "Palenight"
 
 [delta "one-dark-pro"]
   minus-style                   = syntax "#46333D"
@@ -137,17 +179,3 @@
   line-numbers-plus-style       = "#859900"
   line-numbers-zero-style       = "#3b4261"
   syntax-theme                  = "Solarized Dark"
-
-[delta "vesper"]
-  minus-style                   = syntax "#322623"
-  minus-non-emph-style          = syntax "#322623"
-  minus-emph-style              = syntax "#77514A"
-  minus-empty-line-marker-style = syntax "#322623"
-  line-numbers-minus-style      = "#f5a191"
-  plus-style                    = syntax "#253430"
-  plus-non-emph-style           = syntax "#253430"
-  plus-emph-style               = syntax "#4E7C6F"
-  plus-empty-line-marker-style  = syntax "#253430"
-  line-numbers-plus-style       = "#99ffe4"
-  line-numbers-zero-style       = "#7e7e7e"
-  syntax-theme                  = "ansi"

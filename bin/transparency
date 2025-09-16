@@ -75,8 +75,6 @@ if [[ -z "$selected_option" ]]; then
   exit 0
 fi
 
-echo "🫧 Applying $selected_option transparency..."
-
 exports_file="$DOTFILES/shell/exports.sh"
 
 if [[ ! -f "$exports_file" ]]; then
@@ -91,11 +89,8 @@ else
   echo "export TRANSPARENCY=\"$selected_option\"" >> "$exports_file"
 fi
 
-# Export to current shell if sourced
 if [[ "$SCRIPT_EXECUTED" == false ]]; then
   export TRANSPARENCY="$selected_option"
-else
-  echo "💡 To update your current shell, run: source \"$exports_file\" or restart your terminal"
 fi
 
 set_ghostty_opacity "$selected_option"

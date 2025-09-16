@@ -8,8 +8,8 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Vesper"
-export TRANSPARENCY="off"
+export MOOD="Palenight"
+export TRANSPARENCY="on"
 
 # plugins
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -56,7 +56,16 @@ elif [[ "$MOOD" == "Everforest" ]]; then
 		--color=spinner:#A7C080,info:#A7C080,separator:#374145
 		--color=pointer:#83C092,marker:#7FBBB3,prompt:#83C092
 	"
-elif [[ "$MOOD" == "Gruvbox" ]]; then
+elif [[ "$MOOD" == "Flexoki Dark" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878580,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#cecdc3,bg:#100f0f,hl:#d0a215
+		--color=fg+:#cecdc3,bg+:#575653,hl+:#d0a215
+		--color=border:#4385be,header:#d0a215,gutter:#100f0f
+		--color=spinner:#879a39,info:#879a39,separator:#575653
+		--color=pointer:#3aa99f,marker:#4385be,prompt:#3aa99f
+	"
+elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   	--color=fg:#ebdbb2,bg:#1d2021,hl:#d79921
@@ -64,6 +73,33 @@ elif [[ "$MOOD" == "Gruvbox" ]]; then
 		--color=border:#458588,header:#d79921,gutter:#1d2021
 		--color=spinner:#98971a,info:#98971a,separator:#665c54
 		--color=pointer:#b16286,marker:#458588,prompt:#b16286
+	"
+elif [[ "$MOOD" == "Kanagawa Wave" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#dcd7ba,bg:#1f1f28,hl:#FF9E3B
+		--color=fg+:#dcd7ba,bg+:#2d4f67,hl+:#FF9E3B
+		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
+		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
+		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
+	"
+elif [[ "$MOOD" == "Nightfly" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7c8f8f,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#bdc1c6,bg:#011627,hl:#e3d18a
+		--color=fg+:#bdc1c6,bg+:#1d3b53,hl+:#e3d18a
+		--color=border:#82aaff,header:#e3d18a,gutter:#011627
+		--color=spinner:#a1cd5e,info:#a1cd5e,separator:#1d3b53
+		--color=pointer:#7fdbca,marker:#82aaff,prompt:#7fdbca
+	"
+elif [[ "$MOOD" == "Palenight" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c792ea,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#969cc7,bg:#292d3e,hl:#ffe585
+		--color=fg+:#969cc7,bg+:#434758,hl+:#ffe585
+		--color=border:#82aaff,header:#ffe585,gutter:#292d3e
+		--color=spinner:#c3e88d,info:#c3e88d,separator:#434758
+		--color=pointer:#a3f7ff,marker:#82aaff,prompt:#a3f7ff
 	"
 elif [[ "$MOOD" == "OneDarkPro Black" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#434852,bold"
@@ -101,15 +137,6 @@ elif [[ "$MOOD" == "Rose Pine Moon" ]]; then
 		--color=spinner:#f6c177,info:#9ccfd8 \
 		--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
 	"
-elif [[ "$MOOD" == "Solarized" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#839496,bg:#002b36,hl:#d33682
-		--color=fg+:#839496,bg+:#073642,hl+:#d33682
-		--color=border:#268bd2,header:#d33682,gutter:#002b36
-		--color=spinner:#2aa198,info:#2aa198,separator:#073642
-		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
-	"
 elif [[ "$MOOD" == "Solarized Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -118,15 +145,6 @@ elif [[ "$MOOD" == "Solarized Dark" ]]; then
 		--color=border:#268bd2,header:#d33682,gutter:#002b36
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
-	"
-elif [[ "$MOOD" == "Vesper" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7e7e7e,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#ffffff,bg:#101010,hl:#ffc799
-		--color=fg+:#ffffff,bg+:#2a2a2a,hl+:#ffc799
-		--color=border:#99ffe4,header:#ffc799,gutter:#101010
-		--color=spinner:#a0a0a0,info:#a0a0a0,separator:#2a2a2a
-		--color=pointer:#99ffe4,marker:#99ffe4,prompt:#99ffe4
 	"
 fi
 

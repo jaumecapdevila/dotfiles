@@ -15,7 +15,6 @@ return {
   -- Add specific hightlight groups
   on_highlights = function(hl, c)
     -- Syntax
-    hl.Keyword.fg = c.violet
     hl.Function.fg = c.blue
     -- Plugins
     hl.TelescopeBorder.fg = c.blue

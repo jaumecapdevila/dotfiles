@@ -1,0 +1,13 @@
+{
+    "border.variant": "#cb4b16",
+    "panel.background": "#002b36",
+    "panel.indent_guide_active": "#cb4b16",
+    "status_bar.background": "#002b36",
+    "title_bar.background": "#002b36",
+    "predictive": "#657b83",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic", "color": "#6c71c4" }
+    }
+}

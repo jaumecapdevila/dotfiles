@@ -50,7 +50,7 @@
     "active_line_width": 3,
     "background_coloring": "disabled",
     "coloring": "indent_aware",
-    "enabled": true,
+    "enabled": false,
     "line_width": 2
   },
   "inlay_hints": {
@@ -112,7 +112,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Vesper",
+    "dark": "One Dark Pro",
     "light": "Ayu Light",
     "mode": "system"
   },
@@ -130,20 +130,5 @@
   "terminal": {
     "font_family": "OperatorMono Nerd Font",
     "font_weight": 340
-  },
-  "experimental.theme_overrides": {
-    "border.variant": "#99FFE4",
-    "syntax": {
-      "attribute": {
-        "font_style": "italic"
-      },
-      "function": {
-        "font_style": "italic",
-        "font_weight": 900
-      },
-      "keyword": {
-        "font_style": "italic"
-      }
-    }
   }
 }

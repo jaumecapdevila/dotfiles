@@ -131,18 +131,14 @@ return {
           )
 
           -- Smart rename using LSP
-          map(
-            "rn",
-            vim.lsp.buf.rename,
-            "Smart Rename"
-          )
+          map("grn", vim.lsp.buf.rename, "Smart Rename")
         end,
       })
 
       vim.diagnostic.config({
         severity_sort = true,
         signs = false, -- Disable signs in the sign column
-        virtual_text = true,
+        virtual_text = false,
       })
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()

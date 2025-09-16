@@ -1,5 +1,5 @@
 themes {
-  gruvbox_dark {
+  gruvbox_dark_hard {
 		bg "#1d2021"
 		fg "#ebdbb2"
 		red "#cc241d"
