@@ -24,6 +24,7 @@
     ~/.config/starship.toml: config/starship/starship.toml
     ~/.config/zed/keymap.json: config/zed/keymap.json
     ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.config/zed/themes: config/zed/themes
     ~/.config/zellij: config/zellij
     ~/.gitattributes: git/.gitattributes
     ~/.gitconfig: git/.gitconfig

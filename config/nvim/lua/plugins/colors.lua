@@ -10,38 +10,17 @@ return {
     opts = function() return require("configs.ayu") end,
   },
   {
-    "neanias/everforest-nvim",
-    cond = vim.g.mood == "Everforest",
-    config = function(_, opts)
-      require("everforest").setup(opts)
-      vim.cmd("colorscheme everforest")
-    end,
-    lazy = false,
-    name = "Everforest",
-    opts = function() return require("configs.everforest") end,
-  },
-  {
-    "kepano/flexoki-neovim",
-    cond = vim.g.mood == "Flexoki Dark",
-    config = function()
-      require("configs.flexoki")
-      vim.cmd("colorscheme flexoki")
-    end,
-    lazy = false,
-    name = "Flexoki",
-  },
-  {
     "olimorris/onedarkpro.nvim",
     cond = vim.g.mood == "OneDarkPro" or vim.g.mood == "OneDarkPro Black",
     config = function(_, opts)
       require("onedarkpro").setup(opts)
-      local black = vim.g.mood == "OneDarkPro Black"
-
-      if black then
-        vim.cmd("colorscheme onedark_dark")
-      else
-        vim.cmd("colorscheme onedark_vivid")
-      end
+      vim.cmd(
+        "colorscheme "
+          .. (
+            vim.g.mood == "OneDarkPro Black" and "onedark_dark"
+            or "onedark_vivid"
+          )
+      )
     end,
     lazy = false,
     opts = function() return require("configs.onedark") end,
@@ -57,6 +36,12 @@ return {
     opts = function() return require("configs.gruvbox") end,
   },
   {
+    "cocopon/iceberg.vim",
+    cond = vim.g.mood == "Iceberg",
+    config = function() vim.cmd("colorscheme iceberg") end,
+    lazy = false,
+  },
+  {
     "rebelot/kanagawa.nvim",
     cond = vim.g.mood == "Kanagawa Wave",
     config = function(_, opts)
@@ -67,22 +52,12 @@ return {
     opts = require("configs.kanagawa"),
   },
   {
-    "bluz71/vim-nightfly-colors",
-    cond = vim.g.mood == "Nightfly",
-    config = function()
-      vim.g.nightflyCursorColor = true
-      vim.g.nightflyItalics = true
-      vim.g.nightflyNormalFloat = true
-      vim.g.nightflyTransparent = vim.g.transparent
-      vim.g.nightflyWinSeparator = 0
-      vim.cmd("colorscheme nightfly")
-    end,
-    lazy = false,
-  },
-  {
     "marko-cerovac/material.nvim",
     cond = vim.g.mood == "Palenight",
-    config = function(_, opts) require("material").setup(opts) vim.cmd("colorscheme material") end,
+    config = function(_, opts)
+      require("material").setup(opts)
+      vim.cmd("colorscheme material")
+    end,
     init = function() vim.g.material_style = "palenight" end,
     lazy = false,
     opts = function() return require("configs.material") end,
@@ -109,5 +84,25 @@ return {
     end,
     lazy = false,
     opts = require("configs.solarized"),
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = require("configs.tokyonight"),
+    lazy = false,
+    priority = 1000,
+    config = function(_, opts)
+      require("tokyonight").setup(opts)
+      vim.cmd("colorscheme tokyonight")
+    end,
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    cond = vim.g.mood == "VSCode Dark",
+    config = function(_, opts)
+      require("vscode").setup(opts)
+      vim.cmd("colorscheme vscode")
+    end,
+    lazy = false,
+    opts = function() return require("configs.vscode") end,
   },
 }

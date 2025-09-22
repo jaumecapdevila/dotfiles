@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Palenight"
+export MOOD="Solarized Dark"
 export TRANSPARENCY="on"
 
 # plugins
@@ -47,24 +47,6 @@ elif [[ "$MOOD" == "Ayu Mirage" ]]; then
 		--color=spinner:#a6cc70,info:#a6cc70,separator:#33415e
 		--color=pointer:#90e1c6,marker:#6dcbfa,prompt:#90e1c6
 	"
-elif [[ "$MOOD" == "Everforest" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#859289,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#D3C6AA,bg:#272E33,hl:#DBBC7F
-		--color=fg+:#D3C6AA,bg+:#374145,hl+:#DBBC7F
-		--color=border:#7FBBB3,header:#DBBC7F,gutter:#272E33
-		--color=spinner:#A7C080,info:#A7C080,separator:#374145
-		--color=pointer:#83C092,marker:#7FBBB3,prompt:#83C092
-	"
-elif [[ "$MOOD" == "Flexoki Dark" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878580,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#cecdc3,bg:#100f0f,hl:#d0a215
-		--color=fg+:#cecdc3,bg+:#575653,hl+:#d0a215
-		--color=border:#4385be,header:#d0a215,gutter:#100f0f
-		--color=spinner:#879a39,info:#879a39,separator:#575653
-		--color=pointer:#3aa99f,marker:#4385be,prompt:#3aa99f
-	"
 elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -74,6 +56,15 @@ elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
 		--color=spinner:#98971a,info:#98971a,separator:#665c54
 		--color=pointer:#b16286,marker:#458588,prompt:#b16286
 	"
+elif [[ "$MOOD" == "Iceberg" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6b7089,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#c6c8d1,bg:#161821,hl:#e2a478
+		--color=fg+:#c6c8d1,bg+:#1e2132,hl+:#e2a478
+		--color=border:#84a0c6,header:#e2a478,gutter:#161821
+		--color=spinner:#b4be82,info:#b4be82,separator:#1e2132
+		--color=pointer:#a093c7,marker:#84a0c6,prompt:#a093c7
+	"
 elif [[ "$MOOD" == "Kanagawa Wave" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6F6E69,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -82,15 +73,6 @@ elif [[ "$MOOD" == "Kanagawa Wave" ]]; then
 		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
 		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
 		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
-	"
-elif [[ "$MOOD" == "Nightfly" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7c8f8f,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#bdc1c6,bg:#011627,hl:#e3d18a
-		--color=fg+:#bdc1c6,bg+:#1d3b53,hl+:#e3d18a
-		--color=border:#82aaff,header:#e3d18a,gutter:#011627
-		--color=spinner:#a1cd5e,info:#a1cd5e,separator:#1d3b53
-		--color=pointer:#7fdbca,marker:#82aaff,prompt:#7fdbca
 	"
 elif [[ "$MOOD" == "Palenight" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c792ea,bold"
@@ -145,6 +127,15 @@ elif [[ "$MOOD" == "Solarized Dark" ]]; then
 		--color=border:#268bd2,header:#d33682,gutter:#002b36
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
+	"
+elif [[ "$MOOD" == "VSCode Dark" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#D4D4D4,bg:#1F1F1F,hl:#DCDCAA
+		--color=fg+:#D4D4D4,bg+:#264F78,hl+:#DCDCAA
+		--color=border:#569CD6,header:#DCDCAA,gutter:#1F1F1F
+		--color=spinner:#6A9955,info:#6A9955,separator:#264F78
+		--color=pointer:#C586C0,marker:#569CD6,prompt:#C586C0
 	"
 fi
 

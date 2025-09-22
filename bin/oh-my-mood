@@ -1,0 +1,391 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Check if script is being sourced or executed
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  SCRIPT_EXECUTED=true
+else
+  SCRIPT_EXECUTED=false
+fi
+
+check_deps() {
+  local missing_deps=()
+
+  command -v fzf >/dev/null 2>&1 || missing_deps+=("fzf")
+  command -v jq >/dev/null 2>&1 || missing_deps+=("jq")
+  command -v osascript >/dev/null 2>&1 || missing_deps+=("osascript")
+  command -v zellij >/dev/null 2>&1 || missing_deps+=("zellij")
+
+  if [[ ${#missing_deps[@]} -gt 0 ]]; then
+    echo "❌ Missing required dependencies: ${missing_deps[*]}" >&2
+    exit 1
+  fi
+}
+
+FALLBACK_MOOD="OneDarkPro"
+
+declare -A ACCENT_COLORS=(
+  [Ayu Dark]="#E6B450"
+  [Ayu Mirage]="#FFCC66"
+  [Gruvbox Dark]="#fe8019"
+  [Iceberg]="#84a0c6"
+  [Kanagawa Wave]="#7e9cd8"
+  [OneDarkPro Black]="#d55fde"
+  [OneDarkPro]="#d55fde"
+  [Palenight]="#7e57c2"
+  [Rose Pine Moon]="#eb6f92"
+  [Rose Pine]="#eb6f92"
+  [Solarized Dark]="#cb4b16"
+  [Tokyo Storm]="#25aac2"
+  [Tokyo Night]="#25aac2"
+  [VSCode Dark]="#4FC1FF"
+)
+
+declare -A GHOSTTY_THEMES=(
+  [Ayu Dark]="Ayu Dark"
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark]="Gruvbox Dark"
+  [Iceberg]="Iceberg Dark"
+  [Kanagawa Wave]="Kanagawa Wave"
+  [Palenight]="Palenight"
+  [OneDarkPro Black]="OneDarkPro Black"
+  [OneDarkPro]="OneDarkPro"
+  [Rose Pine Moon]="Rose Pine Moon"
+  [Rose Pine]="Rose Pine"
+  [Solarized Dark]="Solarized Dark"
+  [Tokyo Night]="Tokyo Night"
+  [Tokyo Storm]="Tokyo Storm"
+  [VSCode Dark]="VSCode Dark"
+)
+
+declare -A BAT_THEMES=(
+  [Ayu Dark]="Ayu Dark"
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark]="ansi"
+  [Iceberg]="Iceberg Dark"
+  [Kanagawa Wave]="Kanagawa Wave"
+  [Palenight]="Palenight"
+  [OneDarkPro Black]="TwoDark"
+  [OneDarkPro]="TwoDark"
+  [Rose Pine Moon]="Rose Pine Moon"
+  [Rose Pine]="Rose Pine"
+  [Solarized Dark]="Solarized Dark"
+  [Tokyo Night]="Tokyo Night"
+  [Tokyo Storm]="Tokyo Storm"
+  [VSCode Dark]="ansi"
+)
+
+declare -A ZELLIJ_THEMES=(
+  [Ayu Dark]="ayu_dark"
+  [Ayu Mirage]="ayu_mirage"
+  [Gruvbox Dark]="gruvbox_dark_hard"
+  [Iceberg]="iceberg_dark"
+  [Kanagawa Wave]="kanagawa_wave"
+  [Palenight]="palenight"
+  [OneDarkPro Black]="one_dark_pro_black"
+  [OneDarkPro]="one_dark_pro"
+  [Rose Pine Moon]="rose_pine_moon"
+  [Rose Pine]="rose_pine_main"
+  [Solarized Dark]="solarized_dark"
+  [Tokyo Night]="tokyo_night"
+  [Tokyo Storm]="tokyo_storm"
+  [VSCode Dark]="vscode_dark_modern"
+)
+
+declare -A LSD_THEMES=(
+  [Ayu Dark]="bluish"
+  [Ayu Mirage]="bluish"
+  [Gruvbox Dark]="adaptive"
+  [Iceberg]="bluish"
+  [Kanagawa Wave]="adaptive"
+  [Palenight]="bluish"
+  [OneDarkPro Black]="adaptive"
+  [OneDarkPro]="adaptive"
+  [Rose Pine Moon]="adaptive"
+  [Rose Pine]="adaptive"
+  [Solarized Dark]="solarized"
+  [Tokyo Night]="bluish"
+  [Tokyo Storm]="bluish"
+  [VSCode Dark]="bluish"
+)
+
+declare -A DELTA_FEATURES=(
+  [Ayu Dark]="ayu-dark"
+  [Ayu Mirage]="ayu-mirage"
+  [Gruvbox Dark]="gruvbox-dark-hard"
+  [Iceberg]="iceberg-dark"
+  [Kanagawa Wave]="kanagawa-wave"
+  [Palenight]="palenight"
+  [OneDarkPro Black]="one-dark-pro-black"
+  [OneDarkPro]="one-dark-pro"
+  [Rose Pine Moon]="rose-pine-moon"
+  [Rose Pine]="rose-pine-main"
+  [Solarized Dark]="solarized-dark"
+  [Tokyo Night]="tokyo-night"
+  [Tokyo Storm]="tokyo-storm"
+  [VSCode Dark]="vscode-dark-modern"
+)
+
+declare -A ZED_THEMES=(
+  [Ayu Dark]="Ayu Dark"
+  [Ayu Mirage]="Ayu Mirage"
+  [Gruvbox Dark]="Gruvbox Dark Hard"
+  [Iceberg]="Iceberg Dark"
+  [Kanagawa Wave]="Kanagawa Wave"
+  [OneDarkPro Black]="One Dark Pro"
+  [OneDarkPro]="One Dark Pro"
+  [Rose Pine Moon]="Rosé Pine Moon"
+  [Rose Pine]="Rosé Pine"
+  [Solarized Dark]="Solarized Dark"
+  [VSCode Dark]="VSCode Dark Modern"
+)
+
+declare -A ZED_OVERRIDES=(
+  [Ayu Dark]="ayu-dark"
+  [Ayu Mirage]="ayu-mirage"
+  [Gruvbox Dark]="gruvbox-dark-hard"
+  [Kanagawa Wave]="kanagawa-wave"
+  [OneDarkPro Black]="one-dark-pro-black"
+  [OneDarkPro]="one-dark-pro"
+  [Rose Pine Moon]="rose-pine-moon"
+  [Rose Pine]="rose-pine"
+  [Solarized Dark]="solarized-dark"
+  [VSCode Dark]="vscode-dark-modern"
+)
+
+declare -A VSCODE_THEMES=(
+  [Ayu Dark]="Ayu Dark"
+  [Ayu Mirage]="Ayu Mirage"
+  [Iceberg]="Iceberg"
+  [Kanagawa Wave]="Kanagawa Wave"
+  [Palenight]="Palenight Operator"
+  [Rose Pine Moon]="Rosé Pine Moon"
+  [Rose Pine]="Rosé Pine"
+  [Solarized Dark]="Solarized Dark"
+  [Tokyo Night]="Tokyo Night"
+  [Tokyo Storm]="Tokyo Night Storm"
+  [VSCode Dark]="Default Dark+"
+)
+
+declare -A WALLPAPERS=(
+  [Ayu Dark]="Wallpaper 08.jpg"
+  [Ayu Mirage]="Wallpaper 08.jpg"
+  [Gruvbox Dark]="Wallpaper 07.jpg"
+  [Iceberg]="Wallpaper 13.jpg"
+  [Kanagawa Wave]="Wallpaper 11.jpg"
+  [Palenight]="Wallpaper 01.jpg"
+  [OneDarkPro Black]="Wallpaper 09.jpg"
+  [OneDarkPro]="Wallpaper 09.jpg"
+  [Rose Pine Moon]="Wallpaper 04.jpg"
+  [Rose Pine]="Wallpaper 04.jpg"
+  [Solarized Dark]="Wallpaper 03.jpg"
+  [Tokyo Night]="Wallpaper 12.jpg"
+  [Tokyo Storm]="Wallpaper 15.jpg"
+  [VSCode Dark]="Wallpaper 14.jpg"
+)
+
+set_ghostty_mood() {
+  local mood="$1"
+  local ghostty_theme="${GHOSTTY_THEMES[$mood]:-${GHOSTTY_THEMES[$FALLBACK_MOOD]}}"
+  local accent_color="${ACCENT_COLORS[$mood]:-${ACCENT_COLORS[$FALLBACK_MOOD]}}"
+  local config_file="$DOTFILES/config/ghostty/config"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Ghostty config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^theme *=.*\"/theme = \"$ghostty_theme\"/" "$config_file"
+  sed -i '' "s/^split-divider-color *=.*\"/split-divider-color = \"$accent_color\"/" "$config_file"
+  osascript "$DOTFILES/config/ghostty/reload-config.scpt" 2>/dev/null || true
+  echo "✓ Updated Ghostty theme to: $ghostty_theme"
+}
+
+set_bat_mood() {
+  local mood="$1"
+  local bat_theme="${BAT_THEMES[$mood]:-${BAT_THEMES[$FALLBACK_MOOD]}}"
+  local config_file="$DOTFILES/config/bat/config"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Bat config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^--theme=.*\"/--theme=\"$bat_theme\"/" "$config_file"
+  echo "✓ Updated Bat theme to: $bat_theme"
+}
+
+set_zellij_mood() {
+  local mood="$1"
+  local zellij_theme="${ZELLIJ_THEMES[$mood]:-${ZELLIJ_THEMES[$FALLBACK_MOOD]}}"
+  local config_file="$DOTFILES/config/zellij/config.kdl"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Zellij config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^theme \".*\"/theme \"$zellij_theme\"/" "$config_file"
+  zellij kill-all-sessions --yes &> /dev/null || true
+  echo "✓ Updated Zellij theme to: $zellij_theme"
+}
+
+set_delta_mood() {
+  local mood="$1"
+  local delta_features="${DELTA_FEATURES[$mood]:-${DELTA_FEATURES[$FALLBACK_MOOD]}}"
+  local config_file="$DOTFILES/git/.gitconfig"
+
+  if [[ ! -f "$config_file" ]]; then
+    echo "❌ Git config file not found: $config_file" >&2
+    return 1
+  fi
+
+  sed -i '' "s/^  features = .*/  features = \"$delta_features\"/" "$config_file"
+  echo "✓ Updated Delta features to: $delta_features"
+}
+
+set_zed_mood() {
+  local mood="$1"
+  local zed_theme="${ZED_THEMES[$mood]}"
+  local zed_overrides_file="${ZED_OVERRIDES[$mood]}"
+  local zed_settings="$DOTFILES/config/zed/settings.json"
+  local overrides_dir="$DOTFILES/config/zed/overrides"
+  local override_file="$overrides_dir/$zed_overrides_file.json"
+  local theme_overrides="{}"
+
+  if [[ -z "$zed_theme" ]]; then
+    echo "ℹ️ No Zed theme available for mood: $mood, skipping."
+    return 0
+  fi
+
+  if [[ ! -f "$zed_settings" ]]; then
+    echo "❌ Zed settings file not found: $zed_settings" >&2
+    return 1
+  fi
+
+  jq --arg theme "$zed_theme" '.theme.dark = $theme' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
+
+  if [[ -n "$zed_overrides_file" && -f "$override_file" ]]; then
+    theme_overrides=$(cat "$override_file")
+    jq --argjson overrides "$theme_overrides" '."experimental.theme_overrides" = $overrides' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
+  else
+    jq 'del(."experimental.theme_overrides")' "$zed_settings" > "$zed_settings.tmp" && mv "$zed_settings.tmp" "$zed_settings"
+  fi
+
+  echo "✓ Updated Zed theme to: $zed_theme"
+}
+
+set_vscode_mood() {
+  local mood="$1"
+  local vscode_theme="${VSCODE_THEMES[$mood]}"
+  local accent_color="${ACCENT_COLORS[$mood]}"
+  local vscode_settings="$HOME/Library/Application Support/Code/User/settings.json"
+
+  if [[ -z "$vscode_theme" ]]; then
+    echo "ℹ️ No VSCode Dark theme available for mood: $mood, skipping."
+    return 0
+  fi
+
+  if [[ ! -f "$vscode_settings" ]]; then
+    echo "❌ VSCode Dark settings file not found: $vscode_settings" >&2
+    return 1
+  fi
+
+  jq --arg theme "$vscode_theme" --arg color "$accent_color" \
+    '.["workbench.colorTheme"] = $theme | .["material-icon-theme.folders.color"] = $color' \
+    "$vscode_settings" > "$vscode_settings.tmp" && mv "$vscode_settings.tmp" "$vscode_settings"
+  echo "✓ Updated VSCode Dark theme to: $vscode_theme and folder color to: $accent_color"
+}
+
+set_lsd_mood() {
+  local mood="$1"
+  local lsd_theme="${LSD_THEMES[$mood]:-${LSD_THEMES[$FALLBACK_MOOD]}}"
+  local colors_file="$DOTFILES/config/lsd/colors.yaml"
+  local theme_file="$DOTFILES/config/lsd/colors/$lsd_theme.yaml"
+
+  if [[ ! -f "$theme_file" ]]; then
+    echo "❌ LSD theme file not found: $theme_file" >&2
+    return 1
+  fi
+
+  # Remove existing colors.yaml if it exists
+  if [[ -f "$colors_file" || -L "$colors_file" ]]; then
+    rm "$colors_file"
+  fi
+
+  # Create symlink to selected theme
+  ln -s "colors/$lsd_theme.yaml" "$colors_file"
+  echo "✓ Updated LSD colors to: $lsd_theme"
+}
+
+set_mood_wallpaper() {
+  local mood="$1"
+  local mod_wallpaper="${WALLPAPERS[$mood]:-${WALLPAPERS[$FALLBACK_MOOD]}}"
+  local wallpaper_file="$DOTFILES/wallpapers/$mod_wallpaper"
+
+  if [[ ! -f "$wallpaper_file" ]]; then
+    echo "❌ Wallpaper file not found: $wallpaper_file" >&2
+    return 1
+  fi
+
+  osascript "$DOTFILES/wallpapers/set-wallpaper.scpt" "$wallpaper_file" 2>/dev/null || true
+  echo "✓ Updated Wallpaper"
+}
+
+check_deps
+
+if [[ -z "$DOTFILES" ]]; then
+  echo "❌ DOTFILES environment variable is not set" >&2
+  exit 1
+fi
+
+available_moods=(
+  "Ayu Dark"
+  "Ayu Mirage"
+  "Gruvbox Dark"
+  "Iceberg"
+  "Kanagawa Wave"
+  "OneDarkPro Black"
+  "OneDarkPro"
+  "Palenight"
+  "Rose Pine Moon"
+  "Rose Pine"
+  "Solarized Dark"
+  "Tokyo Night"
+  "Tokyo Storm"
+  "VSCode Dark"
+)
+
+selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)
+
+if [[ -z "$selected_mood" ]]; then
+  echo "No mood selected, exiting."
+  exit 1
+fi
+
+echo "🎨 Applying $selected_mood mood..."
+
+exports_file="$DOTFILES/shell/exports.sh"
+
+if [[ ! -f "$exports_file" ]]; then
+  echo "❌ Exports file not found: $exports_file" >&2
+  exit 1
+fi
+
+sed -i '' "s/^export MOOD=.*/export MOOD=\"$selected_mood\"/" "$exports_file"
+
+if [[ "$SCRIPT_EXECUTED" == false ]]; then
+  export MOOD="$selected_mood"
+fi
+
+set_bat_mood "$selected_mood"
+set_delta_mood "$selected_mood"
+set_ghostty_mood "$selected_mood"
+set_lsd_mood "$selected_mood"
+set_mood_wallpaper "$selected_mood"
+set_zed_mood "$selected_mood"
+set_vscode_mood "$selected_mood"
+set_zellij_mood "$selected_mood"
+
+echo "🎉 Successfully applied $selected_mood mood to all applications!"

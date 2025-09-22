@@ -99,6 +99,9 @@
   },
   "relative_line_numbers": true,
   "scroll_beyond_last_line": "off",
+  "scrollbar": {
+    "show": "never"
+  },
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
@@ -112,7 +115,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "One Dark Pro",
+    "dark": "Solarized Dark",
     "light": "Ayu Light",
     "mode": "system"
   },
@@ -130,5 +133,26 @@
   "terminal": {
     "font_family": "OperatorMono Nerd Font",
     "font_weight": 340
+  },
+  "experimental.theme_overrides": {
+    "border.variant": "#cb4b16",
+    "panel.background": "#002b36",
+    "panel.indent_guide_active": "#cb4b16",
+    "status_bar.background": "#002b36",
+    "title_bar.background": "#002b36",
+    "predictive": "#657b83",
+    "syntax": {
+      "attribute": {
+        "font_style": "italic"
+      },
+      "function": {
+        "font_style": "italic",
+        "font_weight": 900
+      },
+      "keyword": {
+        "font_style": "italic",
+        "color": "#6c71c4"
+      }
+    }
   }
 }

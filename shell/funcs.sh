@@ -30,11 +30,11 @@ function za() {
   zellij attach "$session_name" || zellij -s "$session_name"
 }
 
-function change-mood() {
-  "$DOTFILES/bin/mood" && source "$DOTFILES/shell/exports.sh"
+function omm() {
+  "$DOTFILES/bin/oh-my-mood" && source "$DOTFILES/shell/exports.sh"
 }
 
-function toggle-transparency() {
+function omt() {
   local current_value="${TRANSPARENCY:-off}"
   "$DOTFILES/bin/transparency" $([[ "$current_value" == "off" ]] && echo "on" || echo "off")
   source "$DOTFILES/shell/exports.sh"
