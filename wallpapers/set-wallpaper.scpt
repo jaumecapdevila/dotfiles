@@ -6,12 +6,7 @@ on run argv
   set imagePath to item 1 of argv
 
   tell application "System Events"
-    -- Get a list of all desktops
-    set theDesktops to a reference to every desktop
-
-    -- Loop through each desktop and set the wallpaper individually
-    repeat with aDesktop in theDesktops
-      set picture of aDesktop to (POSIX file imagePath)
-    end repeat
+    -- Tell every desktop directly to change its picture
+    tell every desktop to set picture to (POSIX file imagePath)
   end tell
 end run
