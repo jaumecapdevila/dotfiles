@@ -1,7 +1,8 @@
 {
+    "border.variant": "#eb6f92",
+    "editor.active_line_number": "#eb6f92",
     "editor.gutter.background": "#1f1d2e",
     "editor.line_number": "#6e6a86",
-    "editor.active_line_number": "#eb6f92",
     "panel.indent_guide_active": "#eb6f92",
     "syntax": {
         "attribute": { "font_style": "italic" },

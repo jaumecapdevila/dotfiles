@@ -13,8 +13,7 @@
   "tab_size": 2,
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "OperatorMono Nerd Font",
-  "buffer_font_weight": 340,
+  "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_font_size": 17,
   "buffer_line_height": "comfortable",
   "collaboration_panel": {
@@ -50,7 +49,7 @@
     "active_line_width": 3,
     "background_coloring": "disabled",
     "coloring": "indent_aware",
-    "enabled": false,
+    "enabled": true,
     "line_width": 2
   },
   "inlay_hints": {
@@ -115,7 +114,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Solarized Dark",
+    "dark": "Kanagawa Dragon",
     "light": "Ayu Light",
     "mode": "system"
   },
@@ -135,12 +134,13 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#cb4b16",
-    "panel.background": "#002b36",
-    "panel.indent_guide_active": "#cb4b16",
-    "status_bar.background": "#002b36",
-    "title_bar.background": "#002b36",
-    "predictive": "#657b83",
+    "border.variant": "#8ea4a2",
+    "editor.active_line_number": "#8ea4a2",
+    "editor.gutter.background": "#282727",
+    "editor.line_number": "#625e5a",
+    "panel.background": "#181616",
+    "panel.indent_guide_active": "#8ea4a2",
+    "tab_bar.background": "#181616",
     "syntax": {
       "attribute": {
         "font_style": "italic"
@@ -150,8 +150,19 @@
         "font_weight": 900
       },
       "keyword": {
-        "font_style": "italic",
-        "color": "#6c71c4"
+        "font_style": "italic"
+      },
+      "punctuation": {
+        "color": "#9e9b93"
+      },
+      "punctuation.bracket": {
+        "color": "#9e9b93"
+      },
+      "punctuation.list_marker": {
+        "color": "#9e9b93"
+      },
+      "punctuation.special": {
+        "color": "#9e9b93"
       }
     }
   }

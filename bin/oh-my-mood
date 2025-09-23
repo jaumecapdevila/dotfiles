@@ -15,6 +15,7 @@ check_deps() {
   command -v fzf >/dev/null 2>&1 || missing_deps+=("fzf")
   command -v jq >/dev/null 2>&1 || missing_deps+=("jq")
   command -v osascript >/dev/null 2>&1 || missing_deps+=("osascript")
+  command -v wallpaper >/dev/null 2>&1 || missing_deps+=("wallpaper")
   command -v zellij >/dev/null 2>&1 || missing_deps+=("zellij")
 
   if [[ ${#missing_deps[@]} -gt 0 ]]; then
@@ -23,166 +24,167 @@ check_deps() {
   fi
 }
 
-FALLBACK_MOOD="OneDarkPro"
+FALLBACK_MOOD="Tokyo Night"
 
 declare -A ACCENT_COLORS=(
   [Ayu Dark]="#E6B450"
   [Ayu Mirage]="#FFCC66"
   [Gruvbox Dark]="#fe8019"
+  [Gruvbox Soft]="#fe8019"
   [Iceberg]="#84a0c6"
+  [Kanagawa Dragon]="#8ea4a2"
   [Kanagawa Wave]="#7e9cd8"
-  [OneDarkPro Black]="#d55fde"
-  [OneDarkPro]="#d55fde"
+  [Nord]="#88c0d0"
   [Palenight]="#7e57c2"
   [Rose Pine Moon]="#eb6f92"
   [Rose Pine]="#eb6f92"
   [Solarized Dark]="#cb4b16"
-  [Tokyo Storm]="#25aac2"
   [Tokyo Night]="#25aac2"
-  [VSCode Dark]="#4FC1FF"
+  [Tokyo Storm]="#25aac2"
 )
 
 declare -A GHOSTTY_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
-  [Gruvbox Dark]="Gruvbox Dark"
+  [Gruvbox Dark]="Gruvbox Dark Hard"
+  [Gruvbox Soft]="Gruvbox Dark Soft"
   [Iceberg]="Iceberg Dark"
+  [Kanagawa Dragon]="Kanagawa Dragon"
   [Kanagawa Wave]="Kanagawa Wave"
+  [Nord]="Nord"
   [Palenight]="Palenight"
-  [OneDarkPro Black]="OneDarkPro Black"
-  [OneDarkPro]="OneDarkPro"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
   [Tokyo Night]="Tokyo Night"
   [Tokyo Storm]="Tokyo Storm"
-  [VSCode Dark]="VSCode Dark"
 )
 
 declare -A BAT_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
   [Gruvbox Dark]="ansi"
+  [Gruvbox Soft]="ansi"
   [Iceberg]="Iceberg Dark"
+  [Kanagawa Dragon]="ansi"
   [Kanagawa Wave]="Kanagawa Wave"
+  [Nord]="Nord"
   [Palenight]="Palenight"
-  [OneDarkPro Black]="TwoDark"
-  [OneDarkPro]="TwoDark"
   [Rose Pine Moon]="Rose Pine Moon"
   [Rose Pine]="Rose Pine"
   [Solarized Dark]="Solarized Dark"
   [Tokyo Night]="Tokyo Night"
   [Tokyo Storm]="Tokyo Storm"
-  [VSCode Dark]="ansi"
 )
 
 declare -A ZELLIJ_THEMES=(
   [Ayu Dark]="ayu_dark"
   [Ayu Mirage]="ayu_mirage"
   [Gruvbox Dark]="gruvbox_dark_hard"
+  [Gruvbox Soft]="gruvbox_dark_soft"
   [Iceberg]="iceberg_dark"
+  [Kanagawa Dragon]="kanagawa_dragon"
   [Kanagawa Wave]="kanagawa_wave"
+  [Nord]="nord"
   [Palenight]="palenight"
-  [OneDarkPro Black]="one_dark_pro_black"
-  [OneDarkPro]="one_dark_pro"
   [Rose Pine Moon]="rose_pine_moon"
   [Rose Pine]="rose_pine_main"
   [Solarized Dark]="solarized_dark"
   [Tokyo Night]="tokyo_night"
   [Tokyo Storm]="tokyo_storm"
-  [VSCode Dark]="vscode_dark_modern"
 )
 
 declare -A LSD_THEMES=(
   [Ayu Dark]="bluish"
   [Ayu Mirage]="bluish"
   [Gruvbox Dark]="adaptive"
+  [Gruvbox Soft]="adaptive"
   [Iceberg]="bluish"
+  [Kanagawa Dragon]="adaptive"
   [Kanagawa Wave]="adaptive"
+  [Nord]="bluish"
   [Palenight]="bluish"
-  [OneDarkPro Black]="adaptive"
-  [OneDarkPro]="adaptive"
   [Rose Pine Moon]="adaptive"
   [Rose Pine]="adaptive"
   [Solarized Dark]="solarized"
   [Tokyo Night]="bluish"
   [Tokyo Storm]="bluish"
-  [VSCode Dark]="bluish"
 )
 
 declare -A DELTA_FEATURES=(
   [Ayu Dark]="ayu-dark"
   [Ayu Mirage]="ayu-mirage"
   [Gruvbox Dark]="gruvbox-dark-hard"
+  [Gruvbox Soft]="gruvbox-dark-soft"
   [Iceberg]="iceberg-dark"
+  [Kanagawa Dragon]="kanagawa-dragon"
   [Kanagawa Wave]="kanagawa-wave"
+  [Nord]="nord"
   [Palenight]="palenight"
-  [OneDarkPro Black]="one-dark-pro-black"
-  [OneDarkPro]="one-dark-pro"
   [Rose Pine Moon]="rose-pine-moon"
   [Rose Pine]="rose-pine-main"
   [Solarized Dark]="solarized-dark"
   [Tokyo Night]="tokyo-night"
   [Tokyo Storm]="tokyo-storm"
-  [VSCode Dark]="vscode-dark-modern"
 )
 
 declare -A ZED_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
   [Gruvbox Dark]="Gruvbox Dark Hard"
+  [Gruvbox Soft]="Gruvbox Dark Soft"
   [Iceberg]="Iceberg Dark"
+  [Kanagawa Dragon]="Kanagawa Dragon"
   [Kanagawa Wave]="Kanagawa Wave"
-  [OneDarkPro Black]="One Dark Pro"
-  [OneDarkPro]="One Dark Pro"
+  [Nord]="Nord"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
-  [VSCode Dark]="VSCode Dark Modern"
 )
 
 declare -A ZED_OVERRIDES=(
   [Ayu Dark]="ayu-dark"
   [Ayu Mirage]="ayu-mirage"
   [Gruvbox Dark]="gruvbox-dark-hard"
+  [Gruvbox Soft]="gruvbox-dark-soft"
+  [Kanagawa Dragon]="kanagawa-dragon"
   [Kanagawa Wave]="kanagawa-wave"
-  [OneDarkPro Black]="one-dark-pro-black"
-  [OneDarkPro]="one-dark-pro"
+  [Nord]="nord"
   [Rose Pine Moon]="rose-pine-moon"
-  [Rose Pine]="rose-pine"
+  [Rose Pine]="rose-pine-main"
   [Solarized Dark]="solarized-dark"
-  [VSCode Dark]="vscode-dark-modern"
 )
 
 declare -A VSCODE_THEMES=(
   [Ayu Dark]="Ayu Dark"
   [Ayu Mirage]="Ayu Mirage"
   [Iceberg]="Iceberg"
+  [Kanagawa Dragon]="Kanagawa Dragon"
   [Kanagawa Wave]="Kanagawa Wave"
+  [Nord]="Nord"
   [Palenight]="Palenight Operator"
   [Rose Pine Moon]="Rosé Pine Moon"
   [Rose Pine]="Rosé Pine"
   [Solarized Dark]="Solarized Dark"
   [Tokyo Night]="Tokyo Night"
   [Tokyo Storm]="Tokyo Night Storm"
-  [VSCode Dark]="Default Dark+"
 )
 
 declare -A WALLPAPERS=(
   [Ayu Dark]="Wallpaper 08.jpg"
   [Ayu Mirage]="Wallpaper 08.jpg"
   [Gruvbox Dark]="Wallpaper 07.jpg"
+  [Gruvbox Soft]="Wallpaper 07.jpg"
   [Iceberg]="Wallpaper 13.jpg"
+  [Kanagawa Dragon]="Wallpaper 11.jpg"
   [Kanagawa Wave]="Wallpaper 11.jpg"
+  [Nord]="Wallpaper 14.jpg"
   [Palenight]="Wallpaper 01.jpg"
-  [OneDarkPro Black]="Wallpaper 09.jpg"
-  [OneDarkPro]="Wallpaper 09.jpg"
   [Rose Pine Moon]="Wallpaper 04.jpg"
   [Rose Pine]="Wallpaper 04.jpg"
   [Solarized Dark]="Wallpaper 03.jpg"
   [Tokyo Night]="Wallpaper 12.jpg"
   [Tokyo Storm]="Wallpaper 15.jpg"
-  [VSCode Dark]="Wallpaper 14.jpg"
 )
 
 set_ghostty_mood() {
@@ -329,7 +331,7 @@ set_mood_wallpaper() {
     return 1
   fi
 
-  osascript "$DOTFILES/wallpapers/set-wallpaper.scpt" "$wallpaper_file" 2>/dev/null || true
+  wallpaper set --screen "all" "$wallpaper_file"
   echo "✓ Updated Wallpaper"
 }
 
@@ -344,8 +346,11 @@ available_moods=(
   "Ayu Dark"
   "Ayu Mirage"
   "Gruvbox Dark"
+  "Gruvbox Soft"
   "Iceberg"
+  "Kanagawa Dragon"
   "Kanagawa Wave"
+  "Nord"
   "OneDarkPro Black"
   "OneDarkPro"
   "Palenight"
@@ -354,7 +359,6 @@ available_moods=(
   "Solarized Dark"
   "Tokyo Night"
   "Tokyo Storm"
-  "VSCode Dark"
 )
 
 selected_mood=$(printf "%s\n" "${available_moods[@]}" | fzf --border-label="Select mood 💅🏻" --height 40%)

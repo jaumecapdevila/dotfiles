@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "solarized-dark"
+  features = "kanagawa-dragon"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false

@@ -1,3 +1,5 @@
+local variant = vim.g.mood == "Kanagawa Dragon" and "dragon" or "wave"
+
 return {
   compile = false, -- enable compiling the colorscheme
   undercurl = true, -- enable undercurls
@@ -27,5 +29,6 @@ return {
       TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
     }
   end,
-  theme = "wave",
+  background = { dark = variant, light = "lotus" },
+  theme = variant,
 }

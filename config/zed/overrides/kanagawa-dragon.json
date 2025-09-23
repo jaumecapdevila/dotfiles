@@ -1,0 +1,18 @@
+{
+    "border.variant": "#8ea4a2",
+    "editor.active_line_number": "#8ea4a2",
+    "editor.gutter.background": "#282727",
+    "editor.line_number": "#625e5a",
+    "panel.background": "#181616",
+    "panel.indent_guide_active": "#8ea4a2",
+    "tab_bar.background": "#181616",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" },
+        "punctuation": { "color": "#9e9b93" },
+        "punctuation.bracket": { "color": "#9e9b93" },
+        "punctuation.list_marker": { "color": "#9e9b93" },
+        "punctuation.special": { "color": "#9e9b93" }
+    }
+}

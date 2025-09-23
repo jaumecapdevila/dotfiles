@@ -22,9 +22,11 @@ return {
     CursorLineNr = { fg = "love" },
 
     -- Syntax
+    Function = { bold = true, italic = true },
     Keyword = { italic = true },
-    Function = { bold = true },
     String = { italic = false },
+    ["@function"] = { bold = true, italic = true },
+    ["@function.builtin"] = { bold = true, italic = true },
     ["@keyword.import"] = { italic = true },
     ["@keyword.return"] = { italic = true },
 

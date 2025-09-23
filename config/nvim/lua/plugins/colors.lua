@@ -10,24 +10,8 @@ return {
     opts = function() return require("configs.ayu") end,
   },
   {
-    "olimorris/onedarkpro.nvim",
-    cond = vim.g.mood == "OneDarkPro" or vim.g.mood == "OneDarkPro Black",
-    config = function(_, opts)
-      require("onedarkpro").setup(opts)
-      vim.cmd(
-        "colorscheme "
-          .. (
-            vim.g.mood == "OneDarkPro Black" and "onedark_dark"
-            or "onedark_vivid"
-          )
-      )
-    end,
-    lazy = false,
-    opts = function() return require("configs.onedark") end,
-  },
-  {
     "ellisonleao/gruvbox.nvim",
-    cond = vim.g.mood == "Gruvbox Dark",
+    cond = vim.g.mood == "Gruvbox Dark" or vim.g.mood == "Gruvbox Soft",
     config = function(_, opts)
       require("gruvbox").setup(opts)
       vim.cmd("colorscheme gruvbox")
@@ -43,13 +27,23 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
-    cond = vim.g.mood == "Kanagawa Wave",
+    cond = vim.g.mood == "Kanagawa Wave" or vim.g.mood == "Kanagawa Dragon",
     config = function(_, opts)
       require("kanagawa").setup(opts)
       vim.cmd("colorscheme kanagawa")
     end,
     lazy = false,
     opts = require("configs.kanagawa"),
+  },
+  {
+    "gbprod/nord.nvim",
+    cond = vim.g.mood == "Nord",
+    config = function(_, opts)
+      require("nord").setup(opts)
+      vim.cmd("colorscheme nord")
+    end,
+    lazy = false,
+    opts = require("configs.nord"),
   },
   {
     "marko-cerovac/material.nvim",
@@ -87,6 +81,7 @@ return {
   },
   {
     "folke/tokyonight.nvim",
+    cond = vim.g.mood == "Tokyo Night" or vim.g.mood == "Tokyo Storm",
     opts = require("configs.tokyonight"),
     lazy = false,
     priority = 1000,
@@ -94,15 +89,5 @@ return {
       require("tokyonight").setup(opts)
       vim.cmd("colorscheme tokyonight")
     end,
-  },
-  {
-    "Mofiqul/vscode.nvim",
-    cond = vim.g.mood == "VSCode Dark",
-    config = function(_, opts)
-      require("vscode").setup(opts)
-      vim.cmd("colorscheme vscode")
-    end,
-    lazy = false,
-    opts = function() return require("configs.vscode") end,
   },
 }

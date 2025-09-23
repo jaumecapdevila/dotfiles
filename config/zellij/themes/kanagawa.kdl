@@ -1,4 +1,17 @@
 themes {
+  kanagawa_dragon {
+		bg "#181616"
+		fg "#c5c9c5"
+		red "#c4746e"
+		green "#8a9a7b"
+		blue "#8ba4b0"
+		yellow "#c4b28a"
+		magenta "#a292a3"
+		orange "#b6927b"
+		cyan "#8ea4a2"
+		black "#181616"
+		white "#a6a69c"
+	}
   kanagawa_wave {
 		bg "#1f1f28"
 		fg "#dcd7ba"
