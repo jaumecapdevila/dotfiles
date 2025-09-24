@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Kanagawa Dragon"
+export MOOD="Nord"
 export TRANSPARENCY="on"
 
 # plugins

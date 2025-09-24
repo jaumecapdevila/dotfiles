@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "kanagawa-dragon"
+  features = "nord"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false

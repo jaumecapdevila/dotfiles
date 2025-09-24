@@ -114,7 +114,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Kanagawa Dragon",
+    "dark": "Nord",
     "light": "Ayu Light",
     "mode": "system"
   },
@@ -134,13 +134,9 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#8ea4a2",
-    "editor.active_line_number": "#8ea4a2",
-    "editor.gutter.background": "#282727",
-    "editor.line_number": "#625e5a",
-    "panel.background": "#181616",
-    "panel.indent_guide_active": "#8ea4a2",
-    "tab_bar.background": "#181616",
+    "border.variant": "#88c0d0",
+    "editor.active_line_number": "#88c0d0",
+    "panel.indent_guide_active": "#88c0d0",
     "syntax": {
       "attribute": {
         "font_style": "italic"
@@ -151,18 +147,6 @@
       },
       "keyword": {
         "font_style": "italic"
-      },
-      "punctuation": {
-        "color": "#9e9b93"
-      },
-      "punctuation.bracket": {
-        "color": "#9e9b93"
-      },
-      "punctuation.list_marker": {
-        "color": "#9e9b93"
-      },
-      "punctuation.special": {
-        "color": "#9e9b93"
       }
     }
   }
