@@ -1,3 +1,5 @@
+local italics = vim.g.italics
+
 return {
   dark_variant = vim.g.mood == "Rose Pine Moon" and "moon" or "main",
   dim_inactive_windows = false,
@@ -11,7 +13,7 @@ return {
 
   styles = {
     bold = true,
-    italic = false,
+    italic = italics,
     transparency = vim.g.transparent,
   },
 
@@ -22,13 +24,13 @@ return {
     CursorLineNr = { fg = "love" },
 
     -- Syntax
-    Function = { bold = true, italic = true },
-    Keyword = { italic = true },
-    String = { italic = false },
-    ["@function"] = { bold = true, italic = true },
-    ["@function.builtin"] = { bold = true, italic = true },
-    ["@keyword.import"] = { italic = true },
-    ["@keyword.return"] = { italic = true },
+    Function = { bold = true, italic = italics },
+    Keyword = { italic = italics },
+    String = { italic = italics },
+    ["@function"] = { bold = true, italic = italics },
+    ["@function.builtin"] = { bold = true, italic = italics },
+    ["@keyword.import"] = { italic = italics },
+    ["@keyword.return"] = { italic = italics },
 
     -- Notify
     NotifyBackground = { fg = "text", bg = "overlay" },

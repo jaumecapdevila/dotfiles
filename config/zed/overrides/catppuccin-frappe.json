@@ -1,0 +1,12 @@
+{
+    "border.focused": "#8caaee",
+    "border.variant": "#8caaee",
+    "editor.active_line_number": "#8caaee",
+    "panel.indent_guide_active": "#8caaee",
+    "syntax": {
+        "attribute": { "font_style": "italic" },
+        "comment": { "font_style": "italic" },
+        "function": { "font_style": "italic", "font_weight": 900 },
+        "keyword": { "font_style": "italic" }
+    }
+}

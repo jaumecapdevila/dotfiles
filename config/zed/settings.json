@@ -13,7 +13,8 @@
   "tab_size": 2,
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "BerkeleyMono Nerd Font",
+  "buffer_font_family": "OperatorMono Nerd Font",
+  "buffer_font_weight": 340,
   "buffer_font_size": 17,
   "buffer_line_height": "comfortable",
   "collaboration_panel": {
@@ -114,7 +115,7 @@
     "show_diagnostics": "errors"
   },
   "theme": {
-    "dark": "Nord",
+    "dark": "Catppuccin Frappé",
     "light": "Ayu Light",
     "mode": "system"
   },
@@ -134,11 +135,15 @@
     "font_weight": 340
   },
   "experimental.theme_overrides": {
-    "border.variant": "#88c0d0",
-    "editor.active_line_number": "#88c0d0",
-    "panel.indent_guide_active": "#88c0d0",
+    "border.focused": "#8caaee",
+    "border.variant": "#8caaee",
+    "editor.active_line_number": "#8caaee",
+    "panel.indent_guide_active": "#8caaee",
     "syntax": {
       "attribute": {
+        "font_style": "italic"
+      },
+      "comment": {
         "font_style": "italic"
       },
       "function": {

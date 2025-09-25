@@ -8,7 +8,7 @@ export LC_CTYPE="en_US.UTF-8"
 
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export MOOD="Nord"
+export MOOD="Catppuccin Frappe"
 export TRANSPARENCY="on"
 
 # plugins
@@ -47,32 +47,23 @@ elif [[ "$MOOD" == "Ayu Mirage" ]]; then
 		--color=spinner:#a6cc70,info:#a6cc70,separator:#33415e
 		--color=pointer:#90e1c6,marker:#6dcbfa,prompt:#90e1c6
 	"
-elif [[ "$MOOD" == "Gruvbox Dark" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
+elif [[ "$MOOD" == "Catppuccin Frappe" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#626880,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#ebdbb2,bg:#1d2021,hl:#d79921
-		--color=fg+:#ebdbb2,bg+:#665c54,hl+:#d79921
-		--color=border:#458588,header:#d79921,gutter:#1d2021
-		--color=spinner:#98971a,info:#98971a,separator:#665c54
-		--color=pointer:#b16286,marker:#458588,prompt:#b16286
+  	--color=fg:#c6d0f5,bg:#303446,hl:#e5c890
+		--color=fg+:#c6d0f5,bg+:#44495d,hl+:#e5c890
+		--color=border:#8caaee,header:#e5c890,gutter:#303446
+		--color=spinner:#a6d189,info:#a6d189,separator:#44495d
+		--color=pointer:#81c8be,marker:#8caaee,prompt:#81c8be
 	"
-elif [[ "$MOOD" == "Gruvbox Soft" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984,bold"
+elif [[ "$MOOD" == "Catppuccin Mocha" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#585b70,bold"
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#ebdbb2,bg:#32302F,hl:#d79921
-		--color=fg+:#ebdbb2,bg+:#665c54,hl+:#d79921
-		--color=border:#458588,header:#d79921,gutter:#32302F
-		--color=spinner:#98971a,info:#98971a,separator:#665c54
-		--color=pointer:#b16286,marker:#458588,prompt:#b16286
-	"
-elif [[ "$MOOD" == "Iceberg" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6b7089,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#c6c8d1,bg:#161821,hl:#e2a478
-		--color=fg+:#c6c8d1,bg+:#1e2132,hl+:#e2a478
-		--color=border:#84a0c6,header:#e2a478,gutter:#161821
-		--color=spinner:#b4be82,info:#b4be82,separator:#1e2132
-		--color=pointer:#a093c7,marker:#84a0c6,prompt:#a093c7
+  	--color=fg:#cdd6f4,bg:#1e1e2e,hl:#f9e2af
+		--color=fg+:#cdd6f4,bg+:#353749,hl+:#f9e2af
+		--color=border:#89b4fa,header:#f9e2af,gutter:#1e1e2e
+		--color=spinner:#a6e3a1,info:#a6e3a1,separator:#353749
+		--color=pointer:#94e2d5,marker:#89b4fa,prompt:#94e2d5
 	"
 elif [[ "$MOOD" == "Kanagawa Dragon" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a6a69c,bold"
@@ -91,24 +82,6 @@ elif [[ "$MOOD" == "Kanagawa Wave" ]]; then
 		--color=border:#7e9cd8,header:#FF9E3B,gutter:#1f1f28
 		--color=spinner:#6a9589,info:#6a9589,separator:#2d4f67
 		--color=pointer:#c0a36e,marker:#7e9cd8,prompt:#c0a36e
-	"
-elif [[ "$MOOD" == "Nord" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4c566a,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#d8dee9,bg:#2e3440,hl:#ebcb8b
-		--color=fg+:#d8dee9,bg+:#4c566a,hl+:#ebcb8b
-		--color=border:#81a1c1,header:#ebcb8b,gutter:#2e3440
-		--color=spinner:#a3be8c,info:#a3be8c,separator:#4c566a
-		--color=pointer:#88c0d0,marker:#81a1c1,prompt:#88c0d0
-	"
-elif [[ "$MOOD" == "Palenight" ]]; then
-  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#c792ea,bold"
-	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  	--color=fg:#969cc7,bg:#292d3e,hl:#ffe585
-		--color=fg+:#969cc7,bg+:#434758,hl+:#ffe585
-		--color=border:#82aaff,header:#ffe585,gutter:#292d3e
-		--color=spinner:#c3e88d,info:#c3e88d,separator:#434758
-		--color=pointer:#a3f7ff,marker:#82aaff,prompt:#a3f7ff
 	"
 elif [[ "$MOOD" == "Rose Pine" ]]; then
   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6e6a86,bold"
@@ -136,6 +109,33 @@ elif [[ "$MOOD" == "Solarized Dark" ]]; then
 		--color=border:#268bd2,header:#d33682,gutter:#002b36
 		--color=spinner:#2aa198,info:#2aa198,separator:#073642
 		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
+	"
+elif [[ "$MOOD" == "Solarized Light" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#657b83,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#657b83,bg:#fdf6e3,hl:#d33682
+		--color=fg+:#657b83,bg+:#586e75,hl+:#d33682
+		--color=border:#268bd2,header:#d33682,gutter:#fdf6e3
+		--color=spinner:#2aa198,info:#2aa198,separator:#586e75
+		--color=pointer:#b58900,marker:#268bd2,prompt:#b58900
+	"
+elif [[ "$MOOD" == "Tokyo Night" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#414868,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#839496,bg:#16161e,hl:#bb9af7
+		--color=fg+:#839496,bg+:#283457,hl+:#bb9af7
+		--color=border:#7aa2f7,header:#bb9af7,gutter:#16161e
+		--color=spinner:#9ece6a,info:#9ece6a,separator:#283457
+		--color=pointer:#7dcfff,marker:#7aa2f7,prompt:#7dcfff
+	"
+elif [[ "$MOOD" == "Tokyo Storm" ]]; then
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#414868,bold"
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  	--color=fg:#8089b3,bg:#1f2335,hl:#bb9af7
+		--color=fg+:#8089b3,bg+:#2e3c64,hl+:#bb9af7
+		--color=border:#7aa2f7,header:#bb9af7,gutter:#1f2335
+		--color=spinner:#9ece6a,info:#9ece6a,separator:#2e3c64
+		--color=pointer:#7dcfff,marker:#7aa2f7,prompt:#7dcfff
 	"
 fi
 

@@ -1,1 +1,38 @@
-colors/bluish.yaml
+user: dark_blue
+group: dark_magenta
+permission:
+  read: dark_cyan
+  write: dark_magenta
+  exec: dark_magenta
+  exec-sticky: dark_yellow
+  no-access: grey
+  octal: dark_grey
+  acl: cyan
+  context: dark_grey
+date:
+  hour-old: cyan
+  day-old: blue
+  older: dark_blue
+size:
+  none: grey
+  small: dark_cyan
+  medium: cyan
+  large: magenta
+inode:
+  valid: cyan
+  invalid: grey
+links:
+  valid: white
+  invalid: grey
+tree-edge: grey
+git-status:
+  default: grey
+  unmodified: dark_grey
+  ignored: grey
+  new-in-index: dark_cyan
+  new-in-workdir: dark_cyan
+  typechange: dark_yellow
+  deleted: dark_red
+  renamed: dark_cyan
+  modified: dark_magenta
+  conflicted: dark_red

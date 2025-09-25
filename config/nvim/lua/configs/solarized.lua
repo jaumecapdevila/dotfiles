@@ -1,14 +1,16 @@
+local italics = vim.g.italics
+
 return {
-  style = "dark", -- "dark" or "light"
+  style = vim.g.mood == "Solarized Light" and "light" or "dark", -- "dark" or "light"
   transparent = vim.g.transparent, -- true/false; Enable this to disable setting the background color
   enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
   styles = {
     -- Style to be applied to different syntax groups
     comments = { italic = true },
-    keywords = { italic = true },
-    functions = { bold = true, italic = true },
+    keywords = { italic = italics },
+    functions = { bold = true, italic = italics },
     variables = {},
-    string = { italic = true },
+    string = { italic = italics },
     underline = false, -- true/false; for global underline
     undercurl = false, -- true/false; for global undercurl
   },

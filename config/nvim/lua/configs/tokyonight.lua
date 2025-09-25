@@ -1,3 +1,4 @@
+local italics = vim.g.italics
 local mood = vim.g.mood
 local transparent = vim.g.transparent
 
@@ -8,8 +9,8 @@ return {
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     comments = { italic = true },
-    keywords = { italic = true },
-    functions = { bold = true, italic = true },
+    keywords = { italic = italics },
+    functions = { bold = true, italic = italics },
     variables = {},
     sidebars = transparent and "transparent" or "normal", -- style for sidebars, see below
     floats = "dark", -- style for floating windows

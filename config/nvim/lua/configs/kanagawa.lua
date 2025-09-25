@@ -1,13 +1,14 @@
 local variant = vim.g.mood == "Kanagawa Dragon" and "dragon" or "wave"
+local italics = vim.g.italics
 
 return {
   compile = false, -- enable compiling the colorscheme
   undercurl = true, -- enable undercurls
   commentStyle = { italic = true },
-  functionStyle = { italic = true, bold = true },
-  keywordStyle = { italic = true },
-  statementStyle = { bold = true },
-  typeStyle = { italic = true },
+  functionStyle = { italic = italics, bold = true },
+  keywordStyle = { italic = italics },
+  statementStyle = { bold = italics },
+  typeStyle = { italic = italics },
   transparent = vim.g.transparent, -- do not set background color
   dimInactive = false, -- dim inactive window `:h hl-NormalNC`
   terminalColors = true, -- define vim.g.terminal_color_{0,17}

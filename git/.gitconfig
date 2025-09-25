@@ -32,7 +32,7 @@
 	diffFilter = delta --color-only
 
 [delta]
-  features = "nord"
+  features = "catppuccin-frappe"
   keep-plus-minus-markers = true
   light = false
   line-numbers = false

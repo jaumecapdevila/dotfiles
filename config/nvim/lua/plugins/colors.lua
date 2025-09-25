@@ -10,20 +10,15 @@ return {
     opts = function() return require("configs.ayu") end,
   },
   {
-    "ellisonleao/gruvbox.nvim",
-    cond = vim.g.mood == "Gruvbox Dark" or vim.g.mood == "Gruvbox Soft",
+    "catppuccin/nvim",
+    cond = vim.g.mood == "Catppuccin Mocha" or vim.g.mood == "Catppuccin Frappe",
     config = function(_, opts)
-      require("gruvbox").setup(opts)
-      vim.cmd("colorscheme gruvbox")
+      require("catppuccin").setup(opts)
+      vim.cmd("colorscheme catppuccin")
     end,
     lazy = false,
-    opts = function() return require("configs.gruvbox") end,
-  },
-  {
-    "cocopon/iceberg.vim",
-    cond = vim.g.mood == "Iceberg",
-    config = function() vim.cmd("colorscheme iceberg") end,
-    lazy = false,
+    name = "catppuccin",
+    opts = function() return require("configs.catppuccin") end,
   },
   {
     "rebelot/kanagawa.nvim",
@@ -34,28 +29,6 @@ return {
     end,
     lazy = false,
     opts = require("configs.kanagawa"),
-  },
-  {
-    "gbprod/nord.nvim",
-    cond = vim.g.mood == "Nord",
-    config = function(_, opts)
-      require("nord").setup(opts)
-      vim.cmd("colorscheme nord")
-    end,
-    lazy = false,
-    opts = require("configs.nord"),
-  },
-  {
-    "marko-cerovac/material.nvim",
-    cond = vim.g.mood == "Palenight",
-    config = function(_, opts)
-      require("material").setup(opts)
-      vim.cmd("colorscheme material")
-    end,
-    init = function() vim.g.material_style = "palenight" end,
-    lazy = false,
-    opts = function() return require("configs.material") end,
-    priority = 1000,
   },
   {
     "rose-pine/neovim",
@@ -71,7 +44,7 @@ return {
   },
   {
     "Tsuzat/NeoSolarized.nvim",
-    cond = vim.g.mood == "Solarized Dark",
+    cond = vim.g.mood == "Solarized Dark" or vim.g.mood == "Solarized Light",
     config = function(_, opts)
       require("NeoSolarized").setup(opts)
       vim.cmd("colorscheme NeoSolarized")
